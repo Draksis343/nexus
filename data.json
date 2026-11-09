@@ -9,7 +9,7 @@
   {
    "id": "mw8vb6fbrnj",
    "name": "Malignoplayer97",
-   "bonus": 0
+   "bonus": 90
   }
  ],
  "challenges": [
@@ -26,7 +26,14 @@
    "rules": "Jugar únicamente en solitario. No se permite el uso de guías ni tutoriales."
   }
  ],
- "results": [],
+ "results": [
+  {
+   "p": "mw8vb6fbrnj",
+   "c": "mw8va3c229z",
+   "m": "platino",
+   "at": 1794205736406
+  }
+ ],
  "duels": [
   {
    "id": "mw8vcgpx0pv",
@@ -35,8 +42,14 @@
    "game": "Helldivers",
    "rules": "Hacer una misión en solitario contra los bots en dificultad extrema cumpliendo todos los objetivos principales y secundarios",
    "status": "Aceptado",
-   "winner": ""
+   "winner": "mw8vb6fbrnj"
   }
  ],
- "event": null
+ "event": {
+  "title": "The Trials",
+  "sub": "Escapa del loquero",
+  "cid": "mw8va3c229z",
+  "start": 1794205698542,
+  "end": 1794724080000
+ }
 }
