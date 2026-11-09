@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEXUS ARENA</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--line:#343c43;--muted:#a3adb5;--amber:#ffc266;--cyan:#73dbe4;--red:#ff7772}
+*{box-sizing:border-box}body{margin:0;font-family:'Fira Sans',sans-serif;color:#eef0ec;background:#0b0d10}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,#ffffff04 4px),radial-gradient(circle at 86% 5%,#ffc26612,transparent 35%);z-index:-1}
+button,input,select,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.mono{font-family:'Space Mono',monospace}.muted,.subtle{color:var(--muted)}.subtle{font-size:12px}.amber{color:var(--amber)}.cyan{color:var(--cyan)}.red{color:var(--red)}.hidden{display:none!important}
+.sidebar{width:248px;position:fixed;inset:0 auto 0 0;background:#101419;border-right:1px solid var(--line);z-index:30;display:flex;flex-direction:column;padding:25px 16px;overflow:auto}
+.brand{display:flex;gap:12px;align-items:center;padding:5px 9px 24px;border-bottom:1px solid var(--line)}
+.mark{width:34px;height:34px;border:2px solid var(--amber);transform:rotate(45deg);display:grid;place-items:center;flex:none}.mark:after{content:"";width:14px;height:14px;border:2px solid var(--cyan);border-radius:50%}
+.nav{width:100%;display:block;padding:12px 14px;margin:3px 0;border:1px solid transparent;color:#b5bec4;background:transparent;text-align:left}
+.nav:hover,.nav.active{color:#fff;background:#ffc26614;border-color:#ffc26655}.nav.active{box-shadow:inset 3px 0 var(--amber)}
+.side-b{margin-top:auto;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px}
+.main{margin-left:248px;padding:34px clamp(18px,3vw,48px) 65px;max-width:1800px}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--amber);margin:0 0 6px}
+h1,h2,h3,p{margin-top:0}h1{font-family:'Space Mono',monospace;letter-spacing:-.06em;margin-bottom:8px}h2{font-size:18px}.section-title{font-family:'Space Mono',monospace;text-transform:uppercase;font-size:14px;margin:0 0 14px}
+.topline{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:24px}
+.panel{background:linear-gradient(135deg,#1c2228,#12161a 78%);border:1px solid var(--line);box-shadow:0 16px 35px #0005;position:relative}
+.panel:after{content:"";position:absolute;top:-1px;right:-1px;border-top:12px solid #0b0d10;border-left:12px solid transparent;pointer-events:none}
+.pad{padding:22px}.hero{padding:28px 30px;background:linear-gradient(110deg,#24211c,#161a1e 65%,#122026);border-color:#8a6740}
+.grid-main{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,.85fr);gap:18px}.stack{display:grid;gap:14px;align-content:start}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.mt{margin-top:18px}.mb{margin-bottom:16px}.fl{display:flex;align-items:center;gap:14px}
+.badge{display:inline-block;border:1px solid currentColor;padding:5px 8px;font-size:10px;letter-spacing:.1em;font-weight:700;text-transform:uppercase;white-space:nowrap}.badge.muted{color:var(--muted)}.badge.amber{color:var(--amber)}.badge.cyan{color:var(--cyan)}.badge.red{color:var(--red)}
+.btn{border:1px solid #b58954;background:var(--amber);color:#181713;padding:11px 16px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:12px}
+.btn:hover{box-shadow:0 4px 20px #ffc26640}.btn.secondary{background:#20282d;color:#e9eff0;border-color:#57626b}.btn.ghost{background:transparent;color:var(--muted);border-color:var(--line)}.btn.small{padding:8px 11px;font-size:11px}.btn.danger{background:transparent;color:var(--red);border-color:var(--red)}
+.progress{height:7px;background:#343a3d;overflow:hidden}.progress>span{display:block;height:100%;background:linear-gradient(90deg,#b88343,var(--amber))}
+.big{font-family:'Space Mono',monospace;font-size:clamp(24px,3vw,40px);letter-spacing:-.06em;margin:0}.cd{font-size:clamp(25px,3vw,40px)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat{padding:16px}.stat small{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.09em}.stat strong{font-family:'Space Mono';font-size:22px;display:block;color:var(--amber);margin-top:8px}
+.avatar{width:38px;height:38px;flex:none;display:grid;place-items:center;border:1px solid var(--cyan);color:var(--cyan);background:repeating-linear-gradient(45deg,#152328,#152328 5px,#1d3035 6px);font-family:'Space Mono';font-weight:700}.avatar.lg{width:80px;height:80px;font-size:36px;border-width:2px}
+.line{display:grid;grid-template-columns:26px 38px minmax(0,1fr) auto;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #ffffff13}.line:last-child,.rrow:last-child{border:0}
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{padding:19px;display:flex;flex-direction:column;gap:10px;text-align:left;color:inherit;width:100%;min-height:150px}.card:hover,.card.sel{border-color:var(--amber)}.card h3{font-family:'Space Mono';letter-spacing:-.04em;margin:0}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:0 0 18px}.tab{white-space:nowrap;background:#1a2025;color:var(--muted);border:1px solid var(--line);padding:10px 14px;font-size:12px;font-weight:700}.tab.active{color:#151617;background:var(--amber);border-color:var(--amber)}
+table{width:100%;border-collapse:collapse;white-space:nowrap;text-align:left}th{color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:#1a2025}th,td{padding:13px;border-bottom:1px solid var(--line)}.tw{overflow:auto}
+.rrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid #ffffff13}
+.mg{display:flex;gap:5px;flex-wrap:wrap}.mbtn{background:#161b20;border:1px solid var(--line);color:var(--c);padding:6px 9px;font-size:11px;font-weight:700}.mbtn:hover{border-color:var(--c)}.mbtn.on{background:var(--c);color:#111}
+.empty{padding:28px;text-align:center;color:var(--muted)}.vs{font-family:'Space Mono';font-size:17px}
+.field{width:100%;background:#11171b;color:#f2f3ef;border:1px solid #4d5960;padding:10px 12px;min-height:43px;margin-top:5px}
+.modal{position:fixed;inset:0;background:#000c;z-index:50;display:grid;place-items:center;padding:16px;overflow:auto}.modal form{width:min(520px,100%);padding:24px;background:#151a1f}.modal label{display:block;margin-bottom:12px;font-size:12px;color:var(--muted)}
+.toast{position:fixed;right:20px;bottom:20px;z-index:60;background:#1b292b;border:1px solid var(--cyan);padding:13px 18px;max-width:340px}
+.mobile-bar,.scrim{display:none}
+@media(max-width:1100px){.card-grid{grid-template-columns:repeat(2,1fr)}.stat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.sidebar{transform:translateX(-100%);transition:transform .2s}.sidebar.open{transform:none}.scrim.open{display:block;position:fixed;inset:0;background:#000b;z-index:25}.mobile-bar{display:flex;justify-content:space-between;align-items:center;background:#101419;border-bottom:1px solid var(--line);padding:13px 18px}.mobile-bar button{background:transparent;border:1px solid var(--line);color:#fff;padding:8px 12px}.main{margin:0;padding:25px 18px 60px}.grid-main{grid-template-columns:1fr}}
+@media(max-width:560px){.card-grid{grid-template-columns:1fr}.hero{padding:20px}}
+</style></head>
+<body>
+<header class="mobile-bar"><strong class="mono amber">NEXUS ARENA</strong><button id="menu" aria-label="Menú">☰</button></header>
+<div id="scrim" class="scrim"></div>
+<aside id="sidebar" class="sidebar">
+ <div class="brand"><div class="mark"></div><strong class="mono amber">NEXUS<br>ARENA</strong></div>
+ <nav id="nav" style="margin-top:20px"></nav>
+ <div class="side-b" id="side"></div>
+</aside>
+<main class="main">
+ <div class="topline"><div><p class="eyebrow" id="crumb"></p><h1 id="title"></h1><p class="muted" id="sub" style="margin:0"></p></div><span class="badge cyan" id="mode">● SISTEMA ACTIVO</span></div>
+ <div id="screen"></div>
+</main>
+<div id="modal" class="modal hidden"><form id="mform" class="panel"></form></div>
+<div id="toast" class="toast hidden"></div>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const MED={participacion:{n:'Part.',pl:5,xp:15,c:'#a3adb5'},bronce:{n:'Bronce',pl:10,xp:25,c:'#ca906c'},plata:{n:'Plata',pl:20,xp:35,c:'#c6d2da'},oro:{n:'Oro',pl:30,xp:45,c:'#ffc266'},platino:{n:'Platino',pl:40,xp:55,c:'#c7f5f7'}};
+const RANKS=[[0,'Recluta'],[200,'Rival'],[500,'Veterano'],[900,'Élite'],[1400,'Maestro'],[2000,'Leyenda']];
+const EMPTY=()=>({season:'Temporada 01',players:[],challenges:[],results:[],duels:[],event:null});
+const T={inicio:['INICIO','COMMAND CENTER','Tu centro de operaciones para la liga.'],desafios:['LIGA','DESAFÍOS','Elige una misión. Cada punto cuenta.'],retos:['DUELOS','RETOS','Jugador contra jugador.'],rankings:['CLASIFICACIÓN','RANKINGS','El marcador nunca miente.'],logros:['PROGRESIÓN','LOGROS','Las hazañas dejan huella.'],jugadores:['COMPETIDORES','JUGADORES','Cada leyenda empieza en algún lugar.'],historial:['REGISTRO','HISTORIAL','Cada movimiento, registrado.']};
+let D=EMPTY(),A=null,dirty=false,S={page:'inicio',sel:null,psel:null,rtab:'PL'};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+const badge=(t,c='amber')=>`<span class="badge ${c}">${esc(t)}</span>`;
+const bar=n=>`<div class="progress"><span style="width:${Math.max(0,Math.min(100,n||0))}%"></span></div>`;
+const empty=t=>`<div class="panel empty">${t}</div>`;
+const adm=h=>A?h:'';
+const pname=id=>(D.players.find(p=>p.id===id)||{name:'(eliminado)'}).name;
+const cname=id=>(D.challenges.find(c=>c.id===id)||{title:'(eliminado)'}).title;
+const stat=(n,l)=>`<div class="panel stat"><small>${l}</small><strong>${n}</strong></div>`;
+const fmt=ms=>new Date(ms).toLocaleString('es',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.remove('hidden');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.add('hidden'),5000)}
+function touch(){dirty=true;render()}
+
+/* ---------- cálculos ---------- */
+function stats(p){const r=D.results.filter(x=>x.p===p.id),s={pl:+p.bonus||0,xp:0,n:{participacion:0,bronce:0,plata:0,oro:0,platino:0},r};
+ r.forEach(x=>{const m=MED[x.m];if(m){s.pl+=m.pl;s.xp+=m.xp;s.n[x.m]++}});
+ s.medals=s.n.bronce+s.n.plata+s.n.oro+s.n.platino;let k=0;RANKS.forEach((q,i)=>{if(s.xp>=q[0])k=i});
+ s.lvl=k;s.rank=RANKS[k][1];s.from=RANKS[k][0];s.next=RANKS[k+1];return s}
+function ranking(k='PL'){const L=D.players.map(p=>({p,s:stats(p)}));
+ const f={PL:(a,b)=>b.s.pl-a.s.pl||b.s.n.platino-a.s.n.platino||b.s.n.oro-a.s.n.oro||b.s.n.plata-a.s.n.plata||b.s.r.length-a.s.r.length,MED:(a,b)=>b.s.medals-a.s.medals||b.s.pl-a.s.pl,XP:(a,b)=>b.s.xp-a.s.xp};
+ return L.sort(f[k])}
+const left=()=>D.event?Math.max(0,D.event.end-Date.now()):0;
+const cd=()=>{const s=Math.floor(left()/1000);return[Math.floor(s/3600),Math.floor(s%3600/60),s%60].map(n=>String(n).padStart(2,'0')).join(':')};
+const pct=()=>{const e=D.event;return e?(Date.now()-e.start)/(e.end-e.start)*100:0};
+
+/* ---------- páginas ---------- */
+function hero(){const e=D.event;
+ const b=adm(`<div class="row mt"><button class="btn small secondary" data-a="event">${e?'Editar evento':'Configurar evento'}</button>${e?'<button class="btn small danger" data-a="endevent">Terminar evento</button>':''}</div>`);
+ if(!e)return`<section class="panel hero">${badge('SIN EVENTO EN VIVO','cyan')}<h2 class="big mt">Esperando la próxima ronda</h2><p class="muted">Aquí aparecerá el desafío en curso con su cuenta regresiva.</p>${b}</section>`;
+ return`<section class="panel hero"><div class="row"><div>${badge('EN VIVO')}</div>${badge(left()>0?'EN CURSO':'FINALIZADO','cyan')}</div><p class="eyebrow mt">${esc(e.sub)}</p><h2 class="big">${esc(e.title)}</h2>
+ <div class="row mt"><div><div class="subtle">TIEMPO RESTANTE</div><strong id="cd" class="mono amber cd">${cd()}</strong></div>${e.cid&&D.challenges.some(c=>c.id===e.cid)?`<button class="btn" data-a="openc" data-id="${e.cid}">Ver desafío →</button>`:''}</div>
+ <div class="mt" id="cdbar">${bar(pct())}</div>${b}</section>`}
+function home(){const top=ranking().slice(0,3),last=[...D.results].sort((a,b)=>b.at-a.at).slice(0,5);
+ return`<div class="grid-main"><div class="stack">${hero()}
+ <section class="stat-grid">${stat(D.players.length,'Jugadores')}${stat(D.challenges.length,'Desafíos')}${stat(D.results.filter(r=>r.m!=='participacion').length,'Medallas')}${stat(D.duels.length,'Retos')}</section>
+ <section class="panel pad"><h2 class="section-title">Top 3 jugadores</h2>${top.length?top.map((x,i)=>`<div class="line"><span class="mono amber">0${i+1}</span><div class="avatar">${esc(x.p.name[0].toUpperCase())}</div><div><strong>${esc(x.p.name)}</strong><div class="subtle">${x.s.rank}</div></div><strong class="mono amber">${x.s.pl} PL</strong></div>`).join(''):'<p class="muted">Aún no hay jugadores.</p>'}</section></div>
+ <div class="stack"><section class="panel pad"><h2 class="section-title">Últimos resultados</h2>${last.length?last.map(r=>`<div class="rrow"><span><strong>${esc(pname(r.p))}</strong><br><span class="subtle">${esc(cname(r.c))}</span></span>${badge(MED[r.m].n+' · +'+MED[r.m].pl+' PL','cyan')}</div>`).join(''):'<p class="muted">Sin resultados todavía.</p>'}</section></div></div>`}
+
+const CF=[['title','Título*'],['game','Videojuego'],['category','Categoría (Habilidad, Velocidad…)'],['difficulty','Dificultad','select',['Fácil','Medio','Difícil','Extremo']],['status','Estado','select',['Próximamente','Disponible','Por validar','Finalizado']],['round','Ronda (ej. Ronda 01)'],['due','Fecha límite (texto)'],['desc','Descripción','area'],['rules','Reglas','area']];
+const SC={Disponible:'amber','Por validar':'cyan',Próximamente:'muted',Finalizado:'red'};
+function detail(){const c=D.challenges.find(x=>x.id===S.sel);if(!c)return'';
+ const rows=D.players.map(p=>{const r=D.results.find(x=>x.p===p.id&&x.c===c.id);
+  return`<div class="rrow"><span>${esc(p.name)}</span>${A?`<span class="mg">${Object.keys(MED).map(k=>`<button class="mbtn ${r&&r.m===k?'on':''}" style="--c:${MED[k].c}" data-a="medal" data-p="${p.id}" data-c="${c.id}" data-m="${k}" title="+${MED[k].pl} PL">${MED[k].n}</button>`).join('')}</span>`:(r?badge(MED[r.m].n):'<span class="subtle">—</span>')}</div>`}).join('');
+ return`<section class="panel pad mt" style="border-color:#9c7747"><div class="row">${badge(c.status,SC[c.status])}${adm(`<span class="mg"><button class="btn small secondary" data-a="editc" data-id="${c.id}">Editar</button><button class="btn small danger" data-a="delc" data-id="${c.id}">Eliminar</button></span>`)}</div>
+ <h2 class="mono mt">${esc(c.title)}</h2><p class="muted">${esc(c.game)} · ${esc(c.category)} · ${esc(c.difficulty)} · Límite: ${esc(c.due||'—')}</p>
+ ${c.desc?`<h3>La misión</h3><p>${esc(c.desc)}</p>`:''}${c.rules?`<h3>Reglas</h3><p class="muted">${esc(c.rules)}</p>`:''}
+ <div class="mg mb">${['bronce','plata','oro','platino'].map(k=>`<span class="badge" style="color:${MED[k].c}">${MED[k].n} ${MED[k].pl} PL</span>`).join('')}</div>
+ <h3>Resultados${A?' <span class="subtle">(un clic asigna la medalla; otro clic igual la quita)</span>':''}</h3>${rows||'<p class="muted">Agrega jugadores para registrar resultados.</p>'}</section>`}
+function challenges(){const cards=D.challenges.map(c=>`<button class="panel card ${S.sel===c.id?'sel':''}" data-a="openc" data-id="${c.id}"><div class="row">${badge(c.round||'Ronda','cyan')}${badge(c.status,SC[c.status])}</div><h3>${esc(c.title)}</h3><p class="subtle" style="margin:0">${esc(c.game)} · ${esc(c.category)} · ${esc(c.difficulty)}<br>Límite: ${esc(c.due||'—')}</p><strong class="amber mono" style="margin-top:auto">40 PL MÁX.</strong></button>`).join('');
+ return adm('<div class="mb"><button class="btn" data-a="newc">+ Nuevo desafío</button></div>')+(cards?`<div class="card-grid">${cards}</div>`:empty('Aún no hay desafíos.'))+detail()}
+
+const DS=['Pendiente','Aceptado','Jugado'];
+function retos(){const cards=D.duels.map(d=>`<div class="panel card" style="cursor:default"><div class="row">${badge(d.status,d.status==='Jugado'?'cyan':d.status==='Aceptado'?'amber':'muted')}${adm(`<span class="mg"><button class="btn small secondary" data-a="editd" data-id="${d.id}">Editar</button><button class="btn small danger" data-a="deld" data-id="${d.id}">Eliminar</button></span>`)}</div>
+ <div class="vs"><span class="cyan">${esc(pname(d.a))}</span> <span class="muted">VS</span> <span class="amber">${esc(pname(d.b))}</span></div><strong>${esc(d.game)}</strong><p class="muted" style="margin:0">${esc(d.rules||'Sin condiciones')}</p>${d.winner?`<p class="amber mono" style="margin:0">🏆 Ganador: ${esc(pname(d.winner))}</p>`:''}</div>`).join('');
+ return adm('<div class="mb"><button class="btn" data-a="newd">+ Nuevo reto</button></div>')+(cards?`<div class="card-grid">${cards}</div>`:empty('Aún no hay retos publicados.'))}
+
+function rankings(){const tabs=[['PL','General (PL)'],['MED','Coleccionistas'],['XP','Experiencia']],L=ranking(S.rtab);
+ return`<div class="tabs">${tabs.map(([k,l])=>`<button class="tab ${S.rtab===k?'active':''}" data-a="rtab" data-k="${k}">${l}</button>`).join('')}</div>
+ <section class="panel tw">${L.length?`<table><thead><tr><th>Pos.</th><th>Jugador</th><th>Rango</th><th>PL</th><th>Medallas</th><th>XP</th></tr></thead><tbody>${L.map((x,i)=>`<tr><td class="mono amber">#${i+1}</td><td><strong>${esc(x.p.name)}</strong></td><td>${badge(x.s.rank,'cyan')}</td><td class="mono amber">${x.s.pl}</td><td>${x.s.medals}</td><td>${x.s.xp}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Aún no hay jugadores en la clasificación.</div>'}</section>
+ <section class="panel pad mt"><h2 class="section-title">Rangos por XP</h2><div class="mg">${RANKS.map(r=>`<span class="badge cyan">${r[1]} · ${r[0]}+</span>`).join('')}</div></section>`}
+
+const ACH=[['Primer contacto','Participa en tu primer desafío',s=>s.r.length>=1],['Coleccionista','Reúne 10 medallas',s=>s.medals>=10],['Perfeccionista','Consigue 5 platinos',s=>s.n.platino>=5],['Racha de oro','Consigue 3 medallas de oro o platino',s=>s.n.oro+s.n.platino>=3]];
+function logros(){const L=D.players.map(p=>({p,s:stats(p)}));
+ return`<div class="card-grid">${ACH.map(a=>{const w=L.filter(x=>a[2](x.s)).map(x=>x.p.name);return`<div class="panel card" style="cursor:default"><div class="row"><span style="font-size:24px">🏅</span>${badge(w.length+' / '+L.length,'cyan')}</div><h3>${a[0]}</h3><p class="muted" style="margin:0">${a[1]}</p><p class="subtle" style="margin:0">${w.length?esc(w.join(', ')):'Nadie lo ha desbloqueado todavía.'}</p></div>`}).join('')}</div>`}
+
+function pform(p){return[['name','Nombre*']]}
+function profile(){const p=D.players.find(x=>x.id===S.psel);if(!p)return'';const s=stats(p),nx=s.next;
+ return`<section class="panel pad mt"><div class="row"><div class="fl"><div class="avatar lg">${esc(p.name[0].toUpperCase())}</div><div><h2 class="mono" style="margin:0 0 6px">${esc(p.name)}</h2>${badge(s.rank)} ${badge('Nivel '+(s.lvl+1),'cyan')}</div></div><strong class="mono amber" style="font-size:25px">${s.pl} PL</strong></div>
+ ${adm(`<div class="mg mt"><button class="btn small secondary" data-a="editp" data-id="${p.id}">Renombrar</button><button class="btn small secondary" data-a="plp" data-id="${p.id}">Sumar / restar PL</button><button class="btn small danger" data-a="delp" data-id="${p.id}">Eliminar</button></div>`)}
+ <p class="subtle mt">XP ${s.xp}${nx?` / ${nx[0]} para ${nx[1]}`:' · rango máximo'}</p>${bar(nx?(s.xp-s.from)/(nx[0]-s.from)*100:100)}
+ <div class="stat-grid mt">${stat(s.n.platino,'Platinos')}${stat(s.n.oro,'Oros')}${stat(s.n.plata,'Platas')}${stat(s.n.bronce,'Bronces')}</div>
+ <h3 class="mt">Historial</h3>${s.r.length?[...s.r].sort((a,b)=>b.at-a.at).map(r=>`<div class="rrow"><span>${esc(cname(r.c))}</span>${badge(MED[r.m].n+' · +'+MED[r.m].pl+' PL','cyan')}</div>`).join(''):'<p class="muted">Sin resultados todavía.</p>'}${s.pl-Object.values(s.n).reduce((a,_)=>a,0)&&+p.bonus?`<p class="subtle">Ajuste manual: ${p.bonus>0?'+':''}${p.bonus} PL</p>`:''}</section>`}
+function jugadores(){const L=ranking();
+ return adm('<div class="mb"><button class="btn" data-a="newp">+ Nuevo jugador</button></div>')+(L.length?`<div class="card-grid">${L.map(x=>`<button class="panel card ${S.psel===x.p.id?'sel':''}" data-a="openp" data-id="${x.p.id}" style="min-height:110px"><div class="fl"><div class="avatar">${esc(x.p.name[0].toUpperCase())}</div><div><h3>${esc(x.p.name)}</h3><span class="subtle">${x.s.rank}</span></div></div><strong class="mono amber" style="margin-top:auto">${x.s.pl} PL · ${x.s.medals} medallas</strong></button>`).join('')}</div>`:empty('Aún no hay jugadores.'))+profile()}
+
+function historial(){const L=[...D.results].sort((a,b)=>b.at-a.at);
+ return`<section class="panel pad"><h2 class="section-title">Registro de actividad · ${esc(D.season)}</h2>${L.length?L.map(r=>`<div class="rrow"><span><strong>${esc(pname(r.p))}</strong> · ${esc(cname(r.c))}<br><span class="subtle">${fmt(r.at)}</span></span>${badge(MED[r.m].n+' · +'+MED[r.m].pl+' PL','cyan')}</div>`).join(''):'<p class="muted">Todavía no hay actividad registrada.</p>'}</section>`}
+const PAGES={inicio:home,desafios:challenges,retos,rankings,logros,jugadores,historial};
+
+/* ---------- interfaz ---------- */
+function render(){const t=T[S.page];$('#crumb').textContent=`${t[0]} / ${D.season.toUpperCase()}`;$('#title').textContent=t[1];$('#sub').textContent=t[2];
+ $('#mode').textContent=A?'● MODO ADMIN':'● SISTEMA ACTIVO';$('#mode').className='badge '+(A?'amber':'cyan');
+ $('#nav').innerHTML=Object.keys(T).map(k=>`<button class="nav ${S.page===k?'active':''}" data-a="nav" data-k="${k}">${T[k][1][0]+T[k][1].slice(1).toLowerCase()}</button>`).join('');
+ $('#side').innerHTML=`<span class="badge amber" style="text-align:center">${esc(D.season.toUpperCase())}</span>`+(A?`<button class="btn small" data-a="publish">Publicar cambios${dirty?' ●':''}</button><button class="btn small secondary" data-a="dl">Descargar data.json</button><button class="btn small ghost" data-a="settings">Ajustes</button><button class="btn small ghost" data-a="logout">Cerrar sesión</button>`:`<button class="btn small ghost" data-a="login">Acceso admin</button>`);
+ $('#screen').innerHTML=PAGES[S.page]()}
+function closeM(){$('#modal').classList.add('hidden')}
+const toLocal=ms=>new Date(ms-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,16);
+function openForm(title,fields,vals,cb){const f=$('#mform');
+ f.innerHTML=`<h2 class="section-title">${title}</h2>`+fields.map(([k,l,t,o])=>{const v=vals[k]??'',req=l.endsWith('*')?'required':'',lab=l.replace(/\*$/,'');let i;
+  if(t==='select')i=`<select name="${k}" class="field" ${req}>${o.map(x=>{const[a,b]=Array.isArray(x)?x:[x,x];return`<option value="${esc(a)}" ${a==v?'selected':''}>${esc(b)}</option>`}).join('')}</select>`;
+  else if(t==='area')i=`<textarea name="${k}" class="field" rows="3">${esc(v)}</textarea>`;
+  else i=`<input name="${k}" class="field" type="${t==='dt'?'datetime-local':t||'text'}" ${t==='number'?'step="1"':''} value="${esc(v)}" ${req}>`;
+  return`<label>${esc(lab)}${i}</label>`}).join('')+`<div class="row mt"><button type="button" class="btn ghost" data-a="close">Cancelar</button><button class="btn">Guardar</button></div>`;
+ f.onsubmit=e=>{e.preventDefault();const o=Object.fromEntries(new FormData(f));closeM();cb(o)};$('#modal').classList.remove('hidden')}
+
+/* ---------- GitHub: publicar y leer datos ---------- */
+const det=()=>{const h=location.hostname;if(h.endsWith('github.io')){const o=h.split('.')[0];return{owner:o,repo:location.pathname.split('/')[1]||o+'.github.io'}}return{}};
+const gh=(m,b,u='/contents/data.json')=>fetch(`https://api.github.com/repos/${A.owner}/${A.repo}${u}`,{method:m,headers:{Authorization:'Bearer '+A.token,Accept:'application/vnd.github+json'},body:b&&JSON.stringify(b)});
+async function load(){try{const r=await fetch('data.json?t='+Date.now());if(r.ok)D=Object.assign(EMPTY(),await r.json())}catch(e){}}
+async function loadAdmin(){const r=await gh('GET');if(r.ok){const j=await r.json();A.sha=j.sha;D=Object.assign(EMPTY(),JSON.parse(decodeURIComponent(escape(atob(j.content.replace(/\n/g,''))))))}else if(r.status===401||r.status===403){A=null;localStorage.removeItem('nx_admin')}}
+async function login(o){try{A={owner:o.owner.trim(),repo:o.repo.trim(),token:o.token.trim()};const r=await gh('GET',null,'');const j=await r.json();if(!r.ok||!j.permissions||!j.permissions.push)throw 0;localStorage.setItem('nx_admin',JSON.stringify(A));await loadAdmin();toast('Sesión de administrador iniciada.')}catch(e){A=null;toast('No se pudo iniciar sesión. Revisa usuario, repositorio y token (permiso Contents: lectura y escritura).')}render()}
+async function publish(){try{let r=await gh('GET');A.sha=r.ok?(await r.json()).sha:undefined;
+ r=await gh('PUT',{message:'Actualizar datos de NEXUS ARENA',content:btoa(unescape(encodeURIComponent(JSON.stringify(D,null,1)))),sha:A.sha});
+ if(!r.ok)throw new Error(r.status);A.sha=(await r.json()).content.sha;dirty=false;toast('Publicado. Los jugadores lo verán en aproximadamente 1 minuto.')}catch(e){toast('No se pudo publicar ('+e.message+'). Descarga data.json como respaldo.')}render()}
+function download(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,1)],{type:'application/json'}));a.download='data.json';a.click()}
+
+/* ---------- acciones ---------- */
+const opts=()=>D.players.map(p=>[p.id,p.name]);
+const act={
+ nav(e){S.page=e.k;S.sel=null;S.psel=null;$('#sidebar').classList.remove('open');$('#scrim').classList.remove('open');render()},
+ rtab(e){S.rtab=e.k;render()},close:closeM,
+ login(){const d=det();openForm('Acceso de administrador',[['owner','Usuario de GitHub*'],['repo','Repositorio*'],['token','Token de GitHub*','password']],d,login)},
+ logout(){if(dirty&&!confirm('Hay cambios sin publicar. ¿Cerrar sesión de todos modos?'))return;A=null;dirty=false;localStorage.removeItem('nx_admin');load().then(render)},
+ publish,dl:download,
+ settings(){openForm('Ajustes',[['season','Nombre de la temporada*']],D,o=>{D.season=o.season;touch()})},
+ openc(e){S.page='desafios';S.sel=e.id;render()},
+ newc(){openForm('Nuevo desafío',CF,{difficulty:'Medio',status:'Próximamente'},o=>{D.challenges.push({id:uid(),...o});touch()})},
+ editc(e){const c=D.challenges.find(x=>x.id===e.id);openForm('Editar desafío',CF,c,o=>{Object.assign(c,o);touch()})},
+ delc(e){if(!confirm('¿Eliminar este desafío y sus resultados?'))return;D.challenges=D.challenges.filter(c=>c.id!==e.id);D.results=D.results.filter(r=>r.c!==e.id);if(D.event&&D.event.cid===e.id)D.event.cid='';S.sel=null;touch()},
+ medal(e){const i=D.results.findIndex(r=>r.p===e.p&&r.c===e.c);if(i>=0&&D.results[i].m===e.m)D.results.splice(i,1);else if(i>=0)Object.assign(D.results[i],{m:e.m,at:Date.now()});else D.results.push({p:e.p,c:e.c,m:e.m,at:Date.now()});touch()},
+ newp(){openForm('Nuevo jugador',[['name','Nombre*']],{},o=>{D.players.push({id:uid(),name:o.name.trim(),bonus:0});touch()})},
+ editp(e){const p=D.players.find(x=>x.id===e.id);openForm('Renombrar jugador',[['name','Nombre*']],p,o=>{p.name=o.name.trim();touch()})},
+ plp(e){const p=D.players.find(x=>x.id===e.id);openForm('Sumar o restar PL',[['d','PL a sumar (usa negativo para restar)*','number']],{d:0},o=>{p.bonus=(+p.bonus||0)+(+o.d||0);touch()})},
+ delp(e){if(!confirm('¿Eliminar este jugador con sus resultados y retos?'))return;D.players=D.players.filter(p=>p.id!==e.id);D.results=D.results.filter(r=>r.p!==e.id);D.duels=D.duels.filter(d=>d.a!==e.id&&d.b!==e.id);S.psel=null;touch()},
+ openp(e){S.psel=e.id;render()},
+ newd(){if(D.players.length<2)return toast('Agrega al menos 2 jugadores primero.');openForm('Nuevo reto',duelF(),{status:'Pendiente'},o=>{D.duels.push({id:uid(),...o});touch()})},
+ editd(e){const d=D.duels.find(x=>x.id===e.id);openForm('Editar reto',duelF(),d,o=>{Object.assign(d,o);touch()})},
+ deld(e){if(!confirm('¿Eliminar este reto?'))return;D.duels=D.duels.filter(d=>d.id!==e.id);touch()},
+ event(){const v=D.event?{...D.event,end:toLocal(D.event.end)}:{};openForm('Evento en vivo',[['title','Título del desafío*'],['sub','Subtítulo (categoría / videojuego)'],['end','Fecha y hora de cierre*','dt'],['cid','Desafío vinculado (opcional)','select',[['','— Ninguno —'],...D.challenges.map(c=>[c.id,c.title])]]],v,o=>{D.event={title:o.title,sub:o.sub,cid:o.cid,start:D.event?D.event.start:Date.now(),end:new Date(o.end).getTime()};touch()})},
+ endevent(){if(confirm('¿Terminar el evento en vivo?')){D.event=null;touch()}}
+};
+const duelF=()=>[['a','Retador*','select',opts()],['b','Retado*','select',opts()],['game','Videojuego*'],['rules','Condiciones del reto','area'],['status','Estado','select',DS],['winner','Ganador','select',[['','— Sin definir —'],...opts()]]];
+document.addEventListener('click',e=>{if(e.target.id==='modal')return closeM();if(e.target.id==='scrim'||e.target.id==='menu'){const o=e.target.id==='menu';$('#sidebar').classList.toggle('open',o);$('#scrim').classList.toggle('open',o);return}
+ const b=e.target.closest('[data-a]');if(b&&act[b.dataset.a])act[b.dataset.a](b.dataset)});
+setInterval(()=>{const c=$('#cd');if(c){c.textContent=cd();$('#cdbar').innerHTML=bar(pct())}},1000);
+setInterval(async()=>{if(!A&&!document.hidden&&!$('#modal').offsetParent){const b=JSON.stringify(D);await load();if(JSON.stringify(D)!==b)render()}},60000);
+window.onbeforeunload=e=>{if(dirty){e.preventDefault();return''}};
+(async()=>{try{const sv=localStorage.getItem('nx_admin');if(sv){A=JSON.parse(sv);await loadAdmin()}}catch(e){A=null}if(!A)await load();render()})();
+</script></body></html>
