@@ -52,7 +52,14 @@
    "rules": "Completa el parkour en menos de 2 minutos"
   }
  ],
- "results": [],
+ "results": [
+  {
+   "p": "mw8xnmv3bkk",
+   "c": "mw8xsd9ecfi",
+   "m": "platino",
+   "at": 1794209398723
+  }
+ ],
  "duels": [
   {
    "id": "mw8xqizgzhx",
@@ -79,5 +86,12 @@
   }
  ],
  "grants": [],
- "videos": []
+ "videos": [
+  {
+   "id": "mw8y21a70vr",
+   "p": "mw8xnmv3bkk",
+   "url": "https://www.youtube.com/watch?v=wyc1ihpcLeY&t=701s",
+   "title": "Reto 1"
+  }
+ ]
 }
