@@ -265,5 +265,6 @@ setInterval(async()=>{if(!A&&!document.hidden&&!$('#modal').offsetParent){const 
 window.onbeforeunload=e=>{if(dirty){e.preventDefault();return''}};
 (async()=>{try{const sv=localStorage.getItem('nx_admin');if(sv){A=JSON.parse(sv);await loadAdmin()}}catch(e){A=null}if(!A)await load();render()})();
 </script></body></html>
+</script></body></html>
 (async()=>{try{const sv=localStorage.getItem('nx_admin');if(sv){A=JSON.parse(sv);await loadAdmin()}}catch(e){A=null}if(!A)await load();render()})();
 </script></body></html>
