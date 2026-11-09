@@ -47,6 +47,7 @@ table{width:100%;border-collapse:collapse;white-space:nowrap;text-align:left}th{
 .vid{display:flex;gap:10px;align-items:center;margin-bottom:12px}.vid a{display:flex;gap:12px;align-items:center;color:inherit;text-decoration:none;flex:1;min-width:0}.vid a:hover .t{color:var(--amber)}
 .vid img,.vid .ph{width:128px;aspect-ratio:16/9;object-fit:cover;flex:none;border:1px solid var(--line);background:#11171b;display:grid;place-items:center;color:var(--amber);font-size:22px}.vid .t{font-weight:700;overflow:hidden}
 .ach{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--c);padding:6px 10px;background:#ffffff06}
+.span{grid-column:1/-1}.cdb b.red{color:var(--red)}
 .mobile-bar,.scrim{display:none}
 @media(max-width:1100px){.card-grid{grid-template-columns:repeat(2,1fr)}.stat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.sidebar{transform:translateX(-100%);transition:transform .2s}.sidebar.open{transform:none}.scrim.open{display:block;position:fixed;inset:0;background:#000b;z-index:25}.mobile-bar{display:flex;justify-content:space-between;align-items:center;background:#101419;border-bottom:1px solid var(--line);padding:13px 18px}.mobile-bar button{background:transparent;border:1px solid var(--line);color:#fff;padding:8px 12px}.main{margin:0;padding:25px 18px 60px}.grid-main{grid-template-columns:1fr}}
@@ -71,13 +72,20 @@ table{width:100%;border-collapse:collapse;white-space:nowrap;text-align:left}th{
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MED={participacion:{n:'Part.',pl:5,xp:15,c:'#a3adb5'},bronce:{n:'Bronce',pl:10,xp:25,c:'#ca906c'},plata:{n:'Plata',pl:20,xp:35,c:'#c6d2da'},oro:{n:'Oro',pl:30,xp:45,c:'#ffc266'},platino:{n:'Platino',pl:40,xp:55,c:'#c7f5f7'}};
 const RANKS=[[0,'Recluta'],[200,'Rival'],[500,'Veterano'],[900,'Élite'],[1400,'Maestro'],[2000,'Leyenda']];
-const RAR={'Común':{c:'#a3adb5'},'Poco común':{c:'#7fd48b'},Rara:{c:'#5aa9ff'},'Épica':{c:'#b57bff'},Legendaria:{c:'#ff9f43'},'Mítica':{c:'#ff5c8a'},Nexus:{c:'#d9b95b'}};
-const rbadge=r=>r==='Nexus'?'<span class="badge nexus">Nexus</span>':`<span class="badge" style="color:${(RAR[r]||RAR['Común']).c}">${esc(r)}</span>`;
+const RAR={'Común':{c:'#a3adb5'},Rara:{c:'#5aa9ff'},'Épica':{c:'#b57bff'},Nexus:{c:'#d9b95b'}};
+const rc=r=>(RAR[r]||RAR['Común']).c;
+const rbadge=r=>r==='Nexus'?'<span class="badge nexus">Nexus</span>':`<span class="badge" style="color:${rc(r)}">${esc(RAR[r]?r:'Común')}</span>`;
 const DIFF=['Fácil','Medio','Difícil'];
+const DR={Extrema:0,'Difícil':1,Medio:2,'Fácil':3};
+const roman=n=>['','I','II','III','IV','V','VI','VII','VIII','IX','X'][n]||String(n);
+const cinfo=c=>[c.game,c.category,c.difficulty].filter(Boolean).map(esc).join(' · ');
+const ccard=(c,x='')=>`<button class="panel card ${x}" data-a="openc" data-id="${c.id}"><div class="row"><span class="mg">${crar(c)}${c.mode?badge(c.mode,'cyan'):''}</span>${badge(c.status,SC[c.status])}</div><h3>${esc(c.title)}</h3><p class="subtle" style="margin:0">${cinfo(c)}<br>Límite: ${lim(c)}</p><strong class="amber mono" style="margin-top:auto">${40+(c.rarity==='Nexus'?+c.bonus||0:0)} PL MÁX.</strong></button>`;
+const arch=a=>D.grants.filter(g=>g.a===a.id).forEach(g=>{const p=D.players.find(x=>x.id===g.p);if(p)(p.hall=p.hall||[]).push({name:a.name,desc:a.desc,rar:a.rar,season:D.season})});
+function place(){[['#cgrid','#cdet'],['#pgrid','#pdet']].forEach(([g,d])=>{const G=$(g),X=$(d);if(!G||!X)return;const cs=[...G.children].filter(x=>x!==X),i=cs.findIndex(x=>x.classList.contains('sel'));if(i<0)return;const cols=getComputedStyle(G).gridTemplateColumns.split(' ').length||1,t=Math.min(cs.length-1,(Math.floor(i/cols)+1)*cols-1);cs[t].after(X)})}
 const C=id=>D.challenges.find(c=>c.id===id);
 const nxb=r=>{const c=C(r.c);return c&&c.rarity==='Nexus'&&r.m!=='participacion'?+c.bonus||0:0};
 const rpl=r=>MED[r.m].pl+nxb(r);
-const duelRes=()=>D.duels.filter(d=>d.m&&dst(d)==='Cumplido'&&MED[d.m]).map(d=>({p:d.b,c:null,m:d.m,at:d.at||0,t:'Reto: '+d.game}));
+const duelRes=()=>D.duels.filter(d=>d.m&&dst(d)==='Cumplido'&&MED[d.m]).map(d=>({p:d.b,c:null,m:d.m,at:d.at||0,t:'Reto: '+(d.game||'sin juego')}));
 const rname=r=>r.t||cname(r.c);
 const crar=c=>c.rarity==='Nexus'?rbadge('Nexus'):badge('Normal','muted');
 const ytId=u=>{const m=String(u).match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);return m&&m[1]};
@@ -100,75 +108,72 @@ function touch(){dirty=true;render()}
 /* ---------- cálculos ---------- */
 function stats(p){const r=[...D.results,...duelRes()].filter(x=>x.p===p.id),s={pl:+p.bonus||0,xp:0,n:{participacion:0,bronce:0,plata:0,oro:0,platino:0},r};
  r.forEach(x=>{const m=MED[x.m];if(m){s.pl+=m.pl+nxb(x);s.xp+=m.xp;s.n[x.m]++}});
+ s.xpRaw=s.xp;s.xp=Math.max(0,s.xp-(+p.xpBase||0));s.prest=+p.prestige||0;
  s.medals=s.n.bronce+s.n.plata+s.n.oro+s.n.platino;let k=0;RANKS.forEach((q,i)=>{if(s.xp>=q[0])k=i});
- s.lvl=k;s.rank=RANKS[k][1];s.from=RANKS[k][0];s.next=RANKS[k+1];return s}
-function ranking(k='PL'){const L=D.players.map(p=>({p,s:stats(p)}));
- const f={PL:(a,b)=>b.s.pl-a.s.pl||b.s.n.platino-a.s.n.platino||b.s.n.oro-a.s.n.oro||b.s.n.plata-a.s.n.plata||b.s.r.length-a.s.r.length,MED:(a,b)=>b.s.medals-a.s.medals||b.s.pl-a.s.pl,XP:(a,b)=>b.s.xp-a.s.xp};
+ s.lvl=k;s.rank=RANKS[k][1];s.from=RANKS[k][0];s.next=RANKS[k+1];s.max=k===RANKS.length-1;return s}
+function ranking(k='PL'){const L=D.players.map(p=>{const s=stats(p);return{p,s,g:nach(p,s)}});
+ const f={PL:(a,b)=>b.s.pl-a.s.pl||b.s.n.platino-a.s.n.platino||b.s.n.oro-a.s.n.oro||b.s.n.plata-a.s.n.plata||b.s.r.length-a.s.r.length,MED:(a,b)=>b.s.medals-a.s.medals||b.s.pl-a.s.pl,XP:(a,b)=>b.s.prest-a.s.prest||b.s.xp-a.s.xp};
  return L.sort(f[k])}
 const lim=c=>c.end?fmt(c.end):esc(c.due||'—');
 const curEvent=()=>D.challenges.filter(c=>c.rarity==='Nexus'&&c.status!=='Finalizado').sort((a,b)=>(a.end||9e15)-(b.end||9e15))[0];
 const left=()=>{const c=curEvent();return c&&c.end?Math.max(0,c.end-Date.now()):0};
-const cd=()=>{const s=Math.floor(left()/1000),v=[Math.floor(s/86400),Math.floor(s%86400/3600),Math.floor(s%3600/60),s%60],l=['DÍAS','HORAS','MIN','SEG'];return v.map((n,i)=>`<span class="cdb"><b>${String(n).padStart(2,'0')}</b><i>${l[i]}</i></span>`).join('')};
+const cd=()=>{const ms=left(),s=Math.floor(ms/1000),u=ms<=864e5,v=[Math.floor(s/86400),Math.floor(s%86400/3600),Math.floor(s%3600/60),s%60],l=['DÍAS','HORAS','MIN','SEG'];return v.map((n,i)=>`<span class="cdb"><b class="${u?'red':''}">${String(n).padStart(2,'0')}</b><i>${l[i]}</i></span>`).join('')};
 const pct=()=>{const c=curEvent();if(!c||!c.end)return 0;const s=c.start||Date.now();return(Date.now()-s)/(c.end-s)*100};
 
 /* ---------- páginas ---------- */
 function hero(){const c=curEvent();
  if(!c)return`<section class="panel hero">${badge('SIN EVENTO NEXUS','cyan')}<h2 class="big mt">Esperando el próximo desafío Nexus</h2><p class="muted">Cuando el admin cree un desafío de rareza Nexus, aparecerá aquí automáticamente con su cuenta regresiva.</p></section>`;
  const st=c.end&&!left()?'Finalizado':c.status==='Disponible'?'En curso':c.status;
- return`<section class="panel hero" style="border-color:#c9b37a"><div class="row"><span class="badge nexus">Evento Nexus</span>${badge(st,'cyan')}</div><p class="eyebrow mt">${esc(c.game)} · ${esc(c.difficulty)}</p><h2 class="big">${esc(c.title)}</h2>
+ return`<section class="panel hero" style="border-color:#c9b37a"><div class="row"><span class="badge nexus">Evento Nexus</span>${badge(st,'cyan')}</div><p class="eyebrow mt">${esc(c.game)} · ${esc(c.difficulty)}${c.mode?' · '+esc(c.mode):''}</p><h2 class="big">${esc(c.title)}</h2>
  <div class="row mt">${c.end?`<div><div class="subtle">TIEMPO RESTANTE</div><div id="cd" class="cdw">${cd()}</div></div>`:'<div class="subtle">Sin fecha de cierre: edita el desafío para activar el contador.</div>'}<span class="mg"><span class="badge amber">+${+c.bonus||0} PL extra</span><button class="btn" data-a="openc" data-id="${c.id}">Ver desafío →</button></span></div>
  ${c.end?`<div class="mt" id="cdbar">${bar(pct())}</div>`:''}</section>`}
-function others(){const L=D.challenges.filter(c=>c.rarity!=='Nexus'&&c.status!=='Finalizado').slice(0,3);if(!L.length)return'';
- return`<section><div class="row mb"><h2 class="section-title" style="margin:0">Más desafíos</h2><button class="btn small ghost" data-a="nav" data-k="desafios">Ver todos →</button></div><div class="card-grid">${L.map(c=>`<button class="panel card" data-a="openc" data-id="${c.id}"><div class="row"><span class="mg">${badge(c.round||'Ronda','cyan')}${crar(c)}</span>${badge(c.status,SC[c.status])}</div><h3>${esc(c.title)}</h3><p class="subtle" style="margin:0">${esc(c.game)} · ${esc(c.category)} · ${esc(c.difficulty)}<br>Límite: ${lim(c)}</p><strong class="amber mono" style="margin-top:auto">40 PL MÁX.</strong></button>`).join('')}</div></section>`}
+function others(){const L=D.challenges.map((c,i)=>[c,i]).filter(x=>x[0].rarity!=='Nexus'&&x[0].status!=='Finalizado').sort((a,b)=>(DR[a[0].difficulty]??9)-(DR[b[0].difficulty]??9)||a[1]-b[1]).slice(0,3).map(x=>x[0]);if(!L.length)return'';
+ return`<section><div class="row mb"><h2 class="section-title" style="margin:0">Más desafíos</h2><button class="btn small ghost" data-a="nav" data-k="desafios">Ver todos →</button></div><div class="card-grid">${L.map(c=>ccard(c)).join('')}</div></section>`}
 function home(){const top=ranking().slice(0,3),last=[...D.results,...duelRes()].sort((a,b)=>b.at-a.at).slice(0,5);
  return`<div class="grid-main"><div class="stack">${hero()}${others()}
  <section class="stat-grid">${stat(D.players.length,'Jugadores')}${stat(D.challenges.length,'Desafíos')}${stat([...D.results,...duelRes()].filter(r=>r.m!=='participacion').length,'Medallas')}${stat(D.duels.length,'Retos')}</section>
  <section class="panel pad"><h2 class="section-title">Top 3 jugadores</h2>${top.length?top.map((x,i)=>`<div class="line"><span class="mono amber">0${i+1}</span><div class="avatar">${esc(x.p.name[0].toUpperCase())}</div><div><strong>${esc(x.p.name)}</strong><div class="subtle">${x.s.rank}</div></div><strong class="mono amber">${x.s.pl} PL</strong></div>`).join(''):'<p class="muted">Aún no hay jugadores.</p>'}</section></div>
  <div class="stack"><section class="panel pad"><h2 class="section-title">Últimos resultados</h2>${last.length?last.map(r=>`<div class="rrow"><span><strong>${esc(pname(r.p))}</strong><br><span class="subtle">${esc(rname(r))}</span></span>${badge(MED[r.m].n+' · +'+rpl(r)+' PL','cyan')}</div>`).join(''):'<p class="muted">Sin resultados todavía.</p>'}</section></div></div>`}
 
-const CF=[['title','Título*'],['game','Videojuego'],['category','Categoría (Habilidad, Velocidad…)'],['rarity','Rareza','select',['Normal','Nexus']],['difficulty','Dificultad (Extrema solo en Nexus)','select',[...DIFF,'Extrema']],['bonus','PL extra al completar (solo Nexus)','number'],['status','Estado','select',['Próximamente','Disponible','Por validar','Finalizado']],['round','Ronda (ej. Ronda 01)'],['end','Fecha y hora de cierre (para el contador)','dt'],['desc','Descripción','area'],['rules','Reglas','area']];
+const CF=[['title','Título*'],['game','Videojuego'],['mode','Modo de juego','select',['Solo','Multijugador']],['category','Categoría (Habilidad, Velocidad…)'],['rarity','Rareza','select',['Normal','Nexus']],['difficulty','Dificultad (Extrema solo en Nexus)','select',[...DIFF,'Extrema']],['bonus','PL extra al completar (solo Nexus)','number'],['status','Estado','select',['Próximamente','Disponible','Por validar','Finalizado']],['end','Fecha y hora de cierre (para el contador)','dt'],['desc','Descripción','area'],['rules','Reglas','area']];
 const SC={Disponible:'amber','Por validar':'cyan',Próximamente:'muted',Finalizado:'red'};
-function detail(){const c=D.challenges.find(x=>x.id===S.sel);if(!c)return'';
+function detail(){const c=C(S.sel);if(!c)return'';
  const rows=D.players.map(p=>{const r=D.results.find(x=>x.p===p.id&&x.c===c.id);
   return`<div class="rrow"><span>${esc(p.name)}</span>${A?`<span class="mg">${Object.keys(MED).map(k=>`<button class="mbtn ${r&&r.m===k?'on':''}" style="--c:${MED[k].c}" data-a="medal" data-p="${p.id}" data-c="${c.id}" data-m="${k}" title="+${MED[k].pl} PL">${MED[k].n}</button>`).join('')}</span>`:(r?badge(MED[r.m].n):'<span class="subtle">—</span>')}</div>`}).join('');
- return`<section class="panel pad mt" style="border-color:#9c7747"><div class="row"><span class="mg">${crar(c)}${badge(c.status,SC[c.status])}</span>${adm(`<span class="mg"><button class="btn small secondary" data-a="editc" data-id="${c.id}">Editar</button><button class="btn small danger" data-a="delc" data-id="${c.id}">Eliminar</button></span>`)}</div>
- <h2 class="mono mt">${esc(c.title)}</h2><p class="muted">${esc(c.game)} · ${esc(c.category)} · ${esc(c.difficulty)} · Límite: ${lim(c)}</p>
+ return`<section id="cdet" class="panel pad span" style="border-color:#9c7747"><div class="row"><span class="mg">${crar(c)}${c.mode?badge(c.mode,'cyan'):''}${badge(c.status,SC[c.status])}</span>${adm(`<span class="mg"><button class="btn small secondary" data-a="editc" data-id="${c.id}">Editar</button><button class="btn small danger" data-a="delc" data-id="${c.id}">Eliminar</button></span>`)}</div>
+ <h2 class="mono mt">${esc(c.title)}</h2><p class="muted">${cinfo(c)} · Límite: ${lim(c)}</p>
  ${c.desc?`<h3>La misión</h3><p>${esc(c.desc)}</p>`:''}${c.rules?`<h3>Reglas</h3><p class="muted">${esc(c.rules)}</p>`:''}
  <div class="mg mb">${['bronce','plata','oro','platino'].map(k=>`<span class="badge" style="color:${MED[k].c}">${MED[k].n} ${MED[k].pl} PL</span>`).join('')}${c.rarity==='Nexus'?`<span class="badge amber">Nexus: +${+c.bonus||0} PL al completar</span>`:''}</div>
  <h3>Resultados${A?' <span class="subtle">(un clic asigna la medalla; otro clic igual la quita)</span>':''}</h3>${rows||'<p class="muted">Agrega jugadores para registrar resultados.</p>'}</section>`}
-function challenges(){const cards=D.challenges.map(c=>`<button class="panel card ${S.sel===c.id?'sel':''}" data-a="openc" data-id="${c.id}"><div class="row"><span class="mg">${badge(c.round||'Ronda','cyan')}${crar(c)}</span>${badge(c.status,SC[c.status])}</div><h3>${esc(c.title)}</h3><p class="subtle" style="margin:0">${esc(c.game)} · ${esc(c.category)} · ${esc(c.difficulty)}<br>Límite: ${lim(c)}</p><strong class="amber mono" style="margin-top:auto">${40+(c.rarity==='Nexus'?+c.bonus||0:0)} PL MÁX.</strong></button>`).join('');
- return adm('<div class="mb"><button class="btn" data-a="newc">+ Nuevo desafío</button></div>')+(cards?`<div class="card-grid">${cards}</div>`:empty('Aún no hay desafíos.'))+detail()}
-
+function challenges(){return adm('<div class="mb"><button class="btn" data-a="newc">+ Nuevo desafío</button></div>')+(D.challenges.length?`<div id="cgrid" class="card-grid">${D.challenges.map(c=>ccard(c,S.sel===c.id?'sel':'')).join('')}${detail()}</div>`:empty('Aún no hay desafíos.'))}
 const DS=['Pendiente','Aceptado','Cumplido','No cumplido'],DC={Cumplido:'cyan','No cumplido':'red',Aceptado:'amber',Pendiente:'muted'},dst=d=>d.status==='Jugado'?'Cumplido':d.status;
 function retos(){const cards=D.duels.map(d=>`<div class="panel card" style="cursor:default"><div class="row">${badge(dst(d),DC[dst(d)]||'muted')}${adm(`<span class="mg"><button class="btn small secondary" data-a="editd" data-id="${d.id}">Editar</button><button class="btn small danger" data-a="deld" data-id="${d.id}">Eliminar</button></span>`)}</div>
- <div class="vs"><span class="cyan">${esc(pname(d.a))}</span> <span class="muted">VS</span> <span class="amber">${esc(pname(d.b))}</span></div><strong>${esc(d.game)}</strong><p class="muted" style="margin:0">${esc(d.rules||'Sin condiciones')}</p>${dst(d)==='Cumplido'&&d.m&&MED[d.m]?`<p style="margin:0">${badge(MED[d.m].n+' · +'+MED[d.m].pl+' PL para '+pname(d.b),'cyan')}</p>`:''}${A?`<span class="mg">${['bronce','plata','oro','platino'].map(k=>`<button class="mbtn ${d.m===k?'on':''}" style="--c:${MED[k].c}" data-a="dmedal" data-id="${d.id}" data-m="${k}" title="Marca el reto como cumplido y da la medalla a ${esc(pname(d.b))}">${MED[k].n}</button>`).join('')}</span>`:''}</div>`).join('');
- return adm('<div class="mb"><button class="btn" data-a="newd">+ Nuevo reto</button></div>')+(cards?`<div class="card-grid">${cards}</div>`:empty('Aún no hay retos publicados.'))}
-
+ <div class="vs"><span class="cyan">${esc(pname(d.a))}</span> <span class="muted">reta a</span> <span class="amber">${esc(pname(d.b))}</span></div><strong>${d.game?esc(d.game):'<span class="muted">Juego por definir</span>'}</strong><p class="muted" style="margin:0">${d.rules?esc(d.rules):'Condiciones por definir'}</p>${dst(d)==='Cumplido'&&d.m&&MED[d.m]?`<p style="margin:0">${badge(MED[d.m].n+' · +'+MED[d.m].pl+' PL para '+pname(d.b),'cyan')}</p>`:''}${A?`<span class="mg">${['bronce','plata','oro','platino'].map(k=>`<button class="mbtn ${d.m===k?'on':''}" style="--c:${MED[k].c}" data-a="dmedal" data-id="${d.id}" data-m="${k}" title="Marca el reto como cumplido y da la medalla a ${esc(pname(d.b))}">${MED[k].n}</button>`).join('')}</span>`:''}</div>`).join('');
+ return adm('<div class="mb mg"><button class="btn" data-a="newd">+ Nuevo reto</button><button class="btn secondary" data-a="randd">🎲 Generar retos aleatorios</button><button class="btn danger" data-a="endround">Cerrar ronda (borrar lista)</button></div>')+(cards?`<div class="card-grid">${cards}</div>`:empty('Aún no hay retos publicados.'))}
 function rankings(){const tabs=[['PL','General (PL)'],['MED','Coleccionistas'],['XP','Experiencia']],L=ranking(S.rtab);
  return`<div class="tabs">${tabs.map(([k,l])=>`<button class="tab ${S.rtab===k?'active':''}" data-a="rtab" data-k="${k}">${l}</button>`).join('')}</div>
- <section class="panel tw">${L.length?`<table><thead><tr><th>Pos.</th><th>Jugador</th><th>Rango</th><th>PL</th><th>Medallas</th><th>XP</th></tr></thead><tbody>${L.map((x,i)=>`<tr><td class="mono amber">#${i+1}</td><td><strong>${esc(x.p.name)}</strong></td><td>${badge(x.s.rank,'cyan')}</td><td class="mono amber">${x.s.pl}</td><td>${x.s.medals}</td><td>${x.s.xp}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Aún no hay jugadores en la clasificación.</div>'}</section>
+ <section class="panel tw">${L.length?`<table><thead><tr><th>Pos.</th><th>Jugador</th><th>Rango</th><th>PL</th><th>Medallas</th><th>Logros</th><th>XP</th></tr></thead><tbody>${L.map((x,i)=>`<tr><td class="mono amber">#${i+1}</td><td><strong>${esc(x.p.name)}</strong></td><td>${badge(x.s.rank,'cyan')}${x.s.prest?' '+badge('Prestigio '+roman(x.s.prest),'red'):''}</td><td class="mono amber">${x.s.pl}</td><td>${x.s.medals}</td><td>${x.g}</td><td>${x.s.xp}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Aún no hay jugadores en la clasificación.</div>'}</section>
  <section class="panel pad mt"><h2 class="section-title">Rangos por XP</h2><div class="mg">${RANKS.map(r=>`<span class="badge cyan">${r[1]} · ${r[0]}+</span>`).join('')}</div></section>`}
-
-const ACH=[['Primer contacto','Participa en tu primer desafío','Común',s=>s.r.length>=1],['Coleccionista','Reúne 10 medallas','Rara',s=>s.medals>=10],['Perfeccionista','Consigue 5 platinos','Épica',s=>s.n.platino>=5],['Racha de oro','Consigue 3 medallas de oro o platino','Legendaria',s=>s.n.oro+s.n.platino>=3]];
+const ACH=[['Primer contacto','Participa en tu primer desafío','Común',s=>s.r.length>=1],['Coleccionista','Reúne 10 medallas','Rara',s=>s.medals>=10],['Perfeccionista','Consigue 5 platinos','Épica',s=>s.n.platino>=5],['Racha de oro','Consigue 3 medallas de oro o platino','Épica',s=>s.n.oro+s.n.platino>=3]];
 const allAch=()=>[...ACH.map((a,i)=>({id:'auto'+i,name:a[0],desc:a[1],rar:a[2],auto:a[3]})),...D.achs];
 const has=(p,a,s)=>a.auto?a.auto(s):D.grants.some(g=>g.p===p.id&&g.a===a.id);
+const nach=(p,s)=>allAch().filter(a=>has(p,a,s)).length+(p.hall||[]).length;
 function logros(){const L=D.players.map(p=>({p,s:stats(p)}));
- return adm('<div class="mb"><button class="btn" data-a="newa">+ Nuevo logro</button></div>')+`<div class="card-grid">${allAch().map(a=>{const n=L.filter(x=>has(x.p,a,x.s)).length;
- return`<div class="panel card" style="cursor:default;border-left:3px solid ${RAR[a.rar].c}"><div class="row"><span style="font-size:24px">🏅</span>${rbadge(a.rar)}</div><h3>${esc(a.name)}</h3><p class="muted" style="margin:0">${esc(a.desc)}</p><p class="subtle" style="margin:0">${n} / ${L.length} jugadores lo han conseguido</p>${a.auto?'<p class="subtle" style="margin:0">Logro automático</p>':adm(`<span class="mg"><button class="btn small secondary" data-a="edita" data-id="${a.id}">Editar</button><button class="btn small danger" data-a="dela" data-id="${a.id}">Eliminar</button></span>`)}</div>`}).join('')}</div>`}
+ return adm(`<div class="mb mg"><button class="btn" data-a="newa">+ Nuevo logro</button>${D.achs.length?'<button class="btn secondary" data-a="clra">Archivar y limpiar logros personalizados</button>':''}</div>`)+`<div class="card-grid">${allAch().map(a=>{const n=L.filter(x=>has(x.p,a,x.s)).length;
+ return`<div class="panel card" style="cursor:default;border-left:3px solid ${rc(a.rar)}"><div class="row"><span style="font-size:24px">🏅</span>${rbadge(a.rar)}</div><h3>${esc(a.name)}</h3><p class="muted" style="margin:0">${esc(a.desc)}</p><p class="subtle" style="margin:0">${n} / ${L.length} jugadores lo han conseguido</p>${a.auto?'<p class="subtle" style="margin:0">Logro automático</p>':adm(`<span class="mg"><button class="btn small secondary" data-a="edita" data-id="${a.id}">Editar</button><button class="btn small danger" data-a="dela" data-id="${a.id}">Eliminar</button></span>`)}</div>`}).join('')}</div>`}
 function pform(p){return[['name','Nombre*']]}
-function profile(){const p=D.players.find(x=>x.id===S.psel);if(!p)return'';const s=stats(p),nx=s.next,mine=allAch().filter(a=>has(p,a,s)),vids=D.videos.filter(v=>v.p===p.id);
+function profile(){const p=D.players.find(x=>x.id===S.psel);if(!p)return'';const s=stats(p),nx=s.next,mine=allAch().filter(a=>has(p,a,s)),hall=p.hall||[],all=[...mine,...hall],vids=D.videos.filter(v=>v.p===p.id);
  const hist=[...s.r].sort((a,b)=>b.at-a.at).map(r=>`<div class="rrow"><span>${esc(rname(r))}</span>${badge(MED[r.m].n+' · +'+rpl(r)+' PL','cyan')}</div>`).join('')||'<p class="muted">Sin resultados todavía.</p>';
  const vh=vids.map(v=>{const y=ytId(v.url);return`<div class="vid"><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${y?`<img src="https://img.youtube.com/vi/${y}/mqdefault.jpg" alt="" loading="lazy">`:'<span class="ph">▶</span>'}<span class="t">${esc(v.title)}</span></a>${adm(`<button class="btn small danger" data-a="delv" data-id="${v.id}" title="Quitar video">✕</button>`)}</div>`}).join('')||'<p class="muted">Aún no hay videos.</p>';
- return`<section class="panel pad mt"><div class="row"><div class="fl"><div class="avatar lg">${esc(p.name[0].toUpperCase())}</div><div><h2 class="mono" style="margin:0 0 6px">${esc(p.name)}</h2>${badge(s.rank)} ${badge('Nivel '+(s.lvl+1),'cyan')}</div></div><strong class="mono amber" style="font-size:25px">${s.pl} PL</strong></div>
- ${adm(`<div class="mg mt"><button class="btn small secondary" data-a="editp" data-id="${p.id}">Renombrar</button><button class="btn small secondary" data-a="plp" data-id="${p.id}">Sumar / restar PL</button><button class="btn small secondary" data-a="addv" data-id="${p.id}">+ Video</button><button class="btn small danger" data-a="delp" data-id="${p.id}">Eliminar</button></div>`)}
- <p class="subtle mt">XP ${s.xp}${nx?` / ${nx[0]} para ${nx[1]}`:' · rango máximo'}${+p.bonus?` · Ajuste manual: ${p.bonus>0?'+':''}${p.bonus} PL`:''}</p>${bar(nx?(s.xp-s.from)/(nx[0]-s.from)*100:100)}
+ return`<section id="pdet" class="panel pad span"><div class="row"><div class="fl"><div class="avatar lg">${esc(p.name[0].toUpperCase())}</div><div><h2 class="mono" style="margin:0 0 6px">${esc(p.name)}</h2>${badge(s.rank)} ${badge('Nivel '+(s.lvl+1),'cyan')}${s.prest?' '+badge('Prestigio '+roman(s.prest),'red'):''}</div></div><strong class="mono amber" style="font-size:25px">${s.pl} PL</strong></div>
+ ${adm(`<div class="mg mt"><button class="btn small secondary" data-a="editp" data-id="${p.id}">Renombrar</button><button class="btn small secondary" data-a="plp" data-id="${p.id}">Sumar / restar PL</button><button class="btn small secondary" data-a="addv" data-id="${p.id}">+ Video</button><button class="btn small secondary" data-a="presti" data-id="${p.id}">Ascender a Prestigio</button><button class="btn small danger" data-a="delp" data-id="${p.id}">Eliminar</button></div>`)}
+ <p class="subtle mt">XP ${s.xp}${nx?` / ${nx[0]} para ${nx[1]}`:' · nivel máximo'}${+p.bonus?` · Ajuste manual: ${p.bonus>0?'+':''}${p.bonus} PL`:''}</p>${bar(nx?(s.xp-s.from)/(nx[0]-s.from)*100:100)}
  <div class="stat-grid mt">${stat(s.n.platino,'Platinos')}${stat(s.n.oro,'Oros')}${stat(s.n.plata,'Platas')}${stat(s.n.bronce,'Bronces')}</div>
- <h3 class="mt">Logros obtenidos</h3>${mine.length?`<div class="mg">${mine.map(a=>`<span class="ach" style="--c:${RAR[a.rar].c}" title="${esc(a.desc)}">${rbadge(a.rar)}<strong>${esc(a.name)}</strong></span>`).join('')}</div>`:'<p class="muted">Aún no tiene logros.</p>'}
- ${A&&D.achs.length?`<p class="subtle mt">Otorgar o quitar logros personalizados (un clic):</p><div class="mg">${D.achs.map(a=>`<button class="mbtn ${D.grants.some(g=>g.p===p.id&&g.a===a.id)?'on':''}" style="--c:${RAR[a.rar].c}" data-a="grant" data-p="${p.id}" data-g="${a.id}">${esc(a.name)}</button>`).join('')}</div>`:''}
+ <h3 class="mt">Logros obtenidos (${all.length})</h3>${all.length?`<div class="mg">${all.map(a=>`<span class="ach" style="--c:${rc(a.rar)}" title="${esc(a.desc||'')}${a.season?' · '+esc(a.season):''}">${rbadge(a.rar)}<strong>${esc(a.name)}</strong></span>`).join('')}</div>`:'<p class="muted">Aún no tiene logros.</p>'}
+ ${A&&D.achs.length?`<p class="subtle mt">Otorgar o quitar logros personalizados (un clic):</p><div class="mg">${D.achs.map(a=>`<button class="mbtn ${D.grants.some(g=>g.p===p.id&&g.a===a.id)?'on':''}" style="--c:${rc(a.rar)}" data-a="grant" data-p="${p.id}" data-g="${a.id}">${esc(a.name)}</button>`).join('')}</div>`:''}
  <div class="g2 mt"><div><h3>Videos de retos</h3>${vh}</div><div><h3>Historial</h3>${hist}</div></div></section>`}
 function jugadores(){const L=ranking();
- return adm('<div class="mb"><button class="btn" data-a="newp">+ Nuevo jugador</button></div>')+(L.length?`<div class="card-grid">${L.map(x=>`<button class="panel card ${S.psel===x.p.id?'sel':''}" data-a="openp" data-id="${x.p.id}" style="min-height:110px"><div class="fl"><div class="avatar">${esc(x.p.name[0].toUpperCase())}</div><div><h3>${esc(x.p.name)}</h3><span class="subtle">${x.s.rank}</span></div></div><strong class="mono amber" style="margin-top:auto">${x.s.pl} PL · ${x.s.medals} medallas</strong></button>`).join('')}</div>`:empty('Aún no hay jugadores.'))+profile()}
-
+ return adm('<div class="mb"><button class="btn" data-a="newp">+ Nuevo jugador</button></div>')+(L.length?`<div id="pgrid" class="card-grid">${L.map(x=>`<button class="panel card ${S.psel===x.p.id?'sel':''}" data-a="openp" data-id="${x.p.id}" style="min-height:110px"><div class="fl"><div class="avatar">${esc(x.p.name[0].toUpperCase())}</div><div><h3>${esc(x.p.name)}</h3><span class="subtle">${x.s.rank}${x.s.prest?' · Prestigio '+roman(x.s.prest):''}</span></div></div><strong class="mono amber" style="margin-top:auto">${x.s.pl} PL · ${x.s.medals} medallas · ${x.g} logros</strong></button>`).join('')}${profile()}</div>`:empty('Aún no hay jugadores.'))}
 function historial(){const L=[...D.results,...duelRes()].sort((a,b)=>b.at-a.at);
  return`<section class="panel pad"><h2 class="section-title">Registro de actividad · ${esc(D.season)}</h2>${L.length?L.map(r=>`<div class="rrow"><span><strong>${esc(pname(r.p))}</strong> · ${esc(rname(r))}<br><span class="subtle">${fmt(r.at)}</span></span>${badge(MED[r.m].n+' · +'+rpl(r)+' PL','cyan')}</div>`).join(''):'<p class="muted">Todavía no hay actividad registrada.</p>'}</section>`}
 const PAGES={inicio:home,desafios:challenges,retos,rankings,logros,jugadores,historial};
@@ -178,7 +183,7 @@ function render(){const t=T[S.page];$('#crumb').textContent=`${t[0]} / ${D.seaso
  $('#mode').textContent=A?'● MODO ADMIN':'● SISTEMA ACTIVO';$('#mode').className='badge '+(A?'amber':'cyan');
  $('#nav').innerHTML=Object.keys(T).map(k=>`<button class="nav ${S.page===k?'active':''}" data-a="nav" data-k="${k}">${T[k][1][0]+T[k][1].slice(1).toLowerCase()}</button>`).join('');
  $('#side').innerHTML=`<span class="badge amber" style="text-align:center">${esc(D.season.toUpperCase())}</span>`+(A?`<button class="btn small" data-a="publish">Publicar cambios${dirty?' ●':''}</button><button class="btn small secondary" data-a="dl">Descargar data.json</button><button class="btn small ghost" data-a="settings">Ajustes</button><button class="btn small ghost" data-a="logout">Cerrar sesión</button>`:`<button class="btn small ghost" data-a="login">Acceso admin</button>`);
- $('#screen').innerHTML=PAGES[S.page]()}
+ $('#screen').innerHTML=PAGES[S.page]();place()}
 function closeM(){$('#modal').classList.add('hidden')}
 const toLocal=ms=>new Date(ms-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,16);
 function openForm(title,fields,vals,cb){const f=$('#mform');
@@ -209,8 +214,8 @@ const act={
  logout(){if(dirty&&!confirm('Hay cambios sin publicar. ¿Cerrar sesión de todos modos?'))return;A=null;dirty=false;localStorage.removeItem('nx_admin');load().then(render)},
  publish,dl:download,
  settings(){openForm('Ajustes',[['season','Nombre de la temporada*']],D,o=>{D.season=o.season;touch()})},
- openc(e){S.page='desafios';S.sel=e.id;render()},
- newc(){openForm('Nuevo desafío',CF,{rarity:'Normal',difficulty:'Medio',bonus:20,status:'Próximamente'},o=>{o.end=o.end?new Date(o.end).getTime():0;D.challenges.push({id:uid(),start:Date.now(),...o});touch()});bindRarity()},
+ openc(e){const same=S.page==='desafios'&&S.sel===e.id;S.page='desafios';S.sel=same?null:e.id;render();if(S.sel)$('#cdet')?.scrollIntoView({block:'nearest',behavior:'smooth'})},
+ newc(){openForm('Nuevo desafío',CF,{mode:'Solo',rarity:'Normal',difficulty:'Medio',bonus:20,status:'Próximamente'},o=>{o.end=o.end?new Date(o.end).getTime():0;D.challenges.push({id:uid(),start:Date.now(),...o});touch()});bindRarity()},
  editc(e){const c=D.challenges.find(x=>x.id===e.id);openForm('Editar desafío',CF,{...c,end:c.end?toLocal(c.end):''},o=>{o.end=o.end?new Date(o.end).getTime():0;Object.assign(c,o);touch()});bindRarity()},
  delc(e){if(!confirm('¿Eliminar este desafío y sus resultados?'))return;D.challenges=D.challenges.filter(c=>c.id!==e.id);D.results=D.results.filter(r=>r.c!==e.id);S.sel=null;touch()},
  medal(e){const i=D.results.findIndex(r=>r.p===e.p&&r.c===e.c);if(i>=0&&D.results[i].m===e.m)D.results.splice(i,1);else if(i>=0)Object.assign(D.results[i],{m:e.m,at:Date.now()});else D.results.push({p:e.p,c:e.c,m:e.m,at:Date.now()});touch()},
@@ -218,22 +223,27 @@ const act={
  editp(e){const p=D.players.find(x=>x.id===e.id);openForm('Renombrar jugador',[['name','Nombre*']],p,o=>{p.name=o.name.trim();touch()})},
  plp(e){const p=D.players.find(x=>x.id===e.id);openForm('Sumar o restar PL',[['d','PL a sumar (usa negativo para restar)*','number']],{d:0},o=>{p.bonus=(+p.bonus||0)+(+o.d||0);touch()})},
  delp(e){if(!confirm('¿Eliminar este jugador con sus resultados y retos?'))return;D.players=D.players.filter(p=>p.id!==e.id);D.results=D.results.filter(r=>r.p!==e.id);D.duels=D.duels.filter(d=>d.a!==e.id&&d.b!==e.id);D.grants=D.grants.filter(g=>g.p!==e.id);D.videos=D.videos.filter(v=>v.p!==e.id);S.psel=null;touch()},
- openp(e){S.psel=e.id;render()},
+ openp(e){S.psel=S.psel===e.id?null:e.id;render();if(S.psel)$('#pdet')?.scrollIntoView({block:'nearest',behavior:'smooth'})},
  newd(){if(D.players.length<2)return toast('Agrega al menos 2 jugadores primero.');openForm('Nuevo reto',duelF(),{status:'Pendiente'},o=>{D.duels.push({id:uid(),at:Date.now(),...o});touch()})},
  editd(e){const d=D.duels.find(x=>x.id===e.id);openForm('Editar reto',duelF(),d,o=>{Object.assign(d,o);touch()})},
  deld(e){if(!confirm('¿Eliminar este reto?'))return;D.duels=D.duels.filter(d=>d.id!==e.id);touch()},
  newa(){openForm('Nuevo logro',AF,{rar:'Común'},o=>{D.achs.push({id:uid(),...o});touch()})},
  edita(e){const a=D.achs.find(x=>x.id===e.id);openForm('Editar logro',AF,a,o=>{Object.assign(a,o);touch()})},
- dela(e){if(!confirm('¿Eliminar este logro? Se quitará a todos los jugadores.'))return;D.achs=D.achs.filter(a=>a.id!==e.id);D.grants=D.grants.filter(g=>g.a!==e.id);touch()},
+ dela(e){const a=D.achs.find(x=>x.id===e.id);if(!confirm('¿Eliminar este logro? Los jugadores que lo tienen conservarán su insignia en el perfil.'))return;arch(a);D.achs=D.achs.filter(x=>x.id!==e.id);D.grants=D.grants.filter(g=>g.a!==e.id);touch()},
+ clra(){if(!confirm('¿Archivar y eliminar todos los logros personalizados? Cada jugador conserva los que ya ganó.'))return;D.achs.forEach(arch);D.achs=[];D.grants=[];touch()},
  grant(e){const i=D.grants.findIndex(g=>g.p===e.p&&g.a===e.g);if(i>=0)D.grants.splice(i,1);else D.grants.push({p:e.p,a:e.g});touch()},
  addv(e){openForm('Agregar video de reto',[['url','Enlace del video*','url'],['title','Título (vacío = se intenta obtener de YouTube)']],{},async o=>{if(!/^https?:\/\//i.test(o.url))return toast('El enlace debe empezar con http:// o https://');let t=o.title.trim();if(!t){try{const r=await fetch('https://www.youtube.com/oembed?format=json&url='+encodeURIComponent(o.url));if(r.ok)t=(await r.json()).title}catch(x){}}D.videos.push({id:uid(),p:e.id,url:o.url.trim(),title:t||'Video del reto'});touch()})},
  delv(e){D.videos=D.videos.filter(v=>v.id!==e.id);touch()},
  dmedal(e){const d=D.duels.find(x=>x.id===e.id);if(d.m===e.m)d.m='';else{d.m=e.m;d.status='Cumplido';d.at=Date.now()}touch()},
+ presti(e){const p=D.players.find(x=>x.id===e.id),s=stats(p);if(!s.max)return toast('Solo se puede ascender al llegar al nivel máximo (Leyenda, 2,000 XP).');if(!confirm('¿Reiniciar la XP de '+p.name+' y activar Prestigio '+roman(s.prest+1)+'?'))return;p.xpBase=s.xpRaw;p.prestige=s.prest+1;touch()},
+ randd(){const n=D.players.length;if(n<2)return toast('Agrega al menos 2 jugadores primero.');if(D.duels.length&&!confirm('Ya hay retos en la lista; se agregarán '+n+' más. ¿Continuar?'))return;const ids=D.players.map(p=>p.id);for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ids[i],ids[j]]=[ids[j],ids[i]]}ids.forEach((id,i)=>D.duels.push({id:uid(),at:Date.now(),a:id,b:ids[(i+1)%n],game:'',rules:'',status:'Pendiente',m:''}));touch();toast('Se generaron '+n+' retos. Edita cada uno para poner el juego y las condiciones.')},
+ endround(){if(!D.duels.length)return;if(!confirm('¿Cerrar la ronda y borrar la lista de retos? Las medallas ganadas se conservan.'))return;D.results.push(...duelRes());D.duels=[];touch()}
 };
 const AF=[['name','Nombre del logro*'],['desc','Descripción','area'],['rar','Rareza','select',Object.keys(RAR)]];
-const duelF=()=>[['a','Retador*','select',opts()],['b','Retado*','select',opts()],['game','Videojuego*'],['rules','Condiciones del reto','area'],['status','¿Lo cumplió?','select',DS],['m','Medalla (si lo cumplió)','select',[['','— Sin medalla —'],...['bronce','plata','oro','platino'].map(k=>[k,MED[k].n])]]];
+const duelF=()=>[['a','Retador (quien reta)*','select',opts()],['b','Retado (quien cumple el reto)*','select',opts()],['game','Juego del reto*'],['rules','Condiciones (lo que debe cumplir)','area'],['status','¿Lo cumplió?','select',DS],['m','Medalla (si lo cumplió)','select',[['','— Sin medalla —'],...['bronce','plata','oro','platino'].map(k=>[k,MED[k].n])]]];
 document.addEventListener('click',e=>{if(e.target.id==='modal')return closeM();if(e.target.id==='scrim'||e.target.id==='menu'){const o=e.target.id==='menu';$('#sidebar').classList.toggle('open',o);$('#scrim').classList.toggle('open',o);return}
  const b=e.target.closest('[data-a]');if(b&&act[b.dataset.a])act[b.dataset.a](b.dataset)});
+window.addEventListener('resize',place);
 setInterval(()=>{const c=$('#cd');if(c){c.innerHTML=cd();$('#cdbar').innerHTML=bar(pct())}},1000);
 setInterval(async()=>{if(!A&&!document.hidden&&!$('#modal').offsetParent){const b=JSON.stringify(D);await load();if(JSON.stringify(D)!==b)render()}},60000);
 window.onbeforeunload=e=>{if(dirty){e.preventDefault();return''}};
