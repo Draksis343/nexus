@@ -55,9 +55,27 @@
   }
  ],
  "results": [],
- "duels": [],
+ "duels": [
+  {
+   "id": "mw8yed3tfrx",
+   "at": 1794210151385,
+   "a": "mw8ycp11zhb",
+   "b": "mw8ycwnrc3z",
+   "game": "Helldivers",
+   "rules": "Si",
+   "status": "Aceptado",
+   "m": ""
+  }
+ ],
  "event": null,
- "achs": [],
+ "achs": [
+  {
+   "id": "mw8ydyk3hl6",
+   "name": "Prestigioso",
+   "desc": "Gana una temporada en el 1er lugar",
+   "rar": "Nexus"
+  }
+ ],
  "grants": [],
  "videos": [
   {
