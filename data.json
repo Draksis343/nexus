@@ -1,0 +1,83 @@
+{
+ "season": "Temporada 01",
+ "players": [
+  {
+   "id": "mw8xnmv3bkk",
+   "name": "Draksis",
+   "bonus": 0
+  },
+  {
+   "id": "mw8xns1iytt",
+   "name": "Darkplayer97",
+   "bonus": 0
+  },
+  {
+   "id": "mw8xnw3mgr5",
+   "name": "Akiaseru",
+   "bonus": 0
+  },
+  {
+   "id": "mw8xo0qutxl",
+   "name": "TheRoggerXD",
+   "bonus": 0
+  }
+ ],
+ "challenges": [
+  {
+   "id": "mw8xsd9ecfi",
+   "title": "The trials",
+   "game": "The Outlast Trial",
+   "category": "Supervivencia",
+   "rarity": "Nexus",
+   "difficulty": "Extrema",
+   "bonus": "20",
+   "status": "Disponible",
+   "round": "1",
+   "due": "15 de noviembre",
+   "desc": "Sobrevivirías al loquero tu solo? DEMUESTRALO",
+   "rules": "Cumple una misión en dificultad difícil TU SOLO. No se permite el uso de guías ni tutoriales."
+  },
+  {
+   "id": "mw8xu2a474k",
+   "title": "Cubico",
+   "game": "Minecradft",
+   "category": "Speedrun",
+   "rarity": "Normal",
+   "difficulty": "Medio",
+   "bonus": "10",
+   "status": "Próximamente",
+   "round": "1",
+   "due": "15 de noviembre",
+   "desc": "Sabes lo que es el parkour?",
+   "rules": "Completa el parkour en menos de 2 minutos"
+  }
+ ],
+ "results": [],
+ "duels": [
+  {
+   "id": "mw8xqizgzhx",
+   "a": "mw8xnmv3bkk",
+   "b": "mw8xns1iytt",
+   "game": "Helldivers",
+   "rules": "Completar una misión en dificultad EXTREMA cumpliendo con todos los objetivos principales y secundarios",
+   "status": "Aceptado"
+  }
+ ],
+ "event": {
+  "title": "sas",
+  "sub": "asa",
+  "cid": "mw8xu2a474k",
+  "start": 1794209304867,
+  "end": 1794727680000
+ },
+ "achs": [
+  {
+   "id": "mw8xnenlst2",
+   "name": "Prestigioso",
+   "desc": "Gana una temporada",
+   "rar": "Nexus"
+  }
+ ],
+ "grants": [],
+ "videos": []
+}
