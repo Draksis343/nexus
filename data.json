@@ -1,0 +1,70 @@
+{
+ "season": "Temporada 01",
+ "players": [
+  {
+   "id": "mw8ycp11zhb",
+   "name": "Draksis",
+   "bonus": 0
+  },
+  {
+   "id": "mw8ycwnrc3z",
+   "name": "Darkplayer97",
+   "bonus": 0
+  },
+  {
+   "id": "mw8yd230hzp",
+   "name": "Akiaseru",
+   "bonus": 0
+  },
+  {
+   "id": "mw8yd6f9vkg",
+   "name": "TheRoggerXD",
+   "bonus": 0
+  }
+ ],
+ "challenges": [
+  {
+   "id": "mw8yarg0jz7",
+   "start": 1794209983344,
+   "title": "The Trials",
+   "game": "The Outlast Trial",
+   "category": "Supervivencia",
+   "rarity": "Nexus",
+   "difficulty": "Extrema",
+   "bonus": "50",
+   "status": "Disponible",
+   "round": "1",
+   "end": 1794728340000,
+   "desc": "Termina",
+   "rules": "Sin trampas"
+  },
+  {
+   "id": "mw8ycd2ocz6",
+   "start": 1794210058032,
+   "title": "Cubico",
+   "game": "Minecraft",
+   "category": "Speedrun",
+   "rarity": "Normal",
+   "difficulty": "Difícil",
+   "bonus": "38",
+   "status": "Próximamente",
+   "round": "1",
+   "end": 1794728400000,
+   "desc": "Termina el juego lo más rápido que puedas en una seción",
+   "rules": "No se permite el uso de mods"
+  }
+ ],
+ "results": [],
+ "duels": [],
+ "event": null,
+ "achs": [],
+ "grants": [],
+ "videos": [
+  {
+   "id": "mw8ydfvs71d",
+   "p": "mw8ycp11zhb",
+   "url": "https://www.youtube.com/watch?v=wyc1ihpcLeY&t=701s",
+   "title": "Reto 1"
+  }
+ ]
+}
