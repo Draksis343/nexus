@@ -255,16 +255,83 @@ const act={
  endround(){if(!D.duels.length)return;if(!confirm('¿Cerrar la ronda y borrar la lista de retos? Las medallas ganadas se conservan.'))return;D.results.push(...duelRes());D.duels=[];touch()},
  theme(){openForm('Tema de la interfaz',[['preset','Plantilla (si eliges una, se ignoran los colores de abajo)','select',[['','— Personalizado —'],['original','Original'],['navidad','Navidad ❄'],['halloween','Halloween 🎃']]],['bg','Fondo','color'],['p1','Paneles y tarjetas','color'],['side','Barra lateral','color'],['amber','Acento principal','color'],['cyan','Acento secundario','color'],['red','Alerta (rojo)','color'],['text','Texto','color'],['fx','Partículas de fondo','select',[['','Ninguna'],['snow','Nieve ❄'],['embers','Chispas ✨']]],['frost','Escarcha en los bordes','select',[['0','No'],['1','Sí']]]],{...THEMES.original,...(D.theme||{}),preset:''},o=>{D.theme=o.preset?{...THEMES[o.preset]}:(({preset,...r})=>r)(o);touch()})}
 };
-const AF=[['name','Nombre del logro*'],['desc','Descripción','area'],['rar','Rareza','select',Object.keys(RAR)]];
-const duelF=()=>[['a','Retador (quien reta)*','select',opts()],['b','Retado (quien cumple el reto)*','select',opts()],['game','Juego del reto*'],['rules','Condiciones (lo que debe cumplir)','area'],['status','¿Lo cumplió?','select',DS],['m','Medalla (si lo cumplió)','select',[['','— Sin medalla —'],...['bronce','plata','oro','platino'].map(k=>[k,MED[k].n])]]];
-document.addEventListener('click',e=>{if(e.target.id==='modal')return closeM();if(e.target.id==='scrim'||e.target.id==='menu'){const o=e.target.id==='menu';$('#sidebar').classList.toggle('open',o);$('#scrim').classList.toggle('open',o);return}
- const b=e.target.closest('[data-a]');if(b&&act[b.dataset.a])act[b.dataset.a](b.dataset)});
-window.addEventListener('resize',()=>{place();const c=$('#fx');c.width=innerWidth;c.height=innerHeight});
-setInterval(()=>{const c=$('#cd');if(c){c.innerHTML=cd();$('#cdbar').innerHTML=bar(pct())}},1000);
-setInterval(async()=>{if(!A&&!document.hidden&&!$('#modal').offsetParent){const b=JSON.stringify(D);await load();if(JSON.stringify(D)!==b)render()}},60000);
-window.onbeforeunload=e=>{if(dirty){e.preventDefault();return''}};
-(async()=>{try{const sv=localStorage.getItem('nx_admin');if(sv){A=JSON.parse(sv);await loadAdmin()}}catch(e){A=null}if(!A)await load();render()})();
-</script></body></html>
-</script></body></html>
-(async()=>{try{const sv=localStorage.getItem('nx_admin');if(sv){A=JSON.parse(sv);await loadAdmin()}}catch(e){A=null}if(!A)await load();render()})();
-</script></body></html>
+const AF=[
+  ['name','Nombre del logro*'],
+  ['desc','Descripción','area'],
+  ['rar','Rareza','select',Object.keys(RAR)]
+];
+
+const duelF=()=>[
+  ['a','Retador (quien reta)*','select',opts()],
+  ['b','Retado (quien cumple el reto)*','select',opts()],
+  ['game','Juego del reto*'],
+  ['rules','Condiciones (lo que debe cumplir)','area'],
+  ['status','¿Lo cumplió?','select',DS],
+  ['m','Medalla (si lo cumplió)','select',[
+    ['','— Sin medalla —'],
+    ...['bronce','plata','oro','platino'].map(k=>[k,MED[k].n])
+  ]]
+];
+
+document.addEventListener('click',e=>{
+  if(e.target.id==='modal')return closeM();
+
+  if(e.target.id==='scrim'||e.target.id==='menu'){
+    const o=e.target.id==='menu';
+    $('#sidebar').classList.toggle('open',o);
+    $('#scrim').classList.toggle('open',o);
+    return;
+  }
+
+  const b=e.target.closest('[data-a]');
+  if(b&&act[b.dataset.a])act[b.dataset.a](b.dataset);
+});
+
+window.addEventListener('resize',()=>{
+  place();
+  const c=$('#fx');
+  c.width=innerWidth;
+  c.height=innerHeight;
+});
+
+setInterval(()=>{
+  const c=$('#cd');
+  if(c){
+    c.innerHTML=cd();
+    $('#cdbar').innerHTML=bar(pct());
+  }
+},1000);
+
+setInterval(async()=>{
+  if(!A&&!document.hidden&&!$('#modal').offsetParent){
+    const b=JSON.stringify(D);
+    await load();
+    if(JSON.stringify(D)!==b)render();
+  }
+},60000);
+
+window.onbeforeunload=e=>{
+  if(dirty){
+    e.preventDefault();
+    return '';
+  }
+};
+
+(async()=>{
+  try{
+    const sv=localStorage.getItem('nx_admin');
+    if(sv){
+      A=JSON.parse(sv);
+      await loadAdmin();
+    }
+  }catch(e){
+    A=null;
+  }
+
+  if(!A)await load();
+  render();
+})();
+
+ </script>
+</body>
+</html>
