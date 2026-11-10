@@ -39,6 +39,22 @@
    "end": 1794729060000,
    "desc": "Derrotar a un monstruo curtido de <b><font color=\"#ffc670\">RM</font></b>",
    "rules": "<p>Objetivos secundarios</p><ul><li><p>No utilizar más de <b><font color=\"#f3b14f\">3 pociones.</font></b></p></li><li><p><b><font color=\"#fdc572\">No desmayarse</font></b> durante la cacería.</p></li><li><p>Completar la cacería en menos de <b><font color=\"#fbc574\">20 minutos</font></b>.</p></li></ul><p>Condición de excelencia</p><p>- Derrotar al monstruo sin recibir ningún desmayo y en menos de 15 minutos.</p>"
+  },
+  {
+   "id": "mwaf36vsdxy",
+   "start": 1794298649752,
+   "title": "Hee",
+   "game": "Helldivers",
+   "mode": "Solo",
+   "category": "Habilidad",
+   "rarity": "Normal",
+   "difficulty": "Medio",
+   "bonus": "20",
+   "status": "Próximamente",
+   "round": "1",
+   "end": 1794557820000,
+   "desc": "asa",
+   "rules": "as"
   }
  ],
  "results": [
