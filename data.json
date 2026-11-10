@@ -23,91 +23,9 @@
    "bonus": 0
   }
  ],
- "challenges": [
-  {
-   "id": "mwae716n7qz",
-   "start": 1794297149375,
-   "title": "Cazador impecable",
-   "game": "Monster Hunter World",
-   "mode": "Solo",
-   "category": "Combate",
-   "rarity": "Nexus",
-   "difficulty": "Extrema",
-   "bonus": "50",
-   "status": "Próximamente",
-   "round": "1",
-   "end": 1794729060000,
-   "desc": "Derrotar a un monstruo curtido de <b><font color=\"#ffc670\">RM</font></b>",
-   "rules": "<p>Objetivos secundarios</p><ul><li><p>No utilizar más de <b><font color=\"#f3b14f\">3 pociones.</font></b></p></li><li><p><b><font color=\"#fdc572\">No desmayarse</font></b> durante la cacería.</p></li><li><p>Completar la cacería en menos de <b><font color=\"#fbc574\">20 minutos</font></b>.</p></li></ul><p>Condición de excelencia</p><p>- Derrotar al monstruo sin recibir ningún desmayo y en menos de 15 minutos.</p>"
-  },
-  {
-   "id": "mwaf36vsdxy",
-   "start": 1794298649752,
-   "title": "Hee",
-   "game": "Helldivers",
-   "mode": "Solo",
-   "category": "Habilidad",
-   "rarity": "Normal",
-   "difficulty": "Medio",
-   "bonus": "20",
-   "status": "Próximamente",
-   "round": "1",
-   "end": 1794557820000,
-   "desc": "asa",
-   "rules": "as"
-  }
- ],
- "results": [
-  {
-   "p": "mw8ycp11zhb",
-   "c": "mwae716n7qz",
-   "m": "platino",
-   "at": 1794297298556,
-   "s": "Temporada 0 - La prueba del Nexus"
-  }
- ],
- "duels": [
-  {
-   "id": "mwae8l3wfao",
-   "at": 1794297221852,
-   "a": "mw8ycwnrc3z",
-   "b": "mw8ycp11zhb",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwae8l3wmvo",
-   "at": 1794297221852,
-   "a": "mw8ycp11zhb",
-   "b": "mw8yd6f9vkg",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwae8l3wjha",
-   "at": 1794297221852,
-   "a": "mw8yd6f9vkg",
-   "b": "mw8yd230hzp",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwae8l3w7j0",
-   "at": 1794297221852,
-   "a": "mw8yd230hzp",
-   "b": "mw8ycwnrc3z",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  }
- ],
+ "challenges": [],
+ "results": [],
+ "duels": [],
  "event": null,
  "achs": [
   {
@@ -117,12 +35,7 @@
    "rar": "Nexus"
   }
  ],
- "grants": [
-  {
-   "p": "mw8ycp11zhb",
-   "a": "mw8ydyk3hl6"
-  }
- ],
+ "grants": [],
  "videos": [
   {
    "id": "mw8ydfvs71d",
