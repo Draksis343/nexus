@@ -23,9 +23,119 @@
    "bonus": 0
   }
  ],
- "challenges": [],
+ "challenges": [
+  {
+   "id": "mwb5gb1c10t",
+   "start": 1794342931680,
+   "title": "The Last Hunt",
+   "game": "Elden Ring",
+   "mode": "Solo",
+   "category": "Supervivencia",
+   "rarity": "Nexus",
+   "difficulty": "Extrema",
+   "bonus": "20",
+   "slots": 5,
+   "status": "Próximamente",
+   "round": "1",
+   "desc": "aa",
+   "rules": "aaa",
+   "end": 0
+  },
+  {
+   "id": "mwb5hnvjf26",
+   "start": 1794342994975,
+   "title": "Cubic",
+   "game": "Minecraft",
+   "mode": "Solo",
+   "category": "Velocidad",
+   "rarity": "Reliquia",
+   "difficulty": "Difícil",
+   "bonus": "20",
+   "slots": 5,
+   "status": "Disponible",
+   "round": "1",
+   "end": 1794688560000,
+   "desc": "Parkour",
+   "rules": "Yes"
+  },
+  {
+   "id": "mwb5nw6ht13",
+   "start": 1794343285673,
+   "title": "Prueba",
+   "game": "Prueba",
+   "mode": "Multijugador",
+   "category": "Habilidad",
+   "rarity": "Común",
+   "difficulty": "Medio",
+   "bonus": "20",
+   "slots": 5,
+   "status": "Disponible",
+   "round": "1",
+   "end": 1794688860000,
+   "desc": "Prueba",
+   "rules": "Prueba"
+  },
+  {
+   "id": "mwb5q5amnhn",
+   "start": 1794343390798,
+   "title": "Prueba 2",
+   "game": "Prueba 2",
+   "mode": "Solo",
+   "category": "Supervivencia",
+   "rarity": "Épica",
+   "difficulty": "Medio",
+   "bonus": "20",
+   "slots": 5,
+   "status": "Próximamente",
+   "round": "1",
+   "end": 1794688920000,
+   "desc": "Prueba 2",
+   "rules": "Prueba 2"
+  }
+ ],
  "results": [],
- "duels": [],
+ "duels": [
+  {
+   "id": "mwb5jui57k0",
+   "at": 1794343096877,
+   "a": "mw8yd230hzp",
+   "b": "mw8ycwnrc3z",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwb5jui5u0w",
+   "at": 1794343096877,
+   "a": "mw8ycwnrc3z",
+   "b": "mw8ycp11zhb",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwb5jui5v3u",
+   "at": 1794343096877,
+   "a": "mw8ycp11zhb",
+   "b": "mw8yd6f9vkg",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwb5jui5f3t",
+   "at": 1794343096877,
+   "a": "mw8yd6f9vkg",
+   "b": "mw8yd230hzp",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  }
+ ],
  "event": null,
  "achs": [
   {
@@ -33,6 +143,13 @@
    "name": "Prestigioso",
    "desc": "Gana una temporada en el 1er lugar",
    "rar": "Nexus"
+  },
+  {
+   "id": "mwb5l1efstb",
+   "name": "Implacable",
+   "desc": "Se uno de los primeros 5 en culminar el evento nexus",
+   "rar": "Reliquia",
+   "max": 5
   }
  ],
  "grants": [],
