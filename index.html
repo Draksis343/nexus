@@ -40,7 +40,7 @@ table{width:100%;border-collapse:collapse;white-space:nowrap;text-align:left}th{
 .empty{padding:28px;text-align:center;color:var(--muted)}.vs{font-family:'Space Mono';font-size:17px}
 .field{width:100%;background:var(--p2);color:var(--text);border:1px solid #4d5960;padding:10px 12px;min-height:43px;margin-top:5px}
 .modal{position:fixed;inset:0;background:#000c;z-index:50;display:grid;place-items:center;padding:16px;overflow:auto}.modal form{width:min(520px,100%);padding:24px;background:var(--p2)}.modal label{display:block;margin-bottom:12px;font-size:12px;color:var(--muted)}
-.toast{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--p1);border:1px solid var(--cyan);padding:13px 18px;max-width:340px}
+.toast{position:fixed;right:20px;bottom:68px;z-index:60;background:var(--p1);border:1px solid var(--cyan);padding:13px 18px;max-width:340px}
 .badge.nexus{color:transparent;background:linear-gradient(90deg,#aab2b9,#f0c75e);-webkit-background-clip:text;background-clip:text;border-color:#c9b37a}
 .cdw{display:flex;gap:16px}.cdb{text-align:center}.cdb b{display:block;font-family:'Space Mono';font-size:clamp(25px,3vw,40px);color:var(--amber)}.cdb i{font-style:normal;font-size:10px;letter-spacing:.14em;color:var(--muted)}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
@@ -50,7 +50,16 @@ table{width:100%;border-collapse:collapse;white-space:nowrap;text-align:left}th{
 #fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:35}
 .frost .panel{box-shadow:0 16px 35px #0005,inset 0 1px 0 #ffffff55,inset 0 0 26px #bfe6ff14}
 .frost .panel:before{content:"";position:absolute;left:0;right:0;top:0;height:13px;pointer-events:none;border-radius:3px 3px 0 0;background:radial-gradient(circle at 9px 0,#ffffffd9 5px,transparent 6px) 0 0/19px 13px repeat-x,radial-gradient(circle at 14px 0,#e6f4ffb3 4px,transparent 5px) 0 0/27px 10px repeat-x,linear-gradient(#ffffffcc,#ffffffcc) 0 0/100% 2px no-repeat}
-.span{grid-column:1/-1}.cdb b.red{color:var(--red)}
+.span{grid-column:1/-1}
+.avatar{overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.fields{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:16px}.fields .field{flex:1;min-width:150px;width:auto;margin:0}
+.ticks{display:flex;gap:6px}.tick{flex:1;text-align:center;border-top:3px solid var(--line);padding-top:10px;font:11px 'Space Mono';color:var(--muted)}.tick.done{border-color:var(--cyan)}.tick.current{border-color:var(--amber);color:var(--amber)}
+.lbl{display:block;margin-bottom:12px;font-size:12px;color:var(--muted)}
+.rtb{display:flex;gap:6px;align-items:center;margin:5px 0;flex-wrap:wrap}.rtb .mbtn{--c:var(--amber);min-width:34px}.rcol{width:38px;height:32px;padding:0;border:1px solid var(--line);background:transparent}
+.rte{min-height:100px;max-height:260px;overflow:auto;border:1px solid #4d5960;background:var(--p2);padding:10px 12px;color:var(--text);font-size:14px;outline:none}.rte:focus{border-color:var(--cyan)}
+.rt{overflow-wrap:anywhere}.rt ul,.rt ol{margin:4px 0 4px 20px;padding:0}.rt div,.rt p{margin:0 0 6px}
+.snd{position:fixed;right:16px;bottom:16px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:color-mix(in srgb,var(--p1) 85%,transparent);color:var(--text);z-index:36;font-size:17px;padding:0}
+.modal form{max-height:92vh;overflow:auto}.cdb b.red{color:var(--red)}
 .mobile-bar,.scrim{display:none}
 @media(max-width:1100px){.card-grid{grid-template-columns:repeat(2,1fr)}.stat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.sidebar{transform:translateX(-100%);transition:transform .2s}.sidebar.open{transform:none}.scrim.open{display:block;position:fixed;inset:0;background:#000b;z-index:25}.mobile-bar{display:flex;justify-content:space-between;align-items:center;background:var(--side);border-bottom:1px solid var(--line);padding:13px 18px}.mobile-bar button{background:transparent;border:1px solid var(--line);color:#fff;padding:8px 12px}.main{margin:0;padding:25px 18px 60px}.grid-main{grid-template-columns:1fr}}
@@ -60,6 +69,7 @@ table{width:100%;border-collapse:collapse;white-space:nowrap;text-align:left}th{
 <body>
 <header class="mobile-bar"><strong class="mono" style="color:#ffc266">NEXUS ARENA</strong><button id="menu" aria-label="Menú">☰</button></header>
 <canvas id="fx"></canvas>
+<button id="snd" class="snd hidden" data-a="snd" title="Música de fondo: silenciar / activar"></button>
 <div id="scrim" class="scrim"></div>
 <aside id="sidebar" class="sidebar">
  <div class="brand"><div class="mark"></div><strong class="mono" style="color:#ffc266">NEXUS<br>ARENA</strong></div>
@@ -83,7 +93,7 @@ const DIFF=['Fácil','Medio','Difícil'];
 const DR={Extrema:0,'Difícil':1,Medio:2,'Fácil':3};
 const roman=n=>['','I','II','III','IV','V','VI','VII','VIII','IX','X'][n]||String(n);
 const cinfo=c=>[c.game,c.category,c.difficulty].filter(Boolean).map(esc).join(' · ');
-const ccard=(c,x='')=>`<button class="panel card ${x}" data-a="openc" data-id="${c.id}"><div class="row"><span class="mg">${crar(c)}${c.mode?badge(c.mode,'cyan'):''}</span>${badge(c.status,SC[c.status])}</div><h3>${esc(c.title)}</h3><p class="subtle" style="margin:0">${cinfo(c)}<br>Límite: ${lim(c)}</p><strong class="amber mono" style="margin-top:auto">${40+(c.rarity==='Nexus'?+c.bonus||0:0)} PL MÁX.</strong></button>`;
+const ccard=(c,x='')=>`<button class="panel card ${x}" data-a="openc" data-id="${c.id}"><div class="row"><span class="mg">${crar(c)}${c.mode?badge(c.mode,'cyan'):''}${c.round?badge(c.round,'muted'):''}</span>${badge(c.status,SC[c.status])}</div><h3>${esc(c.title)}</h3><p class="subtle" style="margin:0">${cinfo(c)}<br>Límite: ${lim(c)}</p><strong class="amber mono" style="margin-top:auto">${40+(c.rarity==='Nexus'?+c.bonus||0:0)} PL MÁX.</strong></button>`;
 const arch=a=>D.grants.filter(g=>g.a===a.id).forEach(g=>{const p=D.players.find(x=>x.id===g.p);if(p)(p.hall=p.hall||[]).push({name:a.name,desc:a.desc,rar:a.rar,season:D.season})});
 const THEMES={
  original:{bg:'#0b0d10',p1:'#1c2228',side:'#101419',amber:'#ffc266',cyan:'#73dbe4',red:'#ff7772',text:'#eef0ec',fx:'',frost:'0'},
@@ -96,18 +106,34 @@ function fx(type){type=type||'';if(FX.t===type)return;FX.t=type;cancelAnimationF
  ps=Array.from({length:Math.min(110,Math.floor(innerWidth/10))},()=>mk(true));
  const loop=()=>{g.clearRect(0,0,c.width,c.height);ps.forEach(q=>{q.d+=.012*q.s;q.x+=Math.sin(q.d)*.5;q.y+=q.v;if(snow?q.y>c.height+8:q.y<-8)Object.assign(q,mk(false));g.beginPath();g.arc(q.x,q.y,q.r,0,6.28);g.fillStyle=snow?'rgba(255,255,255,.85)':`rgba(255,${120+Math.floor(q.s*70)},60,.7)`;g.fill()});FX.raf=requestAnimationFrame(loop)};loop()}
 function applyTheme(){const t={...THEMES.original,...(D.theme||{})},r=document.documentElement.style;['bg','p1','side','amber','cyan','red','text'].forEach(k=>r.setProperty('--'+k,t[k]));document.body.classList.toggle('frost',t.frost==='1');fx(t.fx)}
+const RT_OK=new Set(['b','strong','i','em','u','div','p','span','ul','ol','li','font']);
+function sani(h){h=String(h||'');if(!/<[a-z]/i.test(h))return esc(h).replace(/\n/g,'<br>');const t=document.createElement('template');t.innerHTML=h;
+ const w=n=>[...n.childNodes].map(c=>{if(c.nodeType===3)return esc(c.textContent);if(c.nodeType!==1)return'';const g=c.tagName.toLowerCase();if(g==='br')return'<br>';if(!RT_OK.has(g))return/^(script|style)$/.test(g)?'':w(c);let a='';
+  if(g==='font'){const k=c.getAttribute('color')||'';if(/^(#[0-9a-f]{3,8}|[a-z]+|rgb\([\d, ]+\))$/i.test(k))a=` color="${k}"`}
+  else if(g==='span'){const m=(c.getAttribute('style')||'').match(/(?:^|;)\s*color:\s*(#[0-9a-f]{3,8}|rgb\([\d, ]+\))/i);if(m)a=` style="color:${m[1]}"`}
+  return`<${g}${a}>${w(c)}</${g}>`}).join('');return w(t.content)}
+const av=(p,c='')=>`<div class="avatar ${c}">${p.img&&/^data:image\//.test(p.img)?`<img src="${esc(p.img)}" alt="">`:esc(p.name[0].toUpperCase())}</div>`;
+function imgData(f,cb){const im=new Image();im.onload=()=>{const s=Math.min(im.width,im.height),c=document.createElement('canvas');c.width=c.height=160;c.getContext('2d').drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,160,160);URL.revokeObjectURL(im.src);cb(c.toDataURL('image/jpeg',.75))};im.src=URL.createObjectURL(f)}
+const CATS=['Habilidad','Supervivencia','Velocidad','Resistencia','Exploración','Creatividad','Cooperación','Combate','Sigilo','Caos'];
+const cats=()=>[...new Set([...CATS,...D.challenges.map(c=>c.category).filter(Boolean)])];
+const AU={a:null,src:'',wait:false,muted:localStorage.getItem('nx_mute')==='1'};
+function audio(){const m=D.music,b=$('#snd');if(!m||!m.src){if(AU.a){AU.a.pause();AU.a=null;AU.src=''}b.classList.add('hidden');return}
+ b.classList.remove('hidden');b.textContent=AU.muted?'🔇':'🔊';
+ if(!AU.a||AU.src!==m.src){if(AU.a)AU.a.pause();AU.a=new Audio(m.src);AU.src=m.src;AU.a.loop=true;AU.a.volume=.35}
+ AU.a.muted=AU.muted;if(AU.muted||!AU.a.paused)return;
+ AU.a.play().catch(()=>{if(AU.wait)return;AU.wait=true;const go=()=>{AU.wait=false;['pointerdown','keydown'].forEach(x=>removeEventListener(x,go));if(!AU.muted&&AU.a)AU.a.play().catch(()=>{})};['pointerdown','keydown'].forEach(x=>addEventListener(x,go))})}
 function place(){[['#cgrid','#cdet'],['#pgrid','#pdet']].forEach(([g,d])=>{const G=$(g),X=$(d);if(!G||!X)return;const cs=[...G.children].filter(x=>x!==X),i=cs.findIndex(x=>x.classList.contains('sel'));if(i<0)return;const cols=getComputedStyle(G).gridTemplateColumns.split(' ').length||1,t=Math.min(cs.length-1,(Math.floor(i/cols)+1)*cols-1);cs[t].after(X)})}
 const C=id=>D.challenges.find(c=>c.id===id);
 const nxb=r=>{const c=C(r.c);return c&&c.rarity==='Nexus'&&r.m!=='participacion'?+c.bonus||0:0};
 const rpl=r=>MED[r.m].pl+nxb(r);
-const duelRes=()=>D.duels.filter(d=>d.m&&dst(d)==='Cumplido'&&MED[d.m]).map(d=>({p:d.b,c:null,m:d.m,at:d.at||0,t:'Reto: '+(d.game||'sin juego')}));
+const duelRes=()=>D.duels.filter(d=>d.m&&dst(d)==='Cumplido'&&MED[d.m]).map(d=>({p:d.b,c:null,m:d.m,at:d.at||0,t:'Reto: '+(d.game||'sin juego'),s:D.season}));
 const rname=r=>r.t||cname(r.c);
 const crar=c=>c.rarity==='Nexus'?rbadge('Nexus'):badge('Normal','muted');
 const ytId=u=>{const m=String(u).match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);return m&&m[1]};
 function bindRarity(){const f=$('#mform'),r=f.elements.rarity,d=f.elements.difficulty;const fn=()=>{const k=d.value;d.innerHTML=(r.value==='Nexus'?[...DIFF,'Extrema']:DIFF).map(x=>`<option ${x===k?'selected':''}>${x}</option>`).join('')};r.onchange=fn;fn()}
-const EMPTY=()=>({season:'Temporada 01',players:[],challenges:[],results:[],duels:[],event:null,achs:[],grants:[],videos:[]});
+const EMPTY=()=>({season:'Temporada 01',players:[],challenges:[],results:[],duels:[],event:null,achs:[],grants:[],videos:[],seasons:[],rounds:{total:6,cur:1},music:null});
 const T={inicio:['INICIO','COMMAND CENTER','Tu centro de operaciones para la liga.'],desafios:['LIGA','DESAFÍOS','Elige una misión. Cada punto cuenta.'],retos:['DUELOS','RETOS','Jugador contra jugador.'],rankings:['CLASIFICACIÓN','RANKINGS','El marcador nunca miente.'],logros:['PROGRESIÓN','LOGROS','Las hazañas dejan huella.'],jugadores:['COMPETIDORES','JUGADORES','Cada leyenda empieza en algún lugar.'],historial:['REGISTRO','HISTORIAL','Cada movimiento, registrado.']};
-let D=EMPTY(),A=null,dirty=false,S={page:'inicio',sel:null,psel:null,rtab:'PL'};
+let D=EMPTY(),A=null,dirty=false,S={page:'inicio',sel:null,psel:null,rtab:'PL',rs:'',ptab:'Resumen',fq:'',fs:'',fc:'',fd:'',fr:''};
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,5);
 const badge=(t,c='amber')=>`<span class="badge ${c}">${esc(t)}</span>`;
 const bar=n=>`<div class="progress"><span style="width:${Math.max(0,Math.min(100,n||0))}%"></span></div>`;
@@ -121,13 +147,13 @@ function toast(t){const e=$('#toast');e.textContent=t;e.classList.remove('hidden
 function touch(){dirty=true;render()}
 
 /* ---------- cálculos ---------- */
-function stats(p){const r=[...D.results,...duelRes()].filter(x=>x.p===p.id),s={pl:+p.bonus||0,xp:0,n:{participacion:0,bronce:0,plata:0,oro:0,platino:0},r};
- r.forEach(x=>{const m=MED[x.m];if(m){s.pl+=m.pl+nxb(x);s.xp+=m.xp;s.n[x.m]++}});
+function stats(p){const r=[...D.results,...duelRes()].filter(x=>x.p===p.id),cur=x=>(x.s||D.season)===D.season,s={pl:+p.bonus||0,plAll:(+p.bonus||0)+(+p.bonusOld||0),sm:0,xp:0,n:{participacion:0,bronce:0,plata:0,oro:0,platino:0},r};
+ r.forEach(x=>{const m=MED[x.m];if(!m)return;const v=m.pl+nxb(x);s.plAll+=v;if(cur(x)){s.pl+=v;if(x.m!=='participacion')s.sm++}s.xp+=m.xp;s.n[x.m]++});
  s.xpRaw=s.xp;s.xp=Math.max(0,s.xp-(+p.xpBase||0));s.prest=+p.prestige||0;
  s.medals=s.n.bronce+s.n.plata+s.n.oro+s.n.platino;let k=0;RANKS.forEach((q,i)=>{if(s.xp>=q[0])k=i});
  s.lvl=k;s.rank=RANKS[k][1];s.from=RANKS[k][0];s.next=RANKS[k+1];s.max=k===RANKS.length-1;return s}
 function ranking(k='PL'){const L=D.players.map(p=>{const s=stats(p);return{p,s,g:nach(p,s)}});
- const f={PL:(a,b)=>b.s.pl-a.s.pl||b.s.n.platino-a.s.n.platino||b.s.n.oro-a.s.n.oro||b.s.n.plata-a.s.n.plata||b.s.r.length-a.s.r.length,MED:(a,b)=>b.s.medals-a.s.medals||b.s.pl-a.s.pl,XP:(a,b)=>b.s.prest-a.s.prest||b.s.xp-a.s.xp};
+ const f={PL:(a,b)=>b.s.pl-a.s.pl||b.s.n.platino-a.s.n.platino||b.s.n.oro-a.s.n.oro||b.s.n.plata-a.s.n.plata||b.s.r.length-a.s.r.length,MED:(a,b)=>b.s.medals-a.s.medals||b.s.pl-a.s.pl,XP:(a,b)=>b.s.prest-a.s.prest||b.s.xp-a.s.xp,HIST:(a,b)=>b.s.plAll-a.s.plAll||b.s.pl-a.s.pl};
  return L.sort(f[k])}
 const lim=c=>c.end?fmt(c.end):esc(c.due||'—');
 const curEvent=()=>D.challenges.filter(c=>c.rarity==='Nexus'&&c.status!=='Finalizado').sort((a,b)=>(a.end||9e15)-(b.end||9e15))[0];
@@ -144,31 +170,42 @@ function hero(){const c=curEvent();
  ${c.end?`<div class="mt" id="cdbar">${bar(pct())}</div>`:''}</section>`}
 function others(){const L=D.challenges.map((c,i)=>[c,i]).filter(x=>x[0].rarity!=='Nexus'&&x[0].status!=='Finalizado').sort((a,b)=>(DR[a[0].difficulty]??9)-(DR[b[0].difficulty]??9)||a[1]-b[1]).slice(0,3).map(x=>x[0]);if(!L.length)return'';
  return`<section><div class="row mb"><h2 class="section-title" style="margin:0">Más desafíos</h2><button class="btn small ghost" data-a="nav" data-k="desafios">Ver todos →</button></div><div class="card-grid">${L.map(c=>ccard(c)).join('')}</div></section>`}
+function seasonPanel(){const R=D.rounds||{total:6,cur:1},rest=Math.max(0,R.total-R.cur);
+ return`<section class="panel pad"><h2 class="section-title">Estado de la temporada</h2><p class="muted">${R.cur>R.total?'La temporada terminó.':`Ronda ${R.cur} de ${R.total}. ${rest?'Quedan '+rest+(rest===1?' ronda':' rondas')+' después de esta.':'Es la última ronda.'}`}</p><div class="ticks">${Array.from({length:R.total},(_,i)=>`<div class="tick ${i+1<R.cur?'done':i+1===R.cur?'current':''}">R${String(i+1).padStart(2,'0')}</div>`).join('')}</div>${adm('<div class="mg mt"><button class="btn small secondary" data-a="settings">Editar</button><button class="btn small" data-a="nextround">Siguiente ronda →</button></div>')}</section>`}
 function home(){const top=ranking().slice(0,3),last=[...D.results,...duelRes()].sort((a,b)=>b.at-a.at).slice(0,5);
  return`<div class="grid-main"><div class="stack">${hero()}${others()}
  <section class="stat-grid">${stat(D.players.length,'Jugadores')}${stat(D.challenges.length,'Desafíos')}${stat([...D.results,...duelRes()].filter(r=>r.m!=='participacion').length,'Medallas')}${stat(D.duels.length,'Retos')}</section>
- <section class="panel pad"><h2 class="section-title">Top 3 jugadores</h2>${top.length?top.map((x,i)=>`<div class="line"><span class="mono amber">0${i+1}</span><div class="avatar">${esc(x.p.name[0].toUpperCase())}</div><div><strong>${esc(x.p.name)}</strong><div class="subtle">${x.s.rank}</div></div><strong class="mono amber">${x.s.pl} PL</strong></div>`).join(''):'<p class="muted">Aún no hay jugadores.</p>'}</section></div>
- <div class="stack"><section class="panel pad"><h2 class="section-title">Últimos resultados</h2>${last.length?last.map(r=>`<div class="rrow"><span><strong>${esc(pname(r.p))}</strong><br><span class="subtle">${esc(rname(r))}</span></span>${badge(MED[r.m].n+' · +'+rpl(r)+' PL','cyan')}</div>`).join(''):'<p class="muted">Sin resultados todavía.</p>'}</section></div></div>`}
+ <section class="panel pad"><h2 class="section-title">Top 3 jugadores</h2>${top.length?top.map((x,i)=>`<div class="line"><span class="mono amber">0${i+1}</span>${av(x.p)}<div><strong>${esc(x.p.name)}</strong><div class="subtle">${x.s.rank}</div></div><strong class="mono amber">${x.s.pl} PL</strong></div>`).join(''):'<p class="muted">Aún no hay jugadores.</p>'}</section></div>
+ <div class="stack"><section class="panel pad"><h2 class="section-title">Últimos resultados</h2>${last.length?last.map(r=>`<div class="rrow"><span><strong>${esc(pname(r.p))}</strong><br><span class="subtle">${esc(rname(r))}</span></span>${badge(MED[r.m].n+' · +'+rpl(r)+' PL','cyan')}</div>`).join(''):'<p class="muted">Sin resultados todavía.</p>'}</section>${seasonPanel()}</div></div>`}
 
-const CF=[['title','Título*'],['game','Videojuego'],['mode','Modo de juego','select',['Solo','Multijugador']],['category','Categoría (Habilidad, Velocidad…)'],['rarity','Rareza','select',['Normal','Nexus']],['difficulty','Dificultad (Extrema solo en Nexus)','select',[...DIFF,'Extrema']],['bonus','PL extra al completar (solo Nexus)','number'],['status','Estado','select',['Próximamente','Disponible','Por validar','Finalizado']],['end','Fecha y hora de cierre (para el contador)','dt'],['desc','Descripción','area'],['rules','Reglas','area']];
+const cf=()=>[['title','Título*'],['game','Videojuego'],['mode','Modo de juego','select',['Solo','Multijugador']],['category','Categoría','select',cats],['rarity','Rareza','select',['Normal','Nexus']],['difficulty','Dificultad (Extrema solo en Nexus)','select',[...DIFF,'Extrema']],['bonus','PL extra al completar (solo Nexus)','number'],['status','Disponibilidad','select',['Próximamente','Disponible','Por validar','Finalizado']],['round','Ronda (opcional, ej. Ronda 04)'],['end','Fecha y hora de cierre (para el contador)','dt'],['desc','Misión','rich'],['rules','Objetivos','rich']];
 const SC={Disponible:'amber','Por validar':'cyan',Próximamente:'muted',Finalizado:'red'};
 function detail(){const c=C(S.sel);if(!c)return'';
  const rows=D.players.map(p=>{const r=D.results.find(x=>x.p===p.id&&x.c===c.id);
   return`<div class="rrow"><span>${esc(p.name)}</span>${A?`<span class="mg">${Object.keys(MED).map(k=>`<button class="mbtn ${r&&r.m===k?'on':''}" style="--c:${MED[k].c}" data-a="medal" data-p="${p.id}" data-c="${c.id}" data-m="${k}" title="+${MED[k].pl} PL">${MED[k].n}</button>`).join('')}</span>`:(r?badge(MED[r.m].n):'<span class="subtle">—</span>')}</div>`}).join('');
- return`<section id="cdet" class="panel pad span" style="border-color:color-mix(in srgb,var(--amber) 50%,var(--line))"><div class="row"><span class="mg">${crar(c)}${c.mode?badge(c.mode,'cyan'):''}${badge(c.status,SC[c.status])}</span>${adm(`<span class="mg"><button class="btn small secondary" data-a="editc" data-id="${c.id}">Editar</button><button class="btn small danger" data-a="delc" data-id="${c.id}">Eliminar</button></span>`)}</div>
+ return`<section id="cdet" class="panel pad span" style="border-color:color-mix(in srgb,var(--amber) 50%,var(--line))"><div class="row"><span class="mg">${crar(c)}${c.mode?badge(c.mode,'cyan'):''}${c.round?badge(c.round,'muted'):''}${badge(c.status,SC[c.status])}</span>${adm(`<span class="mg"><button class="btn small secondary" data-a="editc" data-id="${c.id}">Editar</button><button class="btn small danger" data-a="delc" data-id="${c.id}">Eliminar</button></span>`)}</div>
  <h2 class="mono mt">${esc(c.title)}</h2><p class="muted">${cinfo(c)} · Límite: ${lim(c)}</p>
- ${c.desc?`<h3>La misión</h3><p>${esc(c.desc)}</p>`:''}${c.rules?`<h3>Reglas</h3><p class="muted">${esc(c.rules)}</p>`:''}
- <div class="mg mb">${['bronce','plata','oro','platino'].map(k=>`<span class="badge" style="color:${MED[k].c}">${MED[k].n} ${MED[k].pl} PL</span>`).join('')}${c.rarity==='Nexus'?`<span class="badge amber">Nexus: +${+c.bonus||0} PL al completar</span>`:''}</div>
+ ${c.desc?`<h3>Misión</h3><div class="rt">${sani(c.desc)}</div>`:''}${c.rules?`<h3>Objetivos</h3><div class="rt muted">${sani(c.rules)}</div>`:''}
+ <div class="mg mb mt">${['bronce','plata','oro','platino'].map(k=>`<span class="badge" style="color:${MED[k].c}">${MED[k].n} ${MED[k].pl} PL</span>`).join('')}${c.rarity==='Nexus'?`<span class="badge amber">Nexus: +${+c.bonus||0} PL al completar</span>`:''}</div>
  <h3>Resultados${A?' <span class="subtle">(un clic asigna la medalla; otro clic igual la quita)</span>':''}</h3>${rows||'<p class="muted">Agrega jugadores para registrar resultados.</p>'}</section>`}
-function challenges(){return adm('<div class="mb"><button class="btn" data-a="newc">+ Nuevo desafío</button></div>')+(D.challenges.length?`<div id="cgrid" class="card-grid">${D.challenges.map(c=>ccard(c,S.sel===c.id?'sel':'')).join('')}${detail()}</div>`:empty('Aún no hay desafíos.'))}
+const cfilt=()=>{const q=S.fq.toLowerCase();return D.challenges.filter(c=>(!q||(c.title+' '+c.game).toLowerCase().includes(q))&&(!S.fs||c.status===S.fs)&&(!S.fc||c.category===S.fc)&&(!S.fd||c.difficulty===S.fd)&&(!S.fr||c.round===S.fr))};
+function cwrap(){const L=cfilt();return L.length?`<div id="cgrid" class="card-grid">${L.map(c=>ccard(c,S.sel===c.id?'sel':'')).join('')}${detail()}</div>`:empty(D.challenges.length?'No hay desafíos que coincidan con la búsqueda.':'Aún no hay desafíos.')}
+function cfil(){const o=(a,all,v)=>`<option value="">${all}</option>`+a.map(x=>`<option ${x===v?'selected':''}>${esc(x)}</option>`).join(''),rounds=[...new Set(D.challenges.map(c=>c.round).filter(Boolean))];
+ return`<div class="fields"><input id="fq" class="field" placeholder="Buscar por nombre o videojuego" value="${esc(S.fq)}"><select id="fs" class="field">${o(['Disponible','Próximamente','Por validar','Finalizado'],'Todas las disponibilidades',S.fs)}</select><select id="fc" class="field">${o(cats(),'Todas las categorías',S.fc)}</select><select id="fd" class="field">${o([...DIFF,'Extrema'],'Todas las dificultades',S.fd)}</select>${rounds.length?`<select id="fr" class="field">${o(rounds,'Todas las rondas',S.fr)}</select>`:''}</div>`}
+function challenges(){return adm('<div class="mb"><button class="btn" data-a="newc">+ Nuevo desafío</button></div>')+cfil()+`<div id="cwrap">${cwrap()}</div>`}
 const DS=['Pendiente','Aceptado','Cumplido','No cumplido'],DC={Cumplido:'cyan','No cumplido':'red',Aceptado:'amber',Pendiente:'muted'},dst=d=>d.status==='Jugado'?'Cumplido':d.status;
 function retos(){const cards=D.duels.map(d=>`<div class="panel card" style="cursor:default"><div class="row">${badge(dst(d),DC[dst(d)]||'muted')}${adm(`<span class="mg"><button class="btn small secondary" data-a="editd" data-id="${d.id}">Editar</button><button class="btn small danger" data-a="deld" data-id="${d.id}">Eliminar</button></span>`)}</div>
  <div class="vs"><span class="cyan">${esc(pname(d.a))}</span> <span class="muted">reta a</span> <span class="amber">${esc(pname(d.b))}</span></div><strong>${d.game?esc(d.game):'<span class="muted">Juego por definir</span>'}</strong><p class="muted" style="margin:0">${d.rules?esc(d.rules):'Condiciones por definir'}</p>${dst(d)==='Cumplido'&&d.m&&MED[d.m]?`<p style="margin:0">${badge(MED[d.m].n+' · +'+MED[d.m].pl+' PL para '+pname(d.b),'cyan')}</p>`:''}${A?`<span class="mg">${['bronce','plata','oro','platino'].map(k=>`<button class="mbtn ${d.m===k?'on':''}" style="--c:${MED[k].c}" data-a="dmedal" data-id="${d.id}" data-m="${k}" title="Marca el reto como cumplido y da la medalla a ${esc(pname(d.b))}">${MED[k].n}</button>`).join('')}</span>`:''}</div>`).join('');
  return adm('<div class="mb mg"><button class="btn" data-a="newd">+ Nuevo reto</button><button class="btn secondary" data-a="randd">🎲 Generar retos aleatorios</button><button class="btn danger" data-a="endround">Cerrar ronda (borrar lista)</button></div>')+(cards?`<div class="card-grid">${cards}</div>`:empty('Aún no hay retos publicados.'))}
-function rankings(){const tabs=[['PL','General (PL)'],['MED','Coleccionistas'],['XP','Experiencia']],L=ranking(S.rtab);
- return`<div class="tabs">${tabs.map(([k,l])=>`<button class="tab ${S.rtab===k?'active':''}" data-a="rtab" data-k="${k}">${l}</button>`).join('')}</div>
- <section class="panel tw">${L.length?`<table><thead><tr><th>Pos.</th><th>Jugador</th><th>Rango</th><th>PL</th><th>Medallas</th><th>Logros</th><th>XP</th></tr></thead><tbody>${L.map((x,i)=>`<tr><td class="mono amber">#${i+1}</td><td><strong>${esc(x.p.name)}</strong></td><td>${badge(x.s.rank,'cyan')}${x.s.prest?' '+badge('Prestigio '+roman(x.s.prest),'red'):''}</td><td class="mono amber">${x.s.pl}</td><td>${x.s.medals}</td><td>${x.g}</td><td>${x.s.xp}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Aún no hay jugadores en la clasificación.</div>'}</section>
- <section class="panel pad mt"><h2 class="section-title">Rangos por XP</h2><div class="mg">${RANKS.map(r=>`<span class="badge cyan">${r[1]} · ${r[0]}+</span>`).join('')}</div></section>`}
+function rankings(){const past=S.rs&&D.seasons.find(x=>x.name===S.rs),tabs=[['PL','General (PL)'],['HIST','Histórico'],['MED','Coleccionistas'],['XP','Experiencia']];
+ const sel=D.seasons.length?`<div class="fields"><select id="rs" class="field" style="max-width:300px;flex:none"><option value="">${esc(D.season)} (actual)</option>${[...D.seasons].reverse().map(x=>`<option ${x.name===S.rs?'selected':''}>${esc(x.name)}</option>`).join('')}</select></div>`:'';
+ let tb,table;
+ if(past){const R=[...past.rows].sort((a,b)=>b.pl-a.pl);tb='';table=R.length?`<table><thead><tr><th>Pos.</th><th>Jugador</th><th>Rango</th><th>PL</th><th>Medallas</th><th>Logros</th></tr></thead><tbody>${R.map((x,i)=>`<tr><td class="mono amber">#${i+1}</td><td><strong>${esc(x.name)}</strong></td><td>${badge(x.rank,'cyan')} <span class="subtle">Nivel ${x.lvl}</span>${x.prest?' '+badge('Prestigio '+roman(x.prest),'red'):''}</td><td class="mono amber">${x.pl}</td><td>${x.medals}</td><td>${x.g}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Esa temporada no tuvo jugadores.</div>'}
+ else{const L=ranking(S.rtab);tb=`<div class="tabs">${tabs.map(([k,l])=>`<button class="tab ${S.rtab===k?'active':''}" data-a="rtab" data-k="${k}">${l}</button>`).join('')}</div>`;
+  table=L.length?`<table><thead><tr><th>Pos.</th><th>Jugador</th><th>Rango</th><th>${S.rtab==='HIST'?'PL totales':'PL'}</th><th>Medallas</th><th>Logros</th><th>XP</th></tr></thead><tbody>${L.map((x,i)=>`<tr><td class="mono amber">#${i+1}</td><td><strong>${esc(x.p.name)}</strong></td><td>${badge(x.s.rank,'cyan')}${x.s.prest?' '+badge('Prestigio '+roman(x.s.prest),'red'):''}</td><td class="mono amber">${S.rtab==='HIST'?x.s.plAll:x.s.pl}</td><td>${S.rtab==='PL'?x.s.sm:x.s.medals}</td><td>${x.g}</td><td>${x.s.xp}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Aún no hay jugadores en la clasificación.</div>'}
+ const sn=past||D.seasons[D.seasons.length-1],w=sn&&[...sn.rows].sort((a,b)=>b.pl-a.pl)[0];
+ const fame=w?`<section class="panel pad mt" style="border-color:color-mix(in srgb,var(--amber) 55%,var(--line))"><span class="eyebrow">SALÓN DE LA FAMA</span><div class="fl mt"><span style="width:58px;height:58px;border-radius:50%;border:3px double var(--amber);display:grid;place-items:center;color:var(--amber);font-size:28px;flex:none">★</span><div><h2 style="margin:0 0 4px">Campeón de la ${esc(sn.name)}</h2><p style="margin:0">${esc(w.name)} · ${esc(w.rank)} (Nivel ${w.lvl})${w.prest?' · Prestigio '+roman(w.prest):''} · <strong class="amber">${w.pl} PL</strong></p></div></div></section>`:`<section class="panel pad mt"><span class="eyebrow">SALÓN DE LA FAMA</span><p class="muted" style="margin:10px 0 0">Aquí aparecerá el campeón cuando se cierre la primera temporada.</p></section>`;
+ return`${sel}${tb}<section class="panel tw">${table}</section>${fame}<section class="panel pad mt"><h2 class="section-title">Rangos por XP</h2><div class="mg">${RANKS.map(r=>`<span class="badge cyan">${r[1]} · ${r[0]}+</span>`).join('')}</div></section>`}
 const ACH=[['Primer contacto','Participa en tu primer desafío','Común',s=>s.r.length>=1],['Coleccionista','Reúne 10 medallas','Rara',s=>s.medals>=10],['Perfeccionista','Consigue 5 platinos','Épica',s=>s.n.platino>=5],['Racha de oro','Consigue 3 medallas de oro o platino','Épica',s=>s.n.oro+s.n.platino>=3]];
 const allAch=()=>[...ACH.map((a,i)=>({id:'auto'+i,name:a[0],desc:a[1],rar:a[2],auto:a[3]})),...D.achs];
 const has=(p,a,s)=>a.auto?a.auto(s):D.grants.some(g=>g.p===p.id&&g.a===a.id);
@@ -177,18 +214,23 @@ function logros(){const L=D.players.map(p=>({p,s:stats(p)}));
  return adm(`<div class="mb mg"><button class="btn" data-a="newa">+ Nuevo logro</button>${D.achs.length?'<button class="btn secondary" data-a="clra">Archivar y limpiar logros personalizados</button>':''}</div>`)+`<div class="card-grid">${allAch().map(a=>{const n=L.filter(x=>has(x.p,a,x.s)).length;
  return`<div class="panel card" style="cursor:default;border-left:3px solid ${rc(a.rar)}"><div class="row"><span style="font-size:24px">🏅</span>${rbadge(a.rar)}</div><h3>${esc(a.name)}</h3><p class="muted" style="margin:0">${esc(a.desc)}</p><p class="subtle" style="margin:0">${n} / ${L.length} jugadores lo han conseguido</p>${a.auto?'<p class="subtle" style="margin:0">Logro automático</p>':adm(`<span class="mg"><button class="btn small secondary" data-a="edita" data-id="${a.id}">Editar</button><button class="btn small danger" data-a="dela" data-id="${a.id}">Eliminar</button></span>`)}</div>`}).join('')}</div>`}
 function pform(p){return[['name','Nombre*']]}
-function profile(){const p=D.players.find(x=>x.id===S.psel);if(!p)return'';const s=stats(p),nx=s.next,mine=allAch().filter(a=>has(p,a,s)),hall=p.hall||[],all=[...mine,...hall],vids=D.videos.filter(v=>v.p===p.id);
- const hist=[...s.r].sort((a,b)=>b.at-a.at).map(r=>`<div class="rrow"><span>${esc(rname(r))}</span>${badge(MED[r.m].n+' · +'+rpl(r)+' PL','cyan')}</div>`).join('')||'<p class="muted">Sin resultados todavía.</p>';
+function profile(){const p=D.players.find(x=>x.id===S.psel);if(!p)return'';const s=stats(p),nx=s.next,mine=allAch().filter(a=>has(p,a,s)),hall=p.hall||[],all=[...mine,...hall],vids=D.videos.filter(v=>v.p===p.id),hist=[...s.r].sort((a,b)=>b.at-a.at);
+ const row=r=>`<div class="rrow"><span>${esc(rname(r))}</span><span class="mg">${badge(MED[r.m].n,'cyan')}<strong class="amber mono">+${rpl(r)} PL</strong></span></div>`;
  const vh=vids.map(v=>{const y=ytId(v.url);return`<div class="vid"><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${y?`<img src="https://img.youtube.com/vi/${y}/mqdefault.jpg" alt="" loading="lazy">`:'<span class="ph">▶</span>'}<span class="t">${esc(v.title)}</span></a>${adm(`<button class="btn small danger" data-a="delv" data-id="${v.id}" title="Quitar video">✕</button>`)}</div>`}).join('')||'<p class="muted">Aún no hay videos.</p>';
- return`<section id="pdet" class="panel pad span"><div class="row"><div class="fl"><div class="avatar lg">${esc(p.name[0].toUpperCase())}</div><div><h2 class="mono" style="margin:0 0 6px">${esc(p.name)}</h2>${badge(s.rank)} ${badge('Nivel '+(s.lvl+1),'cyan')}${s.prest?' '+badge('Prestigio '+roman(s.prest),'red'):''}</div></div><strong class="mono amber" style="font-size:25px">${s.pl} PL</strong></div>
- ${adm(`<div class="mg mt"><button class="btn small secondary" data-a="editp" data-id="${p.id}">Renombrar</button><button class="btn small secondary" data-a="plp" data-id="${p.id}">Sumar / restar PL</button><button class="btn small secondary" data-a="addv" data-id="${p.id}">+ Video</button><button class="btn small secondary" data-a="presti" data-id="${p.id}">Ascender a Prestigio</button><button class="btn small danger" data-a="delp" data-id="${p.id}">Eliminar</button></div>`)}
- <p class="subtle mt">XP ${s.xp}${nx?` / ${nx[0]} para ${nx[1]}`:' · nivel máximo'}${+p.bonus?` · Ajuste manual: ${p.bonus>0?'+':''}${p.bonus} PL`:''}</p>${bar(nx?(s.xp-s.from)/(nx[0]-s.from)*100:100)}
- <div class="stat-grid mt">${stat(s.n.platino,'Platinos')}${stat(s.n.oro,'Oros')}${stat(s.n.plata,'Platas')}${stat(s.n.bronce,'Bronces')}</div>
+ const mb=k=>`<div class="panel stat" style="text-align:center"><span style="display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;border:3px double ${MED[k].c};color:${MED[k].c};font-size:20px">✦</span><strong style="color:${MED[k].c}">${s.n[k]}</strong><small>${MED[k].n}</small></div>`;
+ let body;
+ if(S.ptab==='Colección')body=`<div class="stat-grid mt">${['platino','oro','plata','bronce'].map(mb).join('')}</div><h3 class="mt">Vitrina de trofeos</h3>${s.medals?`<div class="mg">${['platino','oro','plata','bronce'].map(k=>Array.from({length:Math.min(s.n[k],40)},()=>`<span style="display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;border:3px double ${MED[k].c};color:${MED[k].c}" title="${MED[k].n}">✦</span>`).join('')).join('')}</div>`:'<p class="muted">Aún no tiene medallas.</p>'}<p class="subtle mt">Participaciones: ${s.n.participacion}</p>`;
+ else if(S.ptab==='Historial')body=`<div class="mt">${hist.length?hist.map(row).join(''):'<p class="muted">Sin desafíos todavía.</p>'}</div>`;
+ else body=`<p class="subtle mt">XP ${s.xp}${nx?` / ${nx[0]} para ${nx[1]}`:' · nivel máximo'}${+p.bonus?` · Ajuste manual: ${p.bonus>0?'+':''}${p.bonus} PL`:''}</p>${bar(nx?(s.xp-s.from)/(nx[0]-s.from)*100:100)}
+ <div class="stat-grid mt">${stat(s.pl,'PL de temporada')}${stat(s.plAll,'PL totales')}${stat(s.medals,'Medallas')}${stat(all.length,'Logros')}</div>
  <h3 class="mt">Logros obtenidos (${all.length})</h3>${all.length?`<div class="mg">${all.map(a=>`<span class="ach" style="--c:${rc(a.rar)}" title="${esc(a.desc||'')}${a.season?' · '+esc(a.season):''}">${rbadge(a.rar)}<strong>${esc(a.name)}</strong></span>`).join('')}</div>`:'<p class="muted">Aún no tiene logros.</p>'}
  ${A&&D.achs.length?`<p class="subtle mt">Otorgar o quitar logros personalizados (un clic):</p><div class="mg">${D.achs.map(a=>`<button class="mbtn ${D.grants.some(g=>g.p===p.id&&g.a===a.id)?'on':''}" style="--c:${rc(a.rar)}" data-a="grant" data-p="${p.id}" data-g="${a.id}">${esc(a.name)}</button>`).join('')}</div>`:''}
- <div class="g2 mt"><div><h3>Videos de retos</h3>${vh}</div><div><h3>Historial</h3>${hist}</div></div></section>`}
+ <div class="g2 mt"><div><h3>Videos de retos</h3>${vh}</div><div><h3>Últimos desafíos</h3>${hist.slice(0,5).map(row).join('')||'<p class="muted">Sin desafíos todavía.</p>'}</div></div>`;
+ return`<section id="pdet" class="panel pad span"><div class="row"><div class="fl">${av(p,'lg')}<div><h2 class="mono" style="margin:0 0 6px">${esc(p.name)}</h2>${badge(s.rank)} ${badge('Nivel '+(s.lvl+1),'cyan')}${s.prest?' '+badge('Prestigio '+roman(s.prest),'red'):''}</div></div><strong class="mono amber" style="font-size:25px">${s.pl} PL</strong></div>
+ ${adm(`<div class="mg mt"><button class="btn small secondary" data-a="editp" data-id="${p.id}">Renombrar</button><button class="btn small secondary" data-a="foto" data-id="${p.id}">Cambiar foto</button>${p.img?`<button class="btn small secondary" data-a="delfoto" data-id="${p.id}">Quitar foto</button>`:''}<button class="btn small secondary" data-a="plp" data-id="${p.id}">Sumar / restar PL</button><button class="btn small secondary" data-a="addv" data-id="${p.id}">+ Video</button><button class="btn small secondary" data-a="presti" data-id="${p.id}">Ascender a Prestigio</button><button class="btn small danger" data-a="delp" data-id="${p.id}">Eliminar</button></div>`)}
+ <div class="tabs mt" style="margin-bottom:0">${['Resumen','Colección','Historial'].map(t=>`<button class="tab ${S.ptab===t?'active':''}" data-a="ptab" data-k="${t}">${t}</button>`).join('')}</div>${body}</section>`}
 function jugadores(){const L=ranking();
- return adm('<div class="mb"><button class="btn" data-a="newp">+ Nuevo jugador</button></div>')+(L.length?`<div id="pgrid" class="card-grid">${L.map(x=>`<button class="panel card ${S.psel===x.p.id?'sel':''}" data-a="openp" data-id="${x.p.id}" style="min-height:110px"><div class="fl"><div class="avatar">${esc(x.p.name[0].toUpperCase())}</div><div><h3>${esc(x.p.name)}</h3><span class="subtle">${x.s.rank}${x.s.prest?' · Prestigio '+roman(x.s.prest):''}</span></div></div><strong class="mono amber" style="margin-top:auto">${x.s.pl} PL · ${x.s.medals} medallas · ${x.g} logros</strong></button>`).join('')}${profile()}</div>`:empty('Aún no hay jugadores.'))}
+ return adm('<div class="mb"><button class="btn" data-a="newp">+ Nuevo jugador</button></div>')+(L.length?`<div id="pgrid" class="card-grid">${L.map(x=>`<button class="panel card ${S.psel===x.p.id?'sel':''}" data-a="openp" data-id="${x.p.id}" style="min-height:110px"><div class="fl">${av(x.p)}<div><h3>${esc(x.p.name)}</h3><span class="subtle">${x.s.rank}${x.s.prest?' · Prestigio '+roman(x.s.prest):''}</span></div></div><strong class="mono amber" style="margin-top:auto">${x.s.pl} PL · ${x.s.medals} medallas · ${x.g} logros</strong></button>`).join('')}${profile()}</div>`:empty('Aún no hay jugadores.'))}
 function historial(){const L=[...D.results,...duelRes()].sort((a,b)=>b.at-a.at);
  return`<section class="panel pad"><h2 class="section-title">Registro de actividad · ${esc(D.season)}</h2>${L.length?L.map(r=>`<div class="rrow"><span><strong>${esc(pname(r.p))}</strong> · ${esc(rname(r))}<br><span class="subtle">${fmt(r.at)}</span></span>${badge(MED[r.m].n+' · +'+rpl(r)+' PL','cyan')}</div>`).join(''):'<p class="muted">Todavía no hay actividad registrada.</p>'}</section>`}
 const PAGES={inicio:home,desafios:challenges,retos,rankings,logros,jugadores,historial};
@@ -197,17 +239,22 @@ const PAGES={inicio:home,desafios:challenges,retos,rankings,logros,jugadores,his
 function render(){const t=T[S.page];$('#crumb').textContent=`${t[0]} / ${D.season.toUpperCase()}`;$('#title').textContent=t[1];$('#sub').textContent=t[2];
  $('#mode').textContent=A?'● MODO ADMIN':'● SISTEMA ACTIVO';$('#mode').className='badge '+(A?'amber':'cyan');
  $('#nav').innerHTML=Object.keys(T).map(k=>`<button class="nav ${S.page===k?'active':''}" data-a="nav" data-k="${k}">${T[k][1][0]+T[k][1].slice(1).toLowerCase()}</button>`).join('');
- $('#side').innerHTML=`<span class="badge amber" style="text-align:center">${esc(D.season.toUpperCase())}</span>`+(A?`<button class="btn small" data-a="publish">Publicar cambios${dirty?' ●':''}</button><button class="btn small secondary" data-a="dl">Descargar data.json</button><button class="btn small ghost" data-a="theme">Tema</button><button class="btn small ghost" data-a="settings">Ajustes</button><button class="btn small ghost" data-a="logout">Cerrar sesión</button>`:`<button class="btn small ghost" data-a="login">Acceso admin</button>`);
- $('#screen').innerHTML=PAGES[S.page]();place();applyTheme()}
+ $('#side').innerHTML=`<span class="badge amber" style="text-align:center">${esc(D.season.toUpperCase())}</span>`+(A?`<button class="btn small" data-a="publish">Publicar cambios${dirty?' ●':''}</button><button class="btn small secondary" data-a="dl">Descargar data.json</button><button class="btn small ghost" data-a="theme">Tema</button><button class="btn small ghost" data-a="musica">♪ Música${D.music?' (cambiar)':''}</button>${D.music?'<button class="btn small ghost" data-a="quitmusica">Quitar música</button>':''}<button class="btn small ghost" data-a="settings">Ajustes y rondas</button><button class="btn small ghost" data-a="closes">Cerrar temporada</button><button class="btn small ghost" data-a="logout">Cerrar sesión</button>`:`<button class="btn small ghost" data-a="login">Acceso admin</button>`);
+ $('#screen').innerHTML=PAGES[S.page]();place();applyTheme();audio()}
 function closeM(){$('#modal').classList.add('hidden')}
 const toLocal=ms=>new Date(ms-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,16);
 function openForm(title,fields,vals,cb){const f=$('#mform');
- f.innerHTML=`<h2 class="section-title">${title}</h2>`+fields.map(([k,l,t,o])=>{const v=vals[k]??'',req=l.endsWith('*')?'required':'',lab=l.replace(/\*$/,'');let i;
-  if(t==='select')i=`<select name="${k}" class="field" ${req}>${o.map(x=>{const[a,b]=Array.isArray(x)?x:[x,x];return`<option value="${esc(a)}" ${a==v?'selected':''}>${esc(b)}</option>`}).join('')}</select>`;
+ f.innerHTML=`<h2 class="section-title">${title}</h2>`+fields.map(([k,l,t,o])=>{const v=vals[k]??'',req=l.endsWith('*')?'required':'',lab=esc(l.replace(/\*$/,''));let i;
+  if(t==='rich')return`<div class="lbl">${lab}<div class="rtb"><button type="button" class="mbtn" data-cmd="bold" title="Negrita"><b>B</b></button><button type="button" class="mbtn" data-cmd="italic" title="Cursiva"><i>I</i></button><button type="button" class="mbtn" data-cmd="underline" title="Subrayado"><u>U</u></button><button type="button" class="mbtn" data-cmd="insertUnorderedList" title="Lista">• Lista</button><input type="color" class="rcol" value="#ffc266" title="Color del texto"></div><div class="rte" contenteditable="true" data-k="${k}">${sani(v)}</div></div>`;
+  if(t==='select'){const L=typeof o==='function'?o():o;i=`<select name="${k}" class="field" ${req}>${L.map(x=>{const[a,b]=Array.isArray(x)?x:[x,x];return`<option value="${esc(a)}" ${a==v?'selected':''}>${esc(b)}</option>`}).join('')}</select>`}
   else if(t==='area')i=`<textarea name="${k}" class="field" rows="3">${esc(v)}</textarea>`;
   else i=`<input name="${k}" class="field" type="${t==='dt'?'datetime-local':t||'text'}" ${t==='number'?'step="1"':''} value="${esc(v)}" ${req}>`;
-  return`<label>${esc(lab)}${i}</label>`}).join('')+`<div class="row mt"><button type="button" class="btn ghost" data-a="close">Cancelar</button><button class="btn">Guardar</button></div>`;
- f.onsubmit=e=>{e.preventDefault();const o=Object.fromEntries(new FormData(f));closeM();cb(o)};$('#modal').classList.remove('hidden')}
+  return`<label>${lab}${i}</label>`}).join('')+`<div class="row mt"><button type="button" class="btn ghost" data-a="close">Cancelar</button><button class="btn">Guardar</button></div>`;
+ f.onmousedown=e=>{const b=e.target.closest('[data-cmd]');if(b){e.preventDefault();document.execCommand(b.dataset.cmd)}};
+ f.onkeyup=f.onmouseup=()=>{const s=getSelection();if(s.rangeCount&&f.contains(s.anchorNode))f.rng=s.getRangeAt(0).cloneRange()};
+ f.oninput=e=>{if(e.target.classList.contains('rcol')){const s=getSelection();if(f.rng){s.removeAllRanges();s.addRange(f.rng)}document.execCommand('foreColor',false,e.target.value)}};
+ f.onsubmit=e=>{e.preventDefault();const o=Object.fromEntries(new FormData(f));f.querySelectorAll('.rte').forEach(d=>{o[d.dataset.k]=(d.textContent.trim()||d.querySelector('li'))?sani(d.innerHTML):''});closeM();cb(o)};
+ f.rng=null;$('#modal').classList.remove('hidden')}
 
 /* ---------- GitHub: publicar y leer datos ---------- */
 const det=()=>{const h=location.hostname;if(h.endsWith('github.io')){const o=h.split('.')[0];return{owner:o,repo:location.pathname.split('/')[1]||o+'.github.io'}}return{}};
@@ -228,17 +275,17 @@ const act={
  login(){const d=det();openForm('Acceso de administrador',[['owner','Usuario de GitHub*'],['repo','Repositorio*'],['token','Token de GitHub*','password']],d,login)},
  logout(){if(dirty&&!confirm('Hay cambios sin publicar. ¿Cerrar sesión de todos modos?'))return;A=null;dirty=false;localStorage.removeItem('nx_admin');load().then(render)},
  publish,dl:download,
- settings(){openForm('Ajustes',[['season','Nombre de la temporada*']],D,o=>{D.season=o.season;touch()})},
+ settings(){openForm('Ajustes de la temporada',[['season','Nombre de la temporada*'],['total','Total de rondas*','number'],['cur','Ronda actual*','number']],{season:D.season,total:D.rounds.total,cur:D.rounds.cur},o=>{const old=D.season;D.results.forEach(r=>{if(r.s===old)r.s=o.season});D.season=o.season;D.rounds={total:Math.max(1,+o.total||1),cur:Math.max(1,+o.cur||1)};touch()})},
  openc(e){const same=S.page==='desafios'&&S.sel===e.id;S.page='desafios';S.sel=same?null:e.id;render();if(S.sel)$('#cdet')?.scrollIntoView({block:'nearest',behavior:'smooth'})},
- newc(){openForm('Nuevo desafío',CF,{mode:'Solo',rarity:'Normal',difficulty:'Medio',bonus:20,status:'Próximamente'},o=>{o.end=o.end?new Date(o.end).getTime():0;D.challenges.push({id:uid(),start:Date.now(),...o});touch()});bindRarity()},
- editc(e){const c=D.challenges.find(x=>x.id===e.id);openForm('Editar desafío',CF,{...c,end:c.end?toLocal(c.end):''},o=>{o.end=o.end?new Date(o.end).getTime():0;Object.assign(c,o);touch()});bindRarity()},
+ newc(){openForm('Nuevo desafío',cf(),{mode:'Solo',rarity:'Normal',difficulty:'Medio',bonus:20,status:'Próximamente'},o=>{o.end=o.end?new Date(o.end).getTime():0;D.challenges.push({id:uid(),start:Date.now(),...o});touch()});bindRarity()},
+ editc(e){const c=D.challenges.find(x=>x.id===e.id);openForm('Editar desafío',cf(),{...c,end:c.end?toLocal(c.end):''},o=>{o.end=o.end?new Date(o.end).getTime():0;Object.assign(c,o);touch()});bindRarity()},
  delc(e){if(!confirm('¿Eliminar este desafío y sus resultados?'))return;D.challenges=D.challenges.filter(c=>c.id!==e.id);D.results=D.results.filter(r=>r.c!==e.id);S.sel=null;touch()},
- medal(e){const i=D.results.findIndex(r=>r.p===e.p&&r.c===e.c);if(i>=0&&D.results[i].m===e.m)D.results.splice(i,1);else if(i>=0)Object.assign(D.results[i],{m:e.m,at:Date.now()});else D.results.push({p:e.p,c:e.c,m:e.m,at:Date.now()});touch()},
+ medal(e){const i=D.results.findIndex(r=>r.p===e.p&&r.c===e.c);if(i>=0&&D.results[i].m===e.m)D.results.splice(i,1);else if(i>=0)Object.assign(D.results[i],{m:e.m,at:Date.now()});else D.results.push({p:e.p,c:e.c,m:e.m,at:Date.now(),s:D.season});touch()},
  newp(){openForm('Nuevo jugador',[['name','Nombre*']],{},o=>{D.players.push({id:uid(),name:o.name.trim(),bonus:0});touch()})},
  editp(e){const p=D.players.find(x=>x.id===e.id);openForm('Renombrar jugador',[['name','Nombre*']],p,o=>{p.name=o.name.trim();touch()})},
  plp(e){const p=D.players.find(x=>x.id===e.id);openForm('Sumar o restar PL',[['d','PL a sumar (usa negativo para restar)*','number']],{d:0},o=>{p.bonus=(+p.bonus||0)+(+o.d||0);touch()})},
  delp(e){if(!confirm('¿Eliminar este jugador con sus resultados y retos?'))return;D.players=D.players.filter(p=>p.id!==e.id);D.results=D.results.filter(r=>r.p!==e.id);D.duels=D.duels.filter(d=>d.a!==e.id&&d.b!==e.id);D.grants=D.grants.filter(g=>g.p!==e.id);D.videos=D.videos.filter(v=>v.p!==e.id);S.psel=null;touch()},
- openp(e){S.psel=S.psel===e.id?null:e.id;render();if(S.psel)$('#pdet')?.scrollIntoView({block:'nearest',behavior:'smooth'})},
+ openp(e){S.psel=S.psel===e.id?null:e.id;S.ptab='Resumen';render();if(S.psel)$('#pdet')?.scrollIntoView({block:'nearest',behavior:'smooth'})},
  newd(){if(D.players.length<2)return toast('Agrega al menos 2 jugadores primero.');openForm('Nuevo reto',duelF(),{status:'Pendiente'},o=>{D.duels.push({id:uid(),at:Date.now(),...o});touch()})},
  editd(e){const d=D.duels.find(x=>x.id===e.id);openForm('Editar reto',duelF(),d,o=>{Object.assign(d,o);touch()})},
  deld(e){if(!confirm('¿Eliminar este reto?'))return;D.duels=D.duels.filter(d=>d.id!==e.id);touch()},
@@ -253,85 +300,25 @@ const act={
  presti(e){const p=D.players.find(x=>x.id===e.id),s=stats(p);if(!s.max)return toast('Solo se puede ascender al llegar al nivel máximo (Leyenda, 2,000 XP).');if(!confirm('¿Reiniciar la XP de '+p.name+' y activar Prestigio '+roman(s.prest+1)+'?'))return;p.xpBase=s.xpRaw;p.prestige=s.prest+1;touch()},
  randd(){const n=D.players.length;if(n<2)return toast('Agrega al menos 2 jugadores primero.');if(D.duels.length&&!confirm('Ya hay retos en la lista; se agregarán '+n+' más. ¿Continuar?'))return;const ids=D.players.map(p=>p.id);for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ids[i],ids[j]]=[ids[j],ids[i]]}ids.forEach((id,i)=>D.duels.push({id:uid(),at:Date.now(),a:id,b:ids[(i+1)%n],game:'',rules:'',status:'Pendiente',m:''}));touch();toast('Se generaron '+n+' retos. Edita cada uno para poner el juego y las condiciones.')},
  endround(){if(!D.duels.length)return;if(!confirm('¿Cerrar la ronda y borrar la lista de retos? Las medallas ganadas se conservan.'))return;D.results.push(...duelRes());D.duels=[];touch()},
+ ptab(e){S.ptab=e.k;render()},
+ foto(e){const i=document.createElement('input');i.type='file';i.accept='image/*';i.onchange=()=>{const f=i.files[0],p=D.players.find(x=>x.id===e.id);if(f&&p)imgData(f,u=>{p.img=u;touch()})};i.click()},
+ delfoto(e){const p=D.players.find(x=>x.id===e.id);if(p){delete p.img;touch()}},
+ snd(){AU.muted=!AU.muted;localStorage.setItem('nx_mute',AU.muted?'1':'0');audio()},
+ musica(){const i=document.createElement('input');i.type='file';i.accept='audio/*';i.onchange=async()=>{const f=i.files[0];if(!f)return;if(f.size>25e6)return toast('La canción pesa más de 25 MB; usa un archivo más ligero.');toast('Subiendo canción…');try{const b=new Uint8Array(await f.arrayBuffer());let s='';for(let k=0;k<b.length;k+=32768)s+=String.fromCharCode.apply(null,b.subarray(k,k+32768));const path='music/'+Date.now()+'-'+f.name.replace(/[^\w.\-]/g,'_');const r=await gh('PUT',{message:'Subir canción de temporada',content:btoa(s)},'/contents/'+path);if(!r.ok)throw new Error(r.status);D.music={src:path,name:f.name};touch();toast('Canción subida. Pulsa "Publicar cambios" para activarla.')}catch(x){toast('No se pudo subir la canción ('+x.message+').')}};i.click()},
+ quitmusica(){D.music=null;touch()},
+ nextround(){D.rounds.cur=Math.min(D.rounds.total+1,D.rounds.cur+1);touch()},
+ closes(){const nx=D.season.replace(/(\d+)\s*$/,m=>String(+m+1).padStart(m.length,'0'));openForm('Cerrar temporada (guarda el ranking y reinicia los PL)',[['name','Nombre de la nueva temporada*'],['total','Rondas de la nueva temporada*','number']],{name:nx===D.season?D.season+' (2)':nx,total:D.rounds.total},o=>{const rows=ranking('PL').map(x=>({name:x.p.name,pl:x.s.pl,medals:x.s.sm,g:x.g,rank:x.s.rank,lvl:x.s.lvl+1,prest:x.s.prest}));D.results.forEach(r=>{if(!r.s)r.s=D.season});D.seasons.push({name:D.season,at:Date.now(),rows});D.players.forEach(p=>{p.bonusOld=(+p.bonusOld||0)+(+p.bonus||0);p.bonus=0});D.season=o.name;D.rounds={total:Math.max(1,+o.total||6),cur:1};S.rs='';touch();toast('Temporada cerrada. La XP, las medallas y los logros se conservan; los PL empiezan de cero.')})},
  theme(){openForm('Tema de la interfaz',[['preset','Plantilla (si eliges una, se ignoran los colores de abajo)','select',[['','— Personalizado —'],['original','Original'],['navidad','Navidad ❄'],['halloween','Halloween 🎃']]],['bg','Fondo','color'],['p1','Paneles y tarjetas','color'],['side','Barra lateral','color'],['amber','Acento principal','color'],['cyan','Acento secundario','color'],['red','Alerta (rojo)','color'],['text','Texto','color'],['fx','Partículas de fondo','select',[['','Ninguna'],['snow','Nieve ❄'],['embers','Chispas ✨']]],['frost','Escarcha en los bordes','select',[['0','No'],['1','Sí']]]],{...THEMES.original,...(D.theme||{}),preset:''},o=>{D.theme=o.preset?{...THEMES[o.preset]}:(({preset,...r})=>r)(o);touch()})}
 };
-const AF=[
-  ['name','Nombre del logro*'],
-  ['desc','Descripción','area'],
-  ['rar','Rareza','select',Object.keys(RAR)]
-];
-
-const duelF=()=>[
-  ['a','Retador (quien reta)*','select',opts()],
-  ['b','Retado (quien cumple el reto)*','select',opts()],
-  ['game','Juego del reto*'],
-  ['rules','Condiciones (lo que debe cumplir)','area'],
-  ['status','¿Lo cumplió?','select',DS],
-  ['m','Medalla (si lo cumplió)','select',[
-    ['','— Sin medalla —'],
-    ...['bronce','plata','oro','platino'].map(k=>[k,MED[k].n])
-  ]]
-];
-
-document.addEventListener('click',e=>{
-  if(e.target.id==='modal')return closeM();
-
-  if(e.target.id==='scrim'||e.target.id==='menu'){
-    const o=e.target.id==='menu';
-    $('#sidebar').classList.toggle('open',o);
-    $('#scrim').classList.toggle('open',o);
-    return;
-  }
-
-  const b=e.target.closest('[data-a]');
-  if(b&&act[b.dataset.a])act[b.dataset.a](b.dataset);
-});
-
-window.addEventListener('resize',()=>{
-  place();
-  const c=$('#fx');
-  c.width=innerWidth;
-  c.height=innerHeight;
-});
-
-setInterval(()=>{
-  const c=$('#cd');
-  if(c){
-    c.innerHTML=cd();
-    $('#cdbar').innerHTML=bar(pct());
-  }
-},1000);
-
-setInterval(async()=>{
-  if(!A&&!document.hidden&&!$('#modal').offsetParent){
-    const b=JSON.stringify(D);
-    await load();
-    if(JSON.stringify(D)!==b)render();
-  }
-},60000);
-
-window.onbeforeunload=e=>{
-  if(dirty){
-    e.preventDefault();
-    return '';
-  }
-};
-
-(async()=>{
-  try{
-    const sv=localStorage.getItem('nx_admin');
-    if(sv){
-      A=JSON.parse(sv);
-      await loadAdmin();
-    }
-  }catch(e){
-    A=null;
-  }
-
-  if(!A)await load();
-  render();
-})();
-
- </script>
-</body>
-</html>
+const AF=[['name','Nombre del logro*'],['desc','Descripción','area'],['rar','Rareza','select',Object.keys(RAR)]];
+const duelF=()=>[['a','Retador (quien reta)*','select',opts()],['b','Retado (quien cumple el reto)*','select',opts()],['game','Juego del reto*'],['rules','Condiciones (lo que debe cumplir)','area'],['status','¿Lo cumplió?','select',DS],['m','Medalla (si lo cumplió)','select',[['','— Sin medalla —'],...['bronce','plata','oro','platino'].map(k=>[k,MED[k].n])]]];
+document.addEventListener('click',e=>{if(e.target.id==='modal')return closeM();if(e.target.id==='scrim'||e.target.id==='menu'){const o=e.target.id==='menu';$('#sidebar').classList.toggle('open',o);$('#scrim').classList.toggle('open',o);return}
+ const b=e.target.closest('[data-a]');if(b&&act[b.dataset.a])act[b.dataset.a](b.dataset)});
+document.addEventListener('input',e=>{if(e.target.id==='fq'){S.fq=e.target.value;$('#cwrap').innerHTML=cwrap();place()}});
+document.addEventListener('change',e=>{const k=e.target.id;if(['fs','fc','fd','fr'].includes(k)){S[k]=e.target.value;$('#cwrap').innerHTML=cwrap();place()}if(k==='rs'){S.rs=e.target.value;render()}});
+window.addEventListener('resize',()=>{place();const c=$('#fx');c.width=innerWidth;c.height=innerHeight});
+setInterval(()=>{const c=$('#cd');if(c){c.innerHTML=cd();$('#cdbar').innerHTML=bar(pct())}},1000);
+setInterval(async()=>{if(!A&&!document.hidden&&!$('#modal').offsetParent){const b=JSON.stringify(D);await load();if(JSON.stringify(D)!==b)render()}},60000);
+window.onbeforeunload=e=>{if(dirty){e.preventDefault();return''}};
+(async()=>{try{const sv=localStorage.getItem('nx_admin');if(sv){A=JSON.parse(sv);await loadAdmin()}}catch(e){A=null}if(!A)await load();render()})();
+</script></body></html>
