@@ -121,7 +121,18 @@
   "cur": 1
  },
  "music": {
-  "src": "music/1794298381106-Diddy_Kong_Racing_Jungle_Falls__Vector_U_Remix_.mp3",
-  "name": "Diddy Kong Racing Jungle Falls (Vector U Remix).mp3"
+  "src": "music/1794298551249-Super_Mario_64_-_Bowser_s_Road__Epic_Orchestral_Remix_.mp3",
+  "name": "Super Mario 64 - Bowser's Road (Epic Orchestral Remix).mp3"
+ },
+ "theme": {
+  "bg": "#0b0d10",
+  "p1": "#1c2228",
+  "side": "#101419",
+  "amber": "#ffc266",
+  "cyan": "#73dbe4",
+  "red": "#ff7772",
+  "text": "#eef0ec",
+  "fx": "",
+  "frost": "0"
  }
 }
