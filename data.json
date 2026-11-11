@@ -184,6 +184,14 @@
    "desc": "Se uno de los primeros 5 en culminar el evento nexus",
    "rar": "Reliquia",
    "max": 5
+  },
+  {
+   "id": "mwcb57usi5j",
+   "name": "Traceur",
+   "desc": "¿Te crees merecedor de este logro? Bueno demuéstralo sacando Rango S en el Biome Spiral Parkour",
+   "rar": "Épica",
+   "max": 5,
+   "_img": null
   }
  ],
  "grants": [],
