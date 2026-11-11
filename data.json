@@ -189,6 +189,22 @@
    "rar": "Épica",
    "max": 5,
    "_img": null
+  },
+  {
+   "id": "mwcirv6qbn4",
+   "name": "Precursor",
+   "desc": "Participa en la Temporada 0: Protocolo Cero",
+   "rar": "Nexus",
+   "max": 5,
+   "_img": null
+  },
+  {
+   "id": "mwciwzeiee8",
+   "name": "El rey de los piratas",
+   "desc": "Encuentra el Token de Fornite >:V",
+   "rar": "Reliquia",
+   "max": 1,
+   "_img": null
   }
  ],
  "grants": [],
