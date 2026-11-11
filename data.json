@@ -188,7 +188,10 @@
   "total": 4,
   "cur": 1
  },
- "music": null,
+ "music": {
+  "src": "music/1794383539093-Apertura.mp3",
+  "name": "Apertura.mp3"
+ },
  "slogan": "JUEGA. SUPERA. TRASCIENDE.",
  "theme": {
   "bg": "#0b0d10",
