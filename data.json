@@ -49,7 +49,7 @@
   {
    "id": "mwb5hnvjf26",
    "start": 1794342994975,
-   "title": "Cubic",
+   "title": "Biome Spiral Parkour",
    "game": "Minecraft",
    "mode": "Solo",
    "category": "Velocidad",
@@ -59,9 +59,11 @@
    "slots": 5,
    "status": "Próximamente",
    "round": "1",
-   "end": 1794688560000,
-   "desc": "Parkour",
-   "rules": "Yes"
+   "end": 1795410000000,
+   "desc": "<b><font color=\"#f9bd62\">Biome Spiral Parkour</font></b> te lleva a un increíble recorrido de parkour a través de todos los biomas de Minecraft. ¿Podrás llegar a la cima de la Torre Espiral superando los desafíos de parkour y derrotar al Dragón del End al final? ¡Ven a descubrirlo y pon a prueba tus habilidades de parkour!<br><br>Versión de Minecraft 26.40",
+   "rules": "<ul><li>Termina el parkour</li><li>Termina con un rango superior al <b>B</b></li><li>No uses los checkpoint del bioma<b><font color=\"#66a1ff\"> Ice Peaks</font></b></li><li><font color=\"#ffffff\">Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b></li></ul>",
+   "link": "https://www.curseforge.com/minecraft-bedrock/maps/biome-spiral-parkour/download/8690321",
+   "_img": null
   },
   {
    "id": "mwb5nw6ht13",
