@@ -35,11 +35,11 @@
    "difficulty": "Extrema",
    "bonus": "20",
    "slots": 5,
-   "status": "Próximamente",
+   "status": "Activo",
    "round": "1",
-   "desc": "aa",
-   "rules": "aaa",
-   "end": 0
+   "desc": "<b><font color=\"#fec46c\">Prueba</font></b>",
+   "rules": "Prueba",
+   "end": 1794802020000
   },
   {
    "id": "mwb5hnvjf26",
@@ -91,6 +91,23 @@
    "end": 1794688920000,
    "desc": "Prueba 2",
    "rules": "Prueba 2"
+  },
+  {
+   "id": "mwblp0imk05",
+   "start": 1794370211806,
+   "title": "Faplayer97",
+   "game": "Helldivers",
+   "mode": "Solo",
+   "category": "Supervivencia",
+   "rarity": "Común",
+   "difficulty": "Medio",
+   "bonus": "20",
+   "slots": 5,
+   "status": "Disponible",
+   "round": "1",
+   "end": 1794802140000,
+   "desc": "Prueba <b>B</b>",
+   "rules": "<font color=\"#ffc46b\">Prueba B</font>"
   }
  ],
  "results": [],
@@ -166,10 +183,7 @@
   "total": 4,
   "cur": 1
  },
- "music": {
-  "src": "music/1794298551249-Super_Mario_64_-_Bowser_s_Road__Epic_Orchestral_Remix_.mp3",
-  "name": "Super Mario 64 - Bowser's Road (Epic Orchestral Remix).mp3"
- },
+ "music": null,
  "slogan": "JUEGA. SUPERA. TRASCIENDE.",
  "theme": {
   "bg": "#0b0d10",
