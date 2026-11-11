@@ -18,11 +18,6 @@
    "bonus": 0
   },
   {
-   "id": "mw8yd6f9vkg",
-   "name": "TheRoggerXD",
-   "bonus": 0
-  },
-  {
    "id": "mwbtbwuil3o",
    "name": "Shadoms",
    "bonus": 0
@@ -144,26 +139,6 @@
    "at": 1794384176665,
    "a": "mw8ycwnrc3z",
    "b": "mwbtbwuil3o",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwbu0bvd3l2",
-   "at": 1794384176665,
-   "a": "mwbtbwuil3o",
-   "b": "mw8yd6f9vkg",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwbu0bvd1b0",
-   "at": 1794384176665,
-   "a": "mw8yd6f9vkg",
-   "b": "mw8yd230hzp",
    "game": "",
    "rules": "",
    "status": "Pendiente",
