@@ -1,9 +1,14 @@
-<!doctype html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NEXUS ARENA</title>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0b0d10;--p1:#1c2228;--side:#101419;--text:#eef0ec;--p2:color-mix(in srgb,var(--p1) 55%,var(--bg));--line:#343c43;--muted:#a3adb5;--amber:#ffc266;--cyan:#73dbe4;--red:#ff7772}
+<!DOCTYPE doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width,initial-scale=1" name="viewport">
+                <title>
+                    NEXUS ARENA
+                </title>
+                <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+                    <style>
+                        :root{--bg:#0b0d10;--p1:#1c2228;--side:#101419;--text:#eef0ec;--p2:color-mix(in srgb,var(--p1) 55%,var(--bg));--line:#343c43;--muted:#a3adb5;--amber:#ffc266;--cyan:#73dbe4;--red:#ff7772}
 *{box-sizing:border-box}body{margin:0;font-family:'Fira Sans',sans-serif;color:var(--text);background:var(--bg)}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,#ffffff04 4px),radial-gradient(circle at 86% 5%,color-mix(in srgb,var(--amber) 7%,transparent),transparent 35%);z-index:-1}
 button,input,select,textarea{font:inherit}button{cursor:pointer}:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
@@ -69,6 +74,7 @@ a.btn{display:inline-block;text-decoration:none}.rt a,.gb a{color:var(--cyan);te
 .news{padding:12px 0;border-bottom:1px solid #ffffff13}.news:last-of-type{border:0}.news img{width:100%;max-height:200px;object-fit:cover;display:block;margin-bottom:10px;border:1px solid var(--line)}.news h3{margin:8px 0 6px;font-size:16px}
 details.rec{border:1px solid var(--line);margin-bottom:8px;background:var(--p2)}details.rec>summary{cursor:pointer;padding:12px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;list-style:none}details.rec>summary::-webkit-details-marker{display:none}details.rec .gb{padding:0 14px 14px}
 .ttl{margin-left:8px;vertical-align:middle}
+.gone{border-color:var(--line)!important}.gone h3,.gone .muted,.gone .subtle,.gone strong.mono,.gone .vs{opacity:.5}
 .span{grid-column:1/-1}
 .avatar{overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .fields{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:16px}.fields .field{flex:1;min-width:150px;width:auto;margin:0}
@@ -84,27 +90,89 @@ details.rec{border:1px solid var(--line);margin-bottom:8px;background:var(--p2)}
 @media(max-width:900px){.sidebar{transform:translateX(-100%);transition:transform .2s}.sidebar.open{transform:none}.scrim.open{display:block;position:fixed;inset:0;background:#000b;z-index:25}.mobile-bar{display:flex;justify-content:space-between;align-items:center;background:var(--side);border-bottom:1px solid var(--line);padding:13px 18px}.mobile-bar button{background:transparent;border:1px solid var(--line);color:#fff;padding:8px 12px}.main{margin:0;padding:25px 18px 60px}.grid-main{grid-template-columns:1fr}}
 @media(max-width:900px){.g2{grid-template-columns:1fr}}
 @media(max-width:560px){.card-grid{grid-template-columns:1fr}.hero{padding:20px}}
-</style></head>
-<body>
-<header class="mobile-bar"><strong class="mono" style="color:#ffc266">NEXUS ARENA</strong><button id="menu" aria-label="Menú">☰</button></header>
-<canvas id="fx"></canvas>
-<button id="snd" class="snd hidden" data-a="snd" title="Música de fondo: silenciar / activar"></button>
-<div id="splash" class="splash"><div class="sp-in"><div class="mark"></div><div class="sp-t mono">NEXUS ARENA</div><div id="sslogan" class="sp-s"></div><button class="btn" id="go" data-a="start">Iniciar</button></div></div>
-<div id="sndp" class="sndp hidden"><button class="mbtn" id="mutebtn" data-a="mute" style="--c:var(--amber)">Silenciar</button><input id="vol" type="range" min="0" max="100" aria-label="Volumen"></div>
-<div id="scrim" class="scrim"></div>
-<aside id="sidebar" class="sidebar">
- <div class="brand"><div class="mark"></div><strong class="mono bt" style="color:#ffc266">NEXUS<br>ARENA</strong><div id="slogan" class="slogan"></div></div>
- <nav id="nav" style="margin-top:20px"></nav>
- <div class="side-b" id="side"></div>
-</aside>
-<main class="main">
- <div class="topline"><div><p class="eyebrow" id="crumb"></p><h1 id="title"></h1><p class="muted" id="sub" style="margin:0"></p></div><span class="badge cyan" id="mode">● SISTEMA ACTIVO</span></div>
- <div id="screen"></div>
-</main>
-<div id="modal" class="modal hidden"><form id="mform" class="panel"></form></div>
-<div id="toast" class="toast hidden"></div>
-<script>
-const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+                    </style>
+                </link>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <header class="mobile-bar">
+            <strong class="mono" style="color:#ffc266">
+                NEXUS ARENA
+            </strong>
+            <button aria-label="Menú" id="menu">
+                ☰
+            </button>
+        </header>
+        <canvas id="fx">
+        </canvas>
+        <button class="snd hidden" data-a="snd" id="snd" title="Música de fondo: silenciar / activar">
+        </button>
+        <div class="splash" id="splash">
+            <div class="sp-in">
+                <div class="mark">
+                </div>
+                <div class="sp-t mono">
+                    NEXUS ARENA
+                </div>
+                <div class="sp-s" id="sslogan">
+                </div>
+                <button class="btn" data-a="start" id="go">
+                    Iniciar
+                </button>
+            </div>
+        </div>
+        <div class="sndp hidden" id="sndp">
+            <button class="mbtn" data-a="mute" id="mutebtn" style="--c:var(--amber)">
+                Silenciar
+            </button>
+            <input aria-label="Volumen" id="vol" max="100" min="0" type="range"/>
+        </div>
+        <div class="scrim" id="scrim">
+        </div>
+        <aside class="sidebar" id="sidebar">
+            <div class="brand">
+                <div class="mark">
+                </div>
+                <strong class="mono bt" style="color:#ffc266">
+                    NEXUS
+                    <br>
+                        ARENA
+                    </br>
+                </strong>
+                <div class="slogan" id="slogan">
+                </div>
+            </div>
+            <nav id="nav" style="margin-top:20px">
+            </nav>
+            <div class="side-b" id="side">
+            </div>
+        </aside>
+        <main class="main">
+            <div class="topline">
+                <div>
+                    <p class="eyebrow" id="crumb">
+                    </p>
+                    <h1 id="title">
+                    </h1>
+                    <p class="muted" id="sub" style="margin:0">
+                    </p>
+                </div>
+                <span class="badge cyan" id="mode">
+                    ● SISTEMA ACTIVO
+                </span>
+            </div>
+            <div id="screen">
+            </div>
+        </main>
+        <div class="modal hidden" id="modal">
+            <form class="panel" id="mform">
+            </form>
+        </div>
+        <div class="toast hidden" id="toast">
+        </div>
+        <script>
+            const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MED={participacion:{n:'Part.',pl:5,xp:15,c:'#a3adb5'},bronce:{n:'Bronce',pl:10,xp:25,c:'#ca906c'},plata:{n:'Plata',pl:20,xp:35,c:'#c6d2da'},oro:{n:'Oro',pl:30,xp:45,c:'#ffc266'},platino:{n:'Platino',pl:40,xp:55,c:'#c7f5f7'}};
 const RANKS=[[0,'Recluta'],[200,'Rival'],[500,'Veterano'],[900,'Élite'],[1400,'Maestro'],[2000,'Leyenda']];
 const RAR={'Común':{c:'#a3adb5'},Rara:{c:'#5aa9ff'},'Épica':{c:'#b57bff'},Nexus:{c:'#d9b95b'},Reliquia:{c:'#b5564e'}};
@@ -120,7 +188,7 @@ const pnh=id=>{const p=D.players.find(x=>x.id===id);return p?esc(p.name)+pr(+p.p
 const pr=n=>n?`<span class="prs" title="Prestigio ${roman(n)}">${roman(n)}</span>`:'';
 const roman=n=>['','I','II','III','IV','V','VI','VII','VIII','IX','X'][n]||String(n);
 const cinfo=c=>[c.game,c.category,c.difficulty].filter(Boolean).map(esc).join(' · ');
-const ccard=(c,x='')=>`<button class="panel card ${x}" data-a="openc" data-id="${c.id}"><div class="row"><span class="mg">${crar(c)}${c.mode?badge(c.mode,'cyan'):''}${c.round?badge(c.round,'muted'):''}</span>${badge(c.status,SC[c.status])}</div><h3>${esc(c.title)}</h3><p class="subtle" style="margin:0">${cinfo(c)}<br>Límite: ${lim(c)}</p>${relicNote(c)}<strong class="amber mono" style="margin-top:auto">${40+(c.rarity==='Nexus'?+c.bonus||0:0)} PL MÁX.</strong></button>`;
+const ccard=(c,x='')=>`<button class="panel card ${x}${gone(c)}" data-a="openc" data-id="${c.id}"><div class="row"><span class="mg">${crar(c)}${c.mode?badge(c.mode,'cyan'):''}${c.round?badge(c.round,'muted'):''}</span>${badge(c.status,SC[c.status])}</div><h3>${esc(c.title)}</h3><p class="subtle" style="margin:0">${cinfo(c)}<br>Límite: ${lim(c)}</p>${relicNote(c)}<strong class="amber mono" style="margin-top:auto">${40+(c.rarity==='Nexus'?+c.bonus||0:0)} PL MÁX.</strong></button>`;
 const arch=a=>D.grants.filter(g=>g.a===a.id).forEach(g=>{const p=D.players.find(x=>x.id===g.p);if(p)(p.hall=p.hall||[]).push({name:a.name,desc:a.desc,rar:a.rar,title:a.title||'',trar:a.trar||a.rar,at:g.at||Date.now(),season:D.season})});
 const THEMES={
  original:{bg:'#0b0d10',p1:'#1c2228',side:'#101419',amber:'#ffc266',cyan:'#73dbe4',red:'#ff7772',text:'#eef0ec',fx:'',frost:'0',retro:'0'},
@@ -170,9 +238,11 @@ const crar=c=>rbadge(!c.rarity||c.rarity==='Normal'?'Común':c.rarity);
 const relicLeft=a=>Math.max(0,(+a.max||0)-D.grants.filter(g=>g.a===a.id).length);
 const relicLeftC=c=>Math.max(0,(+c.slots||0)-D.results.filter(r=>r.c===c.id&&r.m!=='participacion').length);
 const relicDone=r=>r.m!=='participacion'&&(C(r.c)?C(r.c).rarity==='Reliquia':!!r.rel);
-const relicNote=c=>c.rarity==='Reliquia'?`<span class="badge" style="color:${rc('Reliquia')};align-self:flex-start">Reliquia · quedan ${relicLeftC(c)} de ${+c.slots||0} · +10 pts</span>`:'';
-function relicPanel(){const L=D.achs.filter(a=>a.rar==='Reliquia'&&relicLeft(a)>0);if(!L.length)return'';
- return`<section class="panel pad" style="border-color:${rc('Reliquia')}"><div class="row">${rbadge('Reliquia')}<span class="subtle">LOGRO EXCLUSIVO · EDICIÓN LIMITADA</span></div>${L.map(a=>`<div class="rrow"><span><strong class="mono">${esc(a.name)}</strong><br><span class="subtle">${esc(a.desc||'')}</span></span><span class="badge" style="color:${rc('Reliquia')}">Quedan ${relicLeft(a)} de ${+a.max||0}</span></div>`).join('')}</section>`}
+const relicNote=c=>c.rarity!=='Reliquia'?'':(relicLeftC(c)>0?`<span class="badge" style="color:${rc('Reliquia')};align-self:flex-start">Reliquia · quedan ${relicLeftC(c)} de ${+c.slots||0} · +10 pts</span>`:`<span class="badge red" style="align-self:flex-start">🔒 Cupos agotados · ya no está disponible</span>`);
+const gone=c=>c.rarity==='Reliquia'&&relicLeftC(c)<=0?' gone':'';
+function relicPanel(){const R=D.achs.filter(a=>a.rar==='Reliquia');if(!R.length)return'';
+ const row=(a,ok)=>`<div class="rrow${ok?'':' gone'}"><span><strong class="mono">${esc(a.name)}</strong><br><span class="subtle">${esc(a.desc||'')}</span></span>${ok?`<span class="badge" style="color:${rc('Reliquia')}">Quedan ${relicLeft(a)} de ${+a.max||0}</span>`:'<span class="badge red">🔒 Ya no está disponible</span>'}</div>`;
+ return`<section class="panel pad" style="border-color:${rc('Reliquia')}"><div class="row">${rbadge('Reliquia')}<span class="subtle">LOGRO EXCLUSIVO · EDICIÓN LIMITADA</span></div>${R.filter(a=>relicLeft(a)>0).map(a=>row(a,1)).join('')}${R.filter(a=>relicLeft(a)<=0).map(a=>row(a,0)).join('')}</section>`}
 const ytId=u=>{const m=String(u).match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);return m&&m[1]};
 function bindRarity(){const f=$('#mform'),r=f.elements.rarity,d=f.elements.difficulty,s=f.elements.status,e=f.elements.end;
  const lock=()=>{e.disabled=r.value==='Nexus'&&s.value==='Próximamente';if(e.disabled)e.value=''};
@@ -265,7 +335,7 @@ const nach=(p,s)=>allAch().filter(a=>has(p,a,s)).length+(p.hall||[]).length;
 const lfilt=()=>{const q=S.lq.toLowerCase();return allAch().filter(a=>(!q||(a.name+' '+(a.desc||'')).toLowerCase().includes(q))&&(!S.lr||a.rar===S.lr||(S.lr==='Común'&&!RAR[a.rar]))&&(!S.lt||(S.lt==='Automáticos'?!!a.auto:!a.auto))&&(!S.ld||(a.rar==='Reliquia'&&(S.ld==='Disponibles'?relicLeft(a)>0:relicLeft(a)<=0))))};
 function lcards(){const P=D.players.map(p=>({p,s:stats(p)})),L=lfilt();
  return L.length?`<div class="card-grid">${L.map(a=>{const n=P.filter(x=>has(x.p,a,x.s)).length;
- return`<div class="panel card" style="cursor:default;border-left:3px solid ${rc(a.rar)}"><div class="row"><span style="font-size:24px">🏅</span>${rbadge(a.rar)}</div><h3>${esc(a.name)}</h3><p class="muted" style="margin:0">${esc(a.desc)}</p>${a.title?`<p style="margin:0">🎁 Recompensa: ${ttag({name:a.title,rar:a.trar||a.rar},1)}</p>`:''}${a.rar==='Reliquia'?`<p style="margin:0;color:${rc('Reliquia')}">${relicLeft(a)>0?'Quedan '+relicLeft(a)+' de '+(+a.max||0):'Agotada'} · +10 pts de reliquia</p>`:''}<p class="subtle" style="margin:0">${n} / ${P.length} jugadores lo han conseguido</p>${a.auto?'<p class="subtle" style="margin:0">Logro automático</p>':adm(`<span class="mg"><button class="btn small secondary" data-a="edita" data-id="${a.id}">Editar</button><button class="btn small danger" data-a="dela" data-id="${a.id}">Eliminar</button></span>`)}</div>`}).join('')}</div>`:empty('No hay logros que coincidan con los filtros.')}
+ return`<div class="panel card${a.rar==='Reliquia'&&relicLeft(a)<=0?' gone':''}" style="cursor:default;border-left:3px solid ${rc(a.rar)}"><div class="row"><span style="font-size:24px">🏅</span>${rbadge(a.rar)}</div><h3>${esc(a.name)}</h3><p class="muted" style="margin:0">${esc(a.desc)}</p>${a.title?`<p style="margin:0">🎁 Recompensa: ${ttag({name:a.title,rar:a.trar||a.rar},1)}</p>`:''}${a.rar==='Reliquia'?(relicLeft(a)>0?`<p style="margin:0;color:${rc('Reliquia')}">Quedan ${relicLeft(a)} de ${+a.max||0} · +10 pts de reliquia</p>`:`<p style="margin:0"><span class="badge red">🔒 Ya no está disponible</span></p><p class="subtle" style="margin:0">Ya se entregaron las ${+a.max||0} reliquias.</p>`):''}<p class="subtle" style="margin:0">${n} / ${P.length} jugadores lo han conseguido</p>${a.auto?'<p class="subtle" style="margin:0">Logro automático</p>':adm(`<span class="mg"><button class="btn small secondary" data-a="edita" data-id="${a.id}">Editar</button><button class="btn small danger" data-a="dela" data-id="${a.id}">Eliminar</button></span>`)}</div>`}).join('')}</div>`:empty('No hay logros que coincidan con los filtros.')}
 function lfil(){const o=(a,all,v)=>`<option value="">${all}</option>`+a.map(x=>`<option ${x===v?'selected':''}>${esc(x)}</option>`).join('');
  return`<div class="fields"><input id="lq" class="field" placeholder="Buscar logro" value="${esc(S.lq)}"><select id="lr" class="field">${o(Object.keys(RAR),'Todas las rarezas',S.lr)}</select><select id="lt" class="field">${o(['Automáticos','Personalizados'],'Todos los tipos',S.lt)}</select><select id="ld" class="field">${o(['Disponibles','Agotadas'],'Disponibilidad (reliquias)',S.ld)}</select></div>`}
 function logros(){return adm(`<div class="mb mg"><button class="btn" data-a="newa">+ Nuevo logro</button>${D.achs.length?'<button class="btn secondary" data-a="clra">Archivar y limpiar logros personalizados</button>':''}</div>`)+lfil()+`<div id="lwrap">${lcards()}</div>`}
@@ -424,4 +494,6 @@ setInterval(async()=>{if(!A&&!document.hidden&&!$('#modal').offsetParent){const 
 window.onbeforeunload=e=>{if(dirty){e.preventDefault();return''}};
 try{if(sessionStorage.getItem('nx_splash'))$('#splash').remove();else $('#go').focus()}catch(e){}
 (async()=>{try{const sv=localStorage.getItem('nx_admin');if(sv){A=JSON.parse(sv);await loadAdmin()}}catch(e){A=null}if(!A)await load();render()})();
-</script></body></html>
+        </script>
+    </body>
+</html>
