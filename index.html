@@ -135,11 +135,12 @@ function fx(type,key){type=type||'';const k=type+'|'+(type==='pixels'?key:'');if
 function applyTheme(){const t={...THEMES.original,...(D.theme||{})},r=document.documentElement.style;['bg','p1','side','amber','cyan','red','text'].forEach(k=>r.setProperty('--'+k,t[k]));document.body.classList.toggle('frost',t.frost==='1');document.body.classList.toggle('retro',t.retro==='1');$('#slogan').textContent=D.slogan||'';{const s2=$('#sslogan');if(s2)s2.textContent=D.slogan||''}fx(t.fx,t.bg+t.cyan)}
 const nurl=u=>{u=String(u||'').trim();return u?(/^https?:\/\//i.test(u)?u:'https://'+u):''};
 const RT_OK=new Set(['b','strong','i','em','u','div','p','span','ul','ol','li','font']);
-function sani(h){h=String(h||'');if(!/<[a-z]/i.test(h))return esc(h).replace(/\n/g,'<br>');const t=document.createElement('template');t.innerHTML=h;
- const w=n=>[...n.childNodes].map(c=>{if(c.nodeType===3)return esc(c.textContent);if(c.nodeType!==1)return'';const g=c.tagName.toLowerCase();if(g==='br')return'<br>';if(g==='a'){const hf=c.getAttribute('href')||'';return/^https?:\/\//i.test(hf)?`<a href="${esc(hf)}" target="_blank" rel="noopener noreferrer">${w(c)}</a>`:w(c)}if(!RT_OK.has(g))return/^(script|style)$/.test(g)?'':w(c);let a='';
+const lk=s=>s.replace(/https?:\/\/[^\s<]*[^\s<.,;:!?)]/g,u=>`<a href="${u}" target="_blank" rel="noopener noreferrer">${u}</a>`);
+function sani(h){h=String(h||'');if(!/<[a-z]/i.test(h))return lk(esc(h)).replace(/\n/g,'<br>');const t=document.createElement('template');t.innerHTML=h;
+ const w=(n,ia)=>[...n.childNodes].map(c=>{if(c.nodeType===3)return ia?esc(c.textContent):lk(esc(c.textContent));if(c.nodeType!==1)return'';const g=c.tagName.toLowerCase();if(g==='br')return'<br>';if(g==='a'){const hf=c.getAttribute('href')||'';return/^https?:\/\//i.test(hf)?`<a href="${esc(hf)}" target="_blank" rel="noopener noreferrer">${w(c,1)}</a>`:w(c,ia)}if(!RT_OK.has(g))return/^(script|style)$/.test(g)?'':w(c,ia);let a='';
   if(g==='font'){const k=c.getAttribute('color')||'';if(/^(#[0-9a-f]{3,8}|[a-z]+|rgb\([\d, ]+\))$/i.test(k))a=` color="${k}"`}
   else if(g==='span'){const m=(c.getAttribute('style')||'').match(/(?:^|;)\s*color:\s*(#[0-9a-f]{3,8}|rgb\([\d, ]+\))/i);if(m)a=` style="color:${m[1]}"`}
-  return`<${g}${a}>${w(c)}</${g}>`}).join('');return w(t.content)}
+  return`<${g}${a}>${w(c,ia)}</${g}>`}).join('');return w(t.content)}
 const av=(p,c='')=>`<div class="avatar ${c}">${p.img&&/^data:image\//.test(p.img)?`<img src="${esc(p.img)}" alt="">`:esc(p.name[0].toUpperCase())}</div>`;
 function imgBlob(f,max,cb){const im=new Image();im.onload=()=>{const k=Math.min(1,max/im.width),c=document.createElement('canvas');c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext('2d').drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(im.src);const u=c.toDataURL('image/jpeg',.8);cb({url:u,b64:u.split(',')[1]})};im.src=URL.createObjectURL(f)}
 async function repoPut(path,b64,msg){const r=await gh('PUT',{message:msg,content:b64},'/contents/'+path);if(!r.ok)throw new Error(r.status)}
@@ -186,7 +187,7 @@ const stat=(n,l)=>`<div class="panel stat"><small>${l}</small><strong>${n}</stro
 const fmt=ms=>new Date(ms).toLocaleString('es',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.remove('hidden');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.add('hidden'),5000)}
 function touch(){dirty=true;render()}
-
+ 
 /* ---------- cálculos ---------- */
 function stats(p){const r=[...D.results,...duelRes()].filter(x=>x.p===p.id),cur=x=>(x.s||D.season)===D.season,s={pl:+p.bonus||0,plAll:(+p.bonus||0)+(+p.bonusOld||0),sm:0,xp:0,n:{participacion:0,bronce:0,plata:0,oro:0,platino:0},r};
  r.forEach(x=>{const m=MED[x.m];if(!m)return;const v=m.pl+nxb(x);s.plAll+=v;if(cur(x)){s.pl+=v;if(x.m!=='participacion')s.sm++}s.xp+=m.xp;s.n[x.m]++});
@@ -201,7 +202,7 @@ const curEvent=()=>{const rk=c=>c.end&&c.end<=Date.now()?2:(c.status==='Próxima
 const left=()=>{const c=curEvent();return c&&c.end?Math.max(0,c.end-Date.now()):0};
 const cd=()=>{const ms=left(),s=Math.floor(ms/1000),u=ms<=864e5,v=[Math.floor(s/86400),Math.floor(s%86400/3600),Math.floor(s%3600/60),s%60],l=['DÍAS','HORAS','MIN','SEG'];return v.map((n,i)=>`<span class="cdb"><b class="${u?'red':''}">${String(n).padStart(2,'0')}</b><i>${l[i]}</i></span>`).join('')};
 const pct=()=>{const c=curEvent();if(!c||!c.end)return 0;const s=c.start||Date.now();return(Date.now()-s)/(c.end-s)*100};
-
+ 
 /* ---------- páginas ---------- */
 function hero(){const c=curEvent();
  if(!c)return`<section class="panel hero">${badge('SIN EVENTO NEXUS','cyan')}<h2 class="big mt">Esperando el próximo desafío Nexus</h2><p class="muted">Cuando el admin cree un desafío de rareza Nexus, aparecerá aquí automáticamente con su cuenta regresiva.</p></section>`;
@@ -212,9 +213,9 @@ function hero(){const c=curEvent();
 function others(){const L=D.challenges.map((c,i)=>[c,i]).filter(x=>x[0].rarity!=='Nexus'&&x[0].rarity!=='Reliquia'&&x[0].status!=='Finalizado').sort((a,b)=>(DR[a[0].difficulty]??9)-(DR[b[0].difficulty]??9)||a[1]-b[1]).slice(0,3).map(x=>x[0]);if(!L.length)return'';
  return`<section><div class="row mb"><h2 class="section-title" style="margin:0">Más desafíos</h2><button class="btn small ghost" data-a="nav" data-k="desafios">Ver todos →</button></div><div class="card-grid">${L.map(c=>ccard(c)).join('')}</div></section>`}
 function newsPanel(){const L=[...D.news].sort((a,b)=>b.at-a.at),sh=S.allnews?L:L.slice(0,3);if(!L.length&&!A)return'';
- return`<section class="panel pad"><div class="row mb"><h2 class="section-title" style="margin:0">Noticias y avisos</h2>${adm('<button class="btn small" data-a="newn">+ Nuevo</button>')}</div>${sh.length?sh.map(n=>`<article class="news">${n.img&&/^img\//.test(n.img)?`<img src="${esc(n.img)}" alt="" loading="lazy">`:''}<div class="row">${n.kind==='Aviso próximo'?'<span class="badge nexus">Próximamente</span>':badge('Noticia','cyan')}<span class="subtle">${fmt(n.at)}</span></div><h3>${esc(n.title)}</h3><div class="rt">${sani(n.body)}</div>${adm(`<div class="mg mt"><button class="btn small secondary" data-a="editn" data-id="${n.id}">Editar</button><button class="btn small danger" data-a="deln" data-id="${n.id}">Eliminar</button></div>`)}</article>`).join(''):'<p class="muted">Aún no hay avisos.</p>'}${L.length>3?`<button class="btn small ghost mt" data-a="morenews">${S.allnews?'Ver menos':'Ver más ('+(L.length-3)+')'}</button>`:''}</section>`}
-const nf=n=>[['title','Título*'],['kind','Tipo','select',['Noticia','Aviso próximo']],['body','Texto (puedes dar formato y poner enlaces)','rich'],['img','Imagen (opcional)','file'],...(n&&n.img?[['rmimg','Imagen actual','select',[['0','Conservar'],['1','Quitar']]]]:[])];
-async function saveNews(n,o){try{if(o._img){const path='img/news-'+Date.now()+'.jpg';await repoPut(path,o._img.b64,'Imagen de aviso');if(n.img)repoDel(n.img);n.img=path}else if(o.rmimg==='1'&&n.img){repoDel(n.img);n.img=''}n.title=o.title.trim();n.kind=o.kind;n.body=o.body;if(!D.news.includes(n))D.news.push(n);touch()}catch(e){toast('No se pudo subir la imagen ('+e.message+'). Revisa tu sesión de administrador.')}}
+ return`<section class="panel pad"><div class="row mb"><h2 class="section-title" style="margin:0">Noticias y avisos</h2>${adm('<button class="btn small" data-a="newn">+ Nuevo</button>')}</div>${sh.length?sh.map(n=>`<article class="news">${n.img&&/^img\//.test(n.img)?`<img src="${esc(n.img)}" alt="" loading="lazy">`:''}<div class="row">${n.kind==='Aviso próximo'?'<span class="badge nexus">Próximamente</span>':badge('Noticia','cyan')}<span class="subtle">${fmt(n.at)}</span></div><h3>${esc(n.title)}</h3><div class="rt">${sani(n.body)}</div>${n.link&&/^https?:\/\//i.test(n.link)?`<a class="btn small mt" href="${esc(n.link)}" target="_blank" rel="noopener noreferrer">${esc(n.linkText||'Ver más')} ↗</a>`:''}${adm(`<div class="mg mt"><button class="btn small secondary" data-a="editn" data-id="${n.id}">Editar</button><button class="btn small danger" data-a="deln" data-id="${n.id}">Eliminar</button></div>`)}</article>`).join(''):'<p class="muted">Aún no hay avisos.</p>'}${L.length>3?`<button class="btn small ghost mt" data-a="morenews">${S.allnews?'Ver menos':'Ver más ('+(L.length-3)+')'}</button>`:''}</section>`}
+const nf=n=>[['title','Título*'],['kind','Tipo','select',['Noticia','Aviso próximo']],['body','Texto (puedes dar formato y poner enlaces)','rich'],['link','Enlace (opcional, https://…)'],['linkText','Texto del botón del enlace (ej. Ver más)'],['img','Imagen (opcional)','file'],...(n&&n.img?[['rmimg','Imagen actual','select',[['0','Conservar'],['1','Quitar']]]]:[])];
+async function saveNews(n,o){try{if(o._img){const path='img/news-'+Date.now()+'.jpg';await repoPut(path,o._img.b64,'Imagen de aviso');if(n.img)repoDel(n.img);n.img=path}else if(o.rmimg==='1'&&n.img){repoDel(n.img);n.img=''}n.title=o.title.trim();n.kind=o.kind;n.body=o.body;n.link=nurl(o.link);n.linkText=(o.linkText||'').trim();if(!D.news.includes(n))D.news.push(n);touch()}catch(e){toast('No se pudo subir la imagen ('+e.message+'). Revisa tu sesión de administrador.')}}
 function seasonPanel(){const R=D.rounds||{total:6,cur:1},rest=Math.max(0,R.total-R.cur);
  return`<section class="panel pad"><h2 class="section-title">Estado de la temporada</h2><p class="muted">${R.cur>R.total?'La temporada terminó.':`Ronda ${R.cur} de ${R.total}. ${rest?'Quedan '+rest+(rest===1?' ronda':' rondas')+' después de esta.':'Es la última ronda.'}`}</p><div class="ticks">${Array.from({length:R.total},(_,i)=>`<div class="tick ${i+1<R.cur?'done':i+1===R.cur?'current':''}">R${String(i+1).padStart(2,'0')}</div>`).join('')}</div>${adm('<div class="mg mt"><button class="btn small secondary" data-a="settings">Editar</button><button class="btn small" data-a="nextround">Siguiente ronda →</button></div>')}</section>`}
 function home(){const top=ranking().slice(0,3),last=[...D.results,...duelRes()].sort((a,b)=>b.at-a.at).slice(0,5);
@@ -222,7 +223,7 @@ function home(){const top=ranking().slice(0,3),last=[...D.results,...duelRes()].
  <section class="stat-grid">${stat(D.players.length,'Jugadores')}${stat(D.challenges.length,'Desafíos')}${stat([...D.results,...duelRes()].filter(r=>r.m!=='participacion').length,'Medallas')}${stat(D.duels.length,'Retos')}</section>
  <section class="panel pad"><h2 class="section-title">Top 3 jugadores</h2>${top.length?top.map((x,i)=>`<div class="line"><span class="mono amber">0${i+1}</span>${av(x.p)}<div><strong>${esc(x.p.name)}</strong>${pr(x.s.prest)}<div class="subtle">${x.s.rank}</div></div><strong class="mono amber">${x.s.pl} PL</strong></div>`).join(''):'<p class="muted">Aún no hay jugadores.</p>'}</section></div>
  <div class="stack"><section class="panel pad"><h2 class="section-title">Últimos resultados</h2>${last.length?last.map(r=>`<div class="rrow"><span><strong>${esc(pname(r.p))}</strong><br><span class="subtle">${esc(rname(r))}</span></span>${badge(MED[r.m].n+' · +'+rpl(r)+' PL','cyan')}</div>`).join(''):'<p class="muted">Sin resultados todavía.</p>'}</section>${seasonPanel()}${relicPanel()}${newsPanel()}</div></div>`}
-
+ 
 const cf=()=>[['title','Título*'],['game','Videojuego'],['mode','Modo de juego','select',['Solo','Multijugador']],['category','Categoría','select',cats],['rarity','Rareza','select',()=>Object.keys(RAR)],['difficulty','Dificultad (Extrema solo en Nexus)','select',[...DIFF,'Extrema']],['bonus','PL extra al completar (solo Nexus)','number'],['slots','Cupos (solo Reliquia): cuántos jugadores pueden completarlo','number'],['status','Disponibilidad','select',['Próximamente','Disponible','Por validar','Finalizado']],['round','Ronda (opcional, ej. Ronda 04)'],['end','Fecha y hora de cierre (para el contador)','dt'],['desc','Misión','rich'],['rules','Objetivos','rich'],['link','Enlace (opcional, https://…)']];
 const SC={Activo:'amber',Disponible:'amber','Por validar':'cyan',Próximamente:'muted',Finalizado:'red'};
 function detail(){const c=C(S.sel);if(!c)return'';
@@ -306,7 +307,7 @@ function recs(){const on=D.fb&&D.fb.url;
   else box=`<section class="panel pad"><div class="row mb"><h2 class="section-title" style="margin:0">Buzón del administrador${FB.items?' ('+FB.items.length+')':''}</h2><span class="mg"><button class="btn small secondary" data-a="fbrefresh">Actualizar</button><button class="btn small ghost" data-a="fbconf">Configurar</button></span></div>${FB.loading?'<p class="muted">Cargando…</p>':FB.err?`<p class="red">${esc(FB.err)}</p>`:(FB.items&&FB.items.length)?FB.items.map(i=>`<details class="rec"><summary><span class="badge cyan">${esc(i.tag)}</span><strong>${esc(i.title)}</strong><span class="subtle">${fmt(i.at)}</span></summary><div class="gb"><p style="white-space:pre-wrap">${esc(i.text)}</p><p class="subtle">${i.name?'De: '+esc(i.name):'Sin nombre'}</p><button class="btn small danger" data-a="fbdel" data-id="${esc(i.id)}">Eliminar</button></div></details>`).join(''):'<p class="muted">No hay recomendaciones por ahora.</p>'}</section>`}
  return`<div class="stack">${form}${box}</div>`}
 const PAGES={inicio:home,desafios:challenges,retos,rankings,logros,jugadores,historial,guia,recomendaciones:recs};
-
+ 
 /* ---------- interfaz ---------- */
 function render(){const t=T[S.page];$('#crumb').textContent=`${t[0]} / ${D.season.toUpperCase()}`;$('#title').textContent=t[1];$('#sub').textContent=t[2];
  $('#mode').textContent=A?'● MODO ADMIN':'● SISTEMA ACTIVO';$('#mode').className='badge '+(A?'amber':'cyan');
@@ -329,7 +330,7 @@ function openForm(title,fields,vals,cb){const f=$('#mform');
  f.oninput=e=>{if(e.target.classList.contains('rcol')){const s=getSelection();if(f.rng){s.removeAllRanges();s.addRange(f.rng)}document.execCommand('foreColor',false,e.target.value)}};
  f.onsubmit=e=>{e.preventDefault();const o=Object.fromEntries(new FormData(f));f.querySelectorAll('.rte').forEach(d=>{o[d.dataset.k]=(d.textContent.trim()||d.querySelector('li'))?sani(d.innerHTML):''});o._img=f.upl||null;closeM();cb(o)};
  f.rng=null;$('#modal').classList.remove('hidden')}
-
+ 
 /* ---------- GitHub: publicar y leer datos ---------- */
 const det=()=>{const h=location.hostname;if(h.endsWith('github.io')){const o=h.split('.')[0];return{owner:o,repo:location.pathname.split('/')[1]||o+'.github.io'}}return{}};
 const gh=(m,b,u='/contents/data.json')=>fetch(`https://api.github.com/repos/${A.owner}/${A.repo}${u}`,{method:m,headers:{Authorization:'Bearer '+A.token,Accept:'application/vnd.github+json'},body:b&&JSON.stringify(b)});
@@ -340,7 +341,7 @@ async function publish(){try{let r=await gh('GET');A.sha=r.ok?(await r.json()).s
  r=await gh('PUT',{message:'Actualizar datos de NEXUS ARENA',content:btoa(unescape(encodeURIComponent(JSON.stringify(D,null,1)))),sha:A.sha});
  if(!r.ok)throw new Error(r.status);A.sha=(await r.json()).content.sha;dirty=false;toast('Publicado. Los jugadores lo verán en aproximadamente 1 minuto.')}catch(e){toast('No se pudo publicar ('+e.message+'). Descarga data.json como respaldo.')}render()}
 function download(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,1)],{type:'application/json'}));a.download='data.json';a.click()}
-
+ 
 /* ---------- acciones ---------- */
 const opts=()=>D.players.map(p=>[p.id,p.name]);
 const act={
@@ -408,4 +409,3 @@ window.onbeforeunload=e=>{if(dirty){e.preventDefault();return''}};
 try{if(sessionStorage.getItem('nx_splash'))$('#splash').remove();else $('#go').focus()}catch(e){}
 (async()=>{try{const sv=localStorage.getItem('nx_admin');if(sv){A=JSON.parse(sv);await loadAdmin()}}catch(e){A=null}if(!A)await load();render()})();
 </script></body></html>
-
