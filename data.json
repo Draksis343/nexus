@@ -247,7 +247,16 @@
    "n": 1,
    "name": "Protocolo Zero",
    "state": "En vivo",
-   "text": "La temporada de prueba de Nexus Arena"
+   "text": "<p>Todo comienzo necesita una primera prueba.</p><p>La <font color=\"#fdc168\"><b>Temporada 0</b></font> marca el nacimiento de NEXUS ARENA. Una etapa experimental en la que pondremos a prueba nuestros desafíos, sistemas de puntuación, medallas, logros y rankings, mientras descubrimos hasta dónde puede llegar esta iniciativa.</p><p>No hay grandes campeonatos ni una historia escrita de antemano. Solo jugadores dispuestos a participar, competir, experimentar y ayudar a construir algo que pueda perdurar.</p><p>Esta temporada determinará <b><font color=\"#fbc16a\">el futuro de la arena</font></b>. Quienes participen no serán simplemente los primeros competidores: serán parte de quienes hicieron posible su existencia.</p><p><strong><i>Aquí no comienza una leyenda. Aquí se decide si merece existir.</i></strong></p>"
+  },
+  {
+   "id": "mwd89utgmix",
+   "img": "img/tl-1794468601924.jpg",
+   "icon": "img/tl-ic-1794468604113.png",
+   "n": 1,
+   "name": "Oculto...",
+   "state": "Próxima",
+   "text": "???"
   }
  ],
  "theme": {
