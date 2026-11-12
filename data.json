@@ -40,8 +40,8 @@
   {
    "id": "mwb5gb1c10t",
    "start": 1794342931680,
-   "title": "The Last Hunt",
-   "game": "Elden Ring",
+   "title": "Proximamente",
+   "game": "???",
    "mode": "Solo",
    "category": "Supervivencia",
    "rarity": "Nexus",
@@ -50,9 +50,12 @@
    "slots": 5,
    "status": "Próximamente",
    "round": "1",
-   "desc": "<b><font color=\"#fec46c\">Prueba</font></b>",
-   "rules": "Prueba",
-   "end": 0
+   "desc": "<b><font color=\"#fec46c\">???</font></b>",
+   "rules": "???",
+   "end": 0,
+   "link": "",
+   "_ups": {},
+   "_img": null
   },
   {
    "id": "mwb5hnvjf26",
@@ -76,8 +79,8 @@
   {
    "id": "mwb5nw6ht13",
    "start": 1794343285673,
-   "title": "Prueba",
-   "game": "Prueba",
+   "title": "???",
+   "game": "???",
    "mode": "Multijugador",
    "category": "Habilidad",
    "rarity": "Común",
@@ -87,14 +90,17 @@
    "status": "Próximamente",
    "round": "1",
    "end": 1794688860000,
-   "desc": "Prueba",
-   "rules": "Prueba"
+   "desc": "???",
+   "rules": "???",
+   "link": "",
+   "_ups": {},
+   "_img": null
   },
   {
    "id": "mwb5q5amnhn",
    "start": 1794343390798,
-   "title": "Prueba 2",
-   "game": "Prueba 2",
+   "title": "???",
+   "game": "???",
    "mode": "Solo",
    "category": "Supervivencia",
    "rarity": "Épica",
@@ -104,14 +110,17 @@
    "status": "Próximamente",
    "round": "1",
    "end": 1794688920000,
-   "desc": "Prueba 2",
-   "rules": "Prueba 2"
+   "desc": "<b><font color=\"#f5bc66\">???</font></b>",
+   "rules": "???",
+   "link": "",
+   "_ups": {},
+   "_img": null
   },
   {
    "id": "mwblp0imk05",
    "start": 1794370211806,
-   "title": "Faplayer97",
-   "game": "Helldivers",
+   "title": "???",
+   "game": "???",
    "mode": "Solo",
    "category": "Supervivencia",
    "rarity": "Común",
@@ -121,20 +130,23 @@
    "status": "Próximamente",
    "round": "1",
    "end": 1794802140000,
-   "desc": "Prueba <b>B</b>",
-   "rules": "<font color=\"#ffc46b\">Prueba B</font>"
+   "desc": "<b><font color=\"#fdc168\">???</font></b>",
+   "rules": "<font color=\"#d8d2ca\">???</font>",
+   "link": "",
+   "_ups": {},
+   "_img": null
   }
  ],
  "results": [],
  "duels": [
   {
    "id": "mwcfb8xogm0",
-   "at": 1794419958012,
+   "at": 1794470305216,
    "a": "mw8ycwnrc3z",
    "b": "mwbtbwuil3o",
    "game": "",
    "rules": "",
-   "status": "Pendiente",
+   "status": "Cumplido",
    "m": ""
   },
   {
