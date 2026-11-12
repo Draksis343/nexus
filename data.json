@@ -239,6 +239,17 @@
  "fb": {
   "url": "https://script.google.com/macros/s/AKfycbwMCChBGUJJWLGjOKzans_-7h9GBu-QUZ18vXWtw9f9Du9wkOGt55hjUBvfFM97meg-3g/exec"
  },
+ "tl": [
+  {
+   "id": "mwd7tosvob6",
+   "img": "img/tl-1794467875070.jpg",
+   "icon": "img/tl-ic-1794467849475.png",
+   "n": 1,
+   "name": "Protocolo Zero",
+   "state": "En vivo",
+   "text": "La temporada de prueba de Nexus Arena"
+  }
+ ],
  "theme": {
   "bg": "#0b0d10",
   "p1": "#1c2228",
