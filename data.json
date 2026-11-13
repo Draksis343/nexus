@@ -192,7 +192,33 @@
   }
  ],
  "results": [],
- "duels": [],
+ "duels": [
+  {
+   "id": "mwf5ienbbc0",
+   "at": 1794584894375,
+   "a": "mwf4xxf13rm",
+   "b": "mwen9cex36h",
+   "game": "ff",
+   "rules": "ff",
+   "status": "Pendiente",
+   "m": "",
+   "ob_bronce": "ff",
+   "ob_plata": "ff",
+   "ob_oro": "ff",
+   "ob_platino": "ff",
+   "link": ""
+  },
+  {
+   "id": "mwf5ienbrbn",
+   "at": 1794584894375,
+   "a": "mwen9cex36h",
+   "b": "mwf4xxf13rm",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  }
+ ],
  "event": null,
  "achs": [
   {
@@ -504,6 +530,18 @@
   },
   {
    "at": 1794583944176,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794584894375,
+   "t": "Cambio (randd)"
+  },
+  {
+   "at": 1794584910291,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794584915952,
    "t": "Publicó cambios"
   }
  ],
