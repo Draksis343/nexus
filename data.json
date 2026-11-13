@@ -251,8 +251,8 @@
    "title": "¡Se acerca la Temporada 0 de NEXUS ARENA!",
    "kind": "Aviso próximo",
    "body": "Estamos preparando el inicio de la <b><font color=\"#fec267\">temporada 0</font></b>, una etapa de prueba en la que pondremos a funcionar los <b>desafíos, medallas, logros, rankings</b> y demás mecánicas de la plataforma.<div><br><div>Queremos invitar a todos los interesados a formar parte de esta primera experiencia, participar en los retos y ayudarnos a probar el sistema mientras nos divertimos y competimos entre amigos.</div><div><br></div><div>Hecha un vistazo al sitio para que te familiarices con el y ve a la sección de <b>Guía</b> para que sepas como funciona <b><font color=\"#f8be68\">Nexus Arena.</font></b><br><br></div><div>🎮 ¿Te gustaría participar? ¡Regístrate en NEXUS ARENA y prepárate para el comienzo!</div></div>",
-   "link": "https://forms.gle/iAPVjRA2ryqdcLKD8",
-   "linkText": "Regístrate dando clic aquí para que se te de de alta en el sitio"
+   "link": "",
+   "linkText": ""
   }
  ],
  "fb": {
@@ -432,6 +432,14 @@
   },
   {
    "at": 1794553278112,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794553391899,
+   "t": "Cambio (editn)"
+  },
+  {
+   "at": 1794553401843,
    "t": "Publicó cambios"
   }
  ],
