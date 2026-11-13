@@ -192,38 +192,7 @@
   }
  ],
  "results": [],
- "duels": [
-  {
-   "id": "mwf5ienbbc0",
-   "at": 1794584894375,
-   "a": "mwf4xxf13rm",
-   "b": "mwen9cex36h",
-   "game": "ff",
-   "rules": "ff",
-   "status": "Pendiente",
-   "m": "",
-   "ob_bronce": "ff",
-   "ob_plata": "ff",
-   "ob_oro": "ff",
-   "ob_platino": "ff",
-   "link": ""
-  },
-  {
-   "id": "mwf5ienbrbn",
-   "at": 1794584894375,
-   "a": "mwen9cex36h",
-   "b": "mwf4xxf13rm",
-   "game": "Elden Ring",
-   "rules": "Prueba",
-   "status": "Pendiente",
-   "m": "",
-   "ob_bronce": "Prueba",
-   "ob_plata": "Prueba",
-   "ob_oro": "Prueba",
-   "ob_platino": "Prueba",
-   "link": ""
-  }
- ],
+ "duels": [],
  "event": null,
  "achs": [
   {
@@ -587,6 +556,14 @@
   },
   {
    "at": 1794589980847,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794590131876,
+   "t": "Cerró la ronda de retos"
+  },
+  {
+   "at": 1794590150035,
    "t": "Publicó cambios"
   }
  ],
