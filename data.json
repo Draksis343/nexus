@@ -59,7 +59,39 @@
    "_img": null,
    "img": "img/ch-1794528028340.jpg",
    "rtitle": "",
-   "rtrar": "Común"
+   "rtrar": "Común",
+   "goals": [
+    {
+     "id": "mwea9106kap",
+     "name": "Señor de la guerra:",
+     "desc": "Consigue 50 bajas utilizando armas duales",
+     "pl": 5
+    },
+    {
+     "id": "mwea9gj8hpk",
+     "name": "Cazador de élites",
+     "desc": "Elimina 30 Sangheili con la Espada de Energía",
+     "pl": 5
+    },
+    {
+     "id": "mwea9xnmgu5",
+     "name": "Cazador de calaveras",
+     "desc": "Encuentra 5 calaveras ocultas",
+     "pl": 5
+    },
+    {
+     "id": "mweaac1iysq",
+     "name": "A la antigua",
+     "desc": "completa una misión utilizando únicamente armas humanas",
+     "pl": 5
+    },
+    {
+     "id": "mweaavvl0nb",
+     "name": "El último Inquisidor",
+     "desc": "Completa una misión jugando como el Inquisidor sin utilizar el camuflaje activo",
+     "pl": 5
+    }
+   ]
   },
   {
    "id": "mwb5hnvjf26",
@@ -79,7 +111,10 @@
    "rules": "<ul><li><span style=\"color:rgb(210, 132, 15)\">Bronce:</span>Termina el parkour</li><li><span style=\"color:rgb(175, 167, 167)\">Plata:</span>Termina con un rango superior al <b>B</b></li><li><span style=\"color:rgb(232, 205, 33)\">Oro:</span>No uses los checkpoint del bioma<b><font color=\"#66a1ff\"> Ice Peaks</font></b></li><li><font color=\"#ffffff\"><span style=\"color:rgb(135, 207, 238)\">Platino:</span>Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b></li></ul>",
    "link": "https://www.curseforge.com/minecraft-bedrock/maps/biome-spiral-parkour/download/8690321",
    "_img": null,
-   "_ups": {}
+   "_ups": {},
+   "img": "img/ch-1794532975735.jpg",
+   "rtitle": "",
+   "rtrar": "Común"
   },
   {
    "id": "mwb5nw6ht13",
@@ -260,7 +295,18 @@
  ],
  "cg": [],
  "syncs": [],
- "atem": [],
+ "atem": [
+  {
+   "p": "mw8ycp11zhb",
+   "c": "mwea4ayeara",
+   "at": 1794532581226,
+   "s": "Temporada 0 - PROTOCOLO ZERO",
+   "cs": "Temporada 0 - PROTOCOLO ZERO",
+   "t": "EL PODER DEL GARROTE",
+   "tt": "El Sinluz Primitivo",
+   "trar": "Atemporal"
+  }
+ ],
  "theme": {
   "bg": "#0b0d10",
   "p1": "#1c2228",
