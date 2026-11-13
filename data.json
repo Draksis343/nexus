@@ -1,6 +1,12 @@
 {
  "season": "Temporada 0 - PROTOCOLO ZERO",
- "players": [],
+ "players": [
+  {
+   "id": "mwen9cex36h",
+   "name": "Draksis",
+   "bonus": 0
+  }
+ ],
  "challenges": [
   {
    "id": "mwb5gb1c10t",
@@ -440,6 +446,14 @@
   },
   {
    "at": 1794553564115,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794554238489,
+   "t": "Cambio (acccreate)"
+  },
+  {
+   "at": 1794554250425,
    "t": "Publicó cambios"
   }
  ],
