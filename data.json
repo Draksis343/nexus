@@ -56,7 +56,10 @@
    "end": 0,
    "link": "",
    "_ups": {},
-   "_img": null
+   "_img": null,
+   "img": "img/ch-1794528028340.jpg",
+   "rtitle": "",
+   "rtrar": "Común"
   },
   {
    "id": "mwb5hnvjf26",
@@ -232,6 +235,9 @@
    "text": "???"
   }
  ],
+ "cg": [],
+ "syncs": [],
+ "atem": [],
  "theme": {
   "bg": "#0b0d10",
   "p1": "#1c2228",
