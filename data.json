@@ -52,7 +52,7 @@
    "status": "Próximamente",
    "round": "1",
    "desc": "<p>La guerra ha llegado a la Tierra. Mientras el Covenant intensifica su ofensiva, el Jefe Maestro deberá defender a la humanidad de una amenaza que va mucho más allá de una simple invasión. Al mismo tiempo, un guerrero Elites es condenado y obligado a convertirse en el Inquisidor, descubriendo poco a poco una verdad capaz de cambiar el destino de toda la galaxia.</p><p>Lucha en ambos bandos de una guerra que está a punto de cambiarlo todo. <i>El destino de la humanidad y del Covenant está en juego.</i></p>",
-   "rules": "<span style=\"color:rgb(210, 132, 15)\">Bronce: </span>Completa la campaña de Halo 2 en cualquier dificultad.<div><span style=\"color:rgb(175, 167, 167)\">Plata: </span><span style=\"color:rgb(210, 132, 15)\"></span>Completa la misión «Metropolis» sin subirte a ningún vehículo. <span>Dificultad requerida:</span> Heroica o Legendaria</div><div><span style=\"color:rgb(232, 205, 33)\">Oro: </span><span style=\"color:rgb(175, 167, 167)\"></span>Derrota al Profeta del Pesar en la misión «Regret» utilizando la Espada de Energía para asestar el golpe final.</div><div><span style=\"color:rgb(135, 207, 238)\">Platino:</span><span style=\"color:rgb(232, 205, 33)\"></span>Completa la misión «The Great Journey» en dificultad Legendaria sin morir.</div>",
+   "rules": "",
    "end": 0,
    "link": "",
    "_ups": {},
@@ -91,7 +91,11 @@
      "desc": "Completa una misión jugando como el Inquisidor sin utilizar el camuflaje activo",
      "pl": 5
     }
-   ]
+   ],
+   "ob_bronce": "Completa la campaña de Halo 2 en cualquier dificultad",
+   "ob_plata": "Completa la misión «Metropolis» sin subirte a ningún vehículo. Dificultad requerida: Heroica o Legendaria",
+   "ob_oro": "Derrota al Profeta del Pesar en la misión «Regret» utilizando la Espada de Energía para asestar el golpe final",
+   "ob_platino": "Completa la misión «The Great Journey» en dificultad Legendaria sin morir."
   },
   {
    "id": "mwb5hnvjf26",
@@ -108,13 +112,17 @@
    "round": "1",
    "end": 0,
    "desc": "<b><font color=\"#f9bd62\">Biome Spiral Parkour</font></b> te lleva a un increíble recorrido de parkour a través de todos los biomas de Minecraft. ¿Podrás llegar a la cima de la Torre Espiral superando los desafíos de parkour y derrotar al Dragón del End al final? ¡Ven a descubrirlo y pon a prueba tus habilidades de parkour!<br><br>Versión de Minecraft 26.40",
-   "rules": "<ul><li><span style=\"color:rgb(210, 132, 15)\">Bronce:</span>Termina el parkour</li><li><span style=\"color:rgb(175, 167, 167)\">Plata:</span>Termina con un rango superior al <b>B</b></li><li><span style=\"color:rgb(232, 205, 33)\">Oro:</span>No uses los checkpoint del bioma<b><font color=\"#66a1ff\"> Ice Peaks</font></b></li><li><font color=\"#ffffff\"><span style=\"color:rgb(135, 207, 238)\">Platino:</span>Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b></li></ul>",
+   "rules": "",
    "link": "https://www.curseforge.com/minecraft-bedrock/maps/biome-spiral-parkour/download/8690321",
    "_img": null,
    "_ups": {},
    "img": "img/ch-1794532975735.jpg",
    "rtitle": "",
-   "rtrar": "Común"
+   "rtrar": "Común",
+   "ob_bronce": "Termina el parkour",
+   "ob_plata": "Termina con un rango superior al <b>B</b>",
+   "ob_oro": "No uses los checkpoint del bioma<b><font color=\"#66a1ff\"> Ice Peaks</font></b>",
+   "ob_platino": "<font color=\"#ffffff\">Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b>"
   },
   {
    "id": "mwb5nw6ht13",
@@ -131,10 +139,16 @@
    "round": "1",
    "end": 0,
    "desc": "<p>El Ejército Regular se enfrenta a una nueva amenaza que comienza con una misteriosa isla infestada de criaturas mutantes y termina revelando una invasión extraterrestre a gran escala. Atraviesa territorios hostiles, instalaciones militares y fortalezas enemigas mientras rescatas prisioneros y haces frente a las fuerzas del Ejército Rebelde y los marcianos.</p><p>La batalla por la supervivencia de la humanidad está en tus manos. <b>¡Prepárate para desplegarte!</b></p>",
-   "rules": "<span style=\"color:rgb(210, 132, 15)\">Bronce: </span>Completa las cinco misiones de Metal Slug 3 y derrota a Rootmars para poner fin a la invasión marciana.<div><span style=\"color:rgb(175, 167, 167)\">Plata: </span>Rescata al menos 20 prisioneros de guerra (POW) durante una partida completa.<span style=\"color:rgb(175, 167, 167)\"><br></span><span style=\"color:rgb(232, 205, 33)\">Oro: </span><span style=\"color:rgb(175, 167, 167)\"></span><span style=\"color:rgb(210, 132, 15)\"></span>Completa la misión 2 sin convertirte en zombi.</div><div><span style=\"color:rgb(135, 207, 238)\">Platino: </span><span style=\"color:rgb(232, 205, 33)\"></span>Completa las cinco misiones sin perder ninguna vida.</div>",
+   "rules": "",
    "link": "https://www.retrogames.cc/arcade-games/metal-slug-3-ngm-2560.html#",
    "_ups": {},
-   "_img": null
+   "_img": null,
+   "rtitle": "",
+   "rtrar": "Común",
+   "ob_bronce": "Completa las cinco misiones de Metal Slug 3 y derrota a Rootmars para poner fin a la invasión marciana.",
+   "ob_plata": "Rescata al menos 20 prisioneros de guerra (POW) durante una partida completa.",
+   "ob_oro": "Completa la misión 2 sin convertirte en zombi.",
+   "ob_platino": "Completa las cinco misiones sin perder ninguna vida."
   },
   {
    "id": "mwb5q5amnhn",
@@ -295,18 +309,7 @@
  ],
  "cg": [],
  "syncs": [],
- "atem": [
-  {
-   "p": "mw8ycp11zhb",
-   "c": "mwea4ayeara",
-   "at": 1794532581226,
-   "s": "Temporada 0 - PROTOCOLO ZERO",
-   "cs": "Temporada 0 - PROTOCOLO ZERO",
-   "t": "EL PODER DEL GARROTE",
-   "tt": "El Sinluz Primitivo",
-   "trar": "Atemporal"
-  }
- ],
+ "atem": [],
  "theme": {
   "bg": "#0b0d10",
   "p1": "#1c2228",
