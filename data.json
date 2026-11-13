@@ -216,7 +216,68 @@
   }
  ],
  "results": [],
- "duels": [],
+ "duels": [
+  {
+   "id": "mwec5gafgbr",
+   "at": 1794535581111,
+   "a": "mwbtbwuil3o",
+   "b": "mwcfrpxnyzx",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwec5gafh1a",
+   "at": 1794535581111,
+   "a": "mwcfrpxnyzx",
+   "b": "mw8yd230hzp",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwec5gafmx4",
+   "at": 1794535581111,
+   "a": "mw8yd230hzp",
+   "b": "mwchcvoc5wt",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwec5gafm58",
+   "at": 1794535581111,
+   "a": "mwchcvoc5wt",
+   "b": "mw8ycwnrc3z",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwec5gaf6cs",
+   "at": 1794535581111,
+   "a": "mw8ycwnrc3z",
+   "b": "mw8ycp11zhb",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwec5gaflc3",
+   "at": 1794535581111,
+   "a": "mw8ycp11zhb",
+   "b": "mwbtbwuil3o",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  }
+ ],
  "event": null,
  "achs": [
   {
@@ -314,7 +375,11 @@
  "atem": [],
  "log": [
   {
-   "at": 1794535701186,
+   "at": 1794535581111,
+   "t": "Cambio (randd)"
+  },
+  {
+   "at": 1794535796635,
    "t": "Publicó cambios"
   }
  ],
