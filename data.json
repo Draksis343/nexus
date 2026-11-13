@@ -232,7 +232,13 @@
    "icon": "img/ach-1794533617203.png"
   }
  ],
- "grants": [],
+ "grants": [
+  {
+   "p": "mwen9cex36h",
+   "a": "mwciwzeiee8",
+   "at": 1794554394683
+  }
+ ],
  "videos": [],
  "seasons": [],
  "rounds": {
@@ -454,6 +460,14 @@
   },
   {
    "at": 1794554250425,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794554394683,
+   "t": "Dio el logro «El rey de los piratas» a Draksis"
+  },
+  {
+   "at": 1794554408967,
    "t": "Publicó cambios"
   }
  ],
