@@ -236,6 +236,26 @@
    "title": "El rey de los piratas",
    "trar": "Reliquia",
    "icon": "img/ach-1794533617203.png"
+  },
+  {
+   "id": "mwf8u7blofu",
+   "icon": "",
+   "name": "¿Me estas retando?",
+   "desc": "Acepta y completa un reto",
+   "rar": "Rara",
+   "max": 5,
+   "title": "",
+   "trar": "Común"
+  },
+  {
+   "id": "mwf94m35c9p",
+   "icon": "",
+   "name": "Competitivo",
+   "desc": "Realiza un desafío de cualquier dificultad",
+   "rar": "Épica",
+   "max": 5,
+   "title": "",
+   "trar": "Común"
   }
  ],
  "grants": [],
@@ -564,6 +584,18 @@
   },
   {
    "at": 1794590150035,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794590483601,
+   "t": "Cambio (newa)"
+  },
+  {
+   "at": 1794590969297,
+   "t": "Cambio (newa)"
+  },
+  {
+   "at": 1794595076925,
    "t": "Publicó cambios"
   }
  ],
