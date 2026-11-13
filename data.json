@@ -125,7 +125,39 @@
    "ob_plata": "Rescata al menos 20 prisioneros de guerra (POW) durante una partida completa.",
    "ob_oro": "Completa la misión 2 sin convertirte en zombi.",
    "ob_platino": "Completa las cinco misiones sin perder ninguna vida.",
-   "img": "img/ch-1794533296967.jpg"
+   "img": "img/ch-1794533296967.jpg",
+   "goals": [
+    {
+     "id": "mwff2vomz4o",
+     "name": "A toda máquina",
+     "desc": "Derrota a un jefe utilizando un vehículo Metal Slug",
+     "pl": 5
+    },
+    {
+     "id": "mwff39fx9n5",
+     "name": "Salvavidas",
+     "desc": "Rescata a todos los POW de una misión",
+     "pl": 5
+    },
+    {
+     "id": "mwff3ep93do",
+     "name": "Explorador",
+     "desc": "Descubre una ruta alternativa en cada una de las primeras cuatro misiones",
+     "pl": 5
+    },
+    {
+     "id": "mwff3ytgzne",
+     "name": "Jinete del desierto",
+     "desc": "Completa la sección del desierto utilizando el Camel Slug",
+     "pl": 5
+    },
+    {
+     "id": "mwff4o4joec",
+     "name": "Coleccionista",
+     "desc": "Consigue cinco armas especiales diferentes durante una partida",
+     "pl": 5
+    }
+   ]
   },
   {
    "id": "mwb5q5amnhn",
@@ -142,10 +174,16 @@
    "round": "1",
    "end": 0,
    "desc": "<p>A bordo de la <b>UNSC</b> <em><font color=\"#ea1f1f\">Red Horse</font></em>, un escuadrón de marines liderado por la sargento Zhao Heng Lopez recibe la misión de investigar una cápsula de escape procedente de la nave penitenciaria <em>Mona Lisa</em>. Tras encontrar a un superviviente en estado crítico, el equipo es enviado a inspeccionar la misteriosa nave.</p><p>Lo que parecía una operación de reconocimiento pronto se convertirá en un encuentro inesperado con fuerzas Covenant. ¿Podrás completar la misión y descubrir qué secretos esconde la Mona Lisa?</p><p>Requiere tener Halo: The Master Chief Collection</p>",
-   "rules": "<ul><li><font color=\"#d2840f\">Bronce: </font>Termina la historia de The Mona Lisa.</li><li><font color=\"#afa7a7\">Plata:</font> Elimina a todos los Sangheili del enfrentamiento inicial.</li><li><font color=\"#e8cd21\">Oro:</font> Elimina a todos los Sangheili sin utilizar granadas.</li></ul><ul><li><font color=\"#87cfee\">Platino:</font> Completa el enfrentamiento inicial sin recibir daño.</li></ul>",
+   "rules": "",
    "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782031257",
    "_ups": {},
-   "_img": null
+   "_img": null,
+   "rtitle": "",
+   "rtrar": "Común",
+   "ob_bronce": "Termina la historia de The Mona Lisa.",
+   "ob_plata": "Elimina a todos los Sangheili del enfrentamiento inicial.",
+   "ob_oro": "Elimina a todos los Sangheili sin utilizar granadas.",
+   "ob_platino": "Completa el enfrentamiento inicial sin recibir daño."
   },
   {
    "id": "mwblp0imk05",
@@ -187,8 +225,12 @@
    "round": "",
    "link": "",
    "desc": "<p>Las Tierras Intermedias aguardan a un nuevo Sinluz. En un mundo devastado por la guerra, donde semidioses y criaturas ancestrales luchan por el poder, comienza tu travesía con prácticamente nada más que un garrote.</p><p>Explora, combate y desafía a los seres más poderosos de este mundo. No necesitas un arma legendaria para convertirte en el Señor del Círculo... solamente la determinación para demostrarlo.</p>",
-   "rules": "Completa la historia principal de Elden Ring utilizando exclusivamente el Garrote (Club) como arma durante toda la partida.",
-   "end": 0
+   "rules": "Completa la historia principal de Elden Ring utilizando exclusivamente el Garrote (Club) como arma durante toda la partida.<br><br><p>Para evitar interpretaciones o controversias entre jugadores, establecería estas condiciones:</p><ul><li><p>Puedes mejorar el Garrote todo lo que quieras.</p></li><li><p>Puedes subir cualquier atributo y utilizar cualquier armadura, escudo o talismán.</p></li><li><p>Puedes desarrollar una configuración de tanque, fuerza o resistencia.</p></li><li><p>No puedes equipar ni utilizar otras armas para causar daño.</p></li><li><p>Puedes utilizar objetos consumibles y herramientas defensivas.</p></li></ul><p><strong><font color=\"#fbbf65\">Importante:</font></strong> No prohibiría las invocaciones ni las cenizas de espíritu, salvo que quieras convertirlo en un reto todavía más extremo. Lo importante es que el daño ofensivo del jugador provenga exclusivamente del Garrote.</p>",
+   "end": 0,
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": ""
   }
  ],
  "results": [],
@@ -596,6 +638,58 @@
   },
   {
    "at": 1794595076925,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794600292984,
+   "t": "Editó el desafío «The Mona Lisa»"
+  },
+  {
+   "at": 1794600492156,
+   "t": "Editó el desafío «EL PODER DEL GARROTE»"
+  },
+  {
+   "at": 1794600966118,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794600983949,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794600990765,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794601000558,
+   "t": "Cambio (editgoal)"
+  },
+  {
+   "at": 1794601016836,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794601021083,
+   "t": "Cambio (editgoal)"
+  },
+  {
+   "at": 1794601024235,
+   "t": "Cambio (editgoal)"
+  },
+  {
+   "at": 1794601027116,
+   "t": "Cambio (editgoal)"
+  },
+  {
+   "at": 1794601049635,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794601060135,
+   "t": "Cambio (editgoal)"
+  },
+  {
+   "at": 1794601064771,
    "t": "Publicó cambios"
   }
  ],
