@@ -232,13 +232,7 @@
    "icon": "img/ach-1794533617203.png"
   }
  ],
- "grants": [
-  {
-   "p": "mwen9cex36h",
-   "a": "mwciwzeiee8",
-   "at": 1794554394683
-  }
- ],
+ "grants": [],
  "videos": [],
  "seasons": [],
  "rounds": {
@@ -468,6 +462,14 @@
   },
   {
    "at": 1794554408967,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794554523106,
+   "t": "Quitó el logro «El rey de los piratas» a Draksis"
+  },
+  {
+   "at": 1794554532490,
    "t": "Publicó cambios"
   }
  ],
