@@ -10,7 +10,11 @@
   {
    "id": "mwf4xxf13rm",
    "name": "PAROXTINE",
-   "bonus": 0
+   "bonus": 0,
+   "title": {
+    "name": "El rey de los piratas",
+    "rar": "Reliquia"
+   }
   }
  ],
  "challenges": [
@@ -300,7 +304,13 @@
    "trar": "Común"
   }
  ],
- "grants": [],
+ "grants": [
+  {
+   "p": "mwf4xxf13rm",
+   "a": "mwciwzeiee8",
+   "at": 1794622166384
+  }
+ ],
  "videos": [],
  "seasons": [],
  "rounds": {
@@ -690,6 +700,18 @@
   },
   {
    "at": 1794601064771,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794622166385,
+   "t": "Dio el logro «El rey de los piratas» a PAROXTINE"
+  },
+  {
+   "at": 1794622172450,
+   "t": "Cambio (setttl)"
+  },
+  {
+   "at": 1794622176971,
    "t": "Publicó cambios"
   }
  ],
