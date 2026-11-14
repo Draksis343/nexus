@@ -304,13 +304,7 @@
    "trar": "Común"
   }
  ],
- "grants": [
-  {
-   "p": "mwf4xxf13rm",
-   "a": "mwciwzeiee8",
-   "at": 1794622166384
-  }
- ],
+ "grants": [],
  "videos": [],
  "seasons": [],
  "rounds": {
@@ -712,6 +706,14 @@
   },
   {
    "at": 1794622176971,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794637369135,
+   "t": "Quitó el logro «El rey de los piratas» a PAROXTINE"
+  },
+  {
+   "at": 1794637374335,
    "t": "Publicó cambios"
   }
  ],
