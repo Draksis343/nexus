@@ -325,6 +325,17 @@
    "linkText": ""
   }
  ],
+ "emu": {
+  "name": "Emuladores",
+  "body": "<p>🎮 <strong>¡La nostalgia y la diversión tienen un solo lugar: MegaRetro Hub!</strong> 🕹️</p><p>¿Te imaginas tener miles de videojuegos de diferentes generaciones y consolas en una sola biblioteca? ¡Pues deja de buscar juego por juego! Con <strong>MegaRetro Hub</strong> tienes un enorme catálogo de videojuegos listo para explorar y descargar con un solo clic.</p><p>🚀 <strong>¿Qué hace especial a MegaRetro Hub?</strong></p><p>🎮 <strong>Miles de juegos disponibles:</strong> descubre y revive grandes clásicos de distintas consolas y generaciones, desde aquellos títulos que marcaron tu infancia hasta juegos que siempre quisiste probar.</p><p>📚 <strong>Una biblioteca en constante exploración:</strong> todo reunido en un mismo lugar, para que encontrar tu próximo juego favorito sea mucho más sencillo.</p><p>⚡ <strong>Descargas con un solo clic:</strong> olvídate de complicarte buscando archivos, enlaces y configuraciones por separado. Encuentra tu juego, descárgalo y prepárate para jugar.</p><p>👥 <strong>¡La diversión también es multijugador!</strong> Disfruta de experiencias compartidas y vuelve a reunir a tus amigos para esas partidas que nunca pasan de moda.</p><p>🎮 <strong>Compatibilidad con múltiples mandos:</strong> conecta tus controles favoritos y disfruta de una experiencia más cómoda, ya sea con mando o con otras opciones compatibles.</p><p>🕹️ <strong>Una experiencia para todo tipo de jugadores:</strong> tanto si eres un nostálgico que quiere volver a los clásicos como si apenas estás descubriendo el mundo del retro gaming, aquí encontrarás algo que te hará querer jugar una vez más.</p><p>Al final, no se trata solamente de descargar videojuegos, sino de tener una enorme colección de entretenimiento al alcance de tu mano.</p><p>🔥 <strong>¡Redescubre los clásicos, explora nuevas aventuras y dale una segunda vida a tus videojuegos favoritos!</strong></p><p>👉 Entra a MegaRetro Hub y comienza tu colección:</p>",
+  "link": "https://go.hotmart.com/H107560175J?dp=1",
+  "linkText": "",
+  "imgs": [
+   "img/emu-1794717513910-0.jpg",
+   "img/emu-1794717515694-1.jpg",
+   "img/emu-1794717517119-2.jpg"
+  ]
+ },
  "fb": {
   "url": "https://script.google.com/macros/s/AKfycby9lLOnM1_YvtJgoz_2Ktsspbc4knPT2tzgg1-zuGZEusaTUYdK0vK0HlRk8MJl4E4I/exec"
  },
@@ -714,6 +725,22 @@
   },
   {
    "at": 1794637374335,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794717290094,
+   "t": "Editó la ventana de emuladores"
+  },
+  {
+   "at": 1794717518377,
+   "t": "Cambio (emuopen)"
+  },
+  {
+   "at": 1794717525145,
+   "t": "Editó la ventana de emuladores"
+  },
+  {
+   "at": 1794717527715,
    "t": "Publicó cambios"
   }
  ],
