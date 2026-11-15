@@ -210,22 +210,61 @@
   {
    "id": "mwblp0imk05",
    "start": 1794370211806,
-   "title": "???",
-   "game": "???",
+   "title": "Leyenda del Roc",
+   "game": "Guitar Hero 3",
    "mode": "Solo",
-   "category": "Supervivencia",
-   "rarity": "Común",
-   "difficulty": "Medio",
+   "category": "Habilidad",
+   "rarity": "Rara",
+   "difficulty": "Difícil",
    "bonus": "20",
    "slots": 5,
    "status": "Próximamente",
    "round": "1",
    "end": 0,
-   "desc": "<b><font color=\"#fdc168\">???</font></b>",
-   "rules": "<font color=\"#d8d2ca\">???</font>",
-   "link": "",
+   "desc": "<p>El escenario está listo, las luces se encienden y miles de personas esperan escuchar tu música. Comienza tu carrera desde los pequeños escenarios hasta convertirte en una auténtica leyenda del rock.</p><p>Enfréntate a guitarristas legendarios, supera batallas musicales y demuestra que tienes la habilidad necesaria para dominar las canciones más exigentes. Aquí no basta con tocar: ¡tienes que convertirte en un Guitar Hero!</p>",
+   "rules": "<font color=\"#d8d2ca\">Sino tienes emulador, puedes encontrarlo en el enlace de arriba para jugarlo en el navegador</font>",
+   "link": "https://lasvegasherogame.com/gh3/",
    "_ups": {},
-   "_img": null
+   "_img": null,
+   "img": "img/ch-1794722719986.jpg",
+   "rtitle": "",
+   "rtrar": "Común",
+   "ob_bronce": "Completa el modo Carrera en cualquier dificultad.",
+   "ob_plata": "Derrota a Slash, Tom Morello y Lou en sus respectivas batallas de jefe del modo Carrera, sin rechazar ni omitir ningún enfrentamiento.",
+   "ob_oro": "Consigue una racha de 1,000 notas consecutivas en una canción, sin fallar ninguna nota.",
+   "ob_platino": "Completa «Through the Fire and Flames» en dificultad Experto.",
+   "goals": [
+    {
+     "id": "mwhfl2ge63w",
+     "name": "Perfeccionista",
+     "desc": "Consigue un 100% de notas acertadas en cualquier canción",
+     "pl": 5
+    },
+    {
+     "id": "mwhfldrr7qm",
+     "name": "Velocidad endiablada",
+     "desc": "Consigue una racha de 500 notas consecutivas",
+     "pl": 5
+    },
+    {
+     "id": "mwhflpl2riv",
+     "name": "Sin ayuda divina",
+     "desc": "Consigue 200,000 puntos en «Cult of Personality» sin activar el Poder Estelar",
+     "pl": 5
+    },
+    {
+     "id": "mwhfmck6m18",
+     "name": "Estrella dorada",
+     "desc": "Consigue 5 estrellas doradas en una canción de dificultad Experto",
+     "pl": 5
+    },
+    {
+     "id": "mwhfmjqdteh",
+     "name": "El pacto",
+     "desc": "Derrota a Lou en su batalla final sin utilizar la opción de continuar tras perder",
+     "pl": 5
+    }
+   ]
   },
   {
    "id": "mwea4ayeara",
@@ -843,6 +882,34 @@
   },
   {
    "at": 1794720875542,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794722721956,
+   "t": "Editó el desafío «???»"
+  },
+  {
+   "at": 1794722747054,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794722761719,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794722777030,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794722806806,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794722816101,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794722841578,
    "t": "Publicó cambios"
   }
  ],
