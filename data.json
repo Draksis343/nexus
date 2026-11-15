@@ -305,7 +305,78 @@
   }
  ],
  "results": [],
- "duels": [],
+ "duels": [
+  {
+   "id": "mwiajysa91g",
+   "at": 1794774763738,
+   "a": "mwf4xxf13rm",
+   "b": "mwhd448ih4p",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwiajysa9xl",
+   "at": 1794774763738,
+   "a": "mwhd448ih4p",
+   "b": "mwhdqy01n4u",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwiajysaqaq",
+   "at": 1794774763738,
+   "a": "mwhdqy01n4u",
+   "b": "mwen9cex36h",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwiajysa1l3",
+   "at": 1794774763738,
+   "a": "mwen9cex36h",
+   "b": "mwhd47sq1jb",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwiajysazhz",
+   "at": 1794774763738,
+   "a": "mwhd47sq1jb",
+   "b": "mwhg9zxxvpv",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwiajysar9k",
+   "at": 1794774763738,
+   "a": "mwhg9zxxvpv",
+   "b": "mwhg9w6crs5",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwiajysa4o7",
+   "at": 1794774763738,
+   "a": "mwhg9w6crs5",
+   "b": "mwf4xxf13rm",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  }
+ ],
  "event": null,
  "achs": [
   {
@@ -1042,6 +1113,14 @@
   },
   {
    "at": 1794772102198,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794774763738,
+   "t": "Cambio (randd)"
+  },
+  {
+   "at": 1794774771691,
    "t": "Publicó cambios"
   }
  ],
