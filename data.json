@@ -305,7 +305,83 @@
   }
  ],
  "results": [],
- "duels": [],
+ "duels": [
+  {
+   "id": "mwi2zuloett",
+   "at": 1794762067884,
+   "a": "mwhdqy01n4u",
+   "b": "mwhd47sq1jb",
+   "game": "Helldivers",
+   "rules": "d",
+   "status": "Pendiente",
+   "m": "",
+   "ob_bronce": "d",
+   "ob_plata": "d",
+   "ob_oro": "d",
+   "ob_platino": "d",
+   "link": ""
+  },
+  {
+   "id": "mwi2zulonud",
+   "at": 1794762067884,
+   "a": "mwhd47sq1jb",
+   "b": "mwf4xxf13rm",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwi2zuloift",
+   "at": 1794762067884,
+   "a": "mwf4xxf13rm",
+   "b": "mwhg9w6crs5",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwi2zuloztp",
+   "at": 1794762067884,
+   "a": "mwhg9w6crs5",
+   "b": "mwhd448ih4p",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwi2zulolc1",
+   "at": 1794762067884,
+   "a": "mwhd448ih4p",
+   "b": "mwhg9zxxvpv",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwi2zuloiyq",
+   "at": 1794762067884,
+   "a": "mwhg9zxxvpv",
+   "b": "mwen9cex36h",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwi2zulocmb",
+   "at": 1794762067884,
+   "a": "mwen9cex36h",
+   "b": "mwhdqy01n4u",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  }
+ ],
  "event": null,
  "achs": [
   {
@@ -385,12 +461,12 @@
  "slogan": "JUEGA. SUPERA. TRASCIENDE.",
  "news": [
   {
-   "id": "mwc5zvj91md",
-   "at": 1794404310885,
-   "img": "img/news-1794404310885.jpg",
-   "title": "¡Se acerca la Temporada 0 de NEXUS ARENA!",
-   "kind": "Aviso próximo",
-   "body": "Estamos preparando el inicio de la <b><font color=\"#fec267\">temporada 0</font></b>, una etapa de prueba en la que pondremos a funcionar los <b>desafíos, medallas, logros, rankings</b> y demás mecánicas de la plataforma.<div><br><div>Queremos invitar a todos los interesados a formar parte de esta primera experiencia, participar en los retos y ayudarnos a probar el sistema mientras nos divertimos y competimos entre amigos.</div><div><br></div><div>Hecha un vistazo al sitio para que te familiarices con el y ve a la sección de <b>Guía</b> para que sepas como funciona <b><font color=\"#f8be68\">Nexus Arena.</font></b><br><br></div><div>🎮 ¿Te gustaría participar? ¡Regístrate en NEXUS ARENA y prepárate para el comienzo!</div></div>",
+   "id": "mwi2z8o2y0p",
+   "at": 1794762039458,
+   "img": "",
+   "title": "Actualización de participación",
+   "kind": "Noticia",
+   "body": "Se agrego un botón de <b>participación</b> a los desafíos para que todos sepan quienes están realizándolo, al igual que en los retos se agregaron el botón de <b>acepta y rechazar</b>.<div><br></div><div>Una vez hayas colocado tu status como participante tendrás hasta la fecha limite del desafío para enviar tu evidencia (enlace de youtube) mostrado en el mismo desafío. Sino lo haces se marcara como <font color=\"#f84949\">no completado</font> y se te <b>restara una cantidad importante de PL</b>. Podrás abandonarlo antes si lo deseas pero igual se te descontarán 1<b>0 PL</b>  pero si te pasas de la fecha limite sin enviarlo habrá esa consecuencia.</div><div><br></div><div>Los retos una vez hayas aceptado el reto no podrás abandonarlo directamente, pero si te pasas de la fecha establecida para entregarlo se te restará de igual manera PL. Si lo rechazas directamente es la misma cantidad a que no hayas enviado tu evidencia.</div>",
    "link": "",
    "linkText": ""
   }
@@ -981,6 +1057,26 @@
   },
   {
    "at": 1794734735965,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794762039458,
+   "t": "Cambio (newn)"
+  },
+  {
+   "at": 1794762058912,
+   "t": "Cambio (deln)"
+  },
+  {
+   "at": 1794762067884,
+   "t": "Cambio (randd)"
+  },
+  {
+   "at": 1794762077405,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794762166936,
    "t": "Publicó cambios"
   }
  ],
