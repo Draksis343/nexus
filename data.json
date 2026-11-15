@@ -25,6 +25,11 @@
    "id": "mwhd47sq1jb",
    "name": "DarkPlayer",
    "bonus": 0
+  },
+  {
+   "id": "mwhdqy01n4u",
+   "name": "Elramasan",
+   "bonus": 0
   }
  ],
  "challenges": [
@@ -787,6 +792,14 @@
   },
   {
    "at": 1794719567256,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794719661985,
+   "t": "Cambio (acccreate)"
+  },
+  {
+   "at": 1794719666967,
    "t": "Publicó cambios"
   }
  ],
