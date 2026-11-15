@@ -202,7 +202,7 @@
    "difficulty": "Medio",
    "bonus": "20",
    "slots": 5,
-   "status": "Disponible",
+   "status": "Por validar",
    "round": "1",
    "end": 1794731040000,
    "desc": "<p>A bordo de la <b>UNSC</b> <em><font color=\"#ea1f1f\">Red Horse</font></em>, un escuadrón de marines liderado por la sargento Zhao Heng Lopez recibe la misión de investigar una cápsula de escape procedente de la nave penitenciaria <em>Mona Lisa</em>. Tras encontrar a un superviviente en estado crítico, el equipo es enviado a inspeccionar la misteriosa nave.</p><p>Lo que parecía una operación de reconocimiento pronto se convertirá en un encuentro inesperado con fuerzas Covenant. ¿Podrás completar la misión y descubrir qué secretos esconde la Mona Lisa?</p><p>Requiere tener Halo: The Master Chief Collection</p>",
@@ -965,6 +965,14 @@
   },
   {
    "at": 1794731077682,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794731441325,
+   "t": "Editó el desafío «The Mona Lisa»"
+  },
+  {
+   "at": 1794731445117,
    "t": "Publicó cambios"
   }
  ],
