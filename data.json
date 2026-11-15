@@ -43,6 +43,11 @@
    "id": "mwhg9zxxvpv",
    "name": "Roger",
    "bonus": 0
+  },
+  {
+   "id": "mwicujdshcq",
+   "name": "Shadoms",
+   "bonus": 0
   }
  ],
  "challenges": [
@@ -1195,6 +1200,14 @@
   },
   {
    "at": 1794778554747,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794778616224,
+   "t": "Cambio (acccreate)"
+  },
+  {
+   "at": 1794778621589,
    "t": "Publicó cambios"
   }
  ],
