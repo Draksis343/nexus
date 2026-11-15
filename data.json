@@ -312,7 +312,7 @@
    "game": "Super Mario World",
    "mode": "Solo",
    "category": "Habilidad",
-   "rarity": "Común",
+   "rarity": "Rara",
    "difficulty": "Medio",
    "bonus": "20",
    "slots": 5,
@@ -1187,6 +1187,14 @@
   },
   {
    "at": 1794778460526,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794778545619,
+   "t": "Editó el desafío «La aventura del Reino Champiñón»"
+  },
+  {
+   "at": 1794778554747,
    "t": "Publicó cambios"
   }
  ],
