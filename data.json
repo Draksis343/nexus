@@ -57,11 +57,11 @@
    "difficulty": "Extrema",
    "bonus": "50",
    "slots": 5,
-   "status": "Próximamente",
+   "status": "Activo",
    "round": "1",
    "desc": "<p>La guerra ha llegado a la Tierra. Mientras el Covenant intensifica su ofensiva, el Jefe Maestro deberá defender a la humanidad de una amenaza que va mucho más allá de una simple invasión. Al mismo tiempo, un guerrero Elites es condenado y obligado a convertirse en el Inquisidor, descubriendo poco a poco una verdad capaz de cambiar el destino de toda la galaxia.</p><p>Lucha en ambos bandos de una guerra que está a punto de cambiarlo todo. <i>El destino de la humanidad y del Covenant está en juego.</i></p>",
    "rules": "Puedes descargarlo sino lo tienes en el enlace de arriba, es 100% seguro se trata de un proyecto como lo fue el primer halo con su versión en PC donde la comunidad creaba incluso creaba mapas para el multijugador. O bien te recomendamos que cliquees en el botón de emuladores para más información acerca de una app.",
-   "end": 0,
+   "end": 1795931940000,
    "link": "https://www.halo2pc.com/install/",
    "_ups": {},
    "_img": null,
@@ -116,9 +116,9 @@
    "difficulty": "Difícil",
    "bonus": "20",
    "slots": 5,
-   "status": "Próximamente",
+   "status": "Disponible",
    "round": "1",
-   "end": 0,
+   "end": 1795931940000,
    "desc": "<b><font color=\"#f9bd62\">Biome Spiral Parkour</font></b> te lleva a un increíble recorrido de parkour a través de todos los biomas de Minecraft. ¿Podrás llegar a la cima de la Torre Espiral superando los desafíos de parkour y derrotar al Dragón del End al final? ¡Ven a descubrirlo y pon a prueba tus habilidades de parkour!<br><br>Versión de Minecraft 26.40",
    "rules": "",
    "link": "https://www.curseforge.com/minecraft-bedrock/maps/biome-spiral-parkour/download/8690321",
@@ -143,9 +143,9 @@
    "difficulty": "Difícil",
    "bonus": "20",
    "slots": 5,
-   "status": "Próximamente",
+   "status": "Disponible",
    "round": "1",
-   "end": 0,
+   "end": 1795931940000,
    "desc": "<p>El Ejército Regular se enfrenta a una nueva amenaza que comienza con una misteriosa isla infestada de criaturas mutantes y termina revelando una invasión extraterrestre a gran escala. Atraviesa territorios hostiles, instalaciones militares y fortalezas enemigas mientras rescatas prisioneros y haces frente a las fuerzas del Ejército Rebelde y los marcianos.</p><p>La batalla por la supervivencia de la humanidad está en tus manos. <b>¡Prepárate para desplegarte!</b></p>",
    "rules": "",
    "link": "https://www.retrogames.cc/arcade-games/metal-slug-3-ngm-2560.html#",
@@ -228,9 +228,9 @@
    "difficulty": "Difícil",
    "bonus": "20",
    "slots": 5,
-   "status": "Próximamente",
+   "status": "Disponible",
    "round": "1",
-   "end": 0,
+   "end": 1795931940000,
    "desc": "<p>El escenario está listo, las luces se encienden y miles de personas esperan escuchar tu música. Comienza tu carrera desde los pequeños escenarios hasta convertirte en una auténtica leyenda del rock.</p><p>Enfréntate a guitarristas legendarios, supera batallas musicales y demuestra que tienes la habilidad necesaria para dominar las canciones más exigentes. Aquí no basta con tocar: ¡tienes que convertirte en un Guitar Hero!</p>",
    "rules": "<font color=\"#d8d2ca\">Sino tienes emulador, puedes encontrarlo en el enlace de arriba para jugarlo en el navegador</font>",
    "link": "https://lasvegasherogame.com/gh3/",
@@ -292,7 +292,7 @@
    "slots": 5,
    "rtitle": "El Sinluz Primitivo",
    "rtrar": "Atemporal",
-   "status": "Próximamente",
+   "status": "Disponible",
    "round": "",
    "link": "",
    "desc": "<p>Las Tierras Intermedias aguardan a un nuevo Sinluz. En un mundo devastado por la guerra, donde semidioses y criaturas ancestrales luchan por el poder, comienza tu travesía con prácticamente nada más que un garrote.</p><p>Explora, combate y desafía a los seres más poderosos de este mundo. No necesitas un arma legendaria para convertirte en el Señor del Círculo... solamente la determinación para demostrarlo.</p>",
@@ -1018,6 +1018,30 @@
   },
   {
    "at": 1794762653430,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794771707910,
+   "t": "Editó el desafío «La caída del Covenant»"
+  },
+  {
+   "at": 1794771910176,
+   "t": "Editó el desafío «Biome Spiral Parkour»"
+  },
+  {
+   "at": 1794771931602,
+   "t": "Editó el desafío «Guerra sin cuartel»"
+  },
+  {
+   "at": 1794771954377,
+   "t": "Editó el desafío «Leyenda del Rock»"
+  },
+  {
+   "at": 1794771966682,
+   "t": "Editó el desafío «EL PODER DEL GARROTE»"
+  },
+  {
+   "at": 1794772102198,
    "t": "Publicó cambios"
   }
  ],
