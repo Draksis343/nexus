@@ -305,83 +305,7 @@
   }
  ],
  "results": [],
- "duels": [
-  {
-   "id": "mwi2zuloett",
-   "at": 1794762067884,
-   "a": "mwhdqy01n4u",
-   "b": "mwhd47sq1jb",
-   "game": "Helldivers",
-   "rules": "d",
-   "status": "Pendiente",
-   "m": "",
-   "ob_bronce": "d",
-   "ob_plata": "d",
-   "ob_oro": "d",
-   "ob_platino": "d",
-   "link": ""
-  },
-  {
-   "id": "mwi2zulonud",
-   "at": 1794762067884,
-   "a": "mwhd47sq1jb",
-   "b": "mwf4xxf13rm",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwi2zuloift",
-   "at": 1794762067884,
-   "a": "mwf4xxf13rm",
-   "b": "mwhg9w6crs5",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwi2zuloztp",
-   "at": 1794762067884,
-   "a": "mwhg9w6crs5",
-   "b": "mwhd448ih4p",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwi2zulolc1",
-   "at": 1794762067884,
-   "a": "mwhd448ih4p",
-   "b": "mwhg9zxxvpv",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwi2zuloiyq",
-   "at": 1794762067884,
-   "a": "mwhg9zxxvpv",
-   "b": "mwen9cex36h",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  },
-  {
-   "id": "mwi2zulocmb",
-   "at": 1794762067884,
-   "a": "mwen9cex36h",
-   "b": "mwhdqy01n4u",
-   "game": "",
-   "rules": "",
-   "status": "Pendiente",
-   "m": ""
-  }
- ],
+ "duels": [],
  "event": null,
  "achs": [
   {
@@ -471,7 +395,7 @@
    "linkText": ""
   }
  ],
- "rdl": 1795280940000,
+ "rdl": 0,
  "pst": {},
  "emu": {
   "name": "Emuladores",
@@ -1086,6 +1010,14 @@
   },
   {
    "at": 1794762576045,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794762650872,
+   "t": "Cerró la ronda de retos"
+  },
+  {
+   "at": 1794762653430,
    "t": "Publicó cambios"
   }
  ],
