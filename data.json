@@ -224,7 +224,7 @@
    "game": "Guitar Hero 3",
    "mode": "Solo",
    "category": "Habilidad",
-   "rarity": "Rara",
+   "rarity": "Épica",
    "difficulty": "Difícil",
    "bonus": "20",
    "slots": 5,
@@ -940,6 +940,14 @@
   },
   {
    "at": 1794723916657,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794729638799,
+   "t": "Editó el desafío «Leyenda del Rock»"
+  },
+  {
+   "at": 1794729641722,
    "t": "Publicó cambios"
   }
  ],
