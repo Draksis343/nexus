@@ -135,6 +135,7 @@ body.hc{--muted:#e6ebee;--line:#8a949c;--text:#fff}body.hc .subtle,body.hc .mute
 <main class="main">
  <div class="topline"><div><p class="eyebrow" id="crumb"></p><h1 id="title"></h1><p class="muted" id="sub" style="margin:0"></p></div><span class="badge cyan" id="mode">● SISTEMA ACTIVO</span></div>
  <div id="screen"></div>
+ <footer id="foot" style="margin-top:48px;padding-top:20px;border-top:1px solid var(--line);display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;text-align:center"></footer>
 </main>
 <div id="modal" class="modal hidden"><form id="mform" class="panel"></form></div>
 <div id="toast" class="toast hidden"></div>
@@ -230,7 +231,7 @@ function bindRarity(){const f=$('#mform'),r=f.elements.rarity,d=f.elements.diffi
  const fn=()=>{const nx=r.value==='Nexus',xt=nx||r.value==='Atemporal',kd=d.value,ks=s.value,L=nx?['Próximamente','Activo']:['Próximamente','Disponible','Por validar','Finalizado'],cur=nx&&ks==='Disponible'?'Activo':(!nx&&ks==='Activo'?'Disponible':ks);
   d.innerHTML=(xt?[...DIFF,'Extrema']:DIFF).map(x=>`<option ${x===kd?'selected':''}>${x}</option>`).join('');s.innerHTML=L.map(x=>`<option ${x===cur?'selected':''}>${x}</option>`).join('');lock()};
  r.onchange=fn;s.onchange=lock;fn()}
-const EMPTY=()=>({season:'Temporada 01',players:[],challenges:[],results:[],duels:[],event:null,achs:[],grants:[],videos:[],seasons:[],rounds:{total:6,cur:1},music:null,slogan:'Juega. Supera. Trasciende.',news:[],emu:null,fb:null,tl:[],cg:[],syncs:[],atem:[],log:[]});
+const EMPTY=()=>({season:'Temporada 01',players:[],challenges:[],results:[],duels:[],event:null,achs:[],grants:[],videos:[],seasons:[],rounds:{total:6,cur:1},music:null,slogan:'Juega. Supera. Trasciende.',news:[],emu:null,credit:null,fb:null,tl:[],cg:[],syncs:[],atem:[],log:[]});
 const T={inicio:['INICIO','COMMAND CENTER','Tu centro de operaciones para la liga.'],desafios:['LIGA','DESAFÍOS','Elige una misión. Cada punto cuenta.'],retos:['DUELOS','RETOS','Jugador contra jugador.'],rankings:['CLASIFICACIÓN','RANKINGS','El marcador nunca miente.'],logros:['PROGRESIÓN','LOGROS','Las hazañas dejan huella.'],jugadores:['COMPETIDORES','JUGADORES','Cada leyenda empieza en algún lugar.'],historial:['REGISTRO','HISTORIAL','Cada movimiento, registrado.'],tiempo:['TEMPORADAS','LÍNEA DE TIEMPO','El camino de Nexus Arena, temporada a temporada.'],guia:['AYUDA','GUÍA','Todo lo que necesitas saber para jugar en Nexus Arena.'],recomendaciones:['BUZÓN','RECOMENDACIONES','Cuéntanos tus ideas y sugerencias.']};
 T.registro=['ADMIN','REGISTRO','Quién hizo qué y cuándo (solo lo ve el administrador).'];
 T.cuenta=['JUGADOR','MI CUENTA','Tu perfil, tu foto y tu título.'];T.accs=['ADMIN','CUENTAS','Cuentas de jugadores y coadministradores.'];
@@ -497,7 +498,9 @@ function registro(){const L=[...(D.log||[])].reverse();return A?`<section class=
 const PAGES={inicio:home,desafios:challenges,retos,rankings,logros,jugadores,historial,tiempo,guia,recomendaciones:recs,registro,cuenta,accs};
 
 /* ---------- interfaz ---------- */
-function render(){if((S.page==='registro'||S.page==='accs')&&!A)S.page='inicio';const t=T[S.page];$('#crumb').textContent=`${t[0]} / ${D.season.toUpperCase()}`;$('#title').textContent=t[1];$('#sub').textContent=t[2];
+function footHTML(){const c=D.credit;if(!c&&!A)return'';const l=esc((c&&c.label)||'Creado por:'),n=c&&c.names?esc(c.names):'',im=c&&c.img?`<img src="${esc(c.img)}" alt="Logo" style="height:48px;max-width:160px;object-fit:contain">`:'';return`${c?`<span class="subtle">${l}</span>${im}${n?`<strong>${n}</strong>`:''}`:'<span class="subtle">Pie de página sin configurar</span>'}${adm('<button class="btn small ghost" data-a="creditedit">⚙ Editar pie</button>')}`}
+async function saveCredit(o){const c=D.credit||{};try{let img=c.img||'';if(o._img){const path='img/credit-'+Date.now()+'.png';await repoPut(path,o._img.b64,'Logo del pie de página');if(img)repoDel(img);img=path}else if(o.rmimg==='1'&&img){repoDel(img);img=''}D.credit={label:(o.label||'').trim()||'Creado por:',names:(o.names||'').trim(),img};touch()}catch(x){toast('No se pudo subir el logo ('+x.message+'). Revisa tu sesión de administrador.')}}
+function render(){$('#foot').innerHTML=footHTML();if((S.page==='registro'||S.page==='accs')&&!A)S.page='inicio';const t=T[S.page];$('#crumb').textContent=`${t[0]} / ${D.season.toUpperCase()}`;$('#title').textContent=t[1];$('#sub').textContent=t[2];
  $('#mode').textContent=A?'● MODO ADMIN':'● SISTEMA ACTIVO';$('#mode').className='badge '+(A?'amber':'cyan');
  $('#nav').innerHTML=Object.keys(T).filter(k=>k!=='tiempo'&&k!=='cuenta'&&(k!=='registro'||A)&&(k!=='accs'||A)).map(k=>`<button class="nav ${S.page===k?'active':''}" data-a="nav" data-k="${k}">${T[k][1][0]+T[k][1].slice(1).toLowerCase()}</button>`).join('')+`<button class="tlnav${S.page==='tiempo'?' active':''}" data-a="nav" data-k="tiempo" title="Línea de tiempo" aria-label="Línea de tiempo"><span class="tl-l"></span><span class="tl-emb2"></span><span class="tl-l"></span></button>`;
  $('#side').innerHTML=`<span class="badge amber" style="text-align:center">${esc(D.season.toUpperCase())}</span>`+(A?`<button class="btn small" data-a="publish">Publicar cambios${dirty?' ●':''}</button><button class="btn small secondary" data-a="dl">Descargar data.json</button><button class="btn small ghost" data-a="undo">↶ Deshacer${UNDO.length?' ('+UNDO.length+')':''}</button><button class="btn small ghost" data-a="vers">Versiones anteriores</button><button class="btn small ghost" data-a="theme">Tema</button><button class="btn small ghost" data-a="musica">♪ Música${D.music?' (cambiar)':''}</button>${D.music?'<button class="btn small ghost" data-a="quitmusica">Quitar música</button>':''}<button class="btn small ghost" data-a="settings">Ajustes y rondas</button><button class="btn small ghost" data-a="closes">Cerrar temporada</button><button class="btn small ghost" data-a="logout">Cerrar sesión</button>`:`<button class="btn small ghost" data-a="login">Acceso admin</button>`);
@@ -544,6 +547,7 @@ const LOGD={medal:e=>`${D.results.some(r=>r.p===e.p&&r.c===e.c&&r.m===e.m)?'Quit
  newp:()=>'Agregó un jugador',delp:e=>`Eliminó al jugador ${_pn(e.id)}`,newd:()=>'Creó un reto',editd:()=>'Editó un reto',endround:()=>'Cerró la ronda de retos',
  closes:()=>'Cerró la temporada',newt:()=>'Agregó un pin a la línea de tiempo',editt:()=>'Editó un pin de la línea de tiempo',delt:()=>'Quitó un pin de la línea de tiempo',theme:()=>'Cambió el tema'};
 const act={
+ creditedit(){const c=D.credit;pre=JSON.stringify(D);pend='Editó el pie de página';openForm('Pie de página',[['label','Texto inicial'],['names','Nombres del equipo'],['img','Logo (opcional)','file',{max:400,png:1}],...(c&&c.img?[['rmimg','Logo actual','select',[['0','Conservar'],['1','Quitar']]]]:[])],c||{label:'Creado por:'},o=>saveCredit(o))},
  emuopen(){S.emi=0;emuView()},
  emprev(){const n=(D.emu.imgs||[]).length;S.emi=((S.emi||0)-1+n)%n;emuView()},
  emnext(){const n=(D.emu.imgs||[]).length;S.emi=((S.emi||0)+1)%n;emuView()},
