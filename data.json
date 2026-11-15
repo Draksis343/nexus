@@ -471,6 +471,7 @@
    "linkText": ""
   }
  ],
+ "rdl": 1795280940000,
  "pst": {},
  "emu": {
   "name": "Emuladores",
@@ -1077,6 +1078,14 @@
   },
   {
    "at": 1794762166936,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794762573001,
+   "t": "Cambió la fecha límite de la ronda"
+  },
+  {
+   "at": 1794762576045,
    "t": "Publicó cambios"
   }
  ],
