@@ -42,9 +42,9 @@
    "status": "Próximamente",
    "round": "1",
    "desc": "<p>La guerra ha llegado a la Tierra. Mientras el Covenant intensifica su ofensiva, el Jefe Maestro deberá defender a la humanidad de una amenaza que va mucho más allá de una simple invasión. Al mismo tiempo, un guerrero Elites es condenado y obligado a convertirse en el Inquisidor, descubriendo poco a poco una verdad capaz de cambiar el destino de toda la galaxia.</p><p>Lucha en ambos bandos de una guerra que está a punto de cambiarlo todo. <i>El destino de la humanidad y del Covenant está en juego.</i></p>",
-   "rules": "",
+   "rules": "Puedes descargarlo sino lo tienes en el enlace de arriba, es 100% seguro se trata de un proyecto como lo fue el primer halo con su versión en PO donde la comunidad creaba incluso creaba mapas para el multijugador. O bien te recomendamos que cliquees en el botón de emuladores para más información acerca de una app.",
    "end": 0,
-   "link": "",
+   "link": "https://www.halo2pc.com/install/",
    "_ups": {},
    "_img": null,
    "img": "img/ch-1794528028340.jpg",
@@ -775,6 +775,18 @@
   },
   {
    "at": 1794718857280,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794719508441,
+   "t": "Editó el desafío «La caída del Covenant»"
+  },
+  {
+   "at": 1794719564248,
+   "t": "Editó el desafío «La caída del Covenant»"
+  },
+  {
+   "at": 1794719567256,
    "t": "Publicó cambios"
   }
  ],
