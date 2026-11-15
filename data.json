@@ -202,9 +202,9 @@
    "difficulty": "Medio",
    "bonus": "20",
    "slots": 5,
-   "status": "Próximamente",
+   "status": "Disponible",
    "round": "1",
-   "end": 0,
+   "end": 1794731040000,
    "desc": "<p>A bordo de la <b>UNSC</b> <em><font color=\"#ea1f1f\">Red Horse</font></em>, un escuadrón de marines liderado por la sargento Zhao Heng Lopez recibe la misión de investigar una cápsula de escape procedente de la nave penitenciaria <em>Mona Lisa</em>. Tras encontrar a un superviviente en estado crítico, el equipo es enviado a inspeccionar la misteriosa nave.</p><p>Lo que parecía una operación de reconocimiento pronto se convertirá en un encuentro inesperado con fuerzas Covenant. ¿Podrás completar la misión y descubrir qué secretos esconde la Mona Lisa?</p><p>Requiere tener Halo: The Master Chief Collection</p>",
    "rules": "",
    "link": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782031257",
@@ -395,6 +395,7 @@
    "linkText": ""
   }
  ],
+ "pst": {},
  "emu": {
   "name": "Emuladores",
   "body": "<p>¿Quieres tener descargar juegos rápido y de manera Segura?</p><p>Últimamente he estado probando <strong><font color=\"#ba66ff\">MegaRetro Hub</font></strong> y la verdad es que se ha convertido en una opción bastante interesante para quienes disfrutan de los videojuegos retro.</p><p>Más que ser simplemente una página para descargar juegos, prácticamente funciona como una biblioteca donde puedes encontrar miles de títulos de diferentes consolas y generaciones, todo reunido en un mismo lugar.</p><p>Algo que me gustó <b>bastante es lo sencillo</b> que resulta utilizarlo: puedes buscar tus juegos y descargarlos con un solo clic, sin tener que estar saltando entre distintas páginas o buscando archivos por separado.</p><p>Además, cuenta con opciones multijugador, compatibilidad con una gran variedad de mandos y una buena selección de juegos para revivir esos clásicos que tanto nos gustan o descubrir títulos que quizá nunca tuvimos oportunidad de jugar.</p><p>Creo que es una alternativa bastante buena si te gusta la emulación, coleccionar videojuegos o simplemente tener una buena biblioteca de juegos a la mano sin tantas complicaciones.</p><p>Si quieren echarle un vistazo, les dejo mi enlace de afiliado:</p>",
@@ -956,6 +957,14 @@
   },
   {
    "at": 1794730878922,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794731072299,
+   "t": "Editó el desafío «The Mona Lisa»"
+  },
+  {
+   "at": 1794731077682,
    "t": "Publicó cambios"
   }
  ],
