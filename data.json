@@ -557,7 +557,7 @@
   {
    "id": "mwd89utgmix",
    "img": "img/tl-1794468601924.jpg",
-   "icon": "img/tl-ic-1794468604113.png",
+   "icon": "img/tl-ic-1794811411473.png",
    "n": 1,
    "name": "Oculto...",
    "state": "Próxima",
@@ -1274,6 +1274,14 @@
   },
   {
    "at": 1794810372566,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794811413025,
+   "t": "Editó un pin de la línea de tiempo"
+  },
+  {
+   "at": 1794811418204,
    "t": "Publicó cambios"
   }
  ],
