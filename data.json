@@ -336,8 +336,8 @@
    "rules": ""
   },
   {
-   "id": "mwjjb85oy16",
-   "start": 1794849938700,
+   "id": "mwjilyljpbl",
+   "start": 1794848759911,
    "cs": "Temporada 0 - PROTOCOLO ZERO",
    "goals": [],
    "title": "Prueba",
@@ -352,14 +352,14 @@
    "rtrar": "Atemporal",
    "status": "Disponible",
    "round": "",
+   "end": 1794935100000,
    "link": "",
    "desc": "",
    "ob_bronce": "",
    "ob_plata": "",
    "ob_oro": "",
    "ob_platino": "",
-   "rules": "",
-   "end": 1794936300000
+   "rules": ""
   }
  ],
  "results": [],
@@ -595,7 +595,26 @@
    "text": "???"
   }
  ],
- "cg": [],
+ "cg": [
+  {
+   "p": "mwen9cex36h",
+   "c": "mwic1l98xo9",
+   "g": "mwic2ejnc5g",
+   "at": 1794853223762,
+   "s": "Temporada 0 - PROTOCOLO ZERO",
+   "pl": 5,
+   "t": "Logro: Coleccionista de dinosaurios · La aventura del Reino Champiñón"
+  },
+  {
+   "p": "mwen9cex36h",
+   "c": "mwic1l98xo9",
+   "g": "mwic21v4838",
+   "at": 1794853403907,
+   "s": "Temporada 0 - PROTOCOLO ZERO",
+   "pl": 5,
+   "t": "Logro: Un compañero inseparable · La aventura del Reino Champiñón"
+  }
+ ],
  "syncs": [],
  "atem": [],
  "log": [
@@ -1392,47 +1411,15 @@
    "t": "Publicó cambios"
   },
   {
-   "at": 1794849306086,
-   "t": "Eliminó el desafío «Prueba»"
+   "at": 1794853223763,
+   "t": "Registró el resultado de Draksis en «La aventura del Reino Champiñón»"
   },
   {
-   "at": 1794849315051,
-   "t": "Creó un desafío"
+   "at": 1794853403907,
+   "t": "Registró el resultado de Draksis en «La aventura del Reino Champiñón»"
   },
   {
-   "at": 1794849318159,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794849401682,
-   "t": "Editó el desafío «Prueba»"
-  },
-  {
-   "at": 1794849407600,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794849919270,
-   "t": "Eliminó el desafío «Prueba»"
-  },
-  {
-   "at": 1794849938700,
-   "t": "Creó un desafío"
-  },
-  {
-   "at": 1794849942460,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794849956014,
-   "t": "Editó el desafío «Prueba»"
-  },
-  {
-   "at": 1794849971043,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794851672502,
+   "at": 1794853577016,
    "t": "Publicó cambios"
   }
  ],
