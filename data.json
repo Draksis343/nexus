@@ -366,6 +366,33 @@
    "ob_oro": "",
    "ob_platino": "",
    "rules": ""
+  },
+  {
+   "id": "mwjo9kadrfl",
+   "start": 1794858259189,
+   "cs": "Temporada 0 - PROTOCOLO ZERO",
+   "goals": [],
+   "img": "img/ch-1794858259189.jpg",
+   "title": "El Caballero Valiente",
+   "game": "",
+   "mode": "Solo",
+   "category": "Habilidad",
+   "rarity": "Común",
+   "difficulty": "Medio",
+   "bonus": "20",
+   "slots": 5,
+   "rtitle": "",
+   "rtrar": "Atemporal",
+   "status": "Próximamente",
+   "round": "",
+   "link": "",
+   "desc": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rules": "",
+   "end": 0
   }
  ],
  "results": [],
@@ -601,7 +628,26 @@
    "text": "???"
   }
  ],
- "cg": [],
+ "cg": [
+  {
+   "p": "mwen9cex36h",
+   "c": "mwic1l98xo9",
+   "g": "mwic2ejnc5g",
+   "at": 1794853223762,
+   "s": "Temporada 0 - PROTOCOLO ZERO",
+   "pl": 5,
+   "t": "Logro: Coleccionista de dinosaurios · La aventura del Reino Champiñón"
+  },
+  {
+   "p": "mwen9cex36h",
+   "c": "mwic1l98xo9",
+   "g": "mwic21v4838",
+   "at": 1794853403907,
+   "s": "Temporada 0 - PROTOCOLO ZERO",
+   "pl": 5,
+   "t": "Logro: Un compañero inseparable · La aventura del Reino Champiñón"
+  }
+ ],
  "syncs": [],
  "atem": [],
  "log": [
@@ -1418,11 +1464,19 @@
    "t": "Publicó cambios"
   },
   {
-   "at": 1794858059448,
-   "t": "Registró el resultado de Draksis en «La aventura del Reino Champiñón»"
+   "at": 1794858075879,
+   "t": "Creó un desafío"
   },
   {
-   "at": 1794858063572,
+   "at": 1794858116881,
+   "t": "Eliminó el desafío «El Caballero Valiente»"
+  },
+  {
+   "at": 1794858260794,
+   "t": "Creó un desafío"
+  },
+  {
+   "at": 1794858566715,
    "t": "Publicó cambios"
   }
  ],
