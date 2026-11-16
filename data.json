@@ -334,32 +334,6 @@
    "ob_oro": "Activa 3 de los 4 Switch Palaces del juego",
    "ob_platino": "Derrota a Bowser y rescata a la princesa Peach después de completar los objetivos anteriores",
    "rules": ""
-  },
-  {
-   "id": "mwj0la8beex",
-   "start": 1794818495243,
-   "cs": "Temporada 0 - PROTOCOLO ZERO",
-   "goals": [],
-   "title": "Prueba",
-   "game": "Prueba",
-   "mode": "Solo",
-   "category": "Habilidad",
-   "rarity": "Común",
-   "difficulty": "Medio",
-   "bonus": "20",
-   "slots": 5,
-   "rtitle": "",
-   "rtrar": "Atemporal",
-   "status": "Disponible",
-   "round": "",
-   "end": 1794904860000,
-   "link": "",
-   "desc": "Prueba",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "rules": ""
   }
  ],
  "results": [],
@@ -1353,6 +1327,14 @@
   },
   {
    "at": 1794818507401,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794818755176,
+   "t": "Eliminó el desafío «Prueba»"
+  },
+  {
+   "at": 1794818874422,
    "t": "Publicó cambios"
   }
  ],
