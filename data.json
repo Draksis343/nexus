@@ -416,6 +416,21 @@
    "rules": "",
    "status": "Pendiente",
    "m": ""
+  },
+  {
+   "id": "mwiy4wto0qc",
+   "at": 1794814372140,
+   "a": "mwen9cex36h",
+   "b": "mwen9cex36h",
+   "game": "sdsd",
+   "rules": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "status": "Pendiente",
+   "m": "",
+   "link": ""
   }
  ],
  "event": null,
@@ -518,6 +533,7 @@
   }
  ],
  "slogo": "img/season-logo-1794811905064.png",
+ "sfx": {},
  "rdl": 1795327140000,
  "pens": [],
  "penv": {
@@ -1291,6 +1307,14 @@
   },
   {
    "at": 1794811921974,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794814372140,
+   "t": "Creó un reto"
+  },
+  {
+   "at": 1794814438659,
    "t": "Publicó cambios"
   }
  ],
