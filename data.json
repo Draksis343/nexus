@@ -602,26 +602,7 @@
    "text": "???"
   }
  ],
- "cg": [
-  {
-   "p": "mwen9cex36h",
-   "c": "mwic1l98xo9",
-   "g": "mwic2ejnc5g",
-   "at": 1794853223762,
-   "s": "Temporada 0 - PROTOCOLO ZERO",
-   "pl": 5,
-   "t": "Logro: Coleccionista de dinosaurios · La aventura del Reino Champiñón"
-  },
-  {
-   "p": "mwen9cex36h",
-   "c": "mwic1l98xo9",
-   "g": "mwic21v4838",
-   "at": 1794853403907,
-   "s": "Temporada 0 - PROTOCOLO ZERO",
-   "pl": 5,
-   "t": "Logro: Un compañero inseparable · La aventura del Reino Champiñón"
-  }
- ],
+ "cg": [],
  "syncs": [],
  "atem": [],
  "log": [
@@ -1459,6 +1440,14 @@
   },
   {
    "at": 1794862290059,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794862334874,
+   "t": "Registró el resultado de Draksis en «La aventura del Reino Champiñón»"
+  },
+  {
+   "at": 1794862375760,
    "t": "Publicó cambios"
   }
  ],
