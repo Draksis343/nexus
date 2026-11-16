@@ -517,6 +517,7 @@
    "linkText": ""
   }
  ],
+ "slogo": "img/season-logo-1794811905064.png",
  "rdl": 1795327140000,
  "pens": [],
  "penv": {
@@ -1282,6 +1283,14 @@
   },
   {
    "at": 1794811418204,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794811907017,
+   "t": "Cambió el logo de la temporada"
+  },
+  {
+   "at": 1794811921974,
    "t": "Publicó cambios"
   }
  ],
