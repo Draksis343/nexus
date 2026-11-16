@@ -336,8 +336,8 @@
    "rules": ""
   },
   {
-   "id": "mwjilyljpbl",
-   "start": 1794848759911,
+   "id": "mwjixuy3xrj",
+   "start": 1794849315051,
    "cs": "Temporada 0 - PROTOCOLO ZERO",
    "goals": [],
    "title": "Prueba",
@@ -350,16 +350,16 @@
    "slots": 5,
    "rtitle": "",
    "rtrar": "Atemporal",
-   "status": "Disponible",
+   "status": "Próximamente",
    "round": "",
-   "end": 1794935100000,
    "link": "",
    "desc": "",
    "ob_bronce": "",
    "ob_plata": "",
    "ob_oro": "",
    "ob_platino": "",
-   "rules": ""
+   "rules": "",
+   "end": 0
   }
  ],
  "results": [],
@@ -1389,6 +1389,18 @@
   },
   {
    "at": 1794848769220,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794849306086,
+   "t": "Eliminó el desafío «Prueba»"
+  },
+  {
+   "at": 1794849315051,
+   "t": "Creó un desafío"
+  },
+  {
+   "at": 1794849318159,
    "t": "Publicó cambios"
   }
  ],
