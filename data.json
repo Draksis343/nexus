@@ -509,7 +509,7 @@
   {
    "id": "mwiuxy1j8u6",
    "at": 1794809008279,
-   "img": "img/news-1794809832687.jpg",
+   "img": "img/news-1794810367230.gif",
    "title": "Inició la Temporada 0 - Protocolo Zero",
    "kind": "Noticia",
    "body": "<p>¡Damos comienzo a la <strong><i><font color=\"#ffc157\">Temporada 0: Protocolo Zero</font></i></strong> y, con ella, a la primera ronda de retos de Nexus Arena!</p><p>Es momento de poner a prueba tus habilidades, retar a tus amigos y demostrar de qué eres capaz. No dejes pasar la oportunidad de lanzar tus propios desafíos y participar en los de los demás antes de que termine el tiempo de esta ronda.</p><p>🏆 Compite por un lugar en el ranking a través de los <strong><font color=\"#fec158\">Desafíos de Temporada</font></strong> y, si crees tener lo necesario para llegar más lejos, ¡atrévete a conquistar el <strong><font color=\"#ffbf52\">Evento Nexus</font></strong>!</p><p>Recuerda que esta es nuestra temporada de prueba, una oportunidad para poner en marcha esta nueva forma de jugar, competir y compartir nuestra pasión por los videojuegos.</p><p>¡Esperamos que disfruten esta experiencia tanto como nosotros disfrutamos preparándola!</p>",
@@ -1266,6 +1266,14 @@
   },
   {
    "at": 1794809841134,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794810370593,
+   "t": "Cambio (editn)"
+  },
+  {
+   "at": 1794810372566,
    "t": "Publicó cambios"
   }
  ],
