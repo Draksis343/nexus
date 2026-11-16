@@ -350,7 +350,7 @@
    "slots": 5,
    "rtitle": "",
    "rtrar": "Atemporal",
-   "status": "Próximamente",
+   "status": "Disponible",
    "round": "",
    "link": "",
    "desc": "",
@@ -359,7 +359,7 @@
    "ob_oro": "",
    "ob_platino": "",
    "rules": "",
-   "end": 0
+   "end": 1794935760000
   }
  ],
  "results": [],
@@ -1401,6 +1401,14 @@
   },
   {
    "at": 1794849318159,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794849401682,
+   "t": "Editó el desafío «Prueba»"
+  },
+  {
+   "at": 1794849407600,
    "t": "Publicó cambios"
   }
  ],
