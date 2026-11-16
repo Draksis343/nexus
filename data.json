@@ -311,6 +311,12 @@
      "name": "No hay camino equivocado",
      "desc": "Descubre y utiliza cinco salidas secretas diferentes",
      "pl": 5
+    },
+    {
+     "id": "mwjlzbjtizc",
+     "name": "Centenario",
+     "desc": "Acumula 100 vidas",
+     "pl": 5
     }
    ],
    "img": "img/ch-1794777265628.jpg",
@@ -1420,6 +1426,14 @@
   },
   {
    "at": 1794853577016,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794854422075,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794854430626,
    "t": "Publicó cambios"
   }
  ],
