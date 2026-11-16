@@ -416,21 +416,6 @@
    "rules": "",
    "status": "Pendiente",
    "m": ""
-  },
-  {
-   "id": "mwiy4wto0qc",
-   "at": 1794814372140,
-   "a": "mwen9cex36h",
-   "b": "mwen9cex36h",
-   "game": "sdsd",
-   "rules": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "status": "Pendiente",
-   "m": "",
-   "link": ""
   }
  ],
  "event": null,
@@ -1315,6 +1300,14 @@
   },
   {
    "at": 1794814438659,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794814607794,
+   "t": "Cambio (deld)"
+  },
+  {
+   "at": 1794814658322,
    "t": "Publicó cambios"
   }
  ],
