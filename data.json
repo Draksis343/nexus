@@ -1684,6 +1684,30 @@
   {
    "at": 1794939883748,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1794942779756,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794942812736,
+   "t": "Editó una recompensa del pase"
+  },
+  {
+   "at": 1794942936241,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794942996590,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794943150253,
+   "t": "Configuró el pase de temporada"
+  },
+  {
+   "at": 1794943158563,
+   "t": "Publicó cambios"
   }
  ],
  "theme": {
@@ -1699,7 +1723,7 @@
   "retro": "0"
  },
  "pass": {
-  "status": "Activo",
+  "status": "Próximamente",
   "name": "Zero",
   "sub": "Sube de nivel. Reclama. Presume.",
   "levels": 10,
@@ -1745,6 +1769,36 @@
     "desc": "Un poco más para hacerlo",
     "v": "",
     "img": "img/pase-1794931653695.jpg"
+   },
+   {
+    "id": "prmwl2l4rwcdg",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "emblema",
+    "lv": 4,
+    "name": "Forjador",
+    "desc": "Demuestra que estuviste presente en la Temporada 0",
+    "v": "⛏️",
+    "img": ""
+   },
+   {
+    "id": "prmwl2ohipxj1",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "descarga",
+    "lv": 5,
+    "name": "Nexus Arena",
+    "desc": "Un bonito fondo de pantalla para tu PC",
+    "v": "",
+    "link": "",
+    "img": "img/pase-1794942933827.jpg"
+   },
+   {
+    "id": "prmwl2ps32d2x",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "trofeo",
+    "lv": 10,
+    "name": "Zero",
+    "desc": "",
+    "v": ""
    }
   ]
  },
