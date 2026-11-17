@@ -1607,6 +1607,34 @@
   {
    "at": 1794930432648,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1794930784095,
+   "t": "Reinició el pase de temporada"
+  },
+  {
+   "at": 1794930792349,
+   "t": "Configuró el pase de temporada"
+  },
+  {
+   "at": 1794931434989,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794931489908,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794931655415,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794931674971,
+   "t": "Configuró el pase de temporada"
+  },
+  {
+   "at": 1794931792667,
+   "t": "Publicó cambios"
   }
  ],
  "theme": {
@@ -1622,10 +1650,10 @@
   "retro": "0"
  },
  "pass": {
-  "status": "Próximamente",
+  "status": "Activo",
   "name": "Zero",
   "sub": "Sube de nivel. Reclama. Presume.",
-  "levels": 5,
+  "levels": 10,
   "per": 300,
   "xp": {
    "participacion": 40,
@@ -1636,171 +1664,185 @@
    "reto": 100,
    "logro": 120
   },
-  "missions": [
-   {
-    "id": "dm1",
-    "t": "Completa 2 desafíos esta semana",
-    "xp": 200
-   },
-   {
-    "id": "dm2",
-    "t": "Reta a otro jugador y cumple el reto",
-    "xp": 150
-   },
-   {
-    "id": "dm3",
-    "t": "Sube un video de evidencia",
-    "xp": 100
-   }
-  ],
+  "missions": [],
   "done": {},
   "used": {},
   "adj": {},
   "rewards": [
    {
-    "id": "demo-1-emblema",
-    "lv": 1,
-    "type": "emblema",
-    "name": "Emblema Rayo",
-    "desc": "",
+    "id": "prmwkvtz3hk4x",
     "season": "Temporada 0 - PROTOCOLO ZERO",
-    "v": "⚡"
-   },
-   {
-    "id": "demo-3-color",
-    "lv": 3,
-    "type": "color",
-    "name": "Nombre cian",
-    "desc": "",
-    "season": "Temporada 0 - PROTOCOLO ZERO",
-    "v": "#73dbe4"
-   },
-   {
-    "id": "demo-5-marco",
-    "lv": 5,
     "type": "marco",
-    "name": "Marco Neón",
-    "desc": "",
-    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "lv": 1,
+    "name": "Neo",
+    "desc": "Se ve bonito ¿no?",
     "v": "neon"
    },
    {
-    "id": "demo-8-objeto",
-    "lv": 8,
-    "type": "objeto",
-    "name": "Comodín de plazo",
-    "desc": "+24 horas para entregar la evidencia de un reto. Un uso.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
-   },
-   {
-    "id": "demo-10-titulo",
-    "lv": 10,
-    "type": "titulo",
-    "name": "Veterano del Pase",
-    "desc": "",
+    "id": "prmwkvv5h0pr8",
     "season": "Temporada 0 - PROTOCOLO ZERO",
-    "rar": "Rara"
-   },
-   {
-    "id": "demo-12-descarga",
-    "lv": 12,
-    "type": "descarga",
-    "name": "Wallpaper de temporada",
-    "desc": "Fondo para PC y celular.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
-   },
-   {
-    "id": "demo-15-efecto",
-    "lv": 15,
-    "type": "efecto",
-    "name": "Efecto Brasas",
-    "desc": "",
-    "season": "Temporada 0 - PROTOCOLO ZERO",
-    "v": "embers"
-   },
-   {
-    "id": "demo-16-objeto",
-    "lv": 16,
-    "type": "objeto",
-    "name": "Rol de Discord",
-    "desc": "Pide al admin tu rol exclusivo en el Discord.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
-   },
-   {
-    "id": "demo-18-objeto",
-    "lv": 18,
-    "type": "objeto",
-    "name": "Escudo de penalización",
-    "desc": "Evita una penalización de PL. Un uso por temporada.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
-   },
-   {
-    "id": "demo-20-marco",
-    "lv": 20,
-    "type": "marco",
-    "name": "Marco Pixel",
-    "desc": "",
-    "season": "Temporada 0 - PROTOCOLO ZERO",
-    "v": "pixel"
-   },
-   {
-    "id": "demo-22-tarjeta",
-    "lv": 22,
-    "type": "tarjeta",
-    "name": "Tarjeta de jugador",
-    "desc": "Descarga una imagen con tus estadísticas.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
-   },
-   {
-    "id": "demo-24-objeto",
-    "lv": 24,
-    "type": "objeto",
-    "name": "Voto de juego",
-    "desc": "Propón o vota el juego de un desafío de la siguiente ronda.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
-   },
-   {
-    "id": "demo-25-color",
-    "lv": 25,
     "type": "color",
-    "name": "Nombre degradado",
-    "desc": "",
+    "lv": 2,
+    "name": "Nexus",
+    "desc": "Sincronízate con el Nexus",
+    "v": "#ffc266"
+   },
+   {
+    "id": "prmwkvyp6fijb",
     "season": "Temporada 0 - PROTOCOLO ZERO",
-    "v": "degradado"
-   },
-   {
-    "id": "demo-27-objeto",
-    "lv": 27,
-    "type": "objeto",
-    "name": "Reto con firma",
-    "desc": "Tu próximo reto se anuncia con marco especial.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
-   },
-   {
-    "id": "demo-28-descarga",
-    "lv": 28,
-    "type": "descarga",
-    "name": "Pack de stickers",
-    "desc": "Stickers de Nexus Arena.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
-   },
-   {
-    "id": "demo-30-titulo",
-    "lv": 30,
-    "type": "titulo",
-    "name": "Leyenda del Pase",
-    "desc": "",
-    "season": "Temporada 0 - PROTOCOLO ZERO",
-    "rar": "Épica"
-   },
-   {
-    "id": "demo-30-trofeo",
-    "lv": 30,
-    "type": "trofeo",
-    "name": "Trofeo Leyenda",
-    "desc": "Completaste el pase de la temporada.",
-    "season": "Temporada 0 - PROTOCOLO ZERO"
+    "type": "fondo",
+    "lv": 3,
+    "name": "Sincronia",
+    "desc": "Un poco más para hacerlo",
+    "v": "",
+    "img": "img/pase-1794931653695.jpg"
    }
   ]
- }
+ },
+ "passArc": [
+  {
+   "id": "demo-1-emblema",
+   "lv": 1,
+   "type": "emblema",
+   "name": "Emblema Rayo",
+   "desc": "",
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "v": "⚡"
+  },
+  {
+   "id": "demo-3-color",
+   "lv": 3,
+   "type": "color",
+   "name": "Nombre cian",
+   "desc": "",
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "v": "#73dbe4"
+  },
+  {
+   "id": "demo-5-marco",
+   "lv": 5,
+   "type": "marco",
+   "name": "Marco Neón",
+   "desc": "",
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "v": "neon"
+  },
+  {
+   "id": "demo-8-objeto",
+   "lv": 8,
+   "type": "objeto",
+   "name": "Comodín de plazo",
+   "desc": "+24 horas para entregar la evidencia de un reto. Un uso.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "id": "demo-10-titulo",
+   "lv": 10,
+   "type": "titulo",
+   "name": "Veterano del Pase",
+   "desc": "",
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "rar": "Rara"
+  },
+  {
+   "id": "demo-12-descarga",
+   "lv": 12,
+   "type": "descarga",
+   "name": "Wallpaper de temporada",
+   "desc": "Fondo para PC y celular.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "id": "demo-15-efecto",
+   "lv": 15,
+   "type": "efecto",
+   "name": "Efecto Brasas",
+   "desc": "",
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "v": "embers"
+  },
+  {
+   "id": "demo-16-objeto",
+   "lv": 16,
+   "type": "objeto",
+   "name": "Rol de Discord",
+   "desc": "Pide al admin tu rol exclusivo en el Discord.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "id": "demo-18-objeto",
+   "lv": 18,
+   "type": "objeto",
+   "name": "Escudo de penalización",
+   "desc": "Evita una penalización de PL. Un uso por temporada.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "id": "demo-20-marco",
+   "lv": 20,
+   "type": "marco",
+   "name": "Marco Pixel",
+   "desc": "",
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "v": "pixel"
+  },
+  {
+   "id": "demo-22-tarjeta",
+   "lv": 22,
+   "type": "tarjeta",
+   "name": "Tarjeta de jugador",
+   "desc": "Descarga una imagen con tus estadísticas.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "id": "demo-24-objeto",
+   "lv": 24,
+   "type": "objeto",
+   "name": "Voto de juego",
+   "desc": "Propón o vota el juego de un desafío de la siguiente ronda.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "id": "demo-25-color",
+   "lv": 25,
+   "type": "color",
+   "name": "Nombre degradado",
+   "desc": "",
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "v": "degradado"
+  },
+  {
+   "id": "demo-27-objeto",
+   "lv": 27,
+   "type": "objeto",
+   "name": "Reto con firma",
+   "desc": "Tu próximo reto se anuncia con marco especial.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "id": "demo-28-descarga",
+   "lv": 28,
+   "type": "descarga",
+   "name": "Pack de stickers",
+   "desc": "Stickers de Nexus Arena.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "id": "demo-30-titulo",
+   "lv": 30,
+   "type": "titulo",
+   "name": "Leyenda del Pase",
+   "desc": "",
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "rar": "Épica"
+  },
+  {
+   "id": "demo-30-trofeo",
+   "lv": 30,
+   "type": "trofeo",
+   "name": "Trofeo Leyenda",
+   "desc": "Completaste el pase de la temporada.",
+   "season": "Temporada 0 - PROTOCOLO ZERO"
+  }
+ ]
 }
