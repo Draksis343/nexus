@@ -366,7 +366,7 @@
    "ob_oro": "Encuentra y desentierra diez objetos enterrados.",
    "ob_platino": "Navega por la Mina Abandonada sin golpear ningún obstáculo.",
    "rules": "",
-   "end": 1794855540000
+   "end": 1795892340000
   }
  ],
  "results": [],
@@ -1468,6 +1468,14 @@
   },
   {
    "at": 1794894766255,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794894785396,
+   "t": "Editó el desafío «El Caballero Valiente»"
+  },
+  {
+   "at": 1794894789839,
    "t": "Publicó cambios"
   }
  ],
