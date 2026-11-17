@@ -367,6 +367,32 @@
    "ob_platino": "Navega por la Mina Abandonada sin golpear ningún obstáculo.",
    "rules": "",
    "end": 1795892340000
+  },
+  {
+   "id": "mwka7vzceya",
+   "start": 1794895132584,
+   "cs": "Temporada 0 - PROTOCOLO ZERO",
+   "goals": [],
+   "title": "Luchador Aéreo",
+   "game": "Aero Fighters 2",
+   "mode": "Solo",
+   "category": "Habilidad",
+   "rarity": "Épica",
+   "difficulty": "Difícil",
+   "bonus": "100",
+   "slots": 5,
+   "rtitle": "",
+   "rtrar": "Atemporal",
+   "status": "Disponible",
+   "round": "",
+   "end": 1795892340000,
+   "link": "",
+   "desc": "¡A ver si consigues convertirte en la leyenda de Aero Fighters 2!",
+   "ob_bronce": "Completa una misión sin utilizar ningún continue.",
+   "ob_plata": "Completa una partida sin utilizar bombas.",
+   "ob_oro": "Completa el juego sin perder ninguna vida.",
+   "ob_platino": "Completa el juego sin utilizar continues y sin recoger potenciadores de armas.",
+   "rules": ""
   }
  ],
  "results": [],
@@ -1476,6 +1502,14 @@
   },
   {
    "at": 1794894789839,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794895132584,
+   "t": "Creó un desafío"
+  },
+  {
+   "at": 1794895136240,
    "t": "Publicó cambios"
   }
  ],
