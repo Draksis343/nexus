@@ -394,6 +394,32 @@
    "ob_platino": "Completa el juego sin utilizar continues y sin recoger potenciadores de armas.",
    "rules": "",
    "img": "img/ch-1794895745731.jpg"
+  },
+  {
+   "id": "mwkbdc5kox8",
+   "start": 1794897066440,
+   "cs": "Temporada 0 - PROTOCOLO ZERO",
+   "goals": [],
+   "title": "Sailor Senshi",
+   "game": "Bishoujo Senshi Sailor Moon R",
+   "mode": "Solo",
+   "category": "Habilidad",
+   "rarity": "Épica",
+   "difficulty": "Difícil",
+   "bonus": "50",
+   "slots": 5,
+   "rtitle": "",
+   "rtrar": "Atemporal",
+   "status": "Disponible",
+   "round": "",
+   "end": 1795892340000,
+   "link": "",
+   "desc": "Una nueva amenaza se cierne sobre la Tierra. Las fuerzas enemigas han comenzado a atacar la ciudad y las Sailor Scouts deben demostrar que están preparadas para defenderla.",
+   "ob_bronce": "",
+   "ob_plata": "Llega al jefe final con 2 bombas o más.",
+   "ob_oro": "Completa el juego en dificultad normal con los 3 Continues default en opciones (Sin Chibiusa).",
+   "ob_platino": "Completa el juego en dificultad difícil (Sin Chibiusa)",
+   "rules": ""
   }
  ],
  "results": [],
@@ -1519,6 +1545,14 @@
   },
   {
    "at": 1794895749842,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794897066440,
+   "t": "Creó un desafío"
+  },
+  {
+   "at": 1794897070488,
    "t": "Publicó cambios"
   }
  ],
