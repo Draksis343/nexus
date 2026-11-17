@@ -569,6 +569,23 @@
    "max": 5,
    "title": "",
    "trar": "Común"
+  },
+  {
+   "id": "mwkwywompb2",
+   "icon": "",
+   "name": "Prueba de fuego",
+   "desc": "",
+   "rar": "Común",
+   "max": 5,
+   "title": "",
+   "trar": "Común",
+   "rw": {
+    "type": "marco",
+    "name": "",
+    "desc": "",
+    "v": "fuego",
+    "img": ""
+   }
   }
  ],
  "grants": [],
@@ -1634,6 +1651,14 @@
   },
   {
    "at": 1794931792667,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794933344758,
+   "t": "Cambio (newa)"
+  },
+  {
+   "at": 1794933352520,
    "t": "Publicó cambios"
   }
  ],
