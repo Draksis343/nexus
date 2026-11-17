@@ -419,7 +419,8 @@
    "ob_plata": "Llega al jefe final con 2 bombas o más.",
    "ob_oro": "Completa el juego en dificultad normal con los 3 Continues default en opciones (Sin Chibiusa).",
    "ob_platino": "Completa el juego en dificultad difícil (Sin Chibiusa)",
-   "rules": ""
+   "rules": "Puedes descargar el juego de aquí:&amp;nbsp;<a href=\"https://wowroms.com/es/roms/super-nintendo/bishoujo-senshi-sailor-moon-r-japan/27090.html\" target=\"_blank\" rel=\"noopener noreferrer\">https://wowroms.com/es/roms/super-nintendo/bishoujo-senshi-sailor-moon-r-japan/27090.html</a>",
+   "img": "img/ch-1794897240063.jpg"
   }
  ],
  "results": [],
@@ -1553,6 +1554,14 @@
   },
   {
    "at": 1794897070488,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794897241749,
+   "t": "Editó el desafío «Sailor Senshi»"
+  },
+  {
+   "at": 1794897246687,
    "t": "Publicó cambios"
   }
  ],
