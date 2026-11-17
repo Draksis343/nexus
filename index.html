@@ -291,6 +291,10 @@ canvas.pfxc{display:block;pointer-events:none}canvas.pfxc.full{position:absolute
 @keyframes frp{0%,100%{box-shadow:0 0 4px color-mix(in srgb,var(--amber) 40%,transparent)}50%{box-shadow:0 0 0 3px color-mix(in srgb,var(--amber) 35%,transparent),0 0 22px var(--amber)}}
 @keyframes fre{0%,100%{box-shadow:0 0 0 2px #7fe9ff66,0 0 12px #7fe9ff}40%{box-shadow:0 0 0 3px #ffffffaa,0 0 22px #7fe9ff}45%{box-shadow:0 0 2px #7fe9ff}50%{box-shadow:0 0 0 3px #ffffffaa,0 0 24px #b5f6ff}}
 @media(prefers-reduced-motion:reduce){.avatar[class*=fr-]{animation:none!important}}
+.ptabs{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}.ptabs button{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:color-mix(in srgb,var(--p1) 80%,transparent);color:var(--muted);font:700 13px 'Space Mono',monospace;letter-spacing:.04em;cursor:pointer}
+.ptabs button:hover{border-color:color-mix(in srgb,var(--amber) 55%,var(--line));color:var(--text)}.ptabs button.on{background:var(--amber);border-color:var(--amber);color:var(--bg)}
+.ptabs button span{font-size:11px;padding:1px 7px;border-radius:999px;background:#0003}
+.prw .pi{overflow:hidden;border-radius:6px}.prw .pi img{width:auto;height:auto;max-width:74px;max-height:74px;object-fit:contain;border-radius:4px}
 </style></head>
 <body>
 <header class="mobile-bar"><strong class="mono" style="color:#ffc266">NEXUS ARENA</strong><button id="menu" aria-label="Menú">☰</button></header>
@@ -831,7 +835,8 @@ function pase(){const P=PS(),pl=D.players;if(!pl.length)return empty('Aún no ha
   return`<div class="rrow" style="align-items:flex-start;flex-wrap:wrap;gap:8px"><span style="flex:1;min-width:220px">${ok?'✅':'⬜'} <strong>${esc(m.t)}</strong> ${au?badge('Automática','cyan'):badge('Manual','muted')}${m.desc?`<br><span class="subtle">${esc(m.desc)}</span>`:''}${per}${au?`<div style="display:flex;align-items:center;gap:8px;margin-top:6px"><div class="pbar" style="max-width:220px"><span style="width:${c/n*100}%"></span></div><span class="mono subtle">${c} / ${n}</span></div>`:''}${A&&!au?`<span class="mg" style="margin-top:6px">${pl.map(x=>`<button class="mbtn ${((P.done||{})[m.id]||[]).includes(x.id)?'on':''}" data-a="passdone" data-id="${esc(m.id)}" data-p="${x.id}">${esc(x.name)}</button>`).join('')}</span>`:''}</span><span class="mg"><strong class="mono amber">+${+m.xp||0} XP</strong>${A?`<button class="mbtn" data-a="passmis" data-id="${esc(m.id)}">✎</button><button class="mbtn" data-a="passmisdel" data-id="${esc(m.id)}">✕</button>`:''}</span></div>`}).join(''):'<p class="muted">No hay misiones esta temporada.</p>'}${A?'<p class="subtle">Las automáticas se cumplen solas. En las manuales, marca el nombre de cada jugador que la completó.</p>':''}</section>`;
  const inv=S.pinv?passInvHTML(vp):'';
  const fame=passFame();
- return hero+tools+`<section class="panel pad mt"><h3 style="margin-top:0">Recompensas</h3>${track}</section>`+lvbar+btns+inv+how+mis+fame}
+ const ms=P.missions||[],md=ms.filter(m=>misDone(m,vp)).length,tb=S.ptb==='mis'?'mis':'pase',tabs=`<div class="ptabs"><button class="${tb==='pase'?'on':''}" data-a="ptb" data-k="pase">🎟 Pase</button><button class="${tb==='mis'?'on':''}" data-a="ptb" data-k="mis">🎯 Misiones <span>${md}/${ms.length}</span></button></div>`,hero2=hero.replace(/<\/section>$/,tabs+'</section>');
+ return hero2+tools+(tb==='mis'?mis+how:`<section class="panel pad mt"><h3 style="margin-top:0">Recompensas</h3>${track}</section>`+lvbar+btns+inv+fame)}
 function passInvHTML(p){const L=rwOwned(p).sort((a,b)=>(a.lv||999)-(b.lv||999)||(a.at||0)-(b.at||0)),used=(PS().used||{})[p.id]||[];if(!L.length)return`<section id="pinv" class="panel pad mt"><h3 style="margin-top:0">Inventario de ${esc(p.name)}</h3><p class="muted">Aún no ha reclamado recompensas.</p></section>`;
  const act=t=>{const c=cos(p,t);return c&&c.id};
  return`<section id="pinv" class="panel pad mt"><h3 style="margin-top:0">Inventario de ${esc(p.name)}</h3><div class="pinv">${L.map(r=>{const t=PT[r.type]||PT.objeto,on=['marco','color','emblema','fondo','efecto'].includes(r.type)&&act(r.type)===r.id;let x='';
@@ -1055,6 +1060,7 @@ const act={
  undo(){if(!UNDO.length)return toast('No hay nada que deshacer.');D=Object.assign(EMPTY(),JSON.parse(UNDO.pop()));dirty=true;pre=null;pend=null;toast('Deshecho. Recuerda publicar para que se vea.');render()},
  async vers(){try{const r=await gh('GET',null,'/commits?path=data.json&per_page=25');if(!r.ok)throw 0;const cs=await r.json();if(!cs.length)return toast('Aún no hay versiones anteriores.');
   openForm('Restaurar una versión anterior',[['v','Versión (la más reciente arriba)','select',cs.map(c=>[c.sha,new Date(c.commit.author.date).toLocaleString('es',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})+' · '+c.sha.slice(0,7)])]],{},async o=>{try{const q=await gh('GET',null,'/contents/data.json?ref='+o.v);if(!q.ok)throw 0;const j=await q.json();pre=JSON.stringify(D);D=Object.assign(EMPTY(),JSON.parse(decodeURIComponent(escape(atob(j.content.replace(/\n/g,''))))));pend='Restauró una versión anterior ('+o.v.slice(0,7)+')';touch();toast('Versión cargada. Revisa y pulsa Publicar cambios para aplicarla.')}catch(x){toast('No se pudo cargar esa versión.')}})}catch(x){toast('No se pudo leer el historial de versiones.')}},
+ ptb(e){S.ptb=e.k;render()},
  passclaim(e){passClaimDo(e.id?[e.id]:null)},
  passinv(){S.pinv=!S.pinv;render();setTimeout(()=>{const x=$('#pinv');if(x)x.scrollIntoView({behavior:'smooth',block:'start'})},60)},
  pcard(e){const p=D.players.find(x=>x.id===e.id);if(p)passCardDl(p)},
