@@ -1725,6 +1725,58 @@
   {
    "at": 1794947197536,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1794947548588,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794947599734,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794947623283,
+   "t": "Editó una recompensa del pase"
+  },
+  {
+   "at": 1794947895544,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794947930012,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794947967002,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794948004079,
+   "t": "Agregó una recompensa al pase"
+  },
+  {
+   "at": 1794948028330,
+   "t": "Editó una recompensa del pase"
+  },
+  {
+   "at": 1794948098968,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1794948199043,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1794948272886,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1794948308062,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1794948317388,
+   "t": "Publicó cambios"
   }
  ],
  "theme": {
@@ -1754,7 +1806,48 @@
    "reto": 100,
    "logro": 120
   },
-  "missions": [],
+  "missions": [
+   {
+    "id": "pmmwl5r53sden",
+    "t": "Obtén 2 logros",
+    "desc": "",
+    "xp": 150,
+    "kind": "logros",
+    "n": 2,
+    "from": 1794948060000,
+    "to": 1795413540000
+   },
+   {
+    "id": "pmmwl5tabnjnv",
+    "t": "Completa 1 desafio",
+    "desc": "Completa cualquier desafío con al menos una medalla",
+    "xp": 150,
+    "kind": "desafios",
+    "n": 1,
+    "from": 1794948120000,
+    "to": 1795413540000
+   },
+   {
+    "id": "pmmwl5uvaum41",
+    "t": "Cumple un reto",
+    "desc": "Participa en un reto obteniendo al menos 1 medalla",
+    "xp": 150,
+    "kind": "retos",
+    "n": 1,
+    "from": 1794948240000,
+    "to": 1795412940000
+   },
+   {
+    "id": "pmmwl5vmfyto9",
+    "t": "Gana 5 medallas",
+    "desc": "Obtén cualquier medalla",
+    "xp": 150,
+    "kind": "medallas",
+    "n": 5,
+    "from": 1794948240000,
+    "to": 1795412940000
+   }
+  ],
   "done": {},
   "used": {},
   "adj": {},
@@ -1764,9 +1857,11 @@
     "season": "Temporada 0 - PROTOCOLO ZERO",
     "type": "marco",
     "lv": 1,
-    "name": "Neo",
+    "name": "Oro Solido",
     "desc": "Se ve bonito ¿no?",
-    "v": "neon"
+    "v": "oro",
+    "c": "",
+    "img": ""
    },
    {
     "id": "prmwkvv5h0pr8",
@@ -1807,6 +1902,70 @@
     "v": "",
     "link": "",
     "img": "img/pase-1794942933827.jpg"
+   },
+   {
+    "id": "prmwl5fcfgn94",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "trofeo",
+    "lv": 10,
+    "name": "Zero",
+    "desc": "Exhíbelo ante todos",
+    "v": "",
+    "c": "",
+    "img": "img/pase-1794947546291.jpg"
+   },
+   {
+    "id": "prmwl5gfw6z6a",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "efecto",
+    "lv": 10,
+    "name": "Brillo del Nexus",
+    "desc": "Alcanzaste la sima del Nexus",
+    "v": "oro",
+    "c": ""
+   },
+   {
+    "id": "prmwl5ms54727",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "objeto",
+    "lv": 6,
+    "name": "Escudo",
+    "desc": "Sino aviaste evidencia de algún reto o desafío en el tiempo que se programo se te perdona y no perderás PL. Usos: 1",
+    "v": "",
+    "c": "",
+    "img": "img/pase-1794947893499.jpg"
+   },
+   {
+    "id": "prmwl5niqkp5p",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "fondo",
+    "lv": 7,
+    "name": "Opulento",
+    "desc": "Destaca aún más",
+    "v": "",
+    "c": "",
+    "img": "img/pase-1794947928215.jpg"
+   },
+   {
+    "id": "prmwl5oba25kn",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "borde",
+    "lv": 8,
+    "name": "Brillante",
+    "desc": "Que pudiente...",
+    "v": "oro",
+    "c": ""
+   },
+   {
+    "id": "prmwl5p3vzy69",
+    "season": "Temporada 0 - PROTOCOLO ZERO",
+    "type": "objeto",
+    "lv": 9,
+    "name": "Nexus Arena",
+    "desc": "Un bonito wallpaper para tu smartphone",
+    "v": "",
+    "c": "",
+    "img": "img/pase-1794948001823.jpg"
    }
   ]
  },
