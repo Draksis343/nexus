@@ -392,7 +392,8 @@
    "ob_plata": "Completa una partida sin utilizar bombas.",
    "ob_oro": "Completa el juego sin perder ninguna vida.",
    "ob_platino": "Completa el juego sin utilizar continues y sin recoger potenciadores de armas.",
-   "rules": ""
+   "rules": "",
+   "img": "img/ch-1794895745731.jpg"
   }
  ],
  "results": [],
@@ -1510,6 +1511,14 @@
   },
   {
    "at": 1794895136240,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794895747224,
+   "t": "Editó el desafío «Luchador Aéreo»"
+  },
+  {
+   "at": 1794895749842,
    "t": "Publicó cambios"
   }
  ],
