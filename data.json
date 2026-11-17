@@ -64,7 +64,7 @@
    "difficulty": "Extrema",
    "bonus": "50",
    "slots": 5,
-   "status": "Activo",
+   "status": "Próximamente",
    "round": "1",
    "desc": "<p>La guerra ha llegado a la Tierra. Mientras el Covenant intensifica su ofensiva, el Jefe Maestro deberá defender a la humanidad de una amenaza que va mucho más allá de una simple invasión. Al mismo tiempo, un guerrero Elites es condenado y obligado a convertirse en el Inquisidor, descubriendo poco a poco una verdad capaz de cambiar el destino de toda la galaxia.</p><p>Lucha en ambos bandos de una guerra que está a punto de cambiarlo todo. <i>El destino de la humanidad y del Covenant está en juego.</i></p>",
    "rules": "Puedes descargarlo sino lo tienes en el enlace de arriba, es 100% seguro se trata de un proyecto como lo fue el primer halo con su versión en PC donde la comunidad creaba incluso creaba mapas para el multijugador. O bien te recomendamos que cliquees en el botón de emuladores para más información acerca de una app.",
@@ -110,7 +110,8 @@
    "ob_bronce": "Completa la campaña de Halo 2 en cualquier dificultad",
    "ob_plata": "Completa la misión «Metropolis» sin subirte a ningún vehículo. Dificultad requerida: Heroica o Legendaria",
    "ob_oro": "Derrota al Profeta del Pesar en la misión «Regret» utilizando la Espada de Energía para asestar el golpe final",
-   "ob_platino": "Completa la misión «The Great Journey» en dificultad Legendaria sin morir."
+   "ob_platino": "Completa la misión «The Great Journey» en dificultad Legendaria sin morir.",
+   "rq": 20
   },
   {
    "id": "mwb5hnvjf26",
@@ -137,7 +138,8 @@
    "ob_bronce": "Termina el parkour",
    "ob_plata": "Termina con un rango superior al <b>B</b>",
    "ob_oro": "No uses los checkpoint del bioma<b><font color=\"#66a1ff\"> Ice Peaks</font></b>",
-   "ob_platino": "<font color=\"#ffffff\">Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b>"
+   "ob_platino": "<font color=\"#ffffff\">Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b>",
+   "rq": 10
   },
   {
    "id": "mwb5nw6ht13",
@@ -196,7 +198,8 @@
      "desc": "Consigue cinco armas especiales diferentes durante una partida",
      "pl": 5
     }
-   ]
+   ],
+   "rq": 10
   },
   {
    "id": "mwblp0imk05",
@@ -255,7 +258,8 @@
      "desc": "Derrota a Lou en su batalla final sin utilizar la opción de continuar tras perder",
      "pl": 5
     }
-   ]
+   ],
+   "rq": 10
   },
   {
    "id": "mwea4ayeara",
@@ -282,7 +286,8 @@
    "ob_bronce": "",
    "ob_plata": "",
    "ob_oro": "",
-   "ob_platino": ""
+   "ob_platino": "",
+   "rq": 100
   },
   {
    "id": "mwic1l98xo9",
@@ -340,7 +345,8 @@
    "ob_plata": "Encuentra y completa 3 salidas secretas diferentes",
    "ob_oro": "Activa 3 de los 4 Switch Palaces del juego",
    "ob_platino": "Derrota a Bowser y rescata a la princesa Peach después de completar los objetivos anteriores",
-   "rules": ""
+   "rules": "",
+   "rq": 10
   },
   {
    "id": "mwjo9kadrfl",
@@ -367,7 +373,8 @@
    "ob_oro": "Encuentra y desentierra diez objetos enterrados.",
    "ob_platino": "Navega por la Mina Abandonada sin golpear ningún obstáculo.",
    "rules": "",
-   "end": 1795892340000
+   "end": 1795892340000,
+   "rq": 10
   },
   {
    "id": "mwka7vzceya",
@@ -394,7 +401,8 @@
    "ob_oro": "Completa el juego sin perder ninguna vida.",
    "ob_platino": "Completa el juego sin utilizar continues y sin recoger potenciadores de armas.",
    "rules": "",
-   "img": "img/ch-1794895745731.jpg"
+   "img": "img/ch-1794895745731.jpg",
+   "rq": 10
   },
   {
    "id": "mwkbdc5kox8",
@@ -421,7 +429,8 @@
    "ob_oro": "Completa el juego en dificultad normal con los 3 Continues default en opciones (Sin Chibiusa).",
    "ob_platino": "Completa el juego en dificultad difícil (Sin Chibiusa)",
    "rules": "Puedes descargar el juego de Wowroms no hay peligro.",
-   "img": "img/ch-1794897240063.jpg"
+   "img": "img/ch-1794897240063.jpg",
+   "rq": 10
   }
  ],
  "results": [],
@@ -431,10 +440,17 @@
    "at": 1794778683411,
    "a": "mwhd47sq1jb",
    "b": "mwicujdshcq",
-   "game": "",
+   "game": "Super Street fighter 2 The New Challengers",
    "rules": "",
-   "status": "Pendiente",
-   "m": ""
+   "status": "Aceptado",
+   "m": "",
+   "link": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rq": 10,
+   "ms": []
   },
   {
    "id": "mwicvz83kmy",
@@ -451,60 +467,102 @@
    "at": 1794778683411,
    "a": "mwhg9w6crs5",
    "b": "mwhg9zxxvpv",
-   "game": "",
+   "game": "Rush Down (PlayStation 1)",
    "rules": "",
    "status": "Pendiente",
-   "m": ""
+   "m": "",
+   "link": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rq": 10,
+   "ms": []
   },
   {
    "id": "mwicvz83x76",
    "at": 1794778683411,
    "a": "mwhg9zxxvpv",
    "b": "mwf4xxf13rm",
-   "game": "",
+   "game": "Aero Fighters 2",
    "rules": "",
    "status": "Pendiente",
-   "m": ""
+   "m": "",
+   "link": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rq": 10,
+   "ms": []
   },
   {
    "id": "mwicvz83kro",
    "at": 1794778683411,
    "a": "mwf4xxf13rm",
    "b": "mwhdqy01n4u",
-   "game": "",
+   "game": "Fornite",
    "rules": "",
    "status": "Pendiente",
-   "m": ""
+   "m": "",
+   "link": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rq": 10,
+   "ms": []
   },
   {
    "id": "mwicvz83xvq",
    "at": 1794778683411,
    "a": "mwhdqy01n4u",
    "b": "mwhd448ih4p",
-   "game": "",
+   "game": "Minecraft",
    "rules": "",
    "status": "Pendiente",
-   "m": ""
+   "m": "",
+   "link": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rq": 10,
+   "ms": []
   },
   {
    "id": "mwicvz83zks",
    "at": 1794778683411,
    "a": "mwhd448ih4p",
    "b": "mwen9cex36h",
-   "game": "",
+   "game": "Plantas vz Zombies",
    "rules": "",
    "status": "Pendiente",
-   "m": ""
+   "m": "",
+   "link": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rq": 10,
+   "ms": []
   },
   {
    "id": "mwicvz83qqe",
    "at": 1794778683411,
    "a": "mwen9cex36h",
    "b": "mwhd47sq1jb",
-   "game": "",
+   "game": "Pepsiman",
    "rules": "",
    "status": "Pendiente",
-   "m": ""
+   "m": "",
+   "link": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rq": 10,
+   "ms": []
   }
  ],
  "event": null,
@@ -513,14 +571,21 @@
    "id": "mw8ydyk3hl6",
    "name": "Prestigioso",
    "desc": "Gana una temporada en el 1er lugar",
-   "rar": "Nexus"
+   "rar": "Nexus",
+   "rq": 20,
+   "max": 5,
+   "title": "",
+   "trar": "Común"
   },
   {
    "id": "mwb5l1efstb",
    "name": "Implacable",
    "desc": "Se uno de los primeros 5 en culminar el evento nexus",
    "rar": "Reliquia",
-   "max": 5
+   "max": 5,
+   "rq": 20,
+   "title": "",
+   "trar": "Común"
   },
   {
    "id": "mwcb57usi5j",
@@ -528,7 +593,10 @@
    "desc": "¿Te crees merecedor de este logro? Bueno demuéstralo sacando Rango S en el Biome Spiral Parkour",
    "rar": "Épica",
    "max": 5,
-   "_img": null
+   "_img": null,
+   "rq": 10,
+   "title": "",
+   "trar": "Común"
   },
   {
    "id": "mwcirv6qbn4",
@@ -538,7 +606,8 @@
    "max": 5,
    "_img": null,
    "title": "Precursor",
-   "trar": "Nexus"
+   "trar": "Nexus",
+   "rq": 50
   },
   {
    "id": "mwciwzeiee8",
@@ -549,7 +618,8 @@
    "_img": null,
    "title": "El rey de los piratas",
    "trar": "Reliquia",
-   "icon": "img/ach-1794533617203.png"
+   "icon": "img/ach-1794533617203.png",
+   "rq": 20
   },
   {
    "id": "mwf8u7blofu",
@@ -559,7 +629,8 @@
    "rar": "Rara",
    "max": 5,
    "title": "",
-   "trar": "Común"
+   "trar": "Común",
+   "rq": 5
   },
   {
    "id": "mwf94m35c9p",
@@ -569,24 +640,8 @@
    "rar": "Épica",
    "max": 5,
    "title": "",
-   "trar": "Común"
-  },
-  {
-   "id": "mwkwywompb2",
-   "icon": "",
-   "name": "Prueba de fuego",
-   "desc": "",
-   "rar": "Común",
-   "max": 5,
-   "title": "",
    "trar": "Común",
-   "rw": {
-    "type": "marco",
-    "name": "",
-    "desc": "",
-    "v": "fuego",
-    "img": ""
-   }
+   "rq": 10
   }
  ],
  "grants": [],
@@ -1792,6 +1847,114 @@
   },
   {
    "at": 1794950861218,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794951918504,
+   "t": "Editó el desafío «Biome Spiral Parkour»"
+  },
+  {
+   "at": 1794951958341,
+   "t": "Editó el desafío «La caída del Covenant»"
+  },
+  {
+   "at": 1794951967742,
+   "t": "Editó el desafío «Guerra sin cuartel»"
+  },
+  {
+   "at": 1794951976735,
+   "t": "Editó el desafío «Leyenda del Rock»"
+  },
+  {
+   "at": 1794951989030,
+   "t": "Editó el desafío «EL PODER DEL GARROTE»"
+  },
+  {
+   "at": 1794951997997,
+   "t": "Editó el desafío «La aventura del Reino Champiñón»"
+  },
+  {
+   "at": 1794952007262,
+   "t": "Editó el desafío «El Caballero Valiente»"
+  },
+  {
+   "at": 1794952016215,
+   "t": "Editó el desafío «Luchador Aéreo»"
+  },
+  {
+   "at": 1794952021638,
+   "t": "Editó el desafío «Sailor Senshi»"
+  },
+  {
+   "at": 1794952070534,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794952085861,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794952096954,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794952106738,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794952117166,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794952126684,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794952137104,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794952150890,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952159761,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952166528,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952174865,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952181367,
+   "t": "Cambio (dela)"
+  },
+  {
+   "at": 1794952186721,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952196408,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952209505,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952215352,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952225833,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794952255687,
    "t": "Publicó cambios"
   }
  ],
