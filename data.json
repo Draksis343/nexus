@@ -1785,6 +1785,14 @@
   {
    "at": 1794948755905,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1794950858264,
+   "t": "Configuró el pase de temporada"
+  },
+  {
+   "at": 1794950861218,
+   "t": "Publicó cambios"
   }
  ],
  "theme": {
@@ -1804,7 +1812,7 @@
   "name": "Zero",
   "sub": "Sube de nivel. Reclama. Presume.",
   "levels": 10,
-  "per": 300,
+  "per": 150,
   "xp": {
    "participacion": 40,
    "bronce": 80,
