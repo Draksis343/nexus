@@ -361,10 +361,10 @@
    "round": "",
    "link": "",
    "desc": "Comleta estos desafios en el Castle Crashers a ver si muy muy",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
+   "ob_bronce": "Derrota a cualquier jefe final sin utilizar la magia.",
+   "ob_plata": "Utilizando una catapulta, lanza un caballero con máxima potencia.",
+   "ob_oro": "Encuentra y desentierra diez objetos enterrados.",
+   "ob_platino": "Navega por la Mina Abandonada sin golpear ningún obstáculo.",
    "rules": "",
    "end": 1794855540000
   }
@@ -1456,6 +1456,14 @@
   },
   {
    "at": 1794894107804,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794894743963,
+   "t": "Editó el desafío «El Caballero Valiente»"
+  },
+  {
+   "at": 1794894747107,
    "t": "Publicó cambios"
   }
  ],
