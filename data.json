@@ -678,6 +678,15 @@
    "linkText": ""
   }
  ],
+ "notes": [
+  {
+   "id": "mwl9os8xtpt",
+   "ver": "v0.1",
+   "title": "Pase de temporada y cosmeticos",
+   "at": 1794954360000,
+   "body": "<ul><li>Se a agregado un <b><font color=\"#ffba24\">pase de temporada</font></b> accesible para todo mundo! Haz retos, desafíos y consigue logros para conseguir XP del pase para subir de nivel y obtener recompensas exclusivas.</li><li>Tu perfil ahora esta totalmente reconstruido para una mejor navegación. Desde ahí podrás equiparte los cosmeticos que hayas desbloqueado.</li></ul><div>Próximamente</div><div><br></div><div>Se planea la integración de una tienda de cosmeticos para personalizar tu perfil.</div>"
+  }
+ ],
  "slogo": "img/season-logo-1794811905064.png",
  "sStart": 0,
  "sEnd": 0,
@@ -1955,6 +1964,14 @@
   },
   {
    "at": 1794952255687,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794954707457,
+   "t": "Agregó una nota de actualización"
+  },
+  {
+   "at": 1794954719379,
    "t": "Publicó cambios"
   }
  ],
