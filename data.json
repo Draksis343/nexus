@@ -504,6 +504,22 @@
    "rules": "",
    "status": "Pendiente",
    "m": ""
+  },
+  {
+   "id": "mwkrvrtvzq8",
+   "at": 1794924800419,
+   "a": "mwen9cex36h",
+   "b": "mwf4xxf13rm",
+   "game": "Prueba de interfaz",
+   "link": "",
+   "rules": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "status": "Pendiente",
+   "ms": [],
+   "m": ""
   }
  ],
  "event": null,
@@ -1570,6 +1586,18 @@
   },
   {
    "at": 1794897365049,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794924800419,
+   "t": "Creó un reto"
+  },
+  {
+   "at": 1794924817274,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794924820029,
    "t": "Publicó cambios"
   }
  ],
