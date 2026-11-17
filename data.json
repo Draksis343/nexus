@@ -1777,6 +1777,14 @@
   {
    "at": 1794948317388,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1794948746279,
+   "t": "Configuró el pase de temporada"
+  },
+  {
+   "at": 1794948755905,
+   "t": "Publicó cambios"
   }
  ],
  "theme": {
@@ -1792,7 +1800,7 @@
   "retro": "0"
  },
  "pass": {
-  "status": "Próximamente",
+  "status": "Activo",
   "name": "Zero",
   "sub": "Sube de nivel. Reclama. Presume.",
   "levels": 10,
