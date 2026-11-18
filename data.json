@@ -796,6 +796,13 @@
    "title": "Pase de temporada y cosmeticos",
    "at": 1794954360000,
    "body": "<ul><li>Se a agregado un <b><font color=\"#ffba24\">pase de temporada</font></b> accesible para todo mundo! Haz retos, desafíos y consigue logros para conseguir XP del pase para subir de nivel y obtener recompensas exclusivas.</li><li>Tu perfil ahora esta totalmente reconstruido para una mejor navegación. Desde ahí podrás equiparte los cosmeticos que hayas desbloqueado.</li></ul><div>Próximamente</div><div><br></div><div>Se planea la integración de una tienda de cosmeticos para personalizar tu perfil.</div>"
+  },
+  {
+   "id": "mwmcxlm14v8",
+   "ver": "v0.2",
+   "title": "Penalizaciones",
+   "at": 1795020360000,
+   "body": "A partir de la próxima ronda de retos se colocara un <font color=\"#fd5d5d\"><b>limite de tiempo</b></font> para que retes a la persona que te toco, de no hacerlo dentro del limite se te <b><font color=\"#ff6161\">penalizará restándote PL</font></b>, sino cuentas con ellos tus puntos se verán en <b><font color=\"#fd6363\">negativo</font></b> CHEN.<div><br></div><div>Así que hazlo dentro del tiempo asignado para que todos tengan el mismo tiempo de realizar sus retos.</div>"
   }
  ],
  "slogo": "img/season-logo-1794811905064.png",
@@ -2195,6 +2202,14 @@
   },
   {
    "at": 1795010380338,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795020623785,
+   "t": "Agregó una nota de actualización"
+  },
+  {
+   "at": 1795020628733,
    "t": "Publicó cambios"
   }
  ],
