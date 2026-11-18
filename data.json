@@ -467,7 +467,7 @@
     }
    ],
    "title": "Playtime...",
-   "game": "Escape frontal playtime",
+   "game": "Escape from playtime",
    "mode": "Multijugador",
    "category": "Supervivencia",
    "difficulty": "Medio",
@@ -511,10 +511,17 @@
    "at": 1794778683411,
    "a": "mwicujdshcq",
    "b": "mwhg9w6crs5",
-   "game": "",
-   "rules": "",
+   "game": "Left 4 dead 2",
+   "rules": "Puedes jugar solo o multijugador",
    "status": "Pendiente",
-   "m": ""
+   "m": "",
+   "link": "",
+   "ob_bronce": "Completa una campaña en dificultad Normal o superior",
+   "ob_plata": "Completa una campaña en dificultad Avanzada sin que ningún superviviente sea incapacitado",
+   "ob_oro": "Completa tres campañas diferentes en dificultad Experto",
+   "ob_platino": "Completa una campaña completa en dificultad Experto, sin que ningún integrante del equipo muera definitivamente",
+   "rq": 10,
+   "ms": []
   },
   {
    "id": "mwicvz8316x",
@@ -2066,6 +2073,18 @@
   },
   {
    "at": 1794971792574,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794981577302,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1794985425843,
+   "t": "Editó el desafío «Playtime...»"
+  },
+  {
+   "at": 1794985430855,
    "t": "Publicó cambios"
   }
  ],
