@@ -756,10 +756,7 @@
   "total": 2,
   "cur": 1
  },
- "music": {
-  "src": "music/1794720568874-Apertura.mp3",
-  "name": "Apertura.mp3"
- },
+ "music": null,
  "slogan": "JUEGA. SUPERA. TRASCIENDE.",
  "news": [
   {
@@ -2165,6 +2162,14 @@
   },
   {
    "at": 1794988166696,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794988497551,
+   "t": "Cambio (quitmusica)"
+  },
+  {
+   "at": 1794988506381,
    "t": "Publicó cambios"
   }
  ],
