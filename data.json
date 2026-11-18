@@ -431,6 +431,60 @@
    "rules": "Puedes descargar el juego de Wowroms no hay peligro.",
    "img": "img/ch-1794897240063.jpg",
    "rq": 10
+  },
+  {
+   "id": "mwljq2oqpqx",
+   "start": 1794971563802,
+   "cs": "Temporada 0 - PROTOCOLO ZERO",
+   "goals": [
+    {
+     "id": "mwljs7ng63p",
+     "name": "Recolector compulsivo",
+     "desc": "Entrega al menos un recurso en cinco expediciones diferentes.",
+     "pl": 5,
+     "rq": 2
+    },
+    {
+     "id": "mwljsuj1aw7",
+     "name": "No pierdas el camino",
+     "desc": "Utiliza cinco barras luminosas (Glowsticks) en una misma expedición para marcar el recorrido del equipo.",
+     "pl": 5,
+     "rq": 2
+    },
+    {
+     "id": "mwljtapibgw",
+     "name": "Ni un paso atrás",
+     "desc": "Completa una expedición después de que una criatura hostil persiga al equipo, sin que ningún integrante sea eliminado.",
+     "pl": 5,
+     "rq": 2
+    },
+    {
+     "id": "mwljtpow57x",
+     "name": "Una familia unida",
+     "desc": "Consigue que todos los integrantes del equipo sobrevivan y escapen juntos en tres expediciones consecutivas.",
+     "pl": 5,
+     "rq": 2
+    }
+   ],
+   "title": "Playtime...",
+   "game": "Escape frontal playtime",
+   "mode": "Multijugador",
+   "category": "Supervivencia",
+   "difficulty": "Medio",
+   "status": "Disponible",
+   "round": "",
+   "end": 1795931940000,
+   "rq": 5,
+   "link": "",
+   "desc": "Su objetivo es cumplir el proyecto, sobrevivir a la fábrica y demostrar que ningún Critter se queda atrás.",
+   "ob_bronce": "Completen una expedición multijugador cumpliendo la cuota de recursos y logrando escapar.",
+   "ob_plata": "Cumplan la cuota y asegúrense de que todos los integrantes del equipo hayan recolectado y entregado al menos un recurso durante la misma expedición.",
+   "ob_oro": "Completen tres expediciones exitosas consecutivas, cumpliendo la cuota y escapando con todo el equipo.",
+   "ob_platino": "Completen cinco expediciones exitosas consecutivas sin que ningún integrante del equipo sea eliminado o abandonado durante la misión.",
+   "rules": "<ul><li>Todos los objetivos deben realizarse en una misma partida multijugador o equipo habitual.</li><li>Se recomienda jugar con un mínimo de 2 participantes.</li><li>Los objetivos de equipo deben cumplirse con los mismos integrantes durante cada expedición.</li><li>Se permite utilizar cualquier personaje, herramienta o estrategia disponible.</li><li>Las expediciones deben quedar registradas mediante capturas o grabaciones para validar los logros.</li></ul>",
+   "rarity": "Rara",
+   "slots": 5,
+   "img": "img/ch-1794971605672.jpg"
   }
  ],
  "results": [],
@@ -1980,6 +2034,38 @@
   },
   {
    "at": 1794954783501,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794971563804,
+   "t": "Creó un desafío"
+  },
+  {
+   "at": 1794971607680,
+   "t": "Editó el desafío «Playtime...»"
+  },
+  {
+   "at": 1794971663548,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794971693198,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794971714166,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794971733585,
+   "t": "Cambio (newgoal)"
+  },
+  {
+   "at": 1794971773188,
+   "t": "Editó el desafío «Playtime...»"
+  },
+  {
+   "at": 1794971792574,
    "t": "Publicó cambios"
   }
  ],
