@@ -728,6 +728,17 @@
    "title": "",
    "trar": "Común",
    "rq": 10
+  },
+  {
+   "id": "mwlt0ijynmy",
+   "icon": "",
+   "name": "???",
+   "desc": "Encuentra el easter egg",
+   "rar": "Nexus",
+   "rq": 0,
+   "max": 5,
+   "title": "",
+   "trar": "Común"
   }
  ],
  "grants": [],
@@ -2126,6 +2137,14 @@
   },
   {
    "at": 1794986491714,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794987167470,
+   "t": "Cambio (newa)"
+  },
+  {
+   "at": 1794987400864,
    "t": "Publicó cambios"
   }
  ],
