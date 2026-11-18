@@ -737,8 +737,16 @@
    "rar": "Nexus",
    "rq": 0,
    "max": 5,
-   "title": "",
-   "trar": "Común"
+   "title": "Debugger",
+   "trar": "Nexus",
+   "rw": {
+    "type": "marco",
+    "name": "Bits",
+    "desc": "",
+    "v": "pixel",
+    "c": "",
+    "img": ""
+   }
   }
  ],
  "grants": [],
@@ -2145,6 +2153,18 @@
   },
   {
    "at": 1794987400864,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794987989414,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794987999301,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794988166696,
    "t": "Publicó cambios"
   }
  ],
