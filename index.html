@@ -1011,6 +1011,24 @@ function pfxTick(){pfxRaf=0;const L=document.querySelectorAll('canvas.pfxc');if(
  pfxRaf=requestAnimationFrame(pfxTick)}
 function pfxStart(){if(!pfxRaf)pfxRaf=requestAnimationFrame(pfxTick)}
 const pfxCv=(v,c,cls,st)=>`<canvas class="pfxc ${cls||''}" data-fx="${esc(v||'oro')}" data-c="${esc(c||'')}"${st?` style="${st}"`:''}></canvas>`;
+// Música chiptune del juego (sintetizada, sin archivos)
+const MUS={on:false},CHD=[[57,60,64],[53,57,60],[48,52,55],[55,59,62]],mf=m=>440*Math.pow(2,(m-69)/12);
+const MEL=[{0:76,3:74,4:72,6:69,8:72,10:74,12:76,14:79},{0:77,3:76,4:74,6:72,8:69,10:72,12:74,14:72},{0:72,3:74,4:76,6:79,8:76,10:74,12:72,14:67},{0:71,3:72,4:74,6:76,8:79,10:77,12:74,14:71}];
+function musStart(){if(G.mute||MUS.on||!G.on)return;try{G.ac=G.ac||new (window.AudioContext||window.webkitAudioContext)();G.ac.resume&&G.ac.resume()}catch(e){return}const a=G.ac;MUS.on=true;MUS.step=0;MUS.t=a.currentTime+.08;MUS.g=a.createGain();MUS.g.gain.value=.5;MUS.g.connect(a.destination);
+ if(!MUS.nb||MUS.nb.sampleRate!==a.sampleRate){const b=a.createBuffer(1,Math.floor(a.sampleRate*.3),a.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;MUS.nb=b}
+ MUS.iv=setInterval(musTick,25)}
+function musStop(){MUS.on=false;clearInterval(MUS.iv);try{MUS.g&&MUS.g.disconnect()}catch(e){}MUS.g=null}
+function musTick(){const a=G.ac;if(!a||!MUS.on)return;const bpm=G.st==='play'?138+Math.min(42,(G.wave-1)*4):G.st==='pause'?100:116,sp=60/bpm/4;
+ while(MUS.t<a.currentTime+.15){musNote(MUS.step,MUS.t,sp);MUS.t+=sp;MUS.step=(MUS.step+1)%64}}
+function musNote(s,t,sp){const a=G.ac,bar=Math.floor(s/16),i=s%16,ch=CHD[bar],play=G.st==='play',v=G.st==='pause'?.35:1;
+ const tone=(f,d,type,vol)=>{const o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(vol*v,t);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g).connect(MUS.g);o.start(t);o.stop(t+d+.03)};
+ const noise=(d,vol,hp)=>{const n=a.createBufferSource(),f=a.createBiquadFilter(),g=a.createGain();n.buffer=MUS.nb;f.type='highpass';f.frequency.value=hp;g.gain.setValueAtTime(vol*v,t);g.gain.exponentialRampToValueAtTime(.0001,t+d);n.connect(f).connect(g).connect(MUS.g);n.start(t);n.stop(t+d+.03)};
+ if(i%2===0)tone(mf(ch[0]-24+(i%4===2?12:0)),sp*1.7,'triangle',.24);
+ tone(mf(ch[i%3]+12+(i>=8?12:0)),sp*.85,'square',.028);
+ const m=MEL[bar][i];if(m)tone(mf(m),sp*(play?2.6:3.2),'square',play?.045:.032);
+ if(play||G.st==='over'){if(i%8===0){const o=a.createOscillator(),g=a.createGain();o.type='sine';o.frequency.setValueAtTime(150,t);o.frequency.exponentialRampToValueAtTime(40,t+.12);g.gain.setValueAtTime(.32*v,t);g.gain.exponentialRampToValueAtTime(.0001,t+.14);o.connect(g).connect(MUS.g);o.start(t);o.stop(t+.16)}
+  if(i%8===4)noise(.13,.13,1400);if(i%2===1)noise(.03,.035,7000)}}
+
 // ===== EASTER EGG: NEXUS STRIKE =====
 let ARC=[];
 const KONAMI=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'],KGL={ArrowUp:'↑',ArrowDown:'↓',ArrowLeft:'←',ArrowRight:'→',b:'B',a:'A'};
@@ -1025,7 +1043,7 @@ const G={on:false};
 function arcBest(){const L={};ARC.forEach(x=>{if(!L[x.p]||x.s>L[x.p].s)L[x.p]=x});return Object.values(L).filter(x=>D.players.some(p=>p.id===x.p)).sort((a,b)=>b.s-a.s)}
 function arcBoard(n){const L=arcBest().slice(0,n||10),me=U&&U.pid;return L.length?L.map((x,i)=>{const p=D.players.find(y=>y.id===x.p);return`<div class="ab-r${x.p===me?' me':''}"><span>${i+1}</span><b>${esc(p?p.name:'?')}</b><em>${x.s.toLocaleString('es-MX')}</em></div>`}).join(''):'<p class="ab-e">Nadie ha jugado todavía. ¡Sé el primero!</p>'}
 function arcOpen(){if(G.on)return;G.on=true;const ov=document.createElement('div');ov.id='arc';ov.innerHTML=`<div class="arc-w"><canvas id="arcv" width="480" height="720"></canvas><div id="arcui"></div><button class="arc-x" id="arcx" title="Salir">✕</button><button class="arc-m" id="arcm" title="Sonido">${G.mute?'🔇':'🔊'}</button></div>`;document.body.appendChild(ov);document.body.style.overflow='hidden';
- $('#arcx').onclick=arcClose;$('#arcm').onclick=()=>{G.mute=!G.mute;$('#arcm').textContent=G.mute?'🔇':'🔊';try{localStorage.setItem('nx_arc_mute',G.mute?'1':'')}catch(e){}};
+ $('#arcx').onclick=arcClose;$('#arcm').onclick=()=>{G.mute=!G.mute;$('#arcm').textContent=G.mute?'🔇':'🔊';if(G.mute)musStop();else musStart();try{localStorage.setItem('nx_arc_mute',G.mute?'1':'')}catch(e){}};
  try{G.mute=!!localStorage.getItem('nx_arc_mute');$('#arcm').textContent=G.mute?'🔇':'🔊'}catch(e){}
  G.cv=$('#arcv');G.g=G.cv.getContext('2d');G.keys={};G.st='title';G.stars=Array.from({length:90},()=>({x:Math.random()*480,y:Math.random()*720,v:.4+Math.random()*2.2,r:Math.random()<.15?1.6:.9}));
  G.kd=e=>{if(!G.on)return;if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' '].includes(e.key))e.preventDefault();G.keys[e.key.toLowerCase()]=1;if(e.key==='Escape'){if(G.st==='play')G.st='pause';else if(G.st==='pause')G.st='play';else arcClose()}if((e.key==='p'||e.key==='P')&&(G.st==='play'||G.st==='pause'))G.st=G.st==='play'?'pause':'play';if((e.key==='Enter'||e.key===' ')&&(G.st==='title'||G.st==='over')&&!G.saving)arcStart()};
@@ -1034,14 +1052,14 @@ function arcOpen(){if(G.on)return;G.on=true;const ov=document.createElement('div
  G.cv.addEventListener('touchstart',e=>{e.preventDefault();if(G.st==='title'||G.st==='over'){return}G.tx=tp(e);G.touch=1},{passive:false});
  G.cv.addEventListener('touchmove',e=>{e.preventDefault();G.tx=tp(e)},{passive:false});G.cv.addEventListener('touchend',()=>{G.touch=0;G.tx=null});
  G.cv.addEventListener('mousedown',e=>{if(G.st==='play'){G.mouse=1}});addEventListener('mouseup',G.mu=()=>{G.mouse=0});
- arcUI();G.last=performance.now();G.acc=0;G.raf=requestAnimationFrame(arcLoop)}
-function arcClose(){G.on=false;cancelAnimationFrame(G.raf);removeEventListener('keydown',G.kd);removeEventListener('keyup',G.ku);removeEventListener('mouseup',G.mu);const o=$('#arc');if(o)o.remove();document.body.style.overflow='';try{G.ac&&G.ac.close()}catch(e){}G.ac=null}
+ arcUI();G.last=performance.now();G.acc=0;G.raf=requestAnimationFrame(arcLoop);musStart()}
+function arcClose(){musStop();G.on=false;cancelAnimationFrame(G.raf);removeEventListener('keydown',G.kd);removeEventListener('keyup',G.ku);removeEventListener('mouseup',G.mu);const o=$('#arc');if(o)o.remove();document.body.style.overflow='';try{G.ac&&G.ac.close()}catch(e){}G.ac=null}
 function arcSnd(f,d,type,vol,slide){if(G.mute)return;try{G.ac=G.ac||new (window.AudioContext||window.webkitAudioContext)();const a=G.ac,o=a.createOscillator(),g=a.createGain(),t=a.currentTime;o.type=type||'square';o.frequency.setValueAtTime(f,t);if(slide)o.frequency.exponentialRampToValueAtTime(slide,t+d);g.gain.setValueAtTime(vol||.05,t);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g).connect(a.destination);o.start(t);o.stop(t+d)}catch(e){}}
 function arcUI(){const u=$('#arcui');if(!u)return;const me=U&&U.pid&&D.players.find(p=>p.id===U.pid),mine=me&&arcBest().find(x=>x.p===me.id);
  if(G.st==='title')u.innerHTML=`<div class="au"><div class="au-logo">NEXUS<br><span>STRIKE</span></div><p class="au-s">Encontraste el secreto. Defiende la arena.</p><button class="au-b" id="arcgo">▶ JUGAR</button><p class="au-h">${matchMedia('(pointer:coarse)').matches?'Arrastra el dedo para moverte · disparo automático':'← → para moverte · ESPACIO para disparar · P pausa'}</p><div class="ab"><div class="ab-t">🏆 MEJORES PILOTOS</div>${arcBoard(10)}</div>${mine?`<p class="au-h">Tu récord: <b>${mine.s.toLocaleString('es-MX')}</b></p>`:''}</div>`;
  else if(G.st==='over'){const s=G.score;u.innerHTML=`<div class="au"><div class="au-logo" style="font-size:34px">GAME<br><span>OVER</span></div><p class="au-sc">${s.toLocaleString('es-MX')}</p><p class="au-s">Oleada ${G.wave}</p><p class="au-s" id="arcmsg">${me?(FBU()?'Guardando tu puntuación…':'Sin conexión al servidor: no se guardó.'):'Inicia sesión en el sitio para guardar tus puntuaciones.'}</p><button class="au-b" id="arcgo">↻ OTRA VEZ</button><div class="ab"><div class="ab-t">🏆 MEJORES PILOTOS</div><div id="arcbd">${arcBoard(10)}</div></div></div>`}
  else u.innerHTML='';const b=$('#arcgo');if(b)b.onclick=()=>{if(!G.saving)arcStart()}}
-function arcStart(){Object.assign(G,{st:'play',score:0,lives:3,wave:0,pl:{x:240,y:660,inv:90,cd:0},pb:[],eb:[],en:[],fx:[],t:0,msg:0});arcWave();arcUI();arcSnd(440,.12,'square',.05,880)}
+function arcStart(){musStart();Object.assign(G,{st:'play',score:0,lives:3,wave:0,pl:{x:240,y:660,inv:90,cd:0},pb:[],eb:[],en:[],fx:[],t:0,msg:0});arcWave();arcUI();arcSnd(440,.12,'square',.05,880)}
 function arcWave(){G.wave++;G.en=[];const rows=Math.min(5,3+Math.floor(G.wave/3)),cols=8;for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){const ty=r===0?2:r<2?1:0;G.en.push({sx:60+c*52,sy:90+r*46,x:240+(Math.random()-.5)*400,y:-40-r*40-c*8,ty,hp:ty===2?2:1,st:'in',k:Math.random()*6,dv:0})}G.msg=120;G.eb=[]}
 const ECOL=['#ffc266','#73dbe4','#ff7772'],EPTS=[50,100,150];
 function arcBoom(x,y,c,n){for(let i=0;i<(n||16);i++){const a=Math.random()*6.28,v=1+Math.random()*3.5;G.fx.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:30+Math.random()*20,c})}}
