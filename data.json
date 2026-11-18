@@ -752,7 +752,13 @@
    "hid": true
   }
  ],
- "grants": [],
+ "grants": [
+  {
+   "p": "mwhd47sq1jb",
+   "a": "mwlt0ijynmy",
+   "at": 1795010113351
+  }
+ ],
  "videos": [],
  "seasons": [],
  "rounds": {
@@ -2181,6 +2187,14 @@
   },
   {
    "at": 1794988737881,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795010113351,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795010380338,
    "t": "Publicó cambios"
   }
  ],
