@@ -746,7 +746,10 @@
     "v": "pixel",
     "c": "",
     "img": ""
-   }
+   },
+   "egg": false,
+   "secret": false,
+   "hid": true
   }
  ],
  "grants": [],
@@ -2170,6 +2173,14 @@
   },
   {
    "at": 1794988506381,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1794988641818,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1794988737881,
    "t": "Publicó cambios"
   }
  ],
