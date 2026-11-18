@@ -508,7 +508,8 @@
    "ob_platino": "Gana una partida usando solo una pistola de rareza común",
    "rules": "Puedes jugar el construcción o zero construcción.",
    "rarity": "Épica",
-   "slots": 5
+   "slots": 5,
+   "rq": 10
   }
  ],
  "results": [],
@@ -761,6 +762,15 @@
    "body": "<p>¡Damos comienzo a la <strong><i><font color=\"#ffc157\">Temporada 0: Protocolo Zero</font></i></strong> y, con ella, a la primera ronda de retos de Nexus Arena!</p><p>Es momento de poner a prueba tus habilidades, retar a tus amigos y demostrar de qué eres capaz. No dejes pasar la oportunidad de lanzar tus propios desafíos y participar en los de los demás antes de que termine el tiempo de esta ronda.</p><p>🏆 Compite por un lugar en el ranking a través de los <strong><font color=\"#fec158\">Desafíos de Temporada</font></strong> y, si crees tener lo necesario para llegar más lejos, ¡atrévete a conquistar el <strong><font color=\"#ffbf52\">Evento Nexus</font></strong>!</p><p>Recuerda que esta es nuestra temporada de prueba, una oportunidad para poner en marcha esta nueva forma de jugar, competir y compartir nuestra pasión por los videojuegos.</p><p>¡Esperamos que disfruten esta experiencia tanto como nosotros disfrutamos preparándola!</p>",
    "link": "",
    "linkText": ""
+  }
+ ],
+ "notes": [
+  {
+   "id": "mwl9os8xtpt",
+   "ver": "v0.1",
+   "title": "Pase de temporada y cosmeticos",
+   "at": 1794954360000,
+   "body": "<ul><li>Se a agregado un <b><font color=\"#ffba24\">pase de temporada</font></b> accesible para todo mundo! Haz retos, desafíos y consigue logros para conseguir XP del pase para subir de nivel y obtener recompensas exclusivas.</li><li>Tu perfil ahora esta totalmente reconstruido para una mejor navegación. Desde ahí podrás equiparte los cosmeticos que hayas desbloqueado.</li></ul><div>Próximamente</div><div><br></div><div>Se planea la integración de una tienda de cosmeticos para personalizar tu perfil.</div>"
   }
  ],
  "slogo": "img/season-logo-1794811905064.png",
@@ -2109,15 +2119,14 @@
   {
    "at": 1794986084259,
    "t": "Publicó cambios"
-  }
- ],
- "notes": [
+  },
   {
-   "id": "mwl9os8xtpt",
-   "ver": "v0.1",
-   "title": "Pase de temporada y cosmeticos",
-   "at": 1794954360000,
-   "body": "<ul><li>Se a agregado un <b><font color=\"#ffba24\">pase de temporada</font></b> accesible para todo mundo! Haz retos, desafíos y consigue logros para conseguir XP del pase para subir de nivel y obtener recompensas exclusivas.</li><li>Tu perfil ahora esta totalmente reconstruido para una mejor navegación. Desde ahí podrás equiparte los cosmeticos que hayas desbloqueado.</li></ul><div>Próximamente</div><div><br></div><div>Se planea la integración de una tienda de cosmeticos para personalizar tu perfil.</div>"
+   "at": 1794986293986,
+   "t": "Editó el desafío «One Gun Challenge»"
+  },
+  {
+   "at": 1794986491714,
+   "t": "Publicó cambios"
   }
  ],
  "theme": {
