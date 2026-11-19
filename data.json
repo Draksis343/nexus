@@ -811,16 +811,6 @@
  "slogan": "JUEGA. SUPERA. TRASCIENDE.",
  "news": [
   {
-   "id": "mwi2z8o2y0p",
-   "at": 1794762039458,
-   "img": "",
-   "title": "Actualización de participación",
-   "kind": "Noticia",
-   "body": "Se agrego un botón de <b>participación</b> a los desafíos para que todos sepan quienes están realizándolo, al igual que en los retos se agregaron el botón de <b>acepta y rechazar</b>.<div><br></div><div>Una vez hayas colocado tu status como participante tendrás hasta la fecha limite del desafío para enviar tu evidencia (enlace de youtube) mostrado en el mismo desafío. Sino lo haces se marcara como <font color=\"#f84949\">no completado</font> y se te <b>restara una cantidad importante de PL</b>. Podrás abandonarlo antes si lo deseas pero igual se te descontarán 1<b>0 PL</b>  pero si te pasas de la fecha limite sin enviarlo habrá esa consecuencia.</div><div><br></div><div>Los retos una vez hayas aceptado el reto no podrás abandonarlo directamente, pero si te pasas de la fecha establecida para entregarlo se te restará de igual manera PL. Si lo rechazas directamente es la misma cantidad a que no hayas enviado tu evidencia.</div>",
-   "link": "",
-   "linkText": ""
-  },
-  {
    "id": "mwiuxy1j8u6",
    "at": 1794809008279,
    "img": "img/news-1794810367230.gif",
@@ -2320,6 +2310,14 @@
   },
   {
    "at": 1795070118461,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795097248912,
+   "t": "Cambio (deln)"
+  },
+  {
+   "at": 1795098821391,
    "t": "Publicó cambios"
   }
  ],
