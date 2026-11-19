@@ -837,6 +837,24 @@
    "body": "A partir de la próxima ronda de retos se colocara un <font color=\"#fd5d5d\"><b>limite de tiempo</b></font> para que retes a la persona que te toco, de no hacerlo dentro del limite se te <b><font color=\"#ff6161\">penalizará restándote PL</font></b>, sino cuentas con ellos tus puntos se verán en <b><font color=\"#fd6363\">negativo</font></b> CHEN.<div><br></div><div>Así que hazlo dentro del tiempo asignado para que todos tengan el mismo tiempo de realizar sus retos.</div>"
   }
  ],
+ "polls": [
+  {
+   "id": "mwnp6cy9lik",
+   "at": 1795101654033,
+   "closed": false,
+   "q": "Temática de servidor de Minecraft",
+   "desc": "Se comentaba en el grupo de whatsapp de hacer un servidor de Minecraft para épocas decembrinas pero me gustaría saber que es lo que buscan para hacer el servidor, una aventura sobreviviendo al invierno o algo más chill solo para decorar",
+   "opts": [
+    "Modpack de supervivencia invernal",
+    "Modpack chill de construcción",
+    "Modpack con ambas ideas"
+   ],
+   "multi": true,
+   "res": "always",
+   "anon": true,
+   "end": 1795276800000
+  }
+ ],
  "slogo": "img/season-logo-1794811905064.png",
  "sStart": 0,
  "sEnd": 0,
@@ -2330,6 +2348,14 @@
   },
   {
    "at": 1795101329745,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795101654033,
+   "t": "Creó una encuesta"
+  },
+  {
+   "at": 1795101669787,
    "t": "Publicó cambios"
   }
  ],
