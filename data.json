@@ -2377,6 +2377,14 @@
   {
    "at": 1795102684866,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795122135585,
+   "t": "Cambió el fondo del sitio"
+  },
+  {
+   "at": 1795122155937,
+   "t": "Publicó cambios"
   }
  ],
  "theme": {
@@ -2714,5 +2722,12 @@
    "desc": "Completaste el pase de la temporada.",
    "season": "Temporada 0 - PROTOCOLO ZERO"
   }
- ]
+ ],
+ "bgx": {
+  "m": "img",
+  "g1": "#1b2328",
+  "g2": "#0f2226",
+  "dim": 35,
+  "img": "img/bg-1795122133779.jpg"
+ }
 }
