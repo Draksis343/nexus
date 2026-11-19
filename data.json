@@ -2385,6 +2385,14 @@
   {
    "at": 1795122155937,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795125253869,
+   "t": "Cambió el fondo del sitio"
+  },
+  {
+   "at": 1795125261662,
+   "t": "Publicó cambios"
   }
  ],
  "theme": {
@@ -2724,10 +2732,10 @@
   }
  ],
  "bgx": {
-  "m": "img",
+  "m": "auto",
   "g1": "#1b2328",
   "g2": "#0f2226",
   "dim": 35,
-  "img": "img/bg-1795122133779.jpg"
+  "img": ""
  }
 }
