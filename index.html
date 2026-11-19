@@ -333,6 +333,7 @@ canvas.pfxc{display:block;pointer-events:none}canvas.pfxc.full{position:absolute
 @keyframes frs{0%,100%{box-shadow:0 0 0 2px #0b0d10,0 0 0 3px #73dbe466,0 0 12px #73dbe4}50%{box-shadow:0 0 0 2px #0b0d10,0 0 0 3px #ffc26688,0 0 18px #ffc266}}
 .secret{filter:blur(0)}.lg.sec .lg-ic{filter:grayscale(1) brightness(.6)}
 .rdf{border-color:color-mix(in srgb,var(--red) 45%,var(--line))}.rdf .cdw{margin:0}
+.evp{display:flex;align-items:center;gap:8px}.evp .field{margin:0;flex:1}.evp>span{width:18px;text-align:center}
 </style></head>
 <body>
 <header class="mobile-bar"><strong class="mono" style="color:#ffc266">NEXUS ARENA</strong><button id="menu" aria-label="Menú">☰</button></header>
@@ -621,11 +622,12 @@ function challenges(){return emuBtn()+cfil()+`<div id="cwrap">${cwrap()}</div>`}
 const DS=['Pendiente','Aceptado','Cumplido','No cumplido'],DC={Cumplido:'cyan','No cumplido':'red',Aceptado:'amber',Pendiente:'muted'},dst=d=>d.status==='Jugado'?'Cumplido':d.status;
 const dready=d=>{const e=edf(d);return!!(e.game&&String(e.game).trim()&&OBM.some(k=>e['ob_'+k]&&String(e['ob_'+k]).trim()))};
 function duelUI(d){const rs=dresp(d),fin=['Cumplido','No cumplido'].includes(dst(d)),mine=U&&U.pid===d.b;let o='';
- if(rs&&rs.u&&ytId(rs.u))o+=`<p style="margin:0">📹 <a href="${esc(rs.u)}" target="_blank" rel="noopener noreferrer">Evidencia enviada</a>${rs.n?' · <span class="subtle">'+esc(rs.n)+'</span>':''}</p>`;
+ const evl=rs?evList(rs.u):[];if(evl.length)o+=`<p style="margin:0">📹 ${evl.length>1?`Evidencia en ${evl.length} partes: `:''}${evl.map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${evl.length>1?'Parte '+(i+1):'Evidencia enviada'}</a>`).join(' · ')}${rs.n?' · <span class="subtle">'+esc(rs.n)+'</span>':''}</p>`;
+ const evEdit=mine&&rs&&rs.e==='aceptado'&&evl.length&&!rdlOver()&&!fin&&!A&&dst(d)!=='Cumplido';if(evEdit&&!(S.dve||{})[d.id])o+=`<div><button class="btn small ghost" data-a="dvedit" data-id="${d.id}">＋ Agregar o cambiar partes</button></div>`;if(evEdit&&(S.dve||{})[d.id])o+=evForm(d,evl,rs.n);
  if(!fin&&!A){if(mine&&!rs&&!dready(d))o+=`<p class="muted" style="margin:0">⏳ Aún no puedes responder: ${esc(pname(d.a))} debe definir el juego y los objetivos del reto.</p>`;
   else if(mine&&!rs)o+=`<div class="mg"><button class="btn small" data-a="duelok" data-id="${d.id}">✔ Aceptar reto</button><button class="btn small danger" data-a="duelno" data-id="${d.id}">✕ Rechazar reto</button></div>`;
   else if(mine&&rs&&rs.e==='aceptado'&&!rs.u&&rdlOver())o+='<p class="muted" style="margin:0">⏱ El plazo para enviar evidencia terminó.</p>';
-  else if(mine&&rs&&rs.e==='aceptado'&&!rs.u)o+=`<div class="stack" style="gap:8px"><input id="dv-${d.id}" class="field" placeholder="Enlace de YouTube de tu evidencia"><input id="dn-${d.id}" class="field" maxlength="300" placeholder="Comentario (opcional)"><div><button class="btn small" data-a="sendduel" data-id="${d.id}">Enviar evidencia</button></div></div>`;
+  else if(mine&&rs&&rs.e==='aceptado'&&!rs.u)o+=evForm(d,[],'');
   else if(!mine&&!U&&!rs)o+='';}
  if(A&&rs)o+=`<div><button class="btn small ghost" data-a="duelclr" data-id="${d.id}">↺ Reiniciar respuesta del retado</button></div>`;
  return o}
@@ -639,6 +641,8 @@ function rdfBox(){if(!(+D.rdf))return'';const pend=D.duels.filter(d=>!defOf(d)&&
  return`<section class="panel pad mb rdf"><div class="row" style="align-items:center;flex-wrap:wrap;gap:12px"><div><h2 class="section-title" style="margin:0">⚔ Tiempo para retar</h2><p class="subtle" style="margin:4px 0 0">Define el juego y las condiciones de tu reto antes de que termine${PV().nodef?`, o perderás ${PV().nodef} PL`:''}.</p></div><div class="cdw" id="fcd">${fcd()}</div></div>${mine?`<p style="margin:10px 0 0">${badge('Te falta definir '+(mine===1?'tu reto':mine+' retos'),'red')}</p>`:''}</section>`}
 function rdlBox(){if(!(+D.rdl))return A?'<section class="panel pad mb"><p class="muted" style="margin:0">Aún no hay fecha límite de ronda. Pulsa <strong>⏱ Fecha límite de la ronda</strong> para poner el contador.</p></section>':'';
  return`<section class="panel pad mb"><h2 class="section-title">${rdlOver()?'La ronda terminó':'La ronda termina en:'}</h2>${rdlOver()?'<p class="muted" style="margin:0">El plazo para enviar evidencia ya terminó.</p>':`<div class="cdw" id="rcd">${rcd()}</div><p class="subtle" style="margin:8px 0 0">Límite para enviar evidencia: ${new Date(+D.rdl).toLocaleString('es-MX',{dateStyle:'long',timeStyle:'short'})}</p>`}</section>`}
+const evList=u=>String(u||'').split(/\s+/).map(x=>x.trim()).filter(x=>x&&ytId(x));
+function evForm(d,L,n){const v=L.length?L:[''];return`<div class="stack" style="gap:8px" id="dvw-${d.id}">${v.map((u,i)=>`<div class="evp"><span class="mono subtle">${i+1}</span><input class="field dvx" data-d="${d.id}" value="${esc(u)}" placeholder="${i?'Enlace de YouTube de la parte '+(i+1):'Enlace de YouTube de tu evidencia'}"></div>`).join('')}<div><button class="btn small ghost" data-a="dvadd" data-id="${d.id}">＋ Agregar otra parte</button></div><input id="dn-${d.id}" class="field" maxlength="300" placeholder="Comentario (opcional)" value="${esc(n||'')}"><div class="mg"><button class="btn small" data-a="sendduel" data-id="${d.id}">${L.length?'Guardar partes':'Enviar evidencia'}</button>${L.length?`<button class="btn small ghost" data-a="dvedit" data-id="${d.id}">Cancelar</button>`:''}</div></div>`}
 const defOf=d=>(DEF[d.id]||[]).find(x=>x.p===d.a)||null;
 function edf(d){const x=defOf(d);if(!x)return d;const e=Object.assign({},d);if(!e.game&&x.g)e.game=x.g;if(!e.rules&&x.n)e.rules=x.n;OBM.forEach(k=>{if(!(e['ob_'+k]&&String(e['ob_'+k]).trim())&&x.o&&x.o[k])e['ob_'+k]=x.o[k]});return e}
 const canDef=d=>!!(U&&U.pid&&U.pid===d.a&&!A&&FBU()&&!rdfOver()&&!dresp(d)&&!['Cumplido','No cumplido'].includes(dst(d)));
@@ -1319,8 +1323,10 @@ const act={
  async ulogout(){const t=TOK();try{localStorage.removeItem('nx_tok')}catch(x){}U=null;render();if(t)api({action:'logout',token:t})},
  async duelok(e){const d0=D.duels.find(x=>x.id===e.id);if(d0&&!dready(d0))return toast('El retador aún no define el juego y los objetivos.');await duelAns(e.id,'aceptado')},
  async duelno(e){const d0=D.duels.find(x=>x.id===e.id);if(d0&&!dready(d0))return toast('El retador aún no define el juego y los objetivos.');if(confirm('¿Seguro que quieres rechazar este reto? No se puede deshacer.'))await duelAns(e.id,'rechazado')},
- async sendduel(e){if(rdlOver())return toast('El plazo para enviar evidencia ya terminó.');const d=D.duels.find(x=>x.id===e.id),u=($('#dv-'+e.id).value||'').trim(),nota=($('#dn-'+e.id).value||'').trim();if(!d)return;if(!ytId(u)||!/^https?:\/\//i.test(u))return toast('El enlace debe ser de un video de YouTube.');
-  const prev=DUR[e.id];PEND++;DUR[e.id]=Object.assign({},prev||{d:e.id,p:d.b,e:'aceptado'},{u:u,n:nota,vat:Date.now()});render();toast('¡Evidencia enviada! El administrador la revisará.');
+ dvadd(e){const w=$('#dvw-'+e.id);if(!w)return;const n=w.querySelectorAll('.dvx').length;if(n>=10)return toast('Máximo 10 partes.');const r=document.createElement('div');r.className='evp';r.innerHTML=`<span class="mono subtle">${n+1}</span><input class="field dvx" data-d="${esc(e.id)}" placeholder="Enlace de YouTube de la parte ${n+1}">`;w.querySelectorAll('.evp')[n-1].after(r);r.querySelector('input').focus()},
+ dvedit(e){S.dve=S.dve||{};S.dve[e.id]=!S.dve[e.id];render()},
+ async sendduel(e){if(rdlOver())return toast('El plazo para enviar evidencia ya terminó.');const d=D.duels.find(x=>x.id===e.id),L=[...document.querySelectorAll('.dvx[data-d="'+e.id+'"]')].map(x=>x.value.trim()).filter(Boolean),u=L.join('\n'),nota=($('#dn-'+e.id).value||'').trim();if(!d)return;if(!L.length)return toast('Pega al menos un enlace de YouTube.');if(L.some(x=>!ytId(x)||!/^https?:\/\//i.test(x)))return toast('Todos los enlaces deben ser de videos de YouTube.');if(S.dve)delete S.dve[e.id];
+  const prev=DUR[e.id];PEND++;DUR[e.id]=Object.assign({},prev||{d:e.id,p:d.b,e:'aceptado'},{u:u,n:nota,vat:Date.now()});render();toast(L.length>1?'¡Evidencia enviada en '+L.length+' partes! El administrador la revisará.':'¡Evidencia enviada! El administrador la revisará.');
   const j=await api({action:'duelev',token:TOK(),duelId:e.id,url:u,nota:nota,label:pname(d.a)+' reta a '+pname(d.b)+' · '+(d.game||'')});PEND--;if(j.ok)softSync();else{if(prev)DUR[e.id]=prev;render();apiErr(j,3)}},
  async duelclr(e){if(!confirm('¿Reiniciar la respuesta del retado? Podrá aceptar o rechazar otra vez.'))return;const j=await api({action:'duelclear',key:FBK(),duelId:e.id});if(j.ok){await drLoad();render();toast('Respuesta reiniciada.')}else toast(j.error||'No se pudo.')},
  goreto(){S.page='retos';render()},
