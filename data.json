@@ -763,16 +763,6 @@
  ],
  "grants": [
   {
-   "p": "mwhd47sq1jb",
-   "a": "mwlt0ijynmy",
-   "at": 1795010113351
-  },
-  {
-   "p": "mwhdqy01n4u",
-   "a": "mwlt0ijynmy",
-   "at": 1795022995152
-  },
-  {
    "p": "mwhg9zxxvpv",
    "a": "mwf8u7blofu",
    "at": 1795066782233
@@ -2393,8 +2383,21 @@
   {
    "at": 1795125261662,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795132690864,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795132696257,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795132701864,
+   "t": "Publicó cambios"
   }
  ],
+ "events": [],
  "theme": {
   "bg": "#0b0d10",
   "p1": "#1c2228",
