@@ -1072,42 +1072,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794535796635,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794535897105,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794536360130,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794536382040,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794536411294,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794536723408,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794539767390,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794539778479,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794539794411,
-   "t": "Cambio (fbconf)"
-  },
-  {
    "at": 1794539827640,
    "t": "Cambio (fbconf)"
   },
@@ -2670,9 +2634,101 @@
   {
    "at": 1795160220576,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795160422144,
+   "t": "Cambio (evnew)"
+  },
+  {
+   "at": 1795160672582,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795160719650,
+   "t": "Cambio (evpz)"
+  },
+  {
+   "at": 1795160748014,
+   "t": "Cambio (evpz)"
+  },
+  {
+   "at": 1795160760439,
+   "t": "Cambio (evcc)"
+  },
+  {
+   "at": 1795161536830,
+   "t": "Cambió el tema"
+  },
+  {
+   "at": 1795161563611,
+   "t": "Cambió el tema"
+  },
+  {
+   "at": 1795162053161,
+   "t": "Cambio (evcc)"
+  },
+  {
+   "at": 1795162141869,
+   "t": "Publicó cambios"
   }
  ],
- "events": [],
+ "events": [
+  {
+   "id": "evmwoo5wywu6v",
+   "at": 1795160419880,
+   "season": "Temporada 0 - PROTOCOLO ZERO",
+   "core": [
+    {
+     "id": "zmwoocc9ub17",
+     "type": "reliquias",
+     "name": "Dinero facil",
+     "desc": "Toma estas Reliquias y lárgate niño me molestas",
+     "rar": "Reliquia",
+     "v": 50,
+     "a": "",
+     "c": ""
+    },
+    {
+     "id": "zmwoocy5qjnd",
+     "type": "marco",
+     "name": "Cala hasta los huesos",
+     "desc": "Un bonito marco que te helara el alma",
+     "rar": "Épica",
+     "v": "nevado",
+     "a": "",
+     "c": ""
+    }
+   ],
+   "done": [],
+   "img": "img/ev-1795160419880.jpg",
+   "title": "WinterFest",
+   "sub": "Happy Hollydays",
+   "desc": "Vive la experiencia de un mundo nevado en nuestro servidor de Minecraft haciendo objetivos comunitarios para recibir cosméticos como recompensa para tu perfil. Participa en el evento para llevártelos una vez alcancen la meta.",
+   "color": "#ff4d6d",
+   "start": 1796166000000,
+   "end": 1798912800000,
+   "ch": [
+    {
+     "id": "mwoobbydwfx",
+     "name": "Sube a nivel 1 la caldera",
+     "desc": "Mejora la caldera para abarcar más con su calor y sobrevivir al frio intenso",
+     "rar": "Común",
+     "dif": "Fácil",
+     "pl": 20
+    }
+   ],
+   "ac": [
+    {
+     "id": "mwoobbydmxd",
+     "name": "Sobrevive 10 días al frio intenso",
+     "desc": "Sobrevive los 10 días en una sola sesión",
+     "rar": "Común",
+     "pl": 10
+    }
+   ],
+   "cc": false
+  }
+ ],
  "rax": [
   "mwen9cex36h|mwo8g0oqm3q"
  ],
@@ -2686,7 +2742,10 @@
   "text": "#eef0ec",
   "fx": "",
   "frost": "0",
-  "retro": "0"
+  "retro": "0",
+  "g1": "#1b2328",
+  "g2": "#0f2226",
+  "xmas": "0"
  },
  "pass": {
   "status": "Activo",
