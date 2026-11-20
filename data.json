@@ -867,6 +867,13 @@
    "title": "Penalizaciones",
    "at": 1795020360000,
    "body": "A partir de la próxima ronda de retos se colocara un <font color=\"#fd5d5d\"><b>limite de tiempo</b></font> para que retes a la persona que te toco, de no hacerlo dentro del limite se te <b><font color=\"#ff6161\">penalizará restándote PL</font></b>, sino cuentas con ellos tus puntos se verán en <b><font color=\"#fd6363\">negativo</font></b> CHEN.<div><br></div><div>Así que hazlo dentro del tiempo asignado para que todos tengan el mismo tiempo de realizar sus retos.</div>"
+  },
+  {
+   "id": "mwobfud8ceb",
+   "ver": "v0.3",
+   "title": "🕹️ Nueva actualización: desafíos con RetroAchievements",
+   "at": 1795138980000,
+   "body": "<p><strong>¿Cómo funciona?</strong><br>\nLos desafíos con la etiqueta <strong>RA</strong> están ligados a logros de un juego en RetroAchievements. Cuando consigues esos logros mientras juegas, tu medalla y tus PL aparecen solos en Nexus Arena en unos minutos, y te llega una notificación.</p>\n<p><strong>Lo que necesitas (una sola vez)</strong></p>\n<ol>\n<li>Crea tu cuenta gratis en <strong>retroachievements.org</strong>.</li>\n<li>Instala <strong>RetroArch</strong>, entra a <strong>Ajustes → Logros</strong>, actívalos e inicia sesión con tu cuenta.</li>\n<li>Activa el <strong>modo hardcore</strong>. La mayoría de los desafíos lo exigen: no se pueden guardar ni cargar partidas rápidas.</li>\n<li>En Nexus Arena, ve a <strong>Mi cuenta → Editar datos</strong> y escribe tu usuario de RetroAchievements.</li>\n</ol>\n<p><strong>Reglas importantes</strong></p>\n<ul>\n<li>Abre el desafío para ver qué logros cuentan para cada medalla. Los que ya conseguiste se marcan con ✓.</li>\n<li>Solo cuentan los logros que consigas <strong>mientras el desafío está abierto</strong>. Si ya tenías alguno de antes, no cuenta.</li>\n<li>Si al abrir un juego RetroArch te dice que los logros son «no compatibles», cambia el núcleo del emulador. Para Super Nintendo usa <strong>Snes9x - Current</strong>, que se descarga en Actualizador en línea → Descargador de núcleos.</li>\n</ul>\n<p><strong>Retos con RetroAchievements</strong><br>\nAl definir tu reto ahora puedes elegir <strong>RetroAchievements</strong>: buscas el juego, eliges los logros y qué medalla da cada uno. Cuando tu retado los consiga, recibe sus medallas solo, sin video.</p>\n<p>Los desafíos y retos <strong>personalizados</strong> siguen igual, con evidencia en video como siempre.</p>\n<p>¿Dudas? Revisa la <strong>Guía</strong>, sección «Desafíos automáticos (RetroAchievements)». ¡A jugar! 🎮</p>"
   }
  ],
  "polls": [
@@ -2488,6 +2495,14 @@
   },
   {
    "at": 1795138812438,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795139048060,
+   "t": "Agregó una nota de actualización"
+  },
+  {
+   "at": 1795139110780,
    "t": "Publicó cambios"
   }
  ],
