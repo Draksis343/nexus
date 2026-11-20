@@ -1294,7 +1294,7 @@
  "sStart": 0,
  "sEnd": 0,
  "sfx": {},
- "rdl": 1795327140000,
+ "rdl": 1795413540000,
  "pens": [],
  "penv": {
   "ch": 10,
@@ -1343,14 +1343,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794540194624,
-   "t": "Dio medalla Part. a Draksis en «La caída del Covenant»"
-  },
-  {
-   "at": 1794540195323,
-   "t": "Dio medalla Platino a Draksis en «La caída del Covenant»"
-  },
   {
    "at": 1794540196869,
    "t": "Quitó medalla Platino a Draksis en «La caída del Covenant»"
@@ -2941,6 +2933,14 @@
   },
   {
    "at": 1795187663938,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795190101259,
+   "t": "Cambió la fecha límite de la ronda"
+  },
+  {
+   "at": 1795190105186,
    "t": "Publicó cambios"
   }
  ],
