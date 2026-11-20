@@ -159,17 +159,11 @@
    "status": "Disponible",
    "round": "1",
    "end": 1795931940000,
-   "desc": "<p>El Ejército Regular se enfrenta a una nueva amenaza que comienza con una misteriosa isla infestada de criaturas mutantes y termina revelando una invasión extraterrestre a gran escala. Atraviesa territorios hostiles, instalaciones militares y fortalezas enemigas mientras rescatas prisioneros y haces frente a las fuerzas del Ejército Rebelde y los marcianos.</p><p>La batalla por la supervivencia de la humanidad está en tus manos. <b>¡Prepárate para desplegarte!</b></p>",
    "rules": "",
-   "link": "https://www.retrogames.cc/arcade-games/metal-slug-3-ngm-2560.html#",
    "_ups": {},
    "_img": null,
    "rtitle": "",
    "rtrar": "Común",
-   "ob_bronce": "Completa las cinco misiones de Metal Slug 3 y derrota a Rootmars para poner fin a la invasión marciana.",
-   "ob_plata": "Rescata al menos 20 prisioneros de guerra (POW) durante una partida completa.",
-   "ob_oro": "Completa la misión 2 sin convertirte en zombi.",
-   "ob_platino": "Completa las cinco misiones sin perder ninguna vida.",
    "img": "img/ch-1794533296967.jpg",
    "goals": [
     {
@@ -203,7 +197,70 @@
      "pl": 5
     }
    ],
-   "rq": 10
+   "rq": 10,
+   "ra": {
+    "g": {
+     "id": 11771,
+     "t": "Metal Slug 3",
+     "cn": "Arcade",
+     "ic": "/Images/049654.png",
+     "np": 4862,
+     "nph": 4862
+    },
+    "L": [
+     {
+      "id": 64755,
+      "t": "Blue Water Fangs: The Island of Dr. Moreau",
+      "d": "Complete Mission 1 without taking any side paths on Level-3 difficulty",
+      "p": 4,
+      "b": "69839",
+      "n": 3413,
+      "nh": 980
+     },
+     {
+      "id": 64766,
+      "t": "Pyramid",
+      "d": "Complete Mission 4 via the Pyramid path on Level-3 difficulty",
+      "p": 5,
+      "b": "69850",
+      "n": 523,
+      "nh": 255
+     },
+     {
+      "id": 64767,
+      "t": "First Contact",
+      "d": "Complete the Final Mission on Level-3 difficulty",
+      "p": 10,
+      "b": "69851",
+      "n": 1591,
+      "nh": 711
+     },
+     {
+      "id": 64796,
+      "t": "Humid Humanitarian",
+      "d": "Rescue 22 prisoners in Mission 1 without taking any side paths on Level-3 difficulty",
+      "p": 10,
+      "b": "69806",
+      "n": 223,
+      "nh": 105
+     }
+    ],
+    "as": {
+     "64755": "bronce",
+     "64766": "plata",
+     "64767": "platino",
+     "64796": "oro"
+    },
+    "need": {
+     "bronce": 1,
+     "plata": 1,
+     "oro": 1,
+     "platino": 1
+    },
+    "hc": true,
+    "since": 1795142463566,
+    "s": "Temporada 0 - PROTOCOLO ZERO"
+   }
   },
   {
    "id": "mwblp0imk05",
@@ -404,7 +461,7 @@
      "oro": 1,
      "platino": 1
     },
-    "hc": false,
+    "hc": true,
     "since": 1795141255792,
     "s": "Temporada 0 - PROTOCOLO ZERO"
    }
@@ -2568,6 +2625,18 @@
   },
   {
    "at": 1795141271750,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795141453751,
+   "t": "Editó el desafío «La aventura del Reino Champiñón»"
+  },
+  {
+   "at": 1795142463566,
+   "t": "Editó el desafío «Guerra sin cuartel»"
+  },
+  {
+   "at": 1795142526211,
    "t": "Publicó cambios"
   }
  ],
