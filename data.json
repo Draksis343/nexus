@@ -1072,10 +1072,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794535581111,
-   "t": "Cambio (randd)"
-  },
-  {
    "at": 1794535796635,
    "t": "Publicó cambios"
   },
@@ -2666,30 +2662,17 @@
   {
    "at": 1795159760972,
    "t": "Publicó cambios"
-  }
- ],
- "events": [
+  },
   {
-   "id": "evmwono66l2bh",
-   "at": 1795159592013,
-   "season": "Temporada 0 - PROTOCOLO ZERO",
-   "prizes": [],
-   "img": "img/ev-1795159592013.jpg",
-   "title": "Winter Fest",
-   "sub": "Prueba",
-   "desc": "Prueba",
-   "color": "#ff4d6d",
-   "start": 0,
-   "end": 0,
-   "chals": [
-    "mwb5hnvjf26"
-   ],
-   "achs": [
-    "mw8ydyk3hl6"
-   ],
-   "cc": true
+   "at": 1795160218960,
+   "t": "Cambio (evdel)"
+  },
+  {
+   "at": 1795160220576,
+   "t": "Publicó cambios"
   }
  ],
+ "events": [],
  "rax": [
   "mwen9cex36h|mwo8g0oqm3q"
  ],
