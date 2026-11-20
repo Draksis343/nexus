@@ -172,37 +172,39 @@
    "_img": null,
    "rtitle": "",
    "rtrar": "Común",
-   "img": "img/ch-1794533296967.jpg",
+   "img": "",
    "goals": [
     {
-     "id": "mwff2vomz4o",
-     "name": "A toda máquina",
-     "desc": "Derrota a un jefe utilizando un vehículo Metal Slug",
-     "pl": 5
+     "id": "ra64756",
+     "name": "Marine Diver",
+     "desc": "Complete Mission 1 via the Ocean Depths path on Level-3 difficulty",
+     "pl": 10,
+     "rq": 0,
+     "ra": 64756
     },
     {
-     "id": "mwff39fx9n5",
-     "name": "Salvavidas",
-     "desc": "Rescata a todos los POW de una misión",
-     "pl": 5
+     "id": "ra64759",
+     "name": "Devil's Snow Cave",
+     "desc": "Complete Mission 2 via the Cave of Ice path on Level-3 difficulty",
+     "pl": 10,
+     "rq": 0,
+     "ra": 64759
     },
     {
-     "id": "mwff3ep93do",
-     "name": "Explorador",
-     "desc": "Descubre una ruta alternativa en cada una de las primeras cuatro misiones",
-     "pl": 5
+     "id": "ra64761",
+     "name": "Hard Water",
+     "desc": "Complete Mission 3 via the Underground Channel path on Level-3 difficulty",
+     "pl": 10,
+     "rq": 0,
+     "ra": 64761
     },
     {
-     "id": "mwff3ytgzne",
-     "name": "Jinete del desierto",
-     "desc": "Completa la sección del desierto utilizando el Camel Slug",
-     "pl": 5
-    },
-    {
-     "id": "mwff4o4joec",
-     "name": "Coleccionista",
-     "desc": "Consigue cinco armas especiales diferentes durante una partida",
-     "pl": 5
+     "id": "ra64764",
+     "name": "The Japanese Army",
+     "desc": "Complete Mission 4 via the Ex-Military Hideout path on Level-3 difficulty",
+     "pl": 10,
+     "rq": 0,
+     "ra": 64764
     }
    ],
    "rq": 10,
@@ -212,8 +214,11 @@
      "t": "Metal Slug 3",
      "cn": "Arcade",
      "ic": "/Images/049654.png",
-     "np": 4862,
-     "nph": 4862
+     "ti": "/Images/016013.png",
+     "ig": "/Images/131457.png",
+     "bx": "/Images/021974.png",
+     "np": 4864,
+     "nph": 4864
     },
     "L": [
      {
@@ -222,8 +227,44 @@
       "d": "Complete Mission 1 without taking any side paths on Level-3 difficulty",
       "p": 4,
       "b": "69839",
-      "n": 3413,
+      "n": 3415,
       "nh": 980
+     },
+     {
+      "id": 64756,
+      "t": "Marine Diver",
+      "d": "Complete Mission 1 via the Ocean Depths path on Level-3 difficulty",
+      "p": 5,
+      "b": "69840",
+      "n": 1626,
+      "nh": 554
+     },
+     {
+      "id": 64759,
+      "t": "Devil's Snow Cave",
+      "d": "Complete Mission 2 via the Cave of Ice path on Level-3 difficulty",
+      "p": 5,
+      "b": "69843",
+      "n": 1004,
+      "nh": 439
+     },
+     {
+      "id": 64761,
+      "t": "Hard Water",
+      "d": "Complete Mission 3 via the Underground Channel path on Level-3 difficulty",
+      "p": 5,
+      "b": "69845",
+      "n": 1013,
+      "nh": 420
+     },
+     {
+      "id": 64764,
+      "t": "The Japanese Army",
+      "d": "Complete Mission 4 via the Ex-Military Hideout path on Level-3 difficulty",
+      "p": 5,
+      "b": "69848",
+      "n": 822,
+      "nh": 331
      },
      {
       "id": 64766,
@@ -240,7 +281,7 @@
       "d": "Complete the Final Mission on Level-3 difficulty",
       "p": 10,
       "b": "69851",
-      "n": 1591,
+      "n": 1592,
       "nh": 711
      },
      {
@@ -255,6 +296,10 @@
     ],
     "as": {
      "64755": "bronce",
+     "64756": "goal",
+     "64759": "goal",
+     "64761": "goal",
+     "64764": "goal",
      "64766": "plata",
      "64767": "platino",
      "64796": "oro"
@@ -265,10 +310,24 @@
      "oro": 1,
      "platino": 1
     },
+    "gpl": {
+     "64756": 10,
+     "64759": 10,
+     "64761": 10,
+     "64764": 10
+    },
+    "grq": {
+     "64756": 0,
+     "64759": 0,
+     "64761": 0,
+     "64764": 0
+    },
     "hc": true,
     "since": 1795142463566,
-    "s": "Temporada 0 - PROTOCOLO ZERO"
-   }
+    "s": "Temporada 0 - PROTOCOLO ZERO",
+    "im": "https://media.retroachievements.org/Images/131457.png"
+   },
+   "syncrq": 50
   },
   {
    "id": "mwblp0imk05",
@@ -331,6 +390,9 @@
      "t": "Guitar Hero III: Legends of Rock",
      "cn": "PlayStation 2",
      "ic": "/Images/061921.png",
+     "ti": "/Images/130381.png",
+     "ig": "/Images/130382.png",
+     "bx": "/Images/052853.png",
      "np": 6517,
      "nph": 6517
     },
@@ -438,7 +500,8 @@
     },
     "hc": true,
     "since": 1795184408269,
-    "s": "Temporada 0 - PROTOCOLO ZERO"
+    "s": "Temporada 0 - PROTOCOLO ZERO",
+    "im": "https://media.retroachievements.org/Images/052853.png"
    },
    "syncrq": 50
   },
@@ -476,37 +539,55 @@
    "cs": "Temporada 0 - PROTOCOLO ZERO",
    "goals": [
     {
-     "id": "mwic21v4838",
-     "name": "Un compañero inseparable",
-     "desc": "Completa un nivel llevando a Yoshi desde el inicio hasta la meta",
-     "pl": 5
+     "id": "ra4874",
+     "name": "I Believe I Can Fly",
+     "desc": "Collect a feather",
+     "pl": 10,
+     "rq": 0,
+     "ra": 4874
     },
     {
-     "id": "mwic2ejnc5g",
-     "name": "Coleccionista de dinosaurios",
-     "desc": "Consigue las cinco Monedas Dragón de un mismo nivel",
-     "pl": 5
+     "id": "ra4933",
+     "name": "Floating Through The Clouds",
+     "desc": "Hijack a Lakitu's cloud",
+     "pl": 10,
+     "rq": 0,
+     "ra": 4933
     },
     {
-     "id": "mwic2qi37vu",
-     "name": "El poder de los interruptores",
-     "desc": "Activa dos Palacios de Interruptores diferentes",
-     "pl": 5
+     "id": "ra1706",
+     "name": "Maximum Finish",
+     "desc": "Cross the finish line at the end of the stage and collect the max 50 stars",
+     "pl": 10,
+     "rq": 0,
+     "ra": 1706
     },
     {
-     "id": "mwic33xic39",
-     "name": "No hay camino equivocado",
-     "desc": "Descubre y utiliza cinco salidas secretas diferentes",
-     "pl": 5
+     "id": "ra46003",
+     "name": "Yoshi's a Mommy?",
+     "desc": "Help Yoshi lay a cloud egg and get 10 happy coins to summon a 1up",
+     "pl": 10,
+     "rq": 0,
+     "ra": 46003
     },
     {
-     "id": "mwjlzbjtizc",
-     "name": "Centenario",
-     "desc": "Acumula 100 vidas",
-     "pl": 5
+     "id": "ra2342",
+     "name": "Larry in the Airy",
+     "desc": "Defeat Larry Koopa of Castle #7",
+     "pl": 10,
+     "rq": 0,
+     "ra": 2342
+    },
+    {
+     "id": "ra2305",
+     "name": "Chocolate Donut",
+     "desc": "Walk in a circle on Chocolate Island",
+     "pl": 10,
+     "rq": 0,
+     "ra": 2305
     }
    ],
-   "img": "img/ch-1794777265628.jpg",
+   "img": "",
    "title": "La aventura del Reino Champiñón",
    "game": "Super Mario World",
    "mode": "Solo",
@@ -528,8 +609,11 @@
      "t": "Super Mario World",
      "cn": "SNES/Super Famicom",
      "ic": "/Images/126558.png",
-     "np": 114359,
-     "nph": 114359
+     "ti": "/Images/110144.png",
+     "ig": "/Images/132120.png",
+     "bx": "/Images/109856.png",
+     "np": 114381,
+     "nph": 114381
     },
     "L": [
      {
@@ -538,8 +622,53 @@
       "d": "Collect 5 Dragon Coins in a level",
       "p": 2,
       "b": "46591",
-      "n": 95803,
-      "nh": 49797
+      "n": 95826,
+      "nh": 49812
+     },
+     {
+      "id": 4874,
+      "t": "I Believe I Can Fly",
+      "d": "Collect a feather",
+      "p": 1,
+      "b": "46577",
+      "n": 68814,
+      "nh": 37929
+     },
+     {
+      "id": 4933,
+      "t": "Floating Through The Clouds",
+      "d": "Hijack a Lakitu's cloud",
+      "p": 2,
+      "b": "46571",
+      "n": 25747,
+      "nh": 16814
+     },
+     {
+      "id": 1706,
+      "t": "Maximum Finish",
+      "d": "Cross the finish line at the end of the stage and collect the max 50 stars",
+      "p": 5,
+      "b": "47084",
+      "n": 14670,
+      "nh": 9717
+     },
+     {
+      "id": 46003,
+      "t": "Yoshi's a Mommy?",
+      "d": "Help Yoshi lay a cloud egg and get 10 happy coins to summon a 1up",
+      "p": 5,
+      "b": "46668",
+      "n": 10665,
+      "nh": 8056
+     },
+     {
+      "id": 2342,
+      "t": "Larry in the Airy",
+      "d": "Defeat Larry Koopa of Castle #7",
+      "p": 10,
+      "b": "46604",
+      "n": 15486,
+      "nh": 10056
      },
      {
       "id": 2275,
@@ -547,8 +676,8 @@
       "d": "Beat Bowser and save the princess",
       "p": 25,
       "b": "46760",
-      "n": 18915,
-      "nh": 12142
+      "n": 18919,
+      "nh": 12144
      },
      {
       "id": 2199,
@@ -556,8 +685,17 @@
       "d": "Hit the buttons in all four coloured switch palaces",
       "p": 5,
       "b": "47069",
-      "n": 18676,
+      "n": 18677,
       "nh": 12538
+     },
+     {
+      "id": 2305,
+      "t": "Chocolate Donut",
+      "d": "Walk in a circle on Chocolate Island",
+      "p": 1,
+      "b": "47071",
+      "n": 17810,
+      "nh": 11498
      },
      {
       "id": 2298,
@@ -565,15 +703,21 @@
       "d": "Reach the Star Road",
       "p": 5,
       "b": "47072",
-      "n": 31558,
-      "nh": 20174
+      "n": 31561,
+      "nh": 20176
      }
     ],
     "as": {
      "341": "bronce",
+     "1706": "goal",
      "2199": "plata",
      "2275": "platino",
-     "2298": "oro"
+     "2298": "oro",
+     "2305": "goal",
+     "2342": "goal",
+     "4874": "goal",
+     "4933": "goal",
+     "46003": "goal"
     },
     "need": {
      "bronce": 1,
@@ -581,10 +725,28 @@
      "oro": 1,
      "platino": 1
     },
+    "gpl": {
+     "1706": 10,
+     "2305": 10,
+     "2342": 10,
+     "4874": 10,
+     "4933": 10,
+     "46003": 10
+    },
+    "grq": {
+     "1706": 0,
+     "2305": 0,
+     "2342": 0,
+     "4874": 0,
+     "4933": 0,
+     "46003": 0
+    },
     "hc": true,
     "since": 1795141255792,
-    "s": "Temporada 0 - PROTOCOLO ZERO"
-   }
+    "s": "Temporada 0 - PROTOCOLO ZERO",
+    "im": "https://media.retroachievements.org/Images/132120.png"
+   },
+   "syncrq": 50
   },
   {
    "id": "mwjo9kadrfl",
@@ -1142,13 +1304,11 @@
  "pst": {},
  "emu": {
   "name": "Emuladores",
-  "body": "<p>¿Quieres tener descargar juegos rápido y de manera Segura?</p><p>Últimamente he estado probando <strong><font color=\"#ba66ff\">MegaRetro Hub</font></strong> y la verdad es que se ha convertido en una opción bastante interesante para quienes disfrutan de los videojuegos retro.</p><p>Más que ser simplemente una página para descargar juegos, prácticamente funciona como una biblioteca donde puedes encontrar miles de títulos de diferentes consolas y generaciones, todo reunido en un mismo lugar.</p><p>Algo que me gustó <b>bastante es lo sencillo</b> que resulta utilizarlo: puedes buscar tus juegos y descargarlos con un solo clic, sin tener que estar saltando entre distintas páginas o buscando archivos por separado.</p><p>Además, cuenta con opciones multijugador, compatibilidad con una gran variedad de mandos y una buena selección de juegos para revivir esos clásicos que tanto nos gustan o descubrir títulos que quizá nunca tuvimos oportunidad de jugar.</p><p>Creo que es una alternativa bastante buena si te gusta la emulación, coleccionar videojuegos o simplemente tener una buena biblioteca de juegos a la mano sin tantas complicaciones.</p><p>Si quieren echarle un vistazo, les dejo mi enlace de afiliado:</p>",
-  "link": "https://go.hotmart.com/H107560175J?dp=1",
-  "linkText": "",
+  "body": "<p>Para jugar los juegos con <b>RetroAchievements</b> debes crearte una cuenta y descargar de misma manera RetroArch en el siguiente enlace <a href=\"https://www.retroarch.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.retroarch.com</a> En la guía podrás encontrar una sección que te explica a detalle que debes hacer. La sección con esta info se llama <span><b>Desafíos automáticos (RetroAchievements)</b></span></p>",
+  "link": "https://retroachievements.org",
+  "linkText": "Crea tu cuenta aquí",
   "imgs": [
-   "img/emu-1794717513910-0.jpg",
-   "img/emu-1794717515694-1.jpg",
-   "img/emu-1794717517119-2.jpg"
+   "img/emu-1795187659434-0.jpg"
   ]
  },
  "credit": {
@@ -1183,42 +1343,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794539980545,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794540014042,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794540059669,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794540099833,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794540187863,
-   "t": "Dio medalla Platino a Draksis en «La caída del Covenant»"
-  },
-  {
-   "at": 1794540191402,
-   "t": "Quitó medalla Platino a Draksis en «La caída del Covenant»"
-  },
-  {
-   "at": 1794540191993,
-   "t": "Dio medalla Platino a Draksis en «La caída del Covenant»"
-  },
-  {
-   "at": 1794540193212,
-   "t": "Dio medalla Oro a Draksis en «La caída del Covenant»"
-  },
-  {
-   "at": 1794540194242,
-   "t": "Dio medalla Bronce a Draksis en «La caída del Covenant»"
-  },
   {
    "at": 1794540194624,
    "t": "Dio medalla Part. a Draksis en «La caída del Covenant»"
@@ -2781,6 +2905,42 @@
   },
   {
    "at": 1795184628362,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795185547411,
+   "t": "Editó el desafío «Guerra sin cuartel»"
+  },
+  {
+   "at": 1795185636620,
+   "t": "Editó el desafío «Guerra sin cuartel»"
+  },
+  {
+   "at": 1795185687605,
+   "t": "Editó el desafío «Guerra sin cuartel»"
+  },
+  {
+   "at": 1795185701779,
+   "t": "Editó el desafío «Leyenda del Rock»"
+  },
+  {
+   "at": 1795185767249,
+   "t": "Editó el desafío «La aventura del Reino Champiñón»"
+  },
+  {
+   "at": 1795187517235,
+   "t": "Editó la ventana de emuladores"
+  },
+  {
+   "at": 1795187565271,
+   "t": "Editó la ventana de emuladores"
+  },
+  {
+   "at": 1795187662328,
+   "t": "Cambio (emuopen)"
+  },
+  {
+   "at": 1795187663938,
    "t": "Publicó cambios"
   }
  ],
