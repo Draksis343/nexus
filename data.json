@@ -343,14 +343,71 @@
    "status": "Disponible",
    "round": "",
    "end": 1795931940000,
-   "link": "",
-   "desc": "<p>Dinosaur Land esconde muchos secretos y peligros más allá de los caminos habituales. Acompaña a Mario en una aventura para rescatar a la princesa Peach, explorar territorios desconocidos y descubrir los misterios que se esconden en este peculiar mundo.</p><p>No basta con llegar al final: un verdadero aventurero sabe que los mejores caminos son aquellos que pocos se atreven a descubrir.</p>",
-   "ob_bronce": "Completa el mundo Vanilla Dome",
-   "ob_plata": "Encuentra y completa 3 salidas secretas diferentes",
-   "ob_oro": "Activa 3 de los 4 Switch Palaces del juego",
-   "ob_platino": "Derrota a Bowser y rescata a la princesa Peach después de completar los objetivos anteriores",
    "rules": "",
-   "rq": 10
+   "rq": 10,
+   "ra": {
+    "g": {
+     "id": 228,
+     "t": "Super Mario World",
+     "cn": "SNES/Super Famicom",
+     "ic": "/Images/126558.png",
+     "np": 114359,
+     "nph": 114359
+    },
+    "L": [
+     {
+      "id": 341,
+      "t": "Unleash The Dragon",
+      "d": "Collect 5 Dragon Coins in a level",
+      "p": 2,
+      "b": "46591",
+      "n": 95803,
+      "nh": 49797
+     },
+     {
+      "id": 2275,
+      "t": "Bowser Disposer",
+      "d": "Beat Bowser and save the princess",
+      "p": 25,
+      "b": "46760",
+      "n": 18915,
+      "nh": 12142
+     },
+     {
+      "id": 2199,
+      "t": "Filling All The Blocks In",
+      "d": "Hit the buttons in all four coloured switch palaces",
+      "p": 5,
+      "b": "47069",
+      "n": 18676,
+      "nh": 12538
+     },
+     {
+      "id": 2298,
+      "t": "To the Stars!",
+      "d": "Reach the Star Road",
+      "p": 5,
+      "b": "47072",
+      "n": 31558,
+      "nh": 20174
+     }
+    ],
+    "as": {
+     "341": "bronce",
+     "2199": "plata",
+     "2275": "platino",
+     "2298": "oro"
+    },
+    "need": {
+     "bronce": 1,
+     "plata": 1,
+     "oro": 1,
+     "platino": 1
+    },
+    "hc": false,
+    "since": 1795141255792,
+    "s": "Temporada 0 - PROTOCOLO ZERO"
+   }
   },
   {
    "id": "mwjo9kadrfl",
@@ -2503,6 +2560,14 @@
   },
   {
    "at": 1795139110780,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795141255792,
+   "t": "Editó el desafío «La aventura del Reino Champiñón»"
+  },
+  {
+   "at": 1795141271750,
    "t": "Publicó cambios"
   }
  ],
