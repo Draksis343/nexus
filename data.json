@@ -284,51 +284,163 @@
    "status": "Disponible",
    "round": "1",
    "end": 1795931940000,
-   "desc": "<p>El escenario está listo, las luces se encienden y miles de personas esperan escuchar tu música. Comienza tu carrera desde los pequeños escenarios hasta convertirte en una auténtica leyenda del rock.</p><p>Enfréntate a guitarristas legendarios, supera batallas musicales y demuestra que tienes la habilidad necesaria para dominar las canciones más exigentes. Aquí no basta con tocar: ¡tienes que convertirte en un Guitar Hero!</p>",
    "rules": "<font color=\"#d8d2ca\">Sino tienes emulador, puedes encontrarlo en el enlace de arriba para jugarlo en el navegador</font>",
-   "link": "https://lasvegasherogame.com/gh3/",
    "_ups": {},
    "_img": null,
    "img": "img/ch-1794722719986.jpg",
    "rtitle": "",
    "rtrar": "Común",
-   "ob_bronce": "Completa el modo Carrera en cualquier dificultad.",
-   "ob_plata": "Derrota a Slash, Tom Morello y Lou en sus respectivas batallas de jefe del modo Carrera, sin rechazar ni omitir ningún enfrentamiento.",
-   "ob_oro": "Consigue una racha de 1,000 notas consecutivas en una canción, sin fallar ninguna nota.",
-   "ob_platino": "Completa «Through the Fire and Flames» en dificultad Experto.",
    "goals": [
     {
-     "id": "mwhfl2ge63w",
-     "name": "Perfeccionista",
-     "desc": "Consigue un 100% de notas acertadas en cualquier canción",
-     "pl": 5
+     "id": "ra248898",
+     "name": "Hard Avalancha",
+     "desc": "Clear Avalancha on Hard difficulty",
+     "pl": 10,
+     "rq": 0,
+     "ra": 248898
     },
     {
-     "id": "mwhfldrr7qm",
-     "name": "Velocidad endiablada",
-     "desc": "Consigue una racha de 500 notas consecutivas",
-     "pl": 5
+     "id": "ra250495",
+     "name": "Guitar Hoarder I",
+     "desc": "Buy 50% of the regular guitars from the store.",
+     "pl": 10,
+     "rq": 0,
+     "ra": 250495
     },
     {
-     "id": "mwhflpl2riv",
-     "name": "Sin ayuda divina",
-     "desc": "Consigue 200,000 puntos en «Cult of Personality» sin activar el Poder Estelar",
-     "pl": 5
+     "id": "ra250509",
+     "name": "Lou",
+     "desc": "Unlock Lou!",
+     "pl": 10,
+     "rq": 0,
+     "ra": 250509
     },
     {
-     "id": "mwhfmck6m18",
-     "name": "Estrella dorada",
-     "desc": "Consigue 5 estrellas doradas en una canción de dificultad Experto",
-     "pl": 5
-    },
-    {
-     "id": "mwhfmjqdteh",
-     "name": "El pacto",
-     "desc": "Derrota a Lou en su batalla final sin utilizar la opción de continuar tras perder",
-     "pl": 5
+     "id": "ra250517",
+     "name": "El Jefe",
+     "desc": "Unlock El Jefe!",
+     "pl": 10,
+     "rq": 0,
+     "ra": 250517
     }
    ],
-   "rq": 10
+   "rq": 10,
+   "ra": {
+    "g": {
+     "id": 5579,
+     "t": "Guitar Hero III: Legends of Rock",
+     "cn": "PlayStation 2",
+     "ic": "/Images/061921.png",
+     "np": 6517,
+     "nph": 6517
+    },
+    "L": [
+     {
+      "id": 248075,
+      "t": "Morello is Easy",
+      "d": "Defeat Tom Morello in a Guitar battle on Easy!",
+      "p": 5,
+      "b": "274688",
+      "n": 1279,
+      "nh": 685
+     },
+     {
+      "id": 248079,
+      "t": "Slash Broke A String",
+      "d": "Defeat Slash in a guitar battle on Medium!",
+      "p": 5,
+      "b": "274692",
+      "n": 1818,
+      "nh": 812
+     },
+     {
+      "id": 248086,
+      "t": "Send Lou Back to Damnation!",
+      "d": "Defeat Lou in a guitar battle on Expert!",
+      "p": 50,
+      "b": "274700",
+      "n": 326,
+      "nh": 241
+     },
+     {
+      "id": 248303,
+      "t": "Expert Through The Fire and Flames",
+      "d": "Clear Through The Fire and Flames on Expert Difficulty",
+      "p": 5,
+      "b": "274801",
+      "n": 242,
+      "nh": 171
+     },
+     {
+      "id": 248898,
+      "t": "Hard Avalancha",
+      "d": "Clear Avalancha on Hard difficulty",
+      "p": 4,
+      "b": "275429",
+      "n": 501,
+      "nh": 373
+     },
+     {
+      "id": 250495,
+      "t": "Guitar Hoarder I",
+      "d": "Buy 50% of the regular guitars from the store.",
+      "p": 10,
+      "b": "276948",
+      "n": 691,
+      "nh": 441
+     },
+     {
+      "id": 250509,
+      "t": "Lou",
+      "d": "Unlock Lou!",
+      "p": 10,
+      "b": "276962",
+      "n": 609,
+      "nh": 336
+     },
+     {
+      "id": 250517,
+      "t": "El Jefe",
+      "d": "Unlock El Jefe!",
+      "p": 100,
+      "b": "276970",
+      "n": 231,
+      "nh": 124
+     }
+    ],
+    "as": {
+     "248075": "bronce",
+     "248079": "plata",
+     "248086": "oro",
+     "248303": "platino",
+     "248898": "goal",
+     "250495": "goal",
+     "250509": "goal",
+     "250517": "goal"
+    },
+    "need": {
+     "bronce": 1,
+     "plata": 1,
+     "oro": 1,
+     "platino": 1
+    },
+    "gpl": {
+     "248898": 10,
+     "250495": 10,
+     "250509": 10,
+     "250517": 10
+    },
+    "grq": {
+     "248898": 0,
+     "250495": 0,
+     "250509": 0,
+     "250517": 0
+    },
+    "hc": true,
+    "since": 1795184408269,
+    "s": "Temporada 0 - PROTOCOLO ZERO"
+   },
+   "syncrq": 50
   },
   {
    "id": "mwea4ayeara",
@@ -1071,22 +1183,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794539827640,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794539865416,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794539912373,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794539972758,
-   "t": "Cambio (fbconf)"
-  },
   {
    "at": 1794539980545,
    "t": "Publicó cambios"
@@ -2669,6 +2765,22 @@
   },
   {
    "at": 1795162141869,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795184408269,
+   "t": "Editó el desafío «Leyenda del Rock»"
+  },
+  {
+   "at": 1795184530379,
+   "t": "Editó el desafío «Leyenda del Rock»"
+  },
+  {
+   "at": 1795184615721,
+   "t": "Editó el desafío «Leyenda del Rock»"
+  },
+  {
+   "at": 1795184628362,
    "t": "Publicó cambios"
   }
  ],
