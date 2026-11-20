@@ -846,6 +846,29 @@
    "egg": false,
    "secret": false,
    "hid": true
+  },
+  {
+   "id": "mwo8x10n2od",
+   "icon": "",
+   "egg": false,
+   "secret": false,
+   "hid": false,
+   "name": "Prueba",
+   "desc": "",
+   "rar": "Común",
+   "rq": 0,
+   "max": 5,
+   "title": "",
+   "trar": "Común",
+   "rw": {
+    "type": "marco",
+    "name": "prueba",
+    "desc": "",
+    "v": "neon",
+    "a": "",
+    "c": "",
+    "img": ""
+   }
   }
  ],
  "grants": [
@@ -2511,6 +2534,14 @@
   },
   {
    "at": 1795134035142,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795134810984,
+   "t": "Cambio (newa)"
+  },
+  {
+   "at": 1795134814347,
    "t": "Publicó cambios"
   }
  ],
