@@ -50,7 +50,11 @@
   {
    "id": "mwhg9w6crs5",
    "name": "Akiaseru",
-   "bonus": 0
+   "bonus": 0,
+   "title": {
+    "name": "Debugger",
+    "rar": "Nexus"
+   }
   },
   {
    "id": "mwhg9zxxvpv",
@@ -1366,14 +1370,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794553391899,
-   "t": "Cambio (editn)"
-  },
-  {
-   "at": 1794553401843,
-   "t": "Publicó cambios"
-  },
   {
    "at": 1794553559047,
    "t": "Eliminó al jugador Draksis"
@@ -2964,6 +2960,14 @@
   },
   {
    "at": 1795246185316,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795249954368,
+   "t": "Cambio (setttl)"
+  },
+  {
+   "at": 1795249957991,
    "t": "Publicó cambios"
   }
  ],
