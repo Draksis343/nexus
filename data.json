@@ -1211,6 +1211,21 @@
    "p": "mwhd47sq1jb",
    "a": "mwo8x10n2od",
    "at": 1795134824524
+  },
+  {
+   "p": "mwhd47sq1jb",
+   "a": "mwf8u7blofu",
+   "at": 1795245431986
+  },
+  {
+   "p": "mwhg9w6crs5",
+   "a": "mwf8u7blofu",
+   "at": 1795245504871
+  },
+  {
+   "p": "mwhg9w6crs5",
+   "a": "mwlt0ijynmy",
+   "at": 1795245512479
   }
  ],
  "videos": [
@@ -1229,6 +1244,14 @@
    "url": "https://youtu.be/FF5uZ8jZbJ4",
    "title": "Reto: Plantas vz Zombies · Itzy0w0 reta a Draksis",
    "src": "d:mwicvz83zks"
+  },
+  {
+   "id": "mwq2p78zt25",
+   "p": "mwhd47sq1jb",
+   "s": "Temporada 0 - PROTOCOLO ZERO",
+   "url": "https://youtu.be/kVZPLVzn3NI",
+   "title": "Reto: Pepsiman · Draksis reta a DarkPlayer",
+   "src": "d:mwicvz83qqe"
   }
  ],
  "seasons": [],
@@ -1344,26 +1367,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794540199959,
-   "t": "Quitó logro «Señor de la guerra:» a PAROXTINE en «La caída del Covenant»"
-  },
-  {
-   "at": 1794540206003,
-   "t": "Dio Medalla Atemporal a Draksis («EL PODER DEL GARROTE»)"
-  },
-  {
-   "at": 1794540206482,
-   "t": "Quitó Medalla Atemporal a Draksis («EL PODER DEL GARROTE»)"
-  },
-  {
-   "at": 1794540243345,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794553166382,
-   "t": "Cambio (quitmusica)"
-  },
   {
    "at": 1794553259694,
    "t": "Eliminó al jugador Darkplayer97"
@@ -2942,6 +2945,26 @@
   },
   {
    "at": 1795241419239,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795245300468,
+   "t": "Publicó videos de reto en el perfil"
+  },
+  {
+   "at": 1795245431986,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795245504871,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795245512479,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795245521053,
    "t": "Publicó cambios"
   }
  ],
