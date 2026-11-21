@@ -1219,11 +1219,6 @@
   },
   {
    "p": "mwhg9w6crs5",
-   "a": "mwf8u7blofu",
-   "at": 1795245504871
-  },
-  {
-   "p": "mwhg9w6crs5",
    "a": "mwlt0ijynmy",
    "at": 1795245512479
   }
@@ -1367,14 +1362,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794553259694,
-   "t": "Eliminó al jugador Darkplayer97"
-  },
-  {
-   "at": 1794553261822,
-   "t": "Eliminó al jugador Akiaseru"
-  },
   {
    "at": 1794553263524,
    "t": "Eliminó al jugador Shadoms"
@@ -2965,6 +2952,14 @@
   },
   {
    "at": 1795245521053,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795245550264,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795245554631,
    "t": "Publicó cambios"
   }
  ],
