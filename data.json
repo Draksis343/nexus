@@ -742,6 +742,7 @@
      "46003": 0
     },
     "hc": true,
+    "old": true,
     "since": 1795141255792,
     "s": "Temporada 0 - PROTOCOLO ZERO",
     "im": "https://media.retroachievements.org/Images/132120.png"
@@ -1343,14 +1344,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794540196869,
-   "t": "Quitó medalla Platino a Draksis en «La caída del Covenant»"
-  },
-  {
-   "at": 1794540198975,
-   "t": "Dio logro «Señor de la guerra:» a PAROXTINE en «La caída del Covenant»"
-  },
   {
    "at": 1794540199959,
    "t": "Quitó logro «Señor de la guerra:» a PAROXTINE en «La caída del Covenant»"
@@ -2942,6 +2935,14 @@
   {
    "at": 1795190105186,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795241417917,
+   "t": "Editó el desafío «La aventura del Reino Champiñón»"
+  },
+  {
+   "at": 1795241419239,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3004,6 +3005,7 @@
  "rax": [
   "mwen9cex36h|mwo8g0oqm3q"
  ],
+ "ram": [],
  "theme": {
   "bg": "#0b0d10",
   "p1": "#1c2228",
