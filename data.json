@@ -1285,6 +1285,14 @@
    "url": "https://youtu.be/GYguSHF39LI",
    "title": "Reto: Fornite · PAROXTINE reta a Elramasan",
    "src": "d:mwicvz83kro"
+  },
+  {
+   "id": "mwri5wpmze7",
+   "p": "mwhd448ih4p",
+   "s": "Temporada 0 - PROTOCOLO ZERO",
+   "url": "https://youtu.be/U_HvQ7Frf0w",
+   "title": "Reto: Minecraft · Elramasan reta a Itzy0w0",
+   "src": "d:mwicvz83xvq"
   }
  ],
  "seasons": [],
@@ -1327,6 +1335,13 @@
    "title": "🕹️ Nueva actualización: desafíos con RetroAchievements",
    "at": 1795138980000,
    "body": "<p><strong>¿Cómo funciona?</strong><br>\nLos desafíos con la etiqueta <strong>RA</strong> están ligados a logros de un juego en RetroAchievements. Cuando consigues esos logros mientras juegas, tu medalla y tus PL aparecen solos en Nexus Arena en unos minutos, y te llega una notificación.</p>\n<p><strong>Lo que necesitas (una sola vez)</strong></p>\n<ol>\n<li>Crea tu cuenta gratis en <strong>retroachievements.org</strong>.</li>\n<li>Instala <strong>RetroArch</strong>, entra a <strong>Ajustes → Logros</strong>, actívalos e inicia sesión con tu cuenta.</li>\n<li>Activa el <strong>modo hardcore</strong>. La mayoría de los desafíos lo exigen: no se pueden guardar ni cargar partidas rápidas.</li>\n<li>En Nexus Arena, ve a <strong>Mi cuenta → Editar datos</strong> y escribe tu usuario de RetroAchievements.</li>\n</ol>\n<p><strong>Reglas importantes</strong></p>\n<ul>\n<li>Abre el desafío para ver qué logros cuentan para cada medalla. Los que ya conseguiste se marcan con ✓.</li>\n<li>Solo cuentan los logros que consigas <strong>mientras el desafío está abierto</strong>. Si ya tenías alguno de antes, no cuenta.</li>\n<li>Si al abrir un juego RetroArch te dice que los logros son «no compatibles», cambia el núcleo del emulador. Para Super Nintendo usa <strong>Snes9x - Current</strong>, que se descarga en Actualizador en línea → Descargador de núcleos.</li>\n</ul>\n<p><strong>Retos con RetroAchievements</strong><br>\nAl definir tu reto ahora puedes elegir <strong>RetroAchievements</strong>: buscas el juego, eliges los logros y qué medalla da cada uno. Cuando tu retado los consiga, recibe sus medallas solo, sin video.</p>\n<p>Los desafíos y retos <strong>personalizados</strong> siguen igual, con evidencia en video como siempre.</p>\n<p>¿Dudas? Revisa la <strong>Guía</strong>, sección «Desafíos automáticos (RetroAchievements)». ¡A jugar! 🎮</p>"
+  },
+  {
+   "id": "mwriiexn893",
+   "ver": "v0.4",
+   "title": "🤖 ¡Llegaron los avatares robot!",
+   "at": 1795332240000,
+   "body": "<p>Desde hoy cada jugador tiene su propio robot como avatar en Nexus Arena. Ya todos tienen uno por defecto con los colores de la liga, pero lo mejor es que lo hagas tuyo.</p>\n<p><strong>¿Cómo lo armo?</strong><br>\nEntra a <strong>Mi cuenta → Tu estilo → 🤖 Mi avatar</strong>, elige tus piezas y dale <strong>Guardar avatar</strong>.</p>\n<p><strong>¿Qué puedo personalizar?</strong></p>\n<ul>\n<li><strong>Pantalla:</strong> tu robot tiene una pantalla en lugar de cara. Elige entre 18 ojos y 16 bocas, el color con el que brillan y el color de la pantalla. También puedes agregar detalles como sonrojo, lágrimas o enojo.</li>\n<li><strong>Carcasa:</strong> el color base, el color de las luces y si quieres acabado brillante o mate.</li>\n<li><strong>Módulos:</strong> lo que lleva en la cabeza, como orejas de conejo, de gato, de oso o de zorro, cables, antenas, cuernos, alas, hélice, púas y más.</li>\n<li><strong>Cabeza:</strong> audífonos, gorras, gorros, boinas, sombreros, coronas, visores, lentes y más, con el color que quieras.</li>\n<li><strong>Ropa:</strong> camisas y chaquetas como la techwear, bomber, varsity, cuero o puffer, cada una en tu color.</li>\n<li><strong>Accesorios:</strong> cadenas, dije Nexus, corbata, medalla, bufanda y más.</li>\n<li><strong>Fondo:</strong> halo, synthwave, circuitos, estrellas, hexágonos y otros.</li>\n</ul>\n<p><strong>Detalles que te van a gustar</strong></p>\n<ul>\n<li>Tu robot se ve en todo el sitio: en la lista de jugadores, en tu perfil y en el Resumen de la semana si eres el MVP.</li>\n<li>En computadora tu robot respira, parpadea, voltea y hace gestos con la boca. En celular se ve quieto para que todo cargue rápido.</li>\n<li>En el creador, tócalo y verás cómo reacciona.</li>\n<li>Si no te decides, usa <strong>🎲 Aleatorio</strong> o regresa al robot original con <strong>Por defecto</strong>.</li>\n</ul>\n<p><strong>También en esta actualización</strong></p>\n<ul>\n<li>Las fotos y avatares se ven <strong>más grandes</strong> en los perfiles.</li>\n<li>El <strong>MVP de la semana</strong> ahora aparece en grande en el Resumen de la semana, con sus PL, desafíos, medallas y XP de la semana.</li>\n</ul>\n<p>¡Arma tu robot y presúmelo! 🤖⚡</p>"
   }
  ],
  "polls": [
@@ -1400,18 +1415,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794580831154,
-   "t": "Cambio (foto)"
-  },
-  {
-   "at": 1794580834692,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794583938925,
-   "t": "Cambio (acccreate)"
-  },
   {
    "at": 1794583944176,
    "t": "Publicó cambios"
@@ -2998,6 +3001,18 @@
   },
   {
    "at": 1795330064564,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795331740378,
+   "t": "Publicó videos de reto en el perfil"
+  },
+  {
+   "at": 1795332323867,
+   "t": "Agregó una nota de actualización"
+  },
+  {
+   "at": 1795335499453,
    "t": "Publicó cambios"
   }
  ],
