@@ -1077,8 +1077,20 @@
    "rar": "Nexus",
    "rq": 20,
    "max": 5,
-   "title": "",
-   "trar": "Común"
+   "title": "Prestigioso",
+   "trar": "Nexus",
+   "egg": false,
+   "secret": false,
+   "hid": false,
+   "rw": {
+    "type": "efecto",
+    "name": "",
+    "desc": "",
+    "v": "chispas",
+    "a": "",
+    "c": "#ffc266",
+    "img": ""
+   }
   },
   {
    "id": "mwb5l1efstb",
@@ -1381,14 +1393,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794554394683,
-   "t": "Dio el logro «El rey de los piratas» a Draksis"
-  },
-  {
-   "at": 1794554408967,
-   "t": "Publicó cambios"
-  },
   {
    "at": 1794554523106,
    "t": "Quitó el logro «El rey de los piratas» a Draksis"
@@ -2979,6 +2983,14 @@
   },
   {
    "at": 1795319004362,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795320485764,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1795320492273,
    "t": "Publicó cambios"
   }
  ],
