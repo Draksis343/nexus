@@ -921,7 +921,7 @@
    "b": "mwicujdshcq",
    "game": "Super Street fighter 2 The New Challengers",
    "rules": "",
-   "status": "No cumplido",
+   "status": "Aceptado",
    "m": "",
    "link": "",
    "ob_bronce": "",
@@ -933,20 +933,22 @@
   },
   {
    "id": "mwicvz83kmy",
-   "at": 1794778683411,
+   "at": 1795373368698,
    "a": "mwicujdshcq",
    "b": "mwhg9w6crs5",
    "game": "Left 4 dead 2",
    "rules": "Puedes jugar solo o multijugador",
-   "status": "Pendiente",
-   "m": "",
+   "status": "Cumplido",
+   "m": "bronce",
    "link": "",
    "ob_bronce": "Completa una campaña en dificultad Normal o superior",
    "ob_plata": "Completa una campaña en dificultad Avanzada sin que ningún superviviente sea incapacitado",
    "ob_oro": "Completa tres campañas diferentes en dificultad Experto",
    "ob_platino": "Completa una campaña completa en dificultad Experto, sin que ningún integrante del equipo muera definitivamente",
    "rq": 10,
-   "ms": []
+   "ms": [
+    "bronce"
+   ]
   },
   {
    "id": "mwicvz8316x",
@@ -1470,26 +1472,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794600492156,
-   "t": "Editó el desafío «EL PODER DEL GARROTE»"
-  },
-  {
-   "at": 1794600966118,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794600983949,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794600990765,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794601000558,
-   "t": "Cambio (editgoal)"
-  },
   {
    "at": 1794601016836,
    "t": "Cambio (newgoal)"
@@ -3068,6 +3050,26 @@
   },
   {
    "at": 1795339467572,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795373365574,
+   "t": "Dio medalla Bronce en un reto (Akiaseru)"
+  },
+  {
+   "at": 1795373367274,
+   "t": "Quitó medalla Bronce en un reto (Akiaseru)"
+  },
+  {
+   "at": 1795373368698,
+   "t": "Dio medalla Bronce en un reto (Akiaseru)"
+  },
+  {
+   "at": 1795373404412,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1795373412443,
    "t": "Publicó cambios"
   }
  ],
