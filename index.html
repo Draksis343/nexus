@@ -833,7 +833,9 @@ const isX=(cat,i)=>!!(CAT[cat]&&CAT[cat][i]&&CAT[cat][i][2]);
 function allow(s,own){if(own===true)return s;const o={...s};KEYS.forEach(k=>{if(isX(k,o[k])&&!(own&&own.has(k+':'+o[k])))o[k]=0});return o}
 // ---- dibujo
 const TPL=new Map();let RC=0;
-function svgOf(s,o={}){const key=JSON.stringify(s)+'|'+(o.vb||'')+'|'+(o.thumb?1:0)+'|'+(o.num||'');let t=TPL.get(key);if(!t){t=build(s,o);if(TPL.size>400)TPL.clear();TPL.set(key,t)}return t.replaceAll('§','r'+(++RC)+'_')}
+// en celular: avatares estáticos (sin animación ni brillos pesados) para que el sitio vaya fluido
+const LITE=typeof matchMedia!=='undefined'&&(matchMedia('(pointer:coarse)').matches||matchMedia('(max-width:820px)').matches);
+function svgOf(s,o={}){if(LITE)o={...o,thumb:1,lite:1};const key=JSON.stringify(s)+'|'+(o.vb||'')+'|'+(o.thumb?1:0)+'|'+(o.num||'');let t=TPL.get(key);if(!t){t=build(s,o);if(o.lite)t=t.replace(/<animate(Transform)?\b[^>]*\/>/g,'').replace(/ class="rb-spin"/g,'');if(TPL.size>400)TPL.clear();TPL.set(key,t)}return t.replaceAll('§','r'+(++RC)+'_')}
 function build(s,o){
  const u=n=>`url(#§${n})`,B=s.base,L=s.light,X=s.exc&&s.exc!=='auto'?s.exc:L,SC=s.scr,dark=lum(B)<.35,gloss=s.fin!=='mate',hi=gloss?.55:.2;
  const Bl=sh(B,dark?14:12),Bd=sh(B,dark?-6:-16),Bseam=dark?sh(B,16):sh(B,-18),TC=s.topc&&s.topc!=='auto'?s.topc:B,A=L;
@@ -901,7 +903,7 @@ function build(s,o){
  return`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${o.vb||'0 0 400 400'}" class="rbt" data-c="${c}" data-m="${s.mouth}" data-e="${s.eyes}">${defs}${bg}<g transform="translate(30 42) scale(.85)"><g class="rb-body">${body}</g><g class="rb-head"><g class="rb-top">${tp.b||''}</g>${helm}<g class="rb-top">${tp.f||''}</g><g class="rb-hat">${hat}</g></g></g></svg>`}
 // ---- animación (parpadeo, boca, respiración, inclinación) para los que tengan .rb-live
 const AN=new WeakMap();
-function tick(now){requestAnimationFrame(tick);if(document.hidden)return;const L=document.querySelectorAll('.rb-live svg.rbt');if(!L.length)return;
+function tick(now){if(LITE)return;requestAnimationFrame(tick);if(document.hidden)return;const L=document.querySelectorAll('.rb-live svg.rbt');if(!L.length)return;
  const red=matchMedia('(prefers-reduced-motion:reduce)').matches;
  L.forEach((sv,idx)=>{if(idx>3)return;let a=AN.get(sv);if(!a){a={yaw:0,ty:0,next:0,blink:0,bnext:now+1200+Math.random()*1500,mnext:now+3500+Math.random()*3000,mt:0,last:now,ph:Math.random()*9};AN.set(sv,a);
    a.body=sv.querySelector('.rb-body');a.head=sv.querySelector('.rb-head');a.tops=[...sv.querySelectorAll('.rb-top')];a.bl=[...sv.querySelectorAll('.rb-bl')];a.mo=sv.querySelector('.rb-mo');a.ex=sv.querySelector('.rb-ex');a.scan=sv.querySelector('.rb-scan');a.m0=a.mo?a.mo.innerHTML:''}
@@ -923,7 +925,7 @@ function tick(now){requestAnimationFrame(tick);if(document.hidden)return;const L
   if(a.ex)a.ex.setAttribute('transform',`translate(${(y*5).toFixed(2)} 0)`);
   if(a.scan&&!red){const q=((now+a.ph*500)%5200)/5200;a.scan.setAttribute('y',(140+q*160).toFixed(1));a.scan.setAttribute('opacity',q<.6?(.16*Math.sin(q/.6*Math.PI)).toFixed(3):0)}})}
 if(typeof requestAnimationFrame!=='undefined')requestAnimationFrame(tick);
-return{CAT,CATN,DETS,XMAS,KEYS,BASEC,LIGHTC,SCRC,CLOTH,BGC,PAL,def,clean,allow,isX,svg:svgOf,hash:hashN,mouthArt:(i,c)=>(MOUTHS[i]||MOUTHS[0])[1](c)}})();
+return{LITE,CAT,CATN,DETS,XMAS,KEYS,BASEC,LIGHTC,SCRC,CLOTH,BGC,PAL,def,clean,allow,isX,svg:svgOf,hash:hashN,mouthArt:(i,c)=>(MOUTHS[i]||MOUTHS[0])[1](c)}})();
 
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MED={participacion:{n:'Part.',pl:5,xp:15,c:'#a3adb5'},bronce:{n:'Bronce',pl:10,xp:25,c:'#ca906c'},plata:{n:'Plata',pl:20,xp:35,c:'#c6d2da'},oro:{n:'Oro',pl:30,xp:45,c:'#ffc266'},platino:{n:'Platino',pl:40,xp:55,c:'#c7f5f7'}};
