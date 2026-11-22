@@ -976,7 +976,7 @@
    "b": "mwf4xxf13rm",
    "game": "Aero Fighters 2",
    "rules": "",
-   "status": "No cumplido",
+   "status": "Aceptado",
    "m": "",
    "link": "",
    "ob_bronce": "",
@@ -1355,7 +1355,7 @@
  "seasons": [],
  "rounds": {
   "total": 2,
-  "cur": 1
+  "cur": 2
  },
  "music": null,
  "slogan": "JUEGA. SUPERA. TRASCIENDE.",
@@ -1472,18 +1472,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794601016836,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794601021083,
-   "t": "Cambio (editgoal)"
-  },
-  {
-   "at": 1794601024235,
-   "t": "Cambio (editgoal)"
-  },
   {
    "at": 1794601027116,
    "t": "Cambio (editgoal)"
@@ -3070,6 +3058,18 @@
   },
   {
    "at": 1795373412443,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795373476284,
+   "t": "Cambio (nextround)"
+  },
+  {
+   "at": 1795373501980,
+   "t": "Editó un reto"
+  },
+  {
+   "at": 1795373520208,
    "t": "Publicó cambios"
   }
  ],
