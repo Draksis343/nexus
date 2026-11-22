@@ -60,7 +60,7 @@
   {
    "id": "mwicujdshcq",
    "name": "Shadoms",
-   "bonus": 0
+   "bonus": -10
   }
  ],
  "challenges": [
@@ -912,161 +912,70 @@
    "rq": 10
   }
  ],
- "results": [],
- "duels": [
+ "results": [
   {
-   "id": "mwicvz83hvc",
-   "at": 1794778683411,
-   "a": "mwhd47sq1jb",
-   "b": "mwicujdshcq",
-   "game": "Super Street fighter 2 The New Challengers",
-   "rules": "",
-   "status": "Aceptado",
-   "m": "",
-   "link": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "rq": 10,
-   "ms": []
-  },
-  {
-   "id": "mwicvz83kmy",
+   "p": "mwhg9w6crs5",
+   "c": null,
+   "m": "bronce",
    "at": 1795373368698,
-   "a": "mwicujdshcq",
-   "b": "mwhg9w6crs5",
-   "game": "Left 4 dead 2",
-   "rules": "Puedes jugar solo o multijugador",
-   "status": "Cumplido",
-   "m": "bronce",
-   "link": "",
-   "ob_bronce": "Completa una campaña en dificultad Normal o superior",
-   "ob_plata": "Completa una campaña en dificultad Avanzada sin que ningún superviviente sea incapacitado",
-   "ob_oro": "Completa tres campañas diferentes en dificultad Experto",
-   "ob_platino": "Completa una campaña completa en dificultad Experto, sin que ningún integrante del equipo muera definitivamente",
-   "rq": 10,
-   "ms": [
-    "bronce"
-   ]
+   "t": "Reto: Left 4 dead 2",
+   "s": "Temporada 0 - PROTOCOLO ZERO"
   },
   {
-   "id": "mwicvz8316x",
+   "p": "mwhg9zxxvpv",
+   "c": null,
+   "m": "bronce",
    "at": 1795066244514,
-   "a": "mwhg9w6crs5",
-   "b": "mwhg9zxxvpv",
-   "game": "Rush Down (PlayStation 1)",
-   "rules": "",
-   "status": "Cumplido",
-   "m": "bronce",
-   "link": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "rq": 10,
+   "t": "Reto: Rush Down (PlayStation 1)",
+   "s": "Temporada 0 - PROTOCOLO ZERO"
+  },
+  {
+   "p": "mwhdqy01n4u",
+   "c": null,
+   "m": "plata",
    "ms": [
-    "bronce"
-   ]
-  },
-  {
-   "id": "mwicvz83x76",
-   "at": 1795066700404,
-   "a": "mwhg9zxxvpv",
-   "b": "mwf4xxf13rm",
-   "game": "Aero Fighters 2",
-   "rules": "",
-   "status": "Aceptado",
-   "m": "",
-   "link": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "rq": 10,
-   "ms": []
-  },
-  {
-   "id": "mwicvz83kro",
+    "bronce",
+    "plata"
+   ],
    "at": 1795318994050,
-   "a": "mwf4xxf13rm",
-   "b": "mwhdqy01n4u",
-   "game": "Fornite",
-   "rules": "",
-   "status": "Cumplido",
-   "m": "plata",
-   "link": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "rq": 10,
-   "ms": [
-    "bronce",
-    "plata"
-   ]
+   "t": "Reto: Fornite",
+   "s": "Temporada 0 - PROTOCOLO ZERO"
   },
   {
-   "id": "mwicvz83xvq",
-   "at": 1795330033379,
-   "a": "mwhdqy01n4u",
-   "b": "mwhd448ih4p",
-   "game": "Minecraft",
-   "rules": "",
-   "status": "Cumplido",
+   "p": "mwhd448ih4p",
+   "c": null,
    "m": "bronce",
-   "link": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "rq": 10,
-   "ms": [
-    "bronce"
-   ]
+   "at": 1795330033379,
+   "t": "Reto: Minecraft",
+   "s": "Temporada 0 - PROTOCOLO ZERO"
   },
   {
-   "id": "mwicvz83zks",
-   "at": 1795066329777,
-   "a": "mwhd448ih4p",
-   "b": "mwen9cex36h",
-   "game": "Plantas vz Zombies",
-   "rules": "",
-   "status": "Cumplido",
+   "p": "mwen9cex36h",
+   "c": null,
    "m": "plata",
-   "link": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "rq": 10,
    "ms": [
     "bronce",
     "plata"
-   ]
+   ],
+   "at": 1795066329777,
+   "t": "Reto: Plantas vz Zombies",
+   "s": "Temporada 0 - PROTOCOLO ZERO"
   },
   {
-   "id": "mwicvz83qqe",
-   "at": 1795246176456,
-   "a": "mwen9cex36h",
-   "b": "mwhd47sq1jb",
-   "game": "Pepsiman",
-   "rules": "",
-   "status": "Cumplido",
+   "p": "mwhd47sq1jb",
+   "c": null,
    "m": "oro",
-   "link": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
-   "rq": 10,
    "ms": [
     "bronce",
     "plata",
     "oro"
-   ]
+   ],
+   "at": 1795246176456,
+   "t": "Reto: Pepsiman",
+   "s": "Temporada 0 - PROTOCOLO ZERO"
   }
  ],
+ "duels": [],
  "event": null,
  "achs": [
   {
@@ -1423,8 +1332,16 @@
  "sStart": 0,
  "sEnd": 0,
  "sfx": {},
- "rdl": 1795370400000,
- "pens": [],
+ "rdl": 0,
+ "pens": [
+  {
+   "k": "d|mwicvz83hvc|mwicujdshcq",
+   "p": "mwicujdshcq",
+   "v": 10,
+   "why": "Aceptó el reto contra DarkPlayer y no envió evidencia a tiempo",
+   "at": 1795374703070
+  }
+ ],
  "penv": {
   "ch": 10,
   "rej": 5,
@@ -1472,14 +1389,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794601027116,
-   "t": "Cambio (editgoal)"
-  },
-  {
-   "at": 1794601049635,
-   "t": "Cambio (newgoal)"
-  },
   {
    "at": 1794601060135,
    "t": "Cambio (editgoal)"
@@ -3070,6 +2979,14 @@
   },
   {
    "at": 1795373520208,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795374705271,
+   "t": "Cerró la ronda de retos"
+  },
+  {
+   "at": 1795374709367,
    "t": "Publicó cambios"
   }
  ],
