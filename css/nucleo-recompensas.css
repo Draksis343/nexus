@@ -1,0 +1,31 @@
+/* NEXUS ARENA · nucleo-recompensas
+   Apertura de núcleos y recompensas selladas. */
+.loot{position:fixed;inset:0;z-index:9990;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--lc) 16%,#0b0d10) 0,#06080b 70%);opacity:0;transition:opacity .35s;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.loot.on{opacity:1}
+.loot.bye{opacity:0;transition:opacity .45s}
+.loot canvas{position:absolute;inset:0;width:100%;height:100%}
+.lt-hint{position:absolute;bottom:22px;left:0;right:0;text-align:center;font:700 11px 'Space Mono',monospace;letter-spacing:.2em;color:#ffffff66;text-transform:uppercase;animation:lthint 1.6s ease-in-out infinite}
+.lt-card{position:relative;z-index:2;width:min(300px,82vw);padding:22px 18px 16px;border-radius:20px;text-align:center;color:var(--text,#fff);background:linear-gradient(180deg,color-mix(in srgb,var(--lc) 14%,#11151b),#0b0e12 70%);border:1px solid color-mix(in srgb,var(--lc) 70%,transparent);box-shadow:0 0 0 1px #0008,0 0 40px color-mix(in srgb,var(--lc) 55%,transparent),inset 0 0 30px color-mix(in srgb,var(--lc) 14%,transparent);opacity:0;transform:scale(.4) translateY(20px);pointer-events:none}
+.lt-card.in{animation:ltin .7s cubic-bezier(.2,1.4,.4,1) forwards;pointer-events:auto}
+.lt-card.out{animation:ltout .7s ease-in forwards}
+.lt-rar{display:inline-block;font:700 10px 'Space Mono',monospace;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border-radius:999px;color:#0b0d10;background:var(--lc);box-shadow:0 0 14px var(--lc)}
+.lt-ic{display:grid;place-items:center;min-height:108px;margin:14px 0 8px;font-size:58px}
+.lt-ic img{max-width:120px;max-height:108px;border-radius:12px}
+.lt-ic .avatar{width:84px!important;height:84px!important;font-size:30px}
+.lt-ic .bdp{width:120px;height:76px}
+.lt-ic canvas{position:static!important;width:150px!important;height:90px!important}
+.lt-card h3{margin:4px 0 2px;font:700 20px 'Space Mono',monospace}
+.lt-card p{margin:0;color:var(--muted,#9aa);font-size:13px}
+.lt-bt{display:flex;gap:8px;margin-top:16px}
+.lt-bt button{flex:1}
+.lt-beam{position:fixed;z-index:3;width:2px;border-radius:2px;background:linear-gradient(transparent,var(--lc),#fff);box-shadow:0 0 8px var(--lc),0 0 2px #fff;pointer-events:none;animation:ltbeam var(--d,.8s) ease-out forwards}
+.lt-core2d{width:min(240px,60vw);filter:drop-shadow(0 0 22px var(--lc));animation:ltcore 1.6s ease-in-out forwards}
+.lt-flash{position:fixed;inset:0;z-index:1;background:radial-gradient(circle,var(--lc),transparent 60%);opacity:0;pointer-events:none}
+.lt-flash.go{animation:ltfl .8s ease-out}
+.lt-seal{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;padding:14px 10px!important;border:1px solid color-mix(in srgb,var(--lc) 60%,var(--line))!important;background:radial-gradient(circle at 50% 35%,color-mix(in srgb,var(--lc) 16%,var(--p1)),var(--p1) 70%)!important;color:var(--text);font:inherit;cursor:pointer;border-radius:14px;text-align:center}
+.lt-seal svg{width:74px;height:74px;filter:drop-shadow(0 0 10px var(--lc));animation:ltbob 2.6s ease-in-out infinite}
+.lt-seal b{font:700 11px 'Space Mono',monospace;letter-spacing:.12em;color:var(--lc);text-transform:uppercase}
+.lt-seal small{color:var(--muted);font-size:11px}
+.sh-o.lt-seal svg{width:56px;height:56px}
+.rdot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#ff4d4d;box-shadow:0 0 0 2px var(--p1,#11151b),0 0 8px #ff4d4d;flex:none;vertical-align:middle;margin-left:6px;animation:rdp 1.8s ease-in-out infinite}
+.ac-row .rdot{margin:0 4px 0 auto}

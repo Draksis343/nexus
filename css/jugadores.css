@@ -1,0 +1,44 @@
+/* NEXUS ARENA · jugadores
+   Lista de jugadores y perfil. */
+.prs{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:20px;padding:0 6px;margin-left:8px;border:1px solid #e6b422;color:#e6b422;background:#e6b4221a;font:700 12px 'Space Mono',monospace;letter-spacing:.04em;text-shadow:0 0 6px #e6b42266;vertical-align:middle}
+.mvp{display:flex;align-items:center;gap:18px;width:100%;text-align:left;padding:14px 16px;border-radius:18px;border:1px solid color-mix(in srgb,var(--amber) 45%,var(--line));background:linear-gradient(110deg,color-mix(in srgb,var(--amber) 13%,var(--p2)),var(--p2) 60%);color:inherit;font:inherit;cursor:pointer}
+.mvp:hover{border-color:var(--amber)}
+.mvp-av{position:relative;flex:none}
+.mvp-av .avatar{width:112px;height:112px;border-radius:50%;font-size:42px}
+.mvp-st{position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);white-space:nowrap;font:700 10px 'Space Mono',monospace;padding:3px 8px;border-radius:999px;background:var(--amber);color:#1a1206;box-shadow:0 0 12px #ffc26688}
+.mvp-i{min-width:0;display:grid;gap:2px;flex:1}
+.mvp-i small{font:700 10px 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+.mvp-i>b{font-size:22px;line-height:1.15}
+.mvp-s{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:8px}
+.mvp-s div{background:color-mix(in srgb,var(--p1) 80%,transparent);border:1px solid var(--line);border-radius:12px;padding:7px 8px;display:grid}
+.mvp-s b{font:700 17px 'Space Mono',monospace}
+.mvp-s span{font-size:11px;color:var(--muted)}
+@media(max-width:600px){.mvp{flex-direction:column;text-align:center}.mvp-i{justify-items:center}.mvp-s{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}}
+.pl-wrap{display:grid;grid-template-columns:290px minmax(0,1fr);gap:18px;align-items:start}
+.pl-side{position:sticky;top:12px;max-height:calc(100vh - 24px);display:flex;flex-direction:column;padding:14px;border-radius:18px}
+.pl-list{overflow:auto;display:grid;gap:4px;margin-top:10px;padding-right:2px}
+.pl-it{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border-radius:12px;border:1px solid transparent;background:transparent;text-align:left;color:var(--text);cursor:pointer;font:inherit}
+.pl-it:hover{background:color-mix(in srgb,var(--p1) 70%,transparent)}
+.pl-it.on{border-color:var(--amber);background:color-mix(in srgb,var(--amber) 9%,var(--p2))}
+.pl-it .avatar{width:38px;height:38px;border-radius:50%;font-size:16px}
+.pl-it>div:not(.avatar){min-width:0;flex:1}
+.pl-it .avatar{flex:none}
+.pl-it b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-it div>span{font-size:11px;color:var(--muted)}
+.pl-top{margin-bottom:12px}
+.pl-tg{display:none!important}
+.pf-head{padding:18px;border-radius:18px;margin:-6px -6px 14px;background:linear-gradient(120deg,color-mix(in srgb,var(--amber) 10%,var(--p2)),var(--p2) 55%,color-mix(in srgb,var(--cyan) 12%,var(--p2)))}
+.pf-head h2 .badge{font-size:10px;vertical-align:middle}
+#pdet{border-radius:18px}
+#pdet .tabs{flex-wrap:wrap;overflow:visible}
+@media(max-width:900px){.pl-wrap{grid-template-columns:1fr}.pl-side{position:static;max-height:none;display:none}.pl-wrap.open .pl-side{display:flex}.pl-tg{display:inline-flex!important}.pl-list{max-height:60vh}}
+.vit{margin-top:12px;padding:14px;border-radius:16px;background:linear-gradient(120deg,color-mix(in srgb,var(--amber) 12%,var(--p2)),var(--p2));border:1px solid color-mix(in srgb,var(--amber) 35%,var(--line))}
+.vit h4{margin:0 0 10px;font:700 12px 'Space Mono',monospace;letter-spacing:.12em;color:var(--amber)}
+.vit-l{display:flex;gap:10px;overflow-x:auto;padding-bottom:2px}
+.vit-t{flex:0 0 110px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 8px;border-radius:14px;background:color-mix(in srgb,var(--p1) 80%,transparent);border:1px solid color-mix(in srgb,var(--amber) 30%,var(--line));text-align:center}
+.vit-t .ti{width:54px;height:54px;display:grid;place-items:center;font-size:36px;filter:drop-shadow(0 0 10px color-mix(in srgb,var(--amber) 60%,transparent))}
+.vit-t .ti img{max-width:100%;max-height:100%;object-fit:contain}
+.vit-t b{font-size:11px;color:var(--text);line-height:1.2}
+.vit-t span{font-size:10px;color:var(--muted)}
+.pf-head{position:relative;overflow:hidden}
+.pf-head[class*=' bg-']{box-shadow:inset 0 0 0 100vmax #0007}

@@ -1,0 +1,44 @@
+// NEXUS ARENA · Sección: cuenta
+// Mi cuenta del jugador: inicio, estilo, edición de perfil.
+// Se carga en orden desde index.html; comparte variables globales con los demás archivos.
+function cuenta(){if(A)return`<section class="panel pad"><p class="muted">Estás como administrador. Las cuentas de jugadores se gestionan en <strong>Cuentas</strong>.</p></section>`;
+ if(!FBU())return`<section class="panel pad"><p class="muted">Las cuentas de jugadores aún no están activadas.</p></section>`;
+ if(!U)return`<section class="panel pad"><h2 class="section-title">Entra a tu cuenta</h2><p class="muted">Con tu cuenta puedes cambiar tu foto, tu nombre y tu título, y enviar evidencias sin escribir tu nombre.</p><div class="mg"><button class="btn" data-a="ulogin">Iniciar sesión</button><button class="btn secondary" data-a="register">Crear cuenta</button></div></section>`;
+ const p=myP();
+ if(U.estado==='bloqueado')return`<section class="panel pad"><p class="red">Tu cuenta está bloqueada. Habla con el administrador.</p></section>`;
+ if(!p)return`<section class="panel pad"><h2 class="section-title">Hola, ${esc(U.mostrar)}</h2><p class="muted">Tu cuenta <strong>${esc(U.usuario)}</strong> está creada. El administrador debe activarla y crear tu jugador en la liga${U.pid?'. Ya la activó: tu jugador aparecerá en cuanto publique los cambios, vuelve en unos minutos':''}. Cuando esté listo podrás editar tu perfil aquí.</p><div class="mg"><button class="btn small secondary" data-a="refreshme">Revisar ahora</button><button class="btn small ghost" data-a="ulogout">Cerrar sesión</button></div></section>`;
+ return accHome(p)}
+function accHome(p){const s=stats(p),q=passXP(p),P=PS(),soon=P.status!=='Activo',cl=soon?0:passCanClaim(p,q).length,own=rwOwned(p),cnt=t=>own.filter(r=>r.type===t).length,tt=eqt(p);
+ const val=k=>{if(k==='titulo')return tt?`<span class="val" style="color:${rc(tt.rar)}">${esc(tt.name)}</span>`:'<span class="val" style="color:var(--muted)">Sin título</span>';
+  if(k==='fx2'){const a=cos(p,'fondo'),b=cos(p,'efecto'),t=[a&&a.name,b&&b.name].filter(Boolean);return t.length?`<span class="val">${esc(t.join(' · '))}</span>`:'<span class="val" style="color:var(--muted)">Ninguno</span>'}
+  const r=cos(p,k);if(!r)return'<span class="val" style="color:var(--muted)">Ninguno</span>';
+  if(k==='color')return r.v==='degradado'?`<span class="val nm-grad">${esc(r.name)}</span>`:`<span class="val" style="color:${/^#[0-9a-f]{6}$/i.test(r.v||'')?r.v:'var(--cyan)'}">${esc(r.name)}</span>`;
+  if(k==='emblema')return`<span class="val">${esc(String(r.v||'').slice(0,4))} ${esc(r.name)}</span>`;return`<span class="val">${esc(r.name)}</span>`};
+ const sub=k=>{const n=k==='titulo'?owned(p).length:k==='fx2'?cnt('fondo')+cnt('efecto'):cnt(k);return k==='titulo'?(n===1?'1 obtenido':n+' obtenidos'):(n===1?'1 desbloqueado':n+' desbloqueados')};
+ const goal=soon?`<button class="ac-goal" data-a="nav" data-k="pase"><span class="ac-go">›</span><small>🎟 PASE DE TEMPORADA</small><h3>Muy pronto</h3><p>El pase de esta temporada aún no está activo.</p></button>`
+  :`<button class="ac-goal" data-a="nav" data-k="pase"><span class="ac-go">›</span><small>🎟 PASE DE TEMPORADA</small><h3>Nivel ${q.lv}</h3><p>${cl?`🎁 ${cl} ${cl===1?'recompensa':'recompensas'} por reclamar · `:''}${q.lv>=q.N?'¡Pase completo!':(q.per-q.into)+' XP para el nivel '+(q.lv+1)}</p><div class="ac-gb"><div><span style="width:${q.pct.toFixed(1)}%"></span></div><b>${Math.floor(q.pct)}%</b></div></button>`;
+ const TOP=`<div class="ac-top"><div><small>${esc(D.season)} · ${esc(s.rank)}</small><h2>Hola, ${pnm(p)}</h2><p>${esc(D.slogan||'')}</p></div><div class="ac-av">${av(p,'rb-live')}${tt?`<span class="ttl2" style="color:${rc(tt.rar)}">${esc(tt.name)}</span>`:''}</div></div>
+ <div class="ac-tiles"><div class="ac-tile" style="--c:var(--amber)"><i>◆</i><strong>${s.pl}</strong><span>PL temporada</span></div><div class="ac-tile" style="--c:var(--cyan)"><i>✦</i><strong>${s.medals}</strong><span>Medallas</span></div><div class="ac-tile" style="--c:var(--red)"><i>🏅</i><strong>${allAch().filter(a=>has(p,a,s)).length}</strong><span>Logros</span></div></div>`,BODY=`${goal}<div class="ac-h"><h3>Tu estilo</h3><button data-a="goinv">Ver inventario${sealedOf(p).length?'<i class="rdot"></i>':''} ›</button></div>
+ <div class="ac-list"><button class="ac-row" data-a="rbedit"><span class="ic">🤖</span><div><b>Mi avatar</b><span>${avCfg(p)?'Tu robot personalizado':'Arma tu robot: ojos, módulos, ropa y más'}</span></div></button>${STY.map(([k,n,i])=>`<button class="ac-row" data-a="stysheet" data-k="${k}"><span class="ic">${i}</span><div><b>${n}</b><span>${sub(k)}</span></div>${sealedOf(p).some(r=>k==='fx2'?['fondo','efecto'].includes(r.type):r.type===k)?'<i class="rdot" title="Recompensa sin abrir"></i>':''}${val(k)}<span class="ch">›</span></button>`).join('')}</div>
+ <div class="ac-foot"><button class="btn secondary" style="flex:1" data-a="accedit">✎ Editar datos de cuenta</button><button class="btn ghost" data-a="ulogout">Salir</button></div>`;return accHome.parts?{TOP,BODY}:`<div class="ac">${TOP}${BODY}</div>`}
+function accBody(p){accHome.parts=1;try{return accHome(p).BODY}finally{accHome.parts=0}}
+function accEdit(){const p=myP();if(!p)return;S.sty=null;const on=pushOn();
+ sheetOpen(`<h3>Datos de cuenta</h3><p>Cambia tu foto, tu nombre o tu contraseña.</p>
+ <div class="fl" style="gap:14px;margin-bottom:14px">${av(p,'acc64')}<div class="mg"><button type="button" class="btn small secondary" data-a="cphoto" style="border-radius:12px">📷 Cambiar foto</button>${PROF[p.id]&&PROF[p.id].f?'<button type="button" class="btn small ghost" data-a="cdelphoto" style="border-radius:12px">Quitar</button>':''}</div></div>
+ <label class="ac-fld">Nombre que verán todos<input id="cn" class="field" maxlength="24" value="${esc(U.nombre||p._o&&p._o.name||p.name)}"></label>
+ <label class="ac-fld">Usuario de RetroAchievements (para desafíos automáticos)<input id="cra" class="field" maxlength="40" placeholder="Tu usuario en retroachievements.org" value="${esc(U.ra||'')}"></label>
+ <label class="ac-fld">Usuario<input class="field" value="${esc(U.usuario||'')}" disabled></label>
+ <div class="sh-l"><button type="button" class="ac-row" data-a="cpass"><span class="ic">🔑</span><div><b>Contraseña</b><span>Cambiarla</span></div><span class="ch">›</span></button>
+ <button type="button" class="ac-row" data-a="${on?'pushoff':'pushon'}"><span class="ic">🔔</span><div><b>Notificaciones</b><span>${on?'Activadas en este dispositivo · tocar para desactivar':'Desactivadas en este dispositivo · tocar para activar'}</span></div><span class="ch">›</span></button></div>
+ <div class="ac-foot"><button type="button" class="btn ghost" style="flex:1" data-a="close">Cancelar</button><button type="button" class="btn" style="flex:1" data-a="accsave">Guardar</button></div>`)}
+
+// ---- acciones de esta sección ----
+Object.assign(act,{
+ accedit(){accEdit()},
+ async ttlset(e){const p=myP();if(!p)return;const nm=U.nombre||p._o&&p._o.name||p.name;const j=await api({action:'profile',token:TOK(),nombre:nm,titulo:e.n||''});if(j.ok){U=j;await profLoad();ovlApply();render();stySheet('titulo');toast(e.n?'Título equipado.':'Título quitado.')}else apiErr(j,9)},
+ async accsave(){const n=($('#cn').value||'').trim();if(!n)return toast('Escribe un nombre.');const ra=(($('#cra')||{}).value||'').trim(),j=await api({action:'profile',token:TOK(),nombre:n,titulo:U.titulo||'',...(ra!==(U.ra||'')?{ra}:{})});if(j.ok){U=j;await profLoad();ovlApply();closeM();render();toast('Datos guardados.')}else apiErr(j,9)},
+ cphoto(){const i=document.createElement('input');i.type='file';i.accept='image/*';i.onchange=()=>{const f=i.files[0];if(f)imgData(f,async u=>{const j=await api({action:'profile',token:TOK(),foto:u});if(j.ok){U=j;await profLoad();ovlApply();render();if($('#modal').classList.contains('sheetm'))accEdit();toast('Foto actualizada.')}else toast(j.error||'No se pudo guardar la foto.')})};i.click()},
+ async cdelphoto(){const j=await api({action:'profile',token:TOK(),foto:''});if(j.ok){U=j;await profLoad();ovlApply();render();if($('#modal').classList.contains('sheetm'))accEdit();toast('Foto quitada.')}else toast(j.error||'No se pudo.')},
+ async csave(){const n=$('#cn').value.trim(),t=$('#ct').value;if(!n)return toast('Escribe un nombre.');const j=await api({action:'profile',token:TOK(),nombre:n,titulo:t});if(j.ok){U=j;await profLoad();ovlApply();render();toast('Perfil actualizado.')}else toast(j.error||'No se pudo guardar.')},
+ cpass(){openForm('Cambiar contraseña',[['v','Contraseña actual*','password'],['n','Contraseña nueva* (mínimo 6)','password']],{},async o=>{const j=await api({action:'passwd',token:TOK(),vieja:o.v,nueva:o.n});toast(j.ok?'Contraseña cambiada.':(j.error||'No se pudo.'))})}
+});

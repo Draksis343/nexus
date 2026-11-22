@@ -1,0 +1,10 @@
+/* NEXUS ARENA · tema-navidad
+   Tema navideño y efectos del sitio. */
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:35}
+#bgfix{position:fixed;inset:0;z-index:-2;pointer-events:none;display:none}
+#xm{position:absolute;top:0;left:248px;right:0;height:44px;z-index:20;pointer-events:none;overflow:hidden}
+#xm svg{display:block}
+#xm .bl{animation:xbl 1.7s ease-in-out infinite}
+@media(max-width:900px){#xm{left:0}}
+.xmas h1:after{content:" 🎄";font-size:.65em;letter-spacing:0}
+.xmas .panel:hover{border-color:color-mix(in srgb,var(--cyan) 55%,var(--line))}

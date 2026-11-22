@@ -1,0 +1,52 @@
+/* NEXUS ARENA · ajustes-finales
+   Reglas que deben ir al final porque ajustan todo lo anterior (interfaz redondeada, rendimiento, modo ligero, contraste). */
+@media(prefers-reduced-motion:reduce){.mark:after,.tl-big:after,.tlv-line i:after,.tl-it.live .tl-pin{animation:none}}
+@media(prefers-reduced-motion:reduce){#xs .star,#xm .bl{animation:none}}
+@media(prefers-reduced-motion:reduce){.rbt .rb-spin{animation:none}}
+@media(prefers-reduced-motion:reduce){.panel.kb::before{transition:none;transform:none}}
+body.hc{--muted:#e6ebee;--line:#8a949c;--text:#fff}
+body.hc .subtle,body.hc .muted,body.hc .lbl,body.hc .tl-hint{color:#e6ebee!important}
+body.hc .panel{border-color:#8a949c}
+@media(prefers-reduced-motion:reduce){.prw.can,.avatar.fr-fuego,.avatar.fr-arcoiris{animation:none}}
+@media(prefers-reduced-motion:reduce){[class*=" bd-"],[class^="bd-"]{animation:none!important}}
+@media(prefers-reduced-motion:reduce){.avatar[class*=fr-]{animation:none!important}}
+.bg-galaxia{animation-timing-function:steps(400)!important}
+.bg-circuito{animation-timing-function:steps(200)!important}
+.bg-aurora,.bg-aurorab{animation-timing-function:steps(90)!important}
+.bg-plasma{animation-timing-function:steps(60)!important}
+.bg-holo{animation-timing-function:steps(80)!important}
+.bg-fuego{animation-timing-function:steps(12)!important}
+.bg-chimenea{animation-timing-function:steps(13)!important}
+.bg-matrix{animation-timing-function:steps(20)!important}
+.bg-navidad,.bg-pinos{animation-timing-function:steps(72)!important}
+.bg-nieve{animation-timing-function:steps(60)!important}
+.pf-head{contain:paint}
+.fbp{animation-play-state:paused!important}
+.fbp:hover,button:hover>.fbp,button:focus-visible>.fbp{animation-play-state:running!important}
+html.lite [class^="bg-"],html.lite [class*=" bg-"],html.lite .avatar[class*=" fr-"],html.lite .avatar[class*=" fr-"]::before,html.lite .avatar[class*=" fr-"]::after,html.lite .emb,html.lite [class*=" bd-"],html.lite [class*=" bd-"]::before,html.lite [class*=" bd-"]::after,html.lite .rbt .rb-spin{animation:none!important}
+/* === Cosméticos v2 === */
+@media(prefers-reduced-motion:reduce){.avatar[class*=' fr-']::before,.avatar[class*=' fr-']::after,[class*='nm-fx'],[class*=' ea-'],[class*=' bg-']{animation:none!important}}
+/* navidad 2 */
+:root{--rd:18px;--rd2:12px}
+.panel{border-radius:var(--rd)}
+.panel:after{content:none!important}
+.panel.kb{overflow:hidden;isolation:isolate}
+.panel.kb::before{border-radius:inherit}
+.stat,.card,.hero,.news,.lg,.prw,.tl-card{border-radius:var(--rd)}
+.stat{border-radius:14px}
+.btn,.mbtn,.tab,.nav,.tlnav,.ac-row,.ac-goal,.sh-o,.ptabs button,.ntabs button{border-radius:var(--rd2)}
+.badge{border-radius:999px;padding:5px 10px}
+input,select,textarea{border-radius:10px}
+.avatar{border-radius:50%!important}
+.news img{border-radius:12px}
+.tick{border-radius:3px 3px 0 0}
+.rrow,.line{border-radius:10px}
+#mform,.modal form,.modal>form{border-radius:22px}
+#toast{border-radius:14px}
+.frost .panel:before{border-radius:var(--rd) var(--rd) 0 0}
+#menu{border-radius:12px}
+details.panel>summary{border-radius:var(--rd)}
+.xmas .hero{border-image:none!important;border-bottom-width:1px!important;overflow:hidden}
+.xmas .hero:not(.kb)::before{content:'';position:absolute;left:0;right:0;top:auto;bottom:0;height:5px;border-radius:0;background:repeating-linear-gradient(45deg,#e8454b 0 9px,#f4f1ea 9px 18px);pointer-events:none}
+/* === RetroAchievements === */
+@media(prefers-reduced-motion:reduce){.lt-seal svg,.rdot,.lt-hint{animation:none}}

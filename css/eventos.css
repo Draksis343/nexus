@@ -1,0 +1,38 @@
+/* NEXUS ARENA · eventos
+   Eventos de temporada. */
+.evp{display:flex;align-items:center;gap:8px}
+.evp .field{margin:0;flex:1}
+.evp>span{width:18px;text-align:center}
+.evnote{margin:0;padding:8px 10px;border-radius:10px;font-size:12px;color:var(--muted);background:color-mix(in srgb,var(--cyan) 8%,var(--p1));border:1px solid color-mix(in srgb,var(--cyan) 30%,var(--line))}
+.evnote b{color:var(--text)}
+.evc{border-color:color-mix(in srgb,var(--ec) 70%,var(--line))!important;background:radial-gradient(circle at 88% 0%,color-mix(in srgb,var(--ec) 26%,transparent),transparent 55%),linear-gradient(110deg,color-mix(in srgb,var(--ec) 12%,var(--p2)),var(--p2) 65%)!important;box-shadow:0 0 0 1px color-mix(in srgb,var(--ec) 25%,transparent),0 16px 40px color-mix(in srgb,var(--ec) 18%,#0006)!important}
+.evc.kb{background:transparent!important}
+.evb{color:var(--ec)!important;border-color:var(--ec)!important;background:color-mix(in srgb,var(--ec) 14%,transparent)}
+.evchip{display:inline-flex;align-items:center;gap:4px;padding:6px 10px;border-radius:999px;background:#0006;border:1px solid var(--line);font:700 11px 'Space Mono',monospace;white-space:nowrap}
+.evbtn{background:var(--ec)!important;border-color:var(--ec)!important;color:#0b0d10!important}
+.evc .cdb b{color:var(--ec)}
+.evadd{width:100%;padding:22px;border:1px dashed var(--line)!important;background:transparent!important;color:var(--muted);font:700 13px inherit;cursor:pointer;box-shadow:none!important}
+.evadd:hover{color:var(--amber);border-color:var(--amber)!important}
+.evgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:20px;align-items:start}
+@media(max-width:900px){.evgrid{grid-template-columns:1fr}}
+.evh .big{font-size:clamp(28px,4vw,52px)}
+.evac{display:flex;gap:12px;align-items:center;padding:12px 14px;border-left:3px solid var(--pc)!important}
+.evac.got{background:linear-gradient(90deg,color-mix(in srgb,var(--cyan) 10%,var(--p1)),var(--p1))}
+.evst{text-align:right;font-size:12px;white-space:nowrap}
+.evpzg{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.evpz{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:14px 10px;border-color:color-mix(in srgb,var(--pc) 55%,var(--line))!important;background:radial-gradient(circle at 50% 20%,color-mix(in srgb,var(--pc) 16%,var(--p1)),var(--p1) 70%)!important}
+.evpi{font-size:38px;line-height:1;min-height:56px;display:grid;place-items:center;filter:drop-shadow(0 0 10px var(--pc))}
+.evpi img{max-width:72px;max-height:56px;border-radius:10px}
+.evli{border-left:3px solid var(--ec)!important}
+.evit{display:flex;gap:12px;align-items:center;padding:12px 14px;border-left:3px solid var(--pc)!important;flex-wrap:wrap}
+.evit.got{background:linear-gradient(90deg,color-mix(in srgb,var(--cyan) 10%,var(--p1)),var(--p1))}
+.evcore{border-color:color-mix(in srgb,var(--amber) 45%,var(--line))!important}
+.evcoreic svg{width:64px;height:64px;filter:drop-shadow(0 0 10px var(--amber));animation:ltbob 2.6s ease-in-out infinite}
+.evrow{grid-template-columns:1fr auto auto auto auto}
+.evrow select{width:auto}
+@media(max-width:600px){.evrow{grid-template-columns:1fr 1fr}.evrow>input:first-child{grid-column:1/-1}}
+.evico{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;border:1px dashed var(--line);cursor:pointer;font-size:16px;overflow:hidden;flex:none}
+.evico img{width:100%;height:100%;object-fit:contain}
+.evled .evrow{display:flex;flex-wrap:wrap}
+.evled .evrow>input:first-child{flex:1;min-width:220px}
+.evled .evrow .gedesc{flex-basis:100%}

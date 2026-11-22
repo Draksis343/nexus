@@ -1,0 +1,37 @@
+/* NEXUS ARENA · pase
+   Pase de temporada. */
+.pass-hero{padding:22px;background:linear-gradient(120deg,color-mix(in srgb,var(--amber) 15%,var(--p2)) 0%,var(--p2) 46%,color-mix(in srgb,var(--cyan) 17%,var(--p2)) 100%)}
+.plv{display:block;text-align:center;font:700 11px 'Space Mono',monospace;letter-spacing:.1em;color:var(--muted);margin:-4px 0 8px}
+.pcol.on .plv{color:var(--amber)}
+.pcards{display:flex;gap:8px;padding:0 0}
+.pcards .prw{flex:1 1 0;min-width:0}
+.prw{--tc:var(--cyan);position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;min-height:172px;margin-bottom:10px;padding:12px 10px 10px;text-align:center;border:1px solid color-mix(in srgb,var(--tc) 45%,var(--line));background:linear-gradient(180deg,color-mix(in srgb,var(--tc) 16%,var(--p2)),var(--p1));transition:transform .15s,box-shadow .15s}
+.prw:hover{transform:translateY(-3px);box-shadow:0 8px 20px #0006}
+.prw .pi{width:74px;height:74px;display:grid;place-items:center;font-size:40px;line-height:1}
+.prw .pi img{max-width:100%;max-height:100%;object-fit:cover;border-radius:4px}
+.prw b{font:700 12px 'Space Mono',monospace;color:var(--text);line-height:1.25}
+.prw small{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--tc)}
+.prw.lock .pi:after{content:"🔒";position:absolute;top:6px;right:6px;width:24px;height:24px;display:grid;place-items:center;font-size:12px;border-radius:50%;background:color-mix(in srgb,var(--bg) 75%,transparent);border:1px solid var(--line)}
+.prw.got{border-color:var(--cyan)}
+.prw.got:after{content:"✓";position:absolute;top:6px;left:8px;color:var(--cyan);font-weight:700}
+.prw.can{border-color:var(--amber);animation:pglow 1.8s ease-in-out infinite}
+.prw .pact{margin-top:auto;display:flex;gap:4px;flex-wrap:wrap;justify-content:center}
+.plvbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 18px}
+.plvbar .pst{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--amber);color:var(--amber);font-size:18px}
+.plvbar .pln{min-width:140px}
+.plvbar .pln strong{display:block;font:700 18px 'Space Mono',monospace;color:var(--text)}
+.plvbar .pln span{font-size:12px;color:var(--muted)}
+.pinv{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.pinv .panel{padding:12px}
+.pl-it .plv2{font:700 12px 'Space Mono',monospace;color:var(--amber);white-space:nowrap}
+.ptabs{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.ptabs button{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:color-mix(in srgb,var(--p1) 80%,transparent);color:var(--muted);font:700 13px 'Space Mono',monospace;letter-spacing:.04em;cursor:pointer}
+.ptabs button:hover{border-color:color-mix(in srgb,var(--amber) 55%,var(--line));color:var(--text)}
+.ptabs button.on{background:var(--amber);border-color:var(--amber);color:var(--bg)}
+.ptabs button span{font-size:11px;padding:1px 7px;border-radius:999px;background:#0003}
+.prw .pi{overflow:hidden;border-radius:6px}
+.prw .pi img{width:auto;height:auto;max-width:74px;max-height:74px;object-fit:contain;border-radius:4px}
+.pinv .panel{min-width:0;overflow:hidden}
+.pinv .fl{align-items:center;gap:10px}
+.pinv .fl>div{min-width:0}
+.pinv .fl strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

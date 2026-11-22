@@ -1,0 +1,26 @@
+/* NEXUS ARENA · inicio
+   Command Center: desafío Nexus, resumen semanal, MVP, temporada, noticias. */
+.hero{padding:28px 30px;background:linear-gradient(110deg,color-mix(in srgb,var(--amber) 9%,var(--p2)),var(--p2) 65%,color-mix(in srgb,var(--cyan) 8%,var(--p2)));border-color:color-mix(in srgb,var(--amber) 45%,var(--line))}
+.cd{font-size:clamp(25px,3vw,40px)}
+.xmas .hero{border-width:1px 1px 5px 1px;border-image:repeating-linear-gradient(45deg,#e8454b 0 9px,#f4f1ea 9px 18px) 1}
+.news{padding:12px 0;border-bottom:1px solid #ffffff13}
+.news:last-of-type{border:0}
+.news img{width:100%;max-height:200px;object-fit:cover;display:block;margin-bottom:10px;border:1px solid var(--line)}
+.news h3{margin:8px 0 6px;font-size:16px}
+.ticks{display:flex;gap:6px}
+.tick{flex:1;text-align:center;border-top:3px solid var(--line);padding-top:10px;font:11px 'Space Mono';color:var(--muted)}
+.tick.done{border-color:var(--cyan)}
+.tick.current{border-color:var(--amber);color:var(--amber)}
+.upd-row{display:flex;justify-content:flex-end;margin:-6px 0 10px}
+.updb{position:relative;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:color-mix(in srgb,var(--p2) 85%,transparent);color:var(--muted);font:700 11px 'Space Mono',monospace;letter-spacing:.04em;cursor:pointer}
+.updb:hover{color:var(--text);border-color:color-mix(in srgb,var(--cyan) 55%,var(--line))}
+.updb b{color:var(--cyan)}
+.updb i{position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);animation:xbl 1.6s ease-in-out infinite}
+.unote{padding:14px;border-radius:14px;background:var(--p1);border:1px solid var(--line)}
+.unote.last{border-color:color-mix(in srgb,var(--cyan) 50%,var(--line))}
+.uver{padding:2px 8px;border-radius:999px;background:var(--cyan);color:var(--bg);font:700 10px 'Space Mono',monospace}
+.stat-grid.wk{grid-template-columns:repeat(4,1fr)}
+.stat-grid.wk .stat{display:flex;flex-direction:column;justify-content:space-between}
+.stat-grid.wk .stat small{font-size:10px}
+@media(max-width:600px){.stat-grid.wk{grid-template-columns:repeat(2,1fr)}}
+/* === Interfaz redondeada (como los perfiles) === */

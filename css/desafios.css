@@ -1,0 +1,17 @@
+/* NEXUS ARENA · desafios
+   Tarjetas y detalle de desafíos, participantes, resultados, evidencias. */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{padding:19px;display:flex;flex-direction:column;gap:10px;text-align:left;color:inherit;width:100%;min-height:150px}
+.card:hover,.card.sel{border-color:var(--amber)}
+.card h3{font-family:'Space Mono';letter-spacing:-.04em;margin:0}
+.kb{position:relative;overflow:hidden;isolation:isolate}
+.panel.kb::before{content:'';position:absolute;inset:0;height:auto;border-radius:0;z-index:-1;pointer-events:none;background:var(--kbg),var(--kbi) center/cover;transform-origin:60% 40%;transform:scale(1.15);transition:transform 6s cubic-bezier(.2,.6,.2,1)}
+.panel.kb:hover::before,.panel.kb:focus-visible::before{transform:scale(1)}
+@media(max-width:1100px){.card-grid{grid-template-columns:repeat(2,1fr)}.stat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.topline{flex-wrap:wrap}.topline>div{min-width:0;max-width:100%}h1#title{font-size:clamp(24px,9vw,36px);overflow-wrap:anywhere}.card-grid{grid-template-columns:minmax(0,1fr)}.card-grid>*{min-width:0}.card{white-space:normal;overflow-wrap:anywhere}.hero{padding:20px}}
+.objs{display:grid;gap:8px;margin:6px 0}
+.obj{display:flex;gap:12px;align-items:flex-start;border-left:3px solid var(--c);background:color-mix(in srgb,var(--c) 7%,transparent);padding:8px 12px}
+.obj-m{flex:none;min-width:62px;font:700 11px/1.6 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.obj .rt{margin:0;min-width:0}
+.rqc{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:999px;border:1px solid #ff9a8c66;background:color-mix(in srgb,#c8584e 22%,var(--p1));color:#ffc4ba;font:700 12px 'Space Mono',monospace;line-height:1.5;cursor:help;white-space:nowrap}
+.rqc.big{font-size:13px;padding:4px 11px}

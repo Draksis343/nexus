@@ -1,0 +1,12 @@
+/* ===== Mejoras generales ===== */
+/* Botón «volver arriba»: aparece al bajar, encima del botón de sonido */
+#totop{position:fixed;right:16px;bottom:66px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
+ background:color-mix(in srgb,var(--p1) 85%,transparent);color:var(--amber);font-size:18px;font-weight:700;padding:0;z-index:36;
+ opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .2s,transform .2s;cursor:pointer}
+#totop.on{opacity:1;transform:none;pointer-events:auto}
+#totop:hover{border-color:var(--amber);box-shadow:0 0 14px #ffc26655}
+/* Foco visible con teclado en todos los controles */
+button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible,[data-a]:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+/* Saltos suaves al navegar con enlaces internos */
+html{scroll-padding-top:70px}
+@media (prefers-reduced-motion:reduce){#totop{transition:none}}

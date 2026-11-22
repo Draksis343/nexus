@@ -1,0 +1,10 @@
+/* NEXUS ARENA · retos
+   Retos entre jugadores. */
+.retro h1,.retro .section-title,.retro .big,.retro .cdb b{font-family:'Silkscreen','Space Mono',monospace;letter-spacing:.02em}
+.retro h1{font-size:26px}
+.retro .big{font-size:clamp(20px,2.4vw,32px)}
+.retro .section-title{font-size:12px}
+.retro .panel{box-shadow:4px 4px 0 #000a}
+.retro .btn{box-shadow:3px 3px 0 #000b}
+.rdf{border-color:color-mix(in srgb,var(--red) 45%,var(--line))}
+.rdf .cdw{margin:0}
