@@ -1199,6 +1199,46 @@
     "c": "",
     "img": ""
    }
+  },
+  {
+   "id": "mwrmf5k6oq0",
+   "icon": "",
+   "am": {
+    "k": "sync",
+    "n": 1,
+    "sc": "temporada",
+    "s": "Temporada 0 - PROTOCOLO ZERO"
+   },
+   "egg": false,
+   "secret": false,
+   "hid": false,
+   "name": "Sincronización",
+   "desc": "Consigue tu primer sincronización en cualquier desafio.",
+   "rar": "Épica",
+   "rq": 10,
+   "max": 5,
+   "title": "",
+   "trar": "Común"
+  },
+  {
+   "id": "mwrmhy5nt5f",
+   "icon": "",
+   "am": {
+    "k": "nivel",
+    "n": 10,
+    "sc": "siempre",
+    "s": "Temporada 0 - PROTOCOLO ZERO"
+   },
+   "egg": false,
+   "secret": false,
+   "hid": false,
+   "name": "Solo es un protocolo",
+   "desc": "Completa el pase de temporada Protocolo Zero",
+   "rar": "Épica",
+   "rq": 10,
+   "max": 5,
+   "title": "",
+   "trar": "Común"
   }
  ],
  "grants": [
@@ -1256,6 +1296,16 @@
    "p": "mwhd47sq1jb",
    "a": "mwf94m35c9p",
    "at": 1795336765693
+  },
+  {
+   "p": "mwen9cex36h",
+   "a": "mwrmhy5nt5f",
+   "at": 1795339020590
+  },
+  {
+   "p": "mwhd47sq1jb",
+   "a": "mwrmhy5nt5f",
+   "at": 1795339020590
   }
  ],
  "videos": [
@@ -1420,26 +1470,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794589871570,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794589980847,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794590131876,
-   "t": "Cerró la ronda de retos"
-  },
-  {
-   "at": 1794590150035,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794590483601,
-   "t": "Cambio (newa)"
-  },
   {
    "at": 1794590969297,
    "t": "Cambio (newa)"
@@ -3019,6 +3049,26 @@
   {
    "at": 1795337619584,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795338800760,
+   "t": "Editó una recompensa del pase"
+  },
+  {
+   "at": 1795338890215,
+   "t": "Cambio (newa)"
+  },
+  {
+   "at": 1795339020587,
+   "t": "Cambio (newa)"
+  },
+  {
+   "at": 1795339020889,
+   "t": "Guardó logros automáticos"
+  },
+  {
+   "at": 1795339049426,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3265,13 +3315,17 @@
    {
     "id": "prmwl5p3vzy69",
     "season": "Temporada 0 - PROTOCOLO ZERO",
-    "type": "objeto",
+    "type": "descarga",
     "lv": 9,
     "name": "Nexus Arena",
     "desc": "Un bonito wallpaper para tu smartphone",
     "v": "",
     "c": "",
-    "img": "img/pase-1794948001823.jpg"
+    "img": "img/pase-1794948001823.jpg",
+    "hid": false,
+    "a": "",
+    "rar": "Nexus",
+    "link": ""
    }
   ]
  },
