@@ -1080,12 +1080,12 @@
    "secret": false,
    "hid": false,
    "rw": {
-    "type": "efecto",
+    "type": "marco",
     "name": "",
     "desc": "",
-    "v": "chispas",
+    "v": "laurel",
     "a": "",
-    "c": "#ffc266",
+    "c": "",
     "img": ""
    }
   },
@@ -1470,18 +1470,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794590969297,
-   "t": "Cambio (newa)"
-  },
-  {
-   "at": 1794595076925,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794600292984,
-   "t": "Editó el desafío «The Mona Lisa»"
-  },
   {
    "at": 1794600492156,
    "t": "Editó el desafío «EL PODER DEL GARROTE»"
@@ -3068,6 +3056,18 @@
   },
   {
    "at": 1795339049426,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795339386536,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1795339454750,
+   "t": "Cambio (edita)"
+  },
+  {
+   "at": 1795339467572,
    "t": "Publicó cambios"
   }
  ],
