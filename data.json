@@ -1344,7 +1344,7 @@
  "sStart": 0,
  "sEnd": 0,
  "sfx": {},
- "rdl": 1795413540000,
+ "rdl": 1795370400000,
  "pens": [],
  "penv": {
   "ch": 10,
@@ -1393,14 +1393,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794554523106,
-   "t": "Quitó el logro «El rey de los piratas» a Draksis"
-  },
-  {
-   "at": 1794554532490,
-   "t": "Publicó cambios"
-  },
   {
    "at": 1794555197156,
    "t": "Cambio (fbconf)"
@@ -2991,6 +2983,14 @@
   },
   {
    "at": 1795320492273,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795320953864,
+   "t": "Cambió la fecha límite de la ronda"
+  },
+  {
+   "at": 1795320962400,
    "t": "Publicó cambios"
   }
  ],
