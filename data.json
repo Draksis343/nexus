@@ -976,7 +976,78 @@
    "s": "Temporada 0 - PROTOCOLO ZERO"
   }
  ],
- "duels": [],
+ "duels": [
+  {
+   "id": "mwsbf3k97my",
+   "at": 1795380878025,
+   "a": "mwicujdshcq",
+   "b": "mwhd448ih4p",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwsbf3k95hi",
+   "at": 1795380878025,
+   "a": "mwhd448ih4p",
+   "b": "mwhg9zxxvpv",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwsbf3k90em",
+   "at": 1795380878025,
+   "a": "mwhg9zxxvpv",
+   "b": "mwhd47sq1jb",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwsbf3k9ugl",
+   "at": 1795380878025,
+   "a": "mwhd47sq1jb",
+   "b": "mwhdqy01n4u",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwsbf3k9koj",
+   "at": 1795380878025,
+   "a": "mwhdqy01n4u",
+   "b": "mwhg9w6crs5",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwsbf3k9r72",
+   "at": 1795380878025,
+   "a": "mwhg9w6crs5",
+   "b": "mwen9cex36h",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  },
+  {
+   "id": "mwsbf3k9es4",
+   "at": 1795380878025,
+   "a": "mwen9cex36h",
+   "b": "mwicujdshcq",
+   "game": "",
+   "rules": "",
+   "status": "Pendiente",
+   "m": ""
+  }
+ ],
  "event": null,
  "achs": [
   {
@@ -1390,26 +1461,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794622166385,
-   "t": "Dio el logro «El rey de los piratas» a PAROXTINE"
-  },
-  {
-   "at": 1794622172450,
-   "t": "Cambio (setttl)"
-  },
-  {
-   "at": 1794622176971,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794637369135,
-   "t": "Quitó el logro «El rey de los piratas» a PAROXTINE"
-  },
-  {
-   "at": 1794637374335,
-   "t": "Publicó cambios"
-  },
   {
    "at": 1794717290094,
    "t": "Editó la ventana de emuladores"
@@ -2989,6 +3040,26 @@
   {
    "at": 1795380815000,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795380878025,
+   "t": "Cambio (randd)"
+  },
+  {
+   "at": 1795380926781,
+   "t": "Cambió el plazo para retar"
+  },
+  {
+   "at": 1795380935324,
+   "t": "Cambió el plazo para retar"
+  },
+  {
+   "at": 1795380963470,
+   "t": "Cambió el plazo para retar"
+  },
+  {
+   "at": 1795380977248,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3401,5 +3472,6 @@
   "g2": "#0f2226",
   "dim": 35,
   "img": ""
- }
+ },
+ "rdf": 1795406400000
 }
