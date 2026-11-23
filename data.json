@@ -1607,30 +1607,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794933393946,
-   "t": "Quitó el logro «Competitivo» a Draksis"
-  },
-  {
-   "at": 1794933402161,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794939881086,
-   "t": "Cambio (grantt)"
-  },
-  {
-   "at": 1794939883748,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794942779756,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794942812736,
-   "t": "Editó una recompensa del pase"
-  },
-  {
    "at": 1794942936241,
    "t": "Agregó una recompensa al pase"
   },
@@ -3205,6 +3181,30 @@
   {
    "at": 1795458084565,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795458319276,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1795458329158,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1795458340522,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1795458351902,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1795458362486,
+   "t": "Editó misiones del pase"
+  },
+  {
+   "at": 1795458366777,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3653,7 +3653,7 @@
     "kind": "logros",
     "n": 2,
     "from": 1794948060000,
-    "to": 1795413540000
+    "to": 1796018340000
    },
    {
     "id": "pmmwl5tabnjnv",
@@ -3663,7 +3663,7 @@
     "kind": "desafios",
     "n": 1,
     "from": 1794948120000,
-    "to": 1795413540000
+    "to": 1796018340000
    },
    {
     "id": "pmmwl5uvaum41",
@@ -3673,7 +3673,7 @@
     "kind": "retos",
     "n": 1,
     "from": 1794948240000,
-    "to": 1795412940000
+    "to": 1796018340000
    },
    {
     "id": "pmmwl5vmfyto9",
@@ -3683,7 +3683,7 @@
     "kind": "medallas",
     "n": 5,
     "from": 1794948240000,
-    "to": 1795412940000
+    "to": 1796018340000
    }
   ],
   "done": {},
