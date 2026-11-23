@@ -1600,26 +1600,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794775377119,
-   "t": "Cambio (settings)"
-  },
-  {
-   "at": 1794776130197,
-   "t": "Eliminó el desafío «The Mona Lisa»"
-  },
-  {
-   "at": 1794777267449,
-   "t": "Creó un desafío"
-  },
-  {
-   "at": 1794777287153,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794777303587,
-   "t": "Cambio (newgoal)"
-  },
-  {
    "at": 1794777319083,
    "t": "Cambio (newgoal)"
   },
@@ -3198,6 +3178,26 @@
   {
    "at": 1795449464277,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795449706486,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449746447,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449758675,
+   "t": "Cambio (advfill)"
+  },
+  {
+   "at": 1795450003191,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795450034957,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3283,6 +3283,14 @@
       "a": "",
       "c": ""
      },
+     "2": {
+      "id": "amwtgfg7ngjo",
+      "type": "reliquias",
+      "v": 10,
+      "name": "",
+      "desc": "",
+      "rar": "Común"
+     },
      "3": {
       "id": "zmwtf2qqp1ty",
       "type": "borde",
@@ -3292,6 +3300,14 @@
       "v": "baston",
       "a": "",
       "c": ""
+     },
+     "4": {
+      "id": "amwtgfg7n3pg",
+      "type": "reliquias",
+      "v": 10,
+      "name": "",
+      "desc": "",
+      "rar": "Común"
      },
      "5": {
       "id": "zmwtfmm1lnsj",
@@ -3323,6 +3339,14 @@
       "a": "",
       "c": ""
      },
+     "8": {
+      "id": "amwtgfg7nvn2",
+      "type": "reliquias",
+      "v": 10,
+      "name": "",
+      "desc": "",
+      "rar": "Común"
+     },
      "9": {
       "id": "zmwtfa3zah5r",
       "type": "color",
@@ -3332,6 +3356,14 @@
       "v": "fx:navidad",
       "a": "",
       "c": ""
+     },
+     "10": {
+      "id": "amwtgfg7nkee",
+      "type": "reliquias",
+      "v": 10,
+      "name": "",
+      "desc": "",
+      "rar": "Común"
      },
      "11": {
       "id": "zmwtfjj3barv",
@@ -3363,6 +3395,14 @@
       "a": "",
       "c": ""
      },
+     "14": {
+      "id": "amwtgfg7ncsn",
+      "type": "reliquias",
+      "v": 50,
+      "name": "",
+      "desc": "",
+      "rar": "Épica"
+     },
      "15": {
       "id": "zmwtfi8m2ajn",
       "type": "efecto",
@@ -3373,6 +3413,14 @@
       "a": "",
       "c": ""
      },
+     "16": {
+      "id": "amwtgfg7nnvy",
+      "type": "reliquias",
+      "v": 10,
+      "name": "",
+      "desc": "",
+      "rar": "Común"
+     },
      "17": {
       "id": "zmwtfzw2ktsl",
       "type": "emblema",
@@ -3381,6 +3429,16 @@
       "rar": "Épica",
       "v": "❄️",
       "a": "flotar",
+      "c": ""
+     },
+     "18": {
+      "id": "zmwtgf6rzyfr",
+      "type": "color",
+      "name": "Frio al tacro",
+      "desc": "Que frio eres we",
+      "rar": "Épica",
+      "v": "fx:escarcha",
+      "a": "",
       "c": ""
      },
      "19": {
@@ -3393,6 +3451,14 @@
       "a": "",
       "c": ""
      },
+     "20": {
+      "id": "amwtgfg7nfkk",
+      "type": "reliquias",
+      "v": 10,
+      "name": "",
+      "desc": "",
+      "rar": "Común"
+     },
      "21": {
       "id": "zmwtg3zzcs5r",
       "type": "avatar",
@@ -3402,6 +3468,14 @@
       "v": "bg:14",
       "a": "",
       "c": ""
+     },
+     "22": {
+      "id": "amwtgfg7ncoh",
+      "type": "reliquias",
+      "v": 10,
+      "name": "",
+      "desc": "",
+      "rar": "Común"
      },
      "23": {
       "id": "zmwtg4vkaovf",
@@ -3433,6 +3507,14 @@
       "a": "",
       "c": ""
      },
+     "26": {
+      "id": "amwtgfg7nhzf",
+      "type": "reliquias",
+      "v": 10,
+      "name": "",
+      "desc": "",
+      "rar": "Común"
+     },
      "27": {
       "id": "zmwtg5te4t06",
       "type": "efecto",
@@ -3443,6 +3525,14 @@
       "a": "",
       "c": ""
      },
+     "28": {
+      "id": "amwtgfg7nr2z",
+      "type": "reliquias",
+      "v": 50,
+      "name": "",
+      "desc": "",
+      "rar": "Épica"
+     },
      "29": {
       "id": "zmwtg8oy1iyx",
       "type": "emblema",
@@ -3451,6 +3541,16 @@
       "rar": "Épica",
       "v": "🕹️",
       "a": "balanceo",
+      "c": ""
+     },
+     "31": {
+      "id": "zmwtgebxxwrj",
+      "type": "marco",
+      "name": "Feliz Año Nuevo",
+      "desc": "Que este año 2027 sea especial",
+      "rar": "Épica",
+      "v": "campanas",
+      "a": "",
       "c": ""
      }
     }
