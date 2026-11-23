@@ -1600,26 +1600,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794778332246,
-   "t": "Cambió la fecha límite de la ronda"
-  },
-  {
-   "at": 1794778460526,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794778545619,
-   "t": "Editó el desafío «La aventura del Reino Champiñón»"
-  },
-  {
-   "at": 1794778554747,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794778616224,
-   "t": "Cambio (acccreate)"
-  },
-  {
    "at": 1794778621589,
    "t": "Publicó cambios"
   },
@@ -3198,6 +3178,26 @@
   {
    "at": 1795450511195,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795450736716,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795450770000,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795451118355,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795451209546,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795451337706,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3263,16 +3263,41 @@
      "dif": "Medio",
      "pl": 30,
      "xp": 100
+    },
+    {
+     "id": "mwth8lcjmid",
+     "name": "Sube a nivel 5 la caldera",
+     "desc": "Mejora la caldera para abarcar más con su calor y sobrevivir al frio intenso",
+     "rar": "Épica",
+     "dif": "Medio",
+     "pl": 40,
+     "xp": 150
     }
    ],
    "ac": [
     {
      "id": "mwoobbydmxd",
-     "name": "Sobrevive 10 días al frio intenso",
+     "name": "Sobreviviendo",
      "desc": "Sobrevive los 10 días en una sola sesión",
      "rar": "Común",
      "pl": 10,
      "xp": 0
+    },
+    {
+     "id": "mwth8lcjljc",
+     "name": "Comprometido con la causa",
+     "desc": "Donen 1.000 de carbón para la caldera",
+     "rar": "Rara",
+     "pl": 50,
+     "xp": 50
+    },
+    {
+     "id": "mwthajpm2pi",
+     "name": "Fuerte como un roble",
+     "desc": "Sobrevivan a una ventisca.",
+     "rar": "Épica",
+     "pl": 100,
+     "xp": 100
     }
    ],
    "cc": false,
@@ -3553,13 +3578,23 @@
       "a": "balanceo",
       "c": ""
      },
+     "30": {
+      "id": "zmwth14k09lq",
+      "type": "fondo",
+      "name": "Año viejo",
+      "desc": "¡A festejar!",
+      "rar": "Épica",
+      "v": "fuegos",
+      "a": "",
+      "c": ""
+     },
      "31": {
       "id": "zmwtgebxxwrj",
       "type": "marco",
       "name": "Feliz Año Nuevo",
       "desc": "Que este año 2027 sea especial",
       "rar": "Épica",
-      "v": "campanas",
+      "v": "ano2027",
       "a": "",
       "c": ""
      }
