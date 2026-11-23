@@ -1600,54 +1600,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794720728166,
-   "t": "Cambio (foto)"
-  },
-  {
-   "at": 1794720770342,
-   "t": "Cambio (foto)"
-  },
-  {
-   "at": 1794720870740,
-   "t": "Cambio (foto)"
-  },
-  {
-   "at": 1794720875542,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794722721956,
-   "t": "Editó el desafío «???»"
-  },
-  {
-   "at": 1794722747054,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794722761719,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794722777030,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794722806806,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794722816101,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794722841578,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794722854730,
-   "t": "Editó el desafío «Leyenda del Roc»"
-  },
-  {
    "at": 1794723646855,
    "t": "Publicó cambios"
   },
@@ -3198,6 +3150,54 @@
   {
    "at": 1795445889529,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795447345974,
+   "t": "Creó el calendario del evento «WinterFest»"
+  },
+  {
+   "at": 1795447434350,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447465591,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447486177,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447584529,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447611662,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447649278,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447678991,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447773910,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447791036,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447829926,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795447983270,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3265,7 +3265,116 @@
      "xp": 0
     }
    ],
-   "cc": false
+   "cc": false,
+   "adv": {
+    "on": false,
+    "t": "Calendario de adviento",
+    "s": "2026-12-01",
+    "n": 31,
+    "peek": false,
+    "rw": {
+     "1": {
+      "id": "zmwtf1mr2rno",
+      "type": "marco",
+      "name": "Bastón de caramelo",
+      "desc": "Cuidado, es demasiado dulce 🥴",
+      "rar": "Épica",
+      "v": "baston",
+      "a": "",
+      "c": ""
+     },
+     "2": {
+      "id": "zmwtf2auvqi9",
+      "type": "reliquias",
+      "name": "Reliquias",
+      "desc": "Úsalas en la tienda",
+      "rar": "Reliquia",
+      "v": 20,
+      "a": "",
+      "c": ""
+     },
+     "3": {
+      "id": "zmwtf2qqp1ty",
+      "type": "borde",
+      "name": "Super caramelo",
+      "desc": "Super dulce",
+      "rar": "Épica",
+      "v": "baston",
+      "a": "",
+      "c": ""
+     },
+     "4": {
+      "id": "zmwtf4umps7k",
+      "type": "avatar",
+      "name": "Empaquetados",
+      "desc": "Dale mas estilo a tu avatar",
+      "rar": "Épica",
+      "v": "eyes:21",
+      "a": "",
+      "c": ""
+     },
+     "5": {
+      "id": "zmwtf5fkenxm",
+      "type": "reliquias",
+      "name": "Reliquias",
+      "desc": "Úsalos en la tienda",
+      "rar": "Reliquia",
+      "v": 20,
+      "a": "",
+      "c": ""
+     },
+     "6": {
+      "id": "zmwtf6vin7ci",
+      "type": "emblema",
+      "name": "",
+      "desc": "",
+      "rar": "Épica",
+      "v": "🎄",
+      "a": "brillo",
+      "c": ""
+     },
+     "7": {
+      "id": "zmwtf8wr9wul",
+      "type": "titulo",
+      "name": "Espíritu navideño",
+      "desc": "Demuestra tu espíritu",
+      "rar": "Épica",
+      "v": "",
+      "a": "",
+      "c": ""
+     },
+     "8": {
+      "id": "zmwtf99z0823",
+      "type": "reliquias",
+      "name": "Reliquias",
+      "desc": "Úsalos en la tienda",
+      "rar": "Épica",
+      "v": 20,
+      "a": "",
+      "c": ""
+     },
+     "9": {
+      "id": "zmwtfa3zah5r",
+      "type": "color",
+      "name": "Mas dulce?",
+      "desc": "Rico",
+      "rar": "Épica",
+      "v": "fx:navidad",
+      "a": "",
+      "c": ""
+     },
+     "25": {
+      "id": "zmwtf68lafk3",
+      "type": "marco",
+      "name": "Navideño",
+      "desc": "Feliz navidad!!",
+      "rar": "Épica",
+      "v": "estrellanav",
+      "a": "",
+      "c": ""
+     }
+    }
+   }
   }
  ],
  "rax": [
