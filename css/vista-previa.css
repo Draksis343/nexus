@@ -1,0 +1,32 @@
+/* ===== Vista previa de recompensas en los formularios ===== */
+.rwpv{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin:4px 0 14px;padding:12px;border-radius:14px;
+ background:color-mix(in srgb,var(--amber) 6%,var(--p2));border:1px solid color-mix(in srgb,var(--amber) 35%,var(--line))}
+.rwpv-ic{width:88px;height:76px;flex:none;display:grid;place-items:center;font-size:34px}
+.rwpv-ic img{max-width:80px;max-height:72px;border-radius:10px}
+.rwpv-tx{display:flex;flex-direction:column;gap:2px;min-width:0}
+.rwpv-tx b{font-size:15px;color:var(--text)}
+.rwpv-tx span{font-size:12px;color:var(--muted)}
+.rwpv-empty{color:var(--muted);font-size:13px}
+.rwpv-e{font-size:26px}
+/* mini perfil */
+.rwpv-prof{position:relative;flex:1 1 220px;max-width:300px;min-height:84px;border-radius:12px;overflow:hidden;
+ background:var(--p1);border:1px solid var(--line);display:flex;align-items:center}
+.rwpv-bg{position:absolute!important;inset:0;width:100%!important;height:100%!important;border-radius:0!important;animation-play-state:running!important}
+.rwpv-in{position:relative;display:flex;align-items:center;gap:12px;padding:12px 14px}
+.rwpv-in .avatar{width:52px;height:52px;font-size:20px;flex:none}
+.rwpv-in small{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.rwpv-in .emb{margin-left:6px}
+/* galería de opciones */
+.rwgal{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px;margin-top:8px;max-height:260px;overflow:auto;padding:2px 4px 4px 2px}
+.rwgo{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 4px 6px;border-radius:10px;border:1px solid var(--line);
+ background:var(--p2);color:var(--text);font:inherit;cursor:pointer;transition:border-color .15s,transform .15s}
+.rwgo:hover{border-color:var(--cyan);transform:translateY(-1px)}
+.rwgo.on{border-color:var(--amber);box-shadow:0 0 0 1px var(--amber) inset;background:color-mix(in srgb,var(--amber) 10%,var(--p2))}
+.rwgp{height:52px;display:grid;place-items:center;pointer-events:none}
+.rwgp .avatar{width:42px;height:42px;font-size:15px}
+.rwgp .bdp{width:60px;height:40px}
+.rwgp .avatar.rbav{width:50px!important;height:50px!important}
+.rwgo small{font-size:10.5px;line-height:1.2;color:var(--muted);text-align:center;max-width:100%;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.rwgo.on small{color:var(--amber)}
+.retro .rwgo,.retro .rwpv,.retro .rwpv-prof{border-radius:4px}
+@media (max-width:560px){.rwgal{grid-template-columns:repeat(auto-fill,minmax(72px,1fr))}.rwpv{flex-wrap:wrap}}
