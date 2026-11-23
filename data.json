@@ -1607,14 +1607,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794948317388,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794948746279,
-   "t": "Configuró el pase de temporada"
-  },
-  {
    "at": 1794948755905,
    "t": "Publicó cambios"
   },
@@ -3205,6 +3197,14 @@
   {
    "at": 1795461803344,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795462544911,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795462548150,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3636,7 +3636,8 @@
       "c": ""
      }
     }
-   }
+   },
+   "veil": true
   }
  ],
  "rax": [
