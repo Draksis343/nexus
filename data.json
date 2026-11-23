@@ -1600,170 +1600,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794853403907,
-   "t": "Registró el resultado de Draksis en «La aventura del Reino Champiñón»"
-  },
-  {
-   "at": 1794853577016,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794854422075,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794854430626,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794858075879,
-   "t": "Creó un desafío"
-  },
-  {
-   "at": 1794858116881,
-   "t": "Eliminó el desafío «El Caballero Valiente»"
-  },
-  {
-   "at": 1794858260794,
-   "t": "Creó un desafío"
-  },
-  {
-   "at": 1794858566715,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794858754691,
-   "t": "Eliminó el desafío «Prueba»"
-  },
-  {
-   "at": 1794862290059,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794862334874,
-   "t": "Registró el resultado de Draksis en «La aventura del Reino Champiñón»"
-  },
-  {
-   "at": 1794862375760,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794894102716,
-   "t": "Editó el desafío «El Caballero Valiente»"
-  },
-  {
-   "at": 1794894107804,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794894743963,
-   "t": "Editó el desafío «El Caballero Valiente»"
-  },
-  {
-   "at": 1794894747107,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794894766255,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794894785396,
-   "t": "Editó el desafío «El Caballero Valiente»"
-  },
-  {
-   "at": 1794894789839,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794895132584,
-   "t": "Creó un desafío"
-  },
-  {
-   "at": 1794895136240,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794895747224,
-   "t": "Editó el desafío «Luchador Aéreo»"
-  },
-  {
-   "at": 1794895749842,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794897066440,
-   "t": "Creó un desafío"
-  },
-  {
-   "at": 1794897070488,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794897241749,
-   "t": "Editó el desafío «Sailor Senshi»"
-  },
-  {
-   "at": 1794897246687,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794897361474,
-   "t": "Editó el desafío «Sailor Senshi»"
-  },
-  {
-   "at": 1794897365049,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794924800419,
-   "t": "Creó un reto"
-  },
-  {
-   "at": 1794924817274,
-   "t": "Editó un reto"
-  },
-  {
-   "at": 1794924820029,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794927310828,
-   "t": "Cambio (deld)"
-  },
-  {
-   "at": 1794927313235,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794929280670,
-   "t": "Configuró el pase de temporada"
-  },
-  {
-   "at": 1794929303743,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794930430365,
-   "t": "Configuró el pase de temporada"
-  },
-  {
-   "at": 1794930432648,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794930784095,
-   "t": "Reinició el pase de temporada"
-  },
-  {
-   "at": 1794930792349,
-   "t": "Configuró el pase de temporada"
-  },
-  {
-   "at": 1794931434989,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
    "at": 1794931489908,
    "t": "Agregó una recompensa al pase"
   },
@@ -3197,6 +3033,170 @@
   },
   {
    "at": 1795452793568,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795452880231,
+   "t": "Editó «Margen Nevado» en la tienda"
+  },
+  {
+   "at": 1795453262995,
+   "t": "Editó «Margen Luces navideñas» en la tienda"
+  },
+  {
+   "at": 1795453280894,
+   "t": "Editó «Margen Guirnalda» en la tienda"
+  },
+  {
+   "at": 1795453295103,
+   "t": "Editó «Margen Papel de regalo» en la tienda"
+  },
+  {
+   "at": 1795453310098,
+   "t": "Editó «Margen Aurora navideña» en la tienda"
+  },
+  {
+   "at": 1795453319755,
+   "t": "Editó «Margen Galleta glaseada» en la tienda"
+  },
+  {
+   "at": 1795453334057,
+   "t": "Quitó un artículo de la tienda"
+  },
+  {
+   "at": 1795453344104,
+   "t": "Editó «Copos de nieve» en la tienda"
+  },
+  {
+   "at": 1795453360498,
+   "t": "Editó «Luces navideñas» en la tienda"
+  },
+  {
+   "at": 1795453380567,
+   "t": "Editó «Bastones de caramelo» en la tienda"
+  },
+  {
+   "at": 1795453392958,
+   "t": "Editó «Trineo de Santa» en la tienda"
+  },
+  {
+   "at": 1795453411143,
+   "t": "Editó «Nombre hielo» en la tienda"
+  },
+  {
+   "at": 1795453419237,
+   "t": "Quitó un artículo de la tienda"
+  },
+  {
+   "at": 1795453438076,
+   "t": "Editó «Nombre nieve» en la tienda"
+  },
+  {
+   "at": 1795453445009,
+   "t": "Quitó un artículo de la tienda"
+  },
+  {
+   "at": 1795453466990,
+   "t": "Editó «Fondo aurora» en la tienda"
+  },
+  {
+   "at": 1795453489794,
+   "t": "Editó «Marco Astas de reno» en la tienda"
+  },
+  {
+   "at": 1795453509166,
+   "t": "Editó «Marco Luces navideñas» en la tienda"
+  },
+  {
+   "at": 1795453523814,
+   "t": "Editó «Marco Acebo» en la tienda"
+  },
+  {
+   "at": 1795453536975,
+   "t": "Editó «Marco Gorro de Santa» en la tienda"
+  },
+  {
+   "at": 1795453552043,
+   "t": "Editó «Marco Regalo con moño» en la tienda"
+  },
+  {
+   "at": 1795453562546,
+   "t": "Editó «Marco Esfera navideña» en la tienda"
+  },
+  {
+   "at": 1795453574946,
+   "t": "Editó «Marco Galleta de jengibre» en la tienda"
+  },
+  {
+   "at": 1795453584814,
+   "t": "Editó «Marco Campanas» en la tienda"
+  },
+  {
+   "at": 1795453602318,
+   "t": "Editó «Chaqueta · Chaleco de elfo» en la tienda"
+  },
+  {
+   "at": 1795453614794,
+   "t": "Editó «Chaqueta · Abrigo de invierno» en la tienda"
+  },
+  {
+   "at": 1795453627183,
+   "t": "Editó «Accesorio · Bufanda navideña» en la tienda"
+  },
+  {
+   "at": 1795453641847,
+   "t": "Editó «Accesorio · Luces» en la tienda"
+  },
+  {
+   "at": 1795453654690,
+   "t": "Editó «Accesorio · Cascabel» en la tienda"
+  },
+  {
+   "at": 1795453664569,
+   "t": "Editó «Accesorio · Moño de regalo» en la tienda"
+  },
+  {
+   "at": 1795453677205,
+   "t": "Editó «Fondo · Bastones de caramelo» en la tienda"
+  },
+  {
+   "at": 1795453707582,
+   "t": "Editó «Fondo · Papel de regalo» en la tienda"
+  },
+  {
+   "at": 1795453718645,
+   "t": "Editó «Fondo · Bosque nevado» en la tienda"
+  },
+  {
+   "at": 1795453732075,
+   "t": "Editó «Cabeza · Diadema de reno» en la tienda"
+  },
+  {
+   "at": 1795453744970,
+   "t": "Editó «Cabeza · Gorro de elfo» en la tienda"
+  },
+  {
+   "at": 1795453755882,
+   "t": "Editó «Cabeza · Corona de acebo» en la tienda"
+  },
+  {
+   "at": 1795453769254,
+   "t": "Editó «Cabeza · Orejeras» en la tienda"
+  },
+  {
+   "at": 1795453782014,
+   "t": "Editó «Camisa · Suéter navideño» en la tienda"
+  },
+  {
+   "at": 1795453791549,
+   "t": "Editó «Camisa · Pijama a cuadros» en la tienda"
+  },
+  {
+   "at": 1795453810294,
+   "t": "Editó «Módulos · Cuernos de reno» en la tienda"
+  },
+  {
+   "at": 1795453818955,
    "t": "Publicó cambios"
   }
  ],
@@ -4655,15 +4655,16 @@
      "v": "luces",
      "name": "Marco Luces navideñas",
      "desc": "",
-     "rar": "Rara",
+     "rar": "Épica",
      "a": "",
      "c": ""
     },
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798743540000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deru2s42",
@@ -4681,8 +4682,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2dergzt43",
@@ -4693,15 +4695,16 @@
      "v": "gorro",
      "name": "Marco Gorro de Santa",
      "desc": "",
-     "rar": "Rara",
+     "rar": "Épica",
      "a": "",
      "c": ""
     },
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2der99u44",
@@ -4712,15 +4715,16 @@
      "v": "reno",
      "name": "Marco Astas de reno",
      "desc": "",
-     "rar": "Rara",
+     "rar": "Épica",
      "a": "",
      "c": ""
     },
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2der00s45",
@@ -4738,8 +4742,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2der1gv46",
@@ -4757,8 +4762,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2dermzr48",
@@ -4776,8 +4782,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2der3fa49",
@@ -4795,8 +4802,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2derlq550",
@@ -5213,8 +5221,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798696800000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2des46h75",
@@ -5232,8 +5241,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2destuq76",
@@ -5251,8 +5261,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1795456800000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deseeg77",
@@ -5270,8 +5281,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1795456800000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2des1ce78",
@@ -5289,8 +5301,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1795456800000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2des4i779",
@@ -5308,8 +5321,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1795456800000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2des2uv81",
@@ -5597,25 +5611,6 @@
     "feat": false
    },
    {
-    "id": "smwti2desmp096",
-    "at": 1794761307747,
-    "rw": {
-     "id": "zmwti2dese0996",
-     "type": "efecto",
-     "v": "snow",
-     "name": "Nieve suave",
-     "desc": "",
-     "rar": "Rara",
-     "a": "",
-     "c": ""
-    },
-    "price": 60,
-    "sync": 0,
-    "stock": 0,
-    "until": 0,
-    "feat": false
-   },
-   {
     "id": "smwti2des4lv97",
     "at": 1794761307747,
     "rw": {
@@ -5631,8 +5626,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1795456800000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desqy398",
@@ -5650,8 +5646,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2des18m99",
@@ -5745,8 +5742,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desjc0105",
@@ -5764,8 +5762,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2dese5x107",
@@ -5954,8 +5953,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2des34x118",
@@ -6049,8 +6049,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deslbh124",
@@ -6098,25 +6099,6 @@
      "type": "color",
      "v": "fx:luces",
      "name": "Nombre luces que parpadean",
-     "desc": "",
-     "rar": "Rara",
-     "a": "",
-     "c": ""
-    },
-    "price": 60,
-    "sync": 0,
-    "stock": 0,
-    "until": 0,
-    "feat": false
-   },
-   {
-    "id": "smwti2des35d128",
-    "at": 1794761307747,
-    "rw": {
-     "id": "zmwti2desikh128",
-     "type": "color",
-     "v": "fx:galleta",
-     "name": "Nombre galleta glaseada",
      "desc": "",
      "rar": "Rara",
      "a": "",
@@ -6215,25 +6197,6 @@
      "desc": "",
      "rar": "Común",
      "a": "latido",
-     "c": ""
-    },
-    "price": 30,
-    "sync": 0,
-    "stock": 0,
-    "until": 0,
-    "feat": false
-   },
-   {
-    "id": "smwti2desveo134",
-    "at": 1794761307747,
-    "rw": {
-     "id": "zmwti2des1g9134",
-     "type": "emblema",
-     "v": "❄",
-     "name": "Emblema Copo",
-     "desc": "",
-     "rar": "Común",
-     "a": "giro",
      "c": ""
     },
     "price": 30,
@@ -6524,8 +6487,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desgai158",
@@ -6904,8 +6868,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2descjv183",
@@ -6961,8 +6926,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2des8i2188",
@@ -6980,8 +6946,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2dessf2189",
@@ -6999,8 +6966,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desm9d190",
@@ -7018,8 +6986,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2dess6v191",
@@ -7037,8 +7006,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desr8j192",
@@ -7056,8 +7026,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desgi8194",
@@ -7075,8 +7046,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desi68195",
@@ -7094,8 +7066,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desbbk196",
@@ -7113,8 +7086,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desk8f197",
@@ -7132,8 +7106,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deszqf198",
@@ -7151,8 +7126,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2descvm199",
@@ -7170,8 +7146,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deset1200",
@@ -7189,8 +7166,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deshzs201",
@@ -7208,8 +7186,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desg5r202",
@@ -7227,8 +7206,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798740000000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desuw2203",
