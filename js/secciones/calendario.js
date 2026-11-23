@@ -48,7 +48,7 @@ const advHot = e => { const k = advToday(e); return !!(k && advRwOf(e, k) && U &
 
 // Botón del banner del evento
 function advBtn(e) {
-  if (!advOn(e)) return '';
+  if (!advOn(e) || (evVeil(e) && !A)) return '';
   const hot = advHot(e);
   return `<button class="btn small advbtn${hot ? ' hot' : ''}" data-a="advopen" data-id="${e.id}">🎄 ${esc(e.adv.t || 'Calendario de adviento')}${hot ? '<i class="advdot" aria-label="Regalo disponible"></i>' : ''}</button>`;
 }
@@ -83,7 +83,7 @@ const advRefresh = e => { const w = document.querySelector('#mform .advs'); if (
 
 // ---- acciones de esta sección ----
 Object.assign(act, {
-  advopen(e) { const x = advEv(e.id); if (!x || !x.adv) return; sheetOpen(advHTML(x)) },
+  advopen(e) { const x = advEv(e.id); if (!x || !x.adv || (evVeil(x) && !A)) return; sheetOpen(advHTML(x)) },
   advclose() { closeM(false) },
   async advclaim(e) {
     const x = advEv(e.id); if (!x || !advOn(x)) return;
@@ -125,3 +125,6 @@ Object.assign(act, {
     });
   }
 });
+
+// Cuando un evento en modo sorpresa empieza, la página se vuelve a dibujar sola
+(() => { const seen = new Set(); setInterval(() => { const L = (D.events || []).filter(e => e.veil && e.start && Date.now() >= e.start && !seen.has(e.id)); if (!L.length) return; const fresh = L.some(e => Date.now() - e.start < 6 * 36e5); L.forEach(e => seen.add(e.id)); if (fresh) try { render() } catch (x) {} }, 15000) })();

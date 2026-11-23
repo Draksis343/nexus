@@ -36,3 +36,15 @@
 .evled .evrow{display:flex;flex-wrap:wrap}
 .evled .evrow>input:first-child{flex:1;min-width:220px}
 .evled .evrow .gedesc{flex-basis:100%}
+
+/* ===== Evento en modo sorpresa (contenido oculto hasta que empiece) ===== */
+.evchip.evveil{border-color:color-mix(in srgb,var(--ec) 60%,var(--line));color:var(--text)}
+.evveilad{border-style:dashed!important;border-color:color-mix(in srgb,var(--amber) 55%,var(--line))!important;font-size:14px}
+.evveilbox{text-align:center;padding:34px 20px!important;border-color:color-mix(in srgb,var(--ec) 45%,var(--line))!important;
+ background:radial-gradient(circle at 50% 0%,color-mix(in srgb,var(--ec) 16%,transparent),transparent 60%),var(--p1)}
+.evveilbox h2{margin:10px 0 6px;font-size:20px}
+.evveilbox p{max-width:520px;margin:0 auto}
+.evveilic{font-size:46px;display:inline-block;animation:advGift 2.4s ease-in-out infinite;filter:drop-shadow(0 0 14px color-mix(in srgb,var(--ec) 60%,transparent))}
+.evveilq{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.evveilq span{padding:10px 16px;border-radius:12px;border:1px dashed color-mix(in srgb,var(--ec) 50%,var(--line));font:700 16px 'Space Mono',monospace;color:var(--muted)}
+html.lite .evveilic{animation:none}
