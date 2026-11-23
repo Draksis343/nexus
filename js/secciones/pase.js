@@ -19,7 +19,7 @@ const passMine=pid=>PASSC.filter(c=>c.p===pid).map(c=>({...passRw(c.r),at:c.at})
 const passHas=(pid,rid)=>PASSC.some(c=>c.p===pid&&c.r===rid);
 const RWT=['marco','borde','color','emblema','fondo','efecto','avatar','objeto','descarga','tarjeta'];
 function achRw(p){const L=[];[...D.grants,...raGrants()].forEach(g=>{if(g.p!==p.id)return;const a=D.achs.find(x=>x.id===g.a);if(a&&a.rw&&PT[a.rw.type])L.push({...a.rw,id:'ach-'+a.id,lv:0,name:a.rw.name||PT[a.rw.type][0],from:a.name,at:g.at||0,rar:a.rw.rar||a.rar})});(p.hall||[]).forEach((x,i)=>{if(x.rw&&PT[x.rw.type])L.push({...x.rw,id:'hall-'+(x.aid||i)+'-'+(x.at||0),lv:0,name:x.rw.name||PT[x.rw.type][0],from:x.name,at:x.at||0,rar:x.rw.rar||x.rar})});return L}
-const rwOwned=p=>[...passMine(p.id).map(r=>({...r,from:''})),...achRw(p),...evRw(p)];
+const rwOwned=p=>[...passMine(p.id).map(r=>({...r,from:''})),...achRw(p),...evRw(p),...shopRw(p)];
 function passXP(p){const P=PS(),X=P.xp||{},cur=x=>(x.s||D.season)===D.season,b={med:0,part:0,reto:0,logro:0,evento:0,mis:0,adj:0};
  [...D.results,...raRes()].filter(r=>r.p===p.id&&cur(r)).forEach(r=>{if(r.m==='participacion')b.part+=+X.participacion||0;else mset(r).forEach(k=>b.med+=+X[k]||0)});
  D.duels.filter(d=>d.b===p.id&&dst(d)==='Cumplido').forEach(d=>{b.reto+=+X.reto||0;(dms(d).length?dms(d):raDuel(d).ms).forEach(k=>b.med+=+X[k]||0)});
