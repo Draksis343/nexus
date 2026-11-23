@@ -1600,50 +1600,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794762576045,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794762650872,
-   "t": "Cerró la ronda de retos"
-  },
-  {
-   "at": 1794762653430,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794771707910,
-   "t": "Editó el desafío «La caída del Covenant»"
-  },
-  {
-   "at": 1794771910176,
-   "t": "Editó el desafío «Biome Spiral Parkour»"
-  },
-  {
-   "at": 1794771931602,
-   "t": "Editó el desafío «Guerra sin cuartel»"
-  },
-  {
-   "at": 1794771954377,
-   "t": "Editó el desafío «Leyenda del Rock»"
-  },
-  {
-   "at": 1794771966682,
-   "t": "Editó el desafío «EL PODER DEL GARROTE»"
-  },
-  {
-   "at": 1794772102198,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794774763738,
-   "t": "Cambio (randd)"
-  },
-  {
-   "at": 1794774771691,
-   "t": "Publicó cambios"
-  },
-  {
    "at": 1794775377119,
    "t": "Cambio (settings)"
   },
@@ -3198,6 +3154,50 @@
   {
    "at": 1795448652004,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795449032732,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449050849,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449072782,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449152794,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449186273,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449224424,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449265354,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449309196,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449392611,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449443402,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795449464277,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3303,6 +3303,16 @@
       "a": "",
       "c": ""
      },
+     "6": {
+      "id": "zmwtg36jl7zv",
+      "type": "avatar",
+      "name": "Abrigado",
+      "desc": "¿Te portaste bien este año?",
+      "rar": "Épica",
+      "v": "jacket:12",
+      "a": "",
+      "c": ""
+     },
      "7": {
       "id": "zmwtfo1hptk4",
       "type": "fondo",
@@ -3333,6 +3343,16 @@
       "a": "",
       "c": ""
      },
+     "12": {
+      "id": "zmwtg2gpmprr",
+      "type": "avatar",
+      "name": "El gorro del gordo",
+      "desc": "Santa Claus le dio un beso a mamá",
+      "rar": "Épica",
+      "v": "head:18",
+      "a": "",
+      "c": ""
+     },
      "13": {
       "id": "zmwtflm8q7ww",
       "type": "avatar",
@@ -3353,6 +3373,56 @@
       "a": "",
       "c": ""
      },
+     "17": {
+      "id": "zmwtfzw2ktsl",
+      "type": "emblema",
+      "name": "Helado",
+      "desc": "No siento mis dedos",
+      "rar": "Épica",
+      "v": "❄️",
+      "a": "flotar",
+      "c": ""
+     },
+     "19": {
+      "id": "zmwtg0a1t68q",
+      "type": "fondo",
+      "name": "Chimenea",
+      "desc": "Que cálido se siente",
+      "rar": "Épica",
+      "v": "chimenea",
+      "a": "",
+      "c": ""
+     },
+     "21": {
+      "id": "zmwtg3zzcs5r",
+      "type": "avatar",
+      "name": "Lucesitas",
+      "desc": "Suena música navideña*",
+      "rar": "Épica",
+      "v": "bg:14",
+      "a": "",
+      "c": ""
+     },
+     "23": {
+      "id": "zmwtg4vkaovf",
+      "type": "avatar",
+      "name": "Arbolito",
+      "desc": "Lleva el espíritu navideño a todos lados",
+      "rar": "Épica",
+      "v": "top:19",
+      "a": "",
+      "c": ""
+     },
+     "24": {
+      "id": "zmwtg7lr7rey",
+      "type": "fondo",
+      "name": "Jingunbels",
+      "desc": "Si si que así no se escribe, ríete del chiste o vete al diablo.",
+      "rar": "Épica",
+      "v": "navidad",
+      "a": "",
+      "c": ""
+     },
      "25": {
       "id": "zmwtf68lafk3",
       "type": "marco",
@@ -3361,6 +3431,26 @@
       "rar": "Épica",
       "v": "estrellanav",
       "a": "",
+      "c": ""
+     },
+     "27": {
+      "id": "zmwtg5te4t06",
+      "type": "efecto",
+      "name": "Lluvia de regalos",
+      "desc": "¿Qué vendrá dentro de ellos?",
+      "rar": "Épica",
+      "v": "regalos",
+      "a": "",
+      "c": ""
+     },
+     "29": {
+      "id": "zmwtg8oy1iyx",
+      "type": "emblema",
+      "name": "Retro",
+      "desc": "¿Qué hace esto aquí?",
+      "rar": "Épica",
+      "v": "🕹️",
+      "a": "balanceo",
       "c": ""
      }
     }
