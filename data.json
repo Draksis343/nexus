@@ -1542,7 +1542,7 @@
  "sStart": 0,
  "sEnd": 0,
  "sfx": {},
- "rdl": 0,
+ "rdl": 1796018340000,
  "pens": [
   {
    "k": "d|mwicvz83hvc|mwicujdshcq",
@@ -1599,14 +1599,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794931792667,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794933344758,
-   "t": "Cambio (newa)"
-  },
   {
    "at": 1794933352520,
    "t": "Publicó cambios"
@@ -3197,6 +3189,14 @@
   },
   {
    "at": 1795456031078,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795457892327,
+   "t": "Cambió la fecha límite de la ronda"
+  },
+  {
+   "at": 1795458021608,
    "t": "Publicó cambios"
   }
  ],
