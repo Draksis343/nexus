@@ -3,7 +3,7 @@
 //
 //  Datos (en data.json):
 //    D.shop = { on: false,                 // visible para los jugadores
-//               t: 'Tienda Nexus',          // nombre
+//               t: 'Tienda de Reliquias',          // nombre
 //               d: 'texto',                 // descripción corta
 //               items: [ { id, rw:{recompensa}, price, sync, stock, until, feat, at } ] }
 //      price = Reliquias que cuesta        sync  = Medallas de Sincronía necesarias (no se gastan)
@@ -14,7 +14,7 @@
 //  'shop:<artículo>:<precio>' (no hay que actualizar el Apps Script).
 //  Reliquias disponibles = Reliquias ganadas (rqOf) − lo gastado en la tienda.
 // =====================================================================
-const SHOP = () => { D.shop = D.shop || { on: false, t: 'Tienda Nexus', d: '', items: [] }; D.shop.items = D.shop.items || []; return D.shop };
+const SHOP = () => { D.shop = D.shop || { on: false, t: 'Tienda de Reliquias', d: '', items: [] }; D.shop.items = D.shop.items || []; return D.shop };
 const shopVis = () => !!(A || (D.shop && D.shop.on));
 const shopTypes = () => EVRWT().filter(k => k !== 'reliquias');
 const shopBuys = (pid, id) => PASSC.filter(c => /^shop:/.test(c.r || '') && (!pid || c.p === pid) && (!id || String(c.r).split(':')[1] === id));
@@ -50,34 +50,80 @@ function shopState(it, p) {
 }
 
 const shopUntil = ms => new Date(ms).toLocaleDateString('es-MX', { day: 'numeric', month: 'short' }) + ', ' + new Date(ms).toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
+const shopNew = it => (it.at || 0) > Date.now() - 7 * 864e5;
+const shopLim = it => +it.stock > 0 || !!it.until;
+const shopSale = it => +it.old > +it.price;
+
+// Categorías del menú lateral (tipo, nombre, ícono)
+const SHCAT = [['marco', 'Marcos', '🖼'], ['borde', 'Márgenes', '▣'], ['efecto', 'Efectos', '✨'], ['color', 'Colores', '🎨'], ['emblema', 'Emblemas', '✦'], ['titulo', 'Títulos', '🏷'], ['fondo', 'Fondos', '🌄'], ['avatar', 'Avatar', '🤖'], ['objeto', 'Objetos', '🎟'], ['descarga', 'Descargas', '⬇'], ['tarjeta', 'Tarjetas', '🪪'], ['trofeo', 'Trofeos', '🏆']];
+const SHTAB = [['', 'Todo'], ['nuevos', 'Nuevos'], ['limitados', 'Limitados'], ['ofertas', 'Ofertas'], ['obtenidos', 'Obtenidos']];
+
+function shopArt(r) {
+  if (r.type === 'titulo') return `<span class="shtit">${esc(r.name || 'Título')}</span>`;
+  return rIcon(r);
+}
 
 function shopCard(it, p) {
-  const r = it.rw || {}, P = PT[r.type] || PT.objeto, [st, lb] = shopState(it, p), col = lcol(rwRar(r)), left = shopLeft(it);
-  const tags = [
-    +it.sync > 0 ? `<span class="shtag sy" title="Medallas de Sincronía necesarias (no se gastan)">✦ ${+it.sync}</span>` : '',
-    left !== Infinity ? `<span class="shtag">${left > 0 ? 'Quedan ' + left : 'Agotado'}</span>` : '',
-    it.until ? `<span class="shtag">${shopOpen(it) ? '⏳ Hasta ' + shopUntil(it.until) : 'Terminó'}</span>` : ''
-  ].join('');
-  return `<article class="panel shc st-${st}${it.feat ? ' feat' : ''}" style="--pc:${col}">
-  ${it.feat ? '<span class="shfeat">★ Destacado</span>' : ''}
-  <button type="button" class="shpv" data-a="shopview" data-id="${it.id}" aria-label="Ver ${esc(r.name || P[0])}">${rIcon(r)}</button>
-  <div class="shtx"><b>${esc(r.name || P[0])}</b><span class="subtle">${P[1]} ${esc(P[0])} · <span style="color:${col}">${esc(rwRar(r))}</span></span>${r.desc ? `<p>${esc(r.desc)}</p>` : ''}</div>
-  <div class="shtags">${tags}</div>
-  <div class="shbot"><span class="shpr">${RQI} ${+it.price || 0}</span>${A ? `<span class="mg"><button class="btn small secondary" data-a="shopedit" data-id="${it.id}">Editar</button><button class="btn small ghost" data-a="shopdel" data-id="${it.id}" title="Quitar">✕</button></span>`
-    : `<button class="btn small${st === 'buy' ? '' : ' secondary'}" ${st === 'buy' ? `data-a="shopbuy" data-id="${it.id}"` : st === 'login' ? 'data-a="ulogin"' : st === 'mine' ? `data-a="shopview" data-id="${it.id}"` : 'disabled'}>${lb}</button>`}</div></article>`;
+  const r = it.rw || {}, P = PT[r.type] || PT.objeto, [st, lb] = shopState(it, p), rar = rwRar(r), col = lcol(rar), left = shopLeft(it);
+  const badge = st === 'mine' ? ['OBTENIDO', 'own'] : left <= 0 ? ['AGOTADO', 'off'] : shopSale(it) ? ['-' + Math.round(100 - 100 * (+it.price || 0) / (+it.old)) + '%', 'sale'] : +it.stock === 1 ? ['ÚNICO', 'one'] : shopLim(it) ? ['LIMITADO', 'lim'] : shopNew(it) ? ['NUEVO', 'new'] : null;
+  const info = [left !== Infinity && left > 0 ? `Quedan ${left} de ${+it.stock}` : '', it.until && shopOpen(it) ? '⏳ Hasta ' + shopUntil(it.until) : '', +it.sync > 0 ? `✦ Requiere ${+it.sync} Sincronías` : ''].filter(Boolean);
+  const pr = `<span class="shp-dia">💎</span> ${+it.price || 0}${shopSale(it) ? ` <s>${+it.old}</s>` : ''}`;
+  const btn = A ? `<button type="button" class="shbuy" data-a="shopedit" data-id="${it.id}">${pr}<span class="shp-ed">✎ Editar</span></button>`
+    : st === 'buy' ? `<button type="button" class="shbuy" data-a="shopbuy" data-id="${it.id}">${pr}</button>`
+    : st === 'mine' ? `<button type="button" class="shbuy own" data-a="shopview" data-id="${it.id}">✔ Ya es tuyo</button>`
+    : st === 'login' ? `<button type="button" class="shbuy" data-a="ulogin">${pr}</button>`
+    : `<button type="button" class="shbuy no" disabled title="${esc(lb)}">${st === 'off' ? esc(lb) : pr}</button>`;
+  return `<article class="shc st-${st}" style="--pc:${col}">
+  <div class="shc-top"><span class="shrar">${esc(rar)}</span>${badge ? `<span class="shbdg ${badge[1]}">${badge[0]}</span>` : ''}</div>
+  <button type="button" class="shpv" data-a="shopview" data-id="${it.id}" aria-label="Ver ${esc(r.name || P[0])}">${shopArt(r)}</button>
+  <div class="shtx"><b>${esc(r.name || P[0])}</b><span>${esc(P[0])}</span>${info.map(t => `<em>${esc(t)}</em>`).join('')}</div>
+  ${st === 'lock' && !A ? `<small class="shneed">${esc(lb)}</small>` : ''}
+  ${btn}
+  ${A ? `<button type="button" class="shdel" data-a="shopdel" data-id="${it.id}" title="Quitar de la tienda" aria-label="Quitar">✕</button>` : ''}</article>`;
 }
 
 function tienda() {
   if (!shopVis()) return empty('🔒 La tienda todavía no abre. ¡Pronto!');
-  const sh = SHOP(), p = myP(), f = S.shopf || '';
+  const sh = SHOP(), p = myP(), cat = S.shopc == null ? 'dest' : S.shopc, tab = S.shopt || '';
+  if (A && !sh.items.length && !sh.seeded) setTimeout(() => act.shopseed({ auto: 1 }), 0);
   const all = sh.items.filter(it => A || shopOpen(it) || (p && shopMine(p.id, it)));
-  const types = [...new Set(all.map(it => (it.rw || {}).type).filter(Boolean))];
-  const L = all.filter(it => !f || (it.rw || {}).type === f).sort((a, b) => (!!b.feat - !!a.feat) || (+a.price || 0) - (+b.price || 0));
-  const bal = p ? `<div class="shbal"><span title="Reliquias disponibles">${RQI} <b>${rqBal(p)}</b> Reliquias</span><span title="Medallas de Sincronía: no se gastan, desbloquean objetos exclusivos">✦ <b>${syncOf(p)}</b> Sincronías</span></div>` : (A ? '' : '<p class="subtle">Inicia sesión para ver tus Reliquias y comprar.</p>');
-  return `${A ? `<section class="panel pad shadm${sh.on ? ' on' : ''}"><div><b>${sh.on ? '🟢 Tienda abierta' : '🔒 Tienda oculta'}</b><span class="subtle">${sh.on ? 'Los jugadores la ven en el menú.' : 'Solo tú la ves. Actívala cuando esté lista.'}</span></div><div class="mg"><button class="btn small" data-a="shopnew">＋ Nuevo artículo</button><button class="btn small secondary" data-a="shopcfg">⚙ Ajustes</button><button class="btn small ${sh.on ? 'danger' : 'secondary'}" data-a="shopon">${sh.on ? 'Ocultar tienda' : 'Abrir tienda'}</button></div></section>` : ''}
-  <section class="panel hero shhero"><div class="shhd"><div class="shic" aria-hidden="true">🛒</div><div><h2 class="big" style="margin:0">${esc(sh.t || 'Tienda Nexus')}</h2><p class="muted" style="margin:6px 0 0">${esc(sh.d || 'Cambia tus Reliquias por cosméticos para tu perfil. Algunos objetos exclusivos piden Medallas de Sincronía, que no se gastan.')}</p></div></div>${bal}</section>
-  ${types.length > 1 ? `<div class="tabs mt">${[['', 'Todo'], ...types.map(k => [k, PT[k][1] + ' ' + PT[k][0]])].map(([k, t]) => `<button class="tab ${f === k ? 'active' : ''}" data-a="shopf" data-k="${k}">${esc(t)}</button>`).join('')}</div>` : ''}
-  ${L.length ? `<div class="shgrid mt">${L.map(it => shopCard(it, p)).join('')}</div>` : empty(A ? 'Aún no hay artículos. Pulsa «＋ Nuevo artículo».' : 'Todavía no hay artículos a la venta.')}`;
+  const feat = all.filter(it => it.feat);
+  const cats = SHCAT.filter(c => all.some(it => (it.rw || {}).type === c[0]));
+  const cur = cat === 'dest' && !feat.length ? '' : cat;
+  let L = all.filter(it => cur === 'dest' ? it.feat : !cur || (it.rw || {}).type === cur);
+  if (tab === 'nuevos') L = L.filter(shopNew); else if (tab === 'limitados') L = L.filter(shopLim); else if (tab === 'ofertas') L = L.filter(shopSale); else if (tab === 'obtenidos') L = L.filter(it => p && shopMine(p.id, it));
+  L.sort((a, b) => (!!b.feat - !!a.feat) || RARORD.indexOf(rwRar(a.rw || {})) - RARORD.indexOf(rwRar(b.rw || {})) || (+a.price || 0) - (+b.price || 0));
+  const own = p ? sh.items.filter(it => shopMine(p.id, it)).length : 0;
+  const side = [...(feat.length ? [['dest', 'Destacados', '⭐']] : []), ['', 'Todo', '◆'], ...cats].map(([k, t, ic]) => `<button type="button" class="shcat${cur === k ? ' on' : ''}" data-a="shopc" data-k="${k}"><span class="shci">${ic}</span>${esc(t)}<i>${k === 'dest' ? feat.length : k ? all.filter(it => (it.rw || {}).type === k).length : all.length}</i></button>`).join('');
+  const PER = 24, pg = Math.min(S.shopn || 1, Math.max(1, Math.ceil(L.length / PER))), shown = L.slice(0, pg * PER);
+  return `${A ? `<section class="panel pad shadm${sh.on ? ' on' : ''}"><div><b>${sh.on ? '🟢 Tienda abierta' : '🔒 Tienda oculta'}</b><span class="subtle">${sh.on ? 'Los jugadores la ven en el menú.' : 'Solo tú la ves. Ábrela cuando esté lista.'} · ${sh.items.length} artículos</span></div><div class="mg"><button class="btn small" data-a="shopnew">＋ Nuevo artículo</button><button class="btn small secondary" data-a="shopseed">📦 Agregar catálogo</button><button class="btn small secondary" data-a="shopcfg">⚙ Ajustes</button><button class="btn small ${sh.on ? 'danger' : 'secondary'}" data-a="shopon">${sh.on ? 'Ocultar tienda' : 'Abrir tienda'}</button></div></section>` : ''}
+  <section class="shop">
+   <header class="shop-hd"><div><h2>${esc(sh.t || 'Tienda de Reliquias')}</h2>${sh.d ? `<p>${esc(sh.d)}</p>` : ''}</div>
+    <div class="shop-pills">${p ? `<span class="shpill" title="Reliquias disponibles">${RQI} <b>${rqBal(p)}</b><button type="button" class="shplus" data-a="shopinfo" aria-label="Cómo conseguir Reliquias">+</button></span><span class="shpill" title="Medallas de Sincronía (no se gastan)">✦ <b>${syncOf(p)}</b></span><span class="shpill">🎒 <b>${own}</b> obtenidos</span>` : A ? '' : '<span class="shpill">Inicia sesión para comprar</span>'}</div></header>
+   <div class="shop-body">
+    <nav class="shop-side" aria-label="Categorías">${side}</nav>
+    <div class="shop-main">
+     <div class="shtabs" role="tablist">${SHTAB.map(([k, t]) => `<button type="button" role="tab" class="${tab === k ? 'on' : ''}" aria-selected="${tab === k}" data-a="shopt" data-k="${k}">${t}</button>`).join('')}</div>
+     ${shown.length ? `<div class="shgrid">${shown.map(it => shopCard(it, p)).join('')}</div>${L.length > shown.length ? `<button class="btn secondary shmore" data-a="shopmore">Ver más (${L.length - shown.length})</button>` : ''}` : `<div class="shempty">${A && !sh.items.length ? 'Aún no hay artículos. Pulsa «📦 Agregar catálogo» o «＋ Nuevo artículo».' : tab === 'obtenidos' ? 'Todavía no has comprado nada aquí.' : 'No hay artículos en esta vista.'}</div>`}
+    </div></div></section>`;
+}
+
+// ---- Catálogo completo (el admin quita después los exclusivos) ----
+const SHRAR = { Nexus: 180, 'Épica': 100, Rara: 60, 'Común': 30, Reliquia: 250, Atemporal: 150 };
+function shopCatalog() {
+  const L = [], NX = /^(corona|gloria|alas|leyenda|fenix|portal|galaxia|tplasma|ano2027|fuegos|aurorab|fx:arcoiris|fx:galaxia|vortice)$/, EP = /^(solar|arcoiris|plasma|orbita|strike|laurel|marquesina|glitch|prisma|tormenta|holo|energia|synth|matrix|aurora|fuego|fx:oro|fx:fuego|fx:hielo|fx:plasma|fx:holo|fx:glitch|fx:arcade|orbes|ondas|rayos|confeti|trineo)$/;
+  const rar = (v, i) => NX.test(v) ? 'Nexus' : EP.test(v) ? 'Épica' : i < 6 ? 'Común' : 'Rara';
+  const add = (type, v, name, r, x) => L.push({ type, v, name, rar: r, ...(x || {}) });
+  FRAMES.forEach(([v, n], i) => add('marco', v, 'Marco ' + n.replace(/\s*\(.*\)/, ''), rar(v, i)));
+  BORD.forEach(([v, n], i) => add('borde', v, 'Margen ' + n.replace(/\s*\(.*\)/, ''), rar(v, i)));
+  EFX.forEach(([v, n], i) => add('efecto', v, n.replace(/\s*[✨]$/, ''), rar(v, i)));
+  [['#ff7772', 'Rojo'], ['#73dbe4', 'Cian'], ['#ffc266', 'Ámbar'], ['#b57bff', 'Morado'], ['#86e3a6', 'Verde'], ['#ff9ad5', 'Rosa'], ['degradado', 'Degradado del tema']].forEach(([v, n]) => add('color', v, 'Nombre ' + n.toLowerCase(), v === 'degradado' ? 'Rara' : 'Común'));
+  NMC.forEach(([v, n]) => add('color', v, 'Nombre ' + n.toLowerCase(), NX.test(v) ? 'Nexus' : EP.test(v) ? 'Épica' : 'Rara'));
+  [['⚡', 'Rayo', ''], ['🔥', 'Flama', 'latido'], ['❄', 'Copo', 'giro'], ['🌙', 'Luna', ''], ['⭐', 'Estrella', 'brillo'], ['👑', 'Corona', 'brillo'], ['🎮', 'Control', ''], ['🐉', 'Dragón', 'flotar'], ['🦊', 'Zorro', ''], ['💀', 'Calavera', 'latido'], ['🍀', 'Trébol', 'giro'], ['🎯', 'Diana', ''], ['🛡', 'Escudo', ''], ['☄', 'Cometa', 'flotar'], ['🕹', 'Arcade', ''], ['👾', 'Invasor', 'flotar']].forEach(([v, n, a], i) => add('emblema', v, 'Emblema ' + n, i < 8 ? 'Común' : 'Rara', { a }));
+  [['Coleccionista de Reliquias', 'Épica'], ['Cazador de logros', 'Rara'], ['Leyenda retro', 'Épica'], ['Maestro del pixel', 'Rara'], ['Sin miedo al jefe final', 'Rara'], ['Speedrunner', 'Rara'], ['Completista', 'Épica'], ['Rey del arcade', 'Nexus']].forEach(([n, r]) => add('titulo', '', n, r));
+  FBG.forEach(([v, n], i) => add('fondo', v, 'Fondo ' + n.toLowerCase(), rar(v, i)));
+  RB.XMAS.forEach(([v, n]) => add('avatar', v, n, 'Épica'));
+  return L;
 }
 
 // Formulario de artículo (usa el mismo formulario de recompensas del Núcleo)
@@ -86,19 +132,31 @@ function shopForm(it) {
   act.evpz({
     cb: (n, o) => {
       const x = it || { id: 's' + uid(), at: Date.now() };
-      Object.assign(x, { rw: n, price: Math.max(0, Math.round(+o.price || 0)), sync: Math.max(0, Math.round(+o.sync || 0)), stock: Math.max(0, Math.round(+o.stock || 0)), until: o.until ? (Date.parse(o.until) || 0) : 0, feat: o.feat === '1' });
+      Object.assign(x, { rw: n, price: Math.max(0, Math.round(+o.price || 0)), old: Math.max(0, Math.round(+o.old || 0)), sync: Math.max(0, Math.round(+o.sync || 0)), stock: Math.max(0, Math.round(+o.stock || 0)), until: o.until ? (Date.parse(o.until) || 0) : 0, feat: o.feat === '1' });
       if (!it) sh.items.push(x);
       pend = (it ? 'Editó' : 'Agregó') + ' «' + (n.name || PT[n.type][0]) + '» en la tienda'; touch();
     },
     rw: it ? it.rw : null, types: shopTypes(), title: it ? 'Editar artículo de la tienda' : '🛒 Nuevo artículo de la tienda',
-    pre: [['', 'Precio y condiciones', 'sec'], ['price', 'Precio en Reliquias', 'number', { min: 0 }], ['sync', 'Medallas de Sincronía necesarias (no se gastan; 0 = ninguna)', 'number', { min: 0 }], ['stock', 'Cupo total (0 = sin límite)', 'number', { min: 0 }], ['until', 'Disponible hasta (opcional)', 'dt'], ['feat', '¿Destacado?', 'select', [['0', 'No'], ['1', 'Sí, mostrarlo primero']]], ['', 'Qué se lleva el jugador', 'sec']],
-    pv: { price: it ? it.price : 100, sync: it ? it.sync || 0 : 0, stock: it ? it.stock || 0 : 0, until: it ? dt(it.until) : '', feat: it && it.feat ? '1' : '0', ...(it ? {} : { rwt: 'marco' }) }
+    pre: [['', 'Precio y condiciones', 'sec'], ['price', 'Precio en Reliquias', 'number', { min: 0 }], ['old', 'Precio anterior, para mostrarlo en oferta (0 = sin oferta)', 'number', { min: 0 }], ['sync', 'Medallas de Sincronía necesarias (no se gastan; 0 = ninguna)', 'number', { min: 0 }], ['stock', 'Cupo total (0 = sin límite)', 'number', { min: 0 }], ['until', 'Disponible hasta (opcional)', 'dt'], ['feat', '¿Destacado?', 'select', [['0', 'No'], ['1', 'Sí, mostrarlo primero']]], ['', 'Qué se lleva el jugador', 'sec']],
+    pv: { price: it ? it.price : 100, old: it ? it.old || 0 : 0, sync: it ? it.sync || 0 : 0, stock: it ? it.stock || 0 : 0, until: it ? dt(it.until) : '', feat: it && it.feat ? '1' : '0', ...(it ? {} : { rwt: 'marco' }) }
   });
 }
 
 // ---- acciones de esta sección ----
 Object.assign(act, {
-  shopf(e) { S.shopf = e.k || ''; render() },
+  shopc(e) { S.shopc = e.k || ''; S.shopn = 1; render() },
+  shopt(e) { S.shopt = e.k || ''; S.shopn = 1; render() },
+  shopmore() { S.shopn = (S.shopn || 1) + 1; render() },
+  shopinfo() { const p = myP(); if (p) act.rqjoke({ id: p.id }) },
+  shopseed(e) {
+    if (!A) return; const auto = e && e.auto; SHOP().seeded = true; const sh = SHOP(), have = new Set(sh.items.map(it => (it.rw || {}).type + ':' + ((it.rw || {}).type === 'titulo' ? (it.rw || {}).name : (it.rw || {}).v)));
+    const C = shopCatalog().filter(c => !have.has(c.type + ':' + (c.type === 'titulo' ? c.name : c.v)));
+    if (!C.length) return toast('El catálogo completo ya está en la tienda.');
+    if (!auto && !confirm(`¿Agregar ${C.length} artículos a la tienda? Son todos los marcos, márgenes, efectos, colores, emblemas, títulos, fondos y piezas de avatar. Después puedes quitar los que sean exclusivos.`)) return;
+    const now = Date.now();
+    C.forEach((c, i) => sh.items.push({ id: 's' + uid() + i, at: now - 8 * 864e5, rw: { id: 'z' + uid() + i, type: c.type, v: c.v, name: c.name, desc: '', rar: c.rar, a: c.a || '', c: '' }, price: SHRAR[c.rar] || 60, sync: 0, stock: 0, until: 0, feat: false }));
+    pend = 'Agregó el catálogo completo a la tienda'; touch(); toast(C.length + ' artículos agregados. Publica los cambios cuando termines.');
+  },
   shopgo() { try { closeM(false) } catch (x) {} act.nav({ k: 'tienda' }) },
   shopnew() { if (A) shopForm(null) },
   shopedit(e) { const it = SHOP().items.find(x => x.id === e.id); if (A && it) shopForm(it) },
@@ -110,7 +168,7 @@ Object.assign(act, {
   },
   shopcfg() {
     const sh = SHOP();
-    openForm('⚙ Ajustes de la tienda', [['t', 'Nombre de la tienda'], ['d', 'Descripción corta', 'area']], { t: sh.t || 'Tienda Nexus', d: sh.d || '' }, o => { sh.t = (o.t || '').trim().slice(0, 50) || 'Tienda Nexus'; sh.d = (o.d || '').trim().slice(0, 300); pend = 'Editó los ajustes de la tienda'; touch() });
+    openForm('⚙ Ajustes de la tienda', [['t', 'Nombre de la tienda'], ['d', 'Descripción corta', 'area']], { t: sh.t || 'Tienda de Reliquias', d: sh.d || '' }, o => { sh.t = (o.t || '').trim().slice(0, 50) || 'Tienda de Reliquias'; sh.d = (o.d || '').trim().slice(0, 300); pend = 'Editó los ajustes de la tienda'; touch() });
   },
   shopon() {
     const sh = SHOP();
