@@ -1607,86 +1607,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794942936241,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794942996590,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794943150253,
-   "t": "Configuró el pase de temporada"
-  },
-  {
-   "at": 1794943158563,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794945607177,
-   "t": "Borró una recompensa del pase"
-  },
-  {
-   "at": 1794945966176,
-   "t": "Suspendió los retos de Draksis"
-  },
-  {
-   "at": 1794945972673,
-   "t": "Reanudó los retos de Draksis"
-  },
-  {
-   "at": 1794947197536,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794947548588,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794947599734,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794947623283,
-   "t": "Editó una recompensa del pase"
-  },
-  {
-   "at": 1794947895544,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794947930012,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794947967002,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794948004079,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794948028330,
-   "t": "Editó una recompensa del pase"
-  },
-  {
-   "at": 1794948098968,
-   "t": "Editó misiones del pase"
-  },
-  {
-   "at": 1794948199043,
-   "t": "Editó misiones del pase"
-  },
-  {
-   "at": 1794948272886,
-   "t": "Editó misiones del pase"
-  },
-  {
-   "at": 1794948308062,
-   "t": "Editó misiones del pase"
-  },
-  {
    "at": 1794948317388,
    "t": "Publicó cambios"
   },
@@ -3205,6 +3125,86 @@
   {
    "at": 1795458366777,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795459390790,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795459414248,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459419292,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795459439887,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459447031,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459451422,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459454648,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459459721,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459463547,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459467908,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459473868,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459479067,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459482691,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459488163,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459508095,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795459604171,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795461617469,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795461772304,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795461796045,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795461803344,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3245,11 +3245,11 @@
     }
    ],
    "done": [],
-   "img": "img/ev-1795160419880.jpg",
+   "img": "img/ev-1795461610674.jpg",
    "title": "WinterFest",
-   "sub": "Happy Hollydays",
-   "desc": "Vive la experiencia de un mundo nevado en nuestro servidor de Minecraft haciendo objetivos comunitarios para recibir cosméticos como recompensa para tu perfil. Participa en el evento para llevártelos una vez alcancen la meta.",
-   "color": "#ff4d6d",
+   "sub": "Servidor temático de Minecraft",
+   "desc": "Vive la experiencia de un mundo nevado en nuestro servidor de Minecraft haciendo objetivos comunitarios para recibir cosméticos como recompensa para tu perfil. Participa en el evento para llevártelos una vez alcancen la meta. Además de un <b><font color=\"#fdc168\">Calendario de Adviento</font></b> donde podrás reclamar recompensas diariamente a partir del 1ro de diciembre hasta el 31. Recuerda ingresar todos los días a reclamar tu recompensa por que sino lo haces un día no podrás reclamarla despues.<div><i><b><br></b></i></div><div><i><b>Modpack y servidor próximamente</b></i></div>",
+   "color": "#4da3ff",
    "start": 1796166000000,
    "end": 1798740000000,
    "ch": [
@@ -3279,6 +3279,15 @@
      "dif": "Medio",
      "pl": 40,
      "xp": 150
+    },
+    {
+     "id": "mwtmah1n6m5",
+     "name": "Construye una base",
+     "desc": "Construye una base donde puedas sobrevivir al frio extremo",
+     "rar": "Rara",
+     "dif": "Medio",
+     "pl": 30,
+     "xp": 100
     }
    ],
    "ac": [
@@ -3331,7 +3340,9 @@
       "v": 10,
       "name": "",
       "desc": "",
-      "rar": "Común"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "3": {
       "id": "zmwtf2qqp1ty",
@@ -3349,7 +3360,9 @@
       "v": 10,
       "name": "",
       "desc": "",
-      "rar": "Común"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "5": {
       "id": "zmwtfmm1lnsj",
@@ -3387,7 +3400,9 @@
       "v": 10,
       "name": "",
       "desc": "",
-      "rar": "Común"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "9": {
       "id": "zmwtfa3zah5r",
@@ -3405,7 +3420,9 @@
       "v": 10,
       "name": "",
       "desc": "",
-      "rar": "Común"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "11": {
       "id": "zmwtfjj3barv",
@@ -3443,7 +3460,9 @@
       "v": 50,
       "name": "",
       "desc": "",
-      "rar": "Épica"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "15": {
       "id": "zmwtfi8m2ajn",
@@ -3456,12 +3475,15 @@
       "c": ""
      },
      "16": {
-      "id": "amwtgfg7nnvy",
-      "type": "reliquias",
-      "v": 10,
-      "name": "",
-      "desc": "",
-      "rar": "Común"
+      "id": "zmwtm69tcm2g",
+      "type": "fondo",
+      "name": "Doomsday",
+      "desc": "El fin se acerca...",
+      "rar": "Nexus",
+      "v": "",
+      "a": "",
+      "c": "",
+      "img": "img/evrw-1795459408176.jpg"
      },
      "17": {
       "id": "zmwtfzw2ktsl",
@@ -3484,15 +3506,14 @@
       "c": ""
      },
      "19": {
-      "id": "zmwtk5n06olm",
+      "id": "zmwtm6ya7z5n",
       "type": "fondo",
-      "name": "Doomsday",
-      "desc": "El final se acerca...",
-      "rar": "Nexus",
-      "v": "",
+      "name": "Chimenea",
+      "desc": "Es muy cálido aquí",
+      "rar": "Épica",
+      "v": "chimenea",
       "a": "",
-      "c": "",
-      "img": "img/evrw-1795456019382.jpg"
+      "c": ""
      },
      "20": {
       "id": "amwtgfg7nfkk",
@@ -3500,7 +3521,9 @@
       "v": 10,
       "name": "",
       "desc": "",
-      "rar": "Común"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "21": {
       "id": "zmwtg3zzcs5r",
@@ -3518,7 +3541,9 @@
       "v": 10,
       "name": "",
       "desc": "",
-      "rar": "Común"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "23": {
       "id": "zmwtg4vkaovf",
@@ -3556,7 +3581,9 @@
       "v": 10,
       "name": "",
       "desc": "",
-      "rar": "Común"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "27": {
       "id": "zmwtg5te4t06",
@@ -3574,7 +3601,9 @@
       "v": 50,
       "name": "",
       "desc": "",
-      "rar": "Épica"
+      "rar": "Reliquia",
+      "a": "",
+      "c": ""
      },
      "29": {
       "id": "zmwtg8oy1iyx",
@@ -3601,7 +3630,7 @@
       "type": "marco",
       "name": "Feliz Año Nuevo",
       "desc": "Que este año 2027 sea especial",
-      "rar": "Épica",
+      "rar": "Nexus",
       "v": "ano2027",
       "a": "",
       "c": ""
