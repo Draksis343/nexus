@@ -1472,14 +1472,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794718857280,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794719508441,
-   "t": "Editó el desafío «La caída del Covenant»"
-  },
-  {
    "at": 1794719564248,
    "t": "Editó el desafío «La caída del Covenant»"
   },
@@ -3070,6 +3062,14 @@
   {
    "at": 1795403848176,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795408182266,
+   "t": "Cambió el plazo para retar"
+  },
+  {
+   "at": 1795408191524,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3483,5 +3483,5 @@
   "dim": 35,
   "img": ""
  },
- "rdf": 1795410000000
+ "rdf": 1795456800000
 }
