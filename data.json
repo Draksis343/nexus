@@ -1600,14 +1600,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794720572776,
-   "t": "Cambio (musica)"
-  },
-  {
-   "at": 1794720574810,
-   "t": "Publicó cambios"
-  },
-  {
    "at": 1794720728166,
    "t": "Cambio (foto)"
   },
@@ -3198,6 +3190,14 @@
   {
    "at": 1795442850295,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795445205754,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795445889529,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3242,7 +3242,17 @@
      "desc": "Mejora la caldera para abarcar más con su calor y sobrevivir al frio intenso",
      "rar": "Común",
      "dif": "Fácil",
-     "pl": 20
+     "pl": 20,
+     "xp": 50
+    },
+    {
+     "id": "mwtdpv5m1yr",
+     "name": "Sube a nivel 3 la caldera",
+     "desc": "Mejora la caldera para abarcar más con su calor y sobrevivir al frio intenso",
+     "rar": "Rara",
+     "dif": "Medio",
+     "pl": 30,
+     "xp": 100
     }
    ],
    "ac": [
@@ -3251,7 +3261,8 @@
      "name": "Sobrevive 10 días al frio intenso",
      "desc": "Sobrevive los 10 días en una sola sesión",
      "rar": "Común",
-     "pl": 10
+     "pl": 10,
+     "xp": 0
     }
    ],
    "cc": false
