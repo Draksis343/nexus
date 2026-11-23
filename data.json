@@ -1289,6 +1289,16 @@
    "p": "mwhd47sq1jb",
    "a": "mwrmhy5nt5f",
    "at": 1795339020590
+  },
+  {
+   "p": "mwhdqy01n4u",
+   "a": "mwf8u7blofu",
+   "at": 1795403816147
+  },
+  {
+   "p": "mwhdqy01n4u",
+   "a": "mwo8x10n2od",
+   "at": 1795403821139
   }
  ],
  "videos": [
@@ -1461,34 +1471,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794717525145,
-   "t": "Editó la ventana de emuladores"
-  },
-  {
-   "at": 1794717527715,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794717854646,
-   "t": "Editó la ventana de emuladores"
-  },
-  {
-   "at": 1794717893310,
-   "t": "Editó la ventana de emuladores"
-  },
-  {
-   "at": 1794717899969,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794718596978,
-   "t": "Cambio (acccreate)"
-  },
-  {
-   "at": 1794718601594,
-   "t": "Cambio (acccreate)"
-  },
   {
    "at": 1794718857280,
    "t": "Publicó cambios"
@@ -3059,6 +3041,34 @@
   },
   {
    "at": 1795400696489,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795403815070,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795403816147,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795403816991,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795403821139,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795403832586,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795403839807,
+   "t": "Cambio (grantt)"
+  },
+  {
+   "at": 1795403848176,
    "t": "Publicó cambios"
   }
  ],
