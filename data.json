@@ -1607,14 +1607,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794950861218,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794951918504,
-   "t": "Editó el desafío «Biome Spiral Parkour»"
-  },
-  {
    "at": 1794951958341,
    "t": "Editó el desafío «La caída del Covenant»"
   },
@@ -3205,6 +3197,14 @@
   {
    "at": 1795462853680,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795464171770,
+   "t": "Puso música ambiental al evento «WinterFest»"
+  },
+  {
+   "at": 1795464186208,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3637,7 +3637,11 @@
      }
     }
    },
-   "veil": true
+   "veil": true,
+   "music": {
+    "src": "music/1795464168858-Twinklies__Journey.mp3",
+    "name": "Twinklies' Journey.mp3"
+   }
   }
  ],
  "rax": [
