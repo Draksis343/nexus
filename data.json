@@ -61,7 +61,7 @@
   {
    "id": "mwicujdshcq",
    "name": "Shadoms",
-   "bonus": -10
+   "bonus": 0
   }
  ],
  "challenges": [
@@ -1599,14 +1599,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794720390219,
-   "t": "Editó el pie de página"
-  },
-  {
-   "at": 1794720394293,
-   "t": "Publicó cambios"
-  },
   {
    "at": 1794720572776,
    "t": "Cambio (musica)"
@@ -3197,6 +3189,14 @@
   },
   {
    "at": 1795409452261,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795442846206,
+   "t": "Cambio (plp)"
+  },
+  {
+   "at": 1795442850295,
    "t": "Publicó cambios"
   }
  ],
