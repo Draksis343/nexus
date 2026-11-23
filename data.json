@@ -1600,18 +1600,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794931489908,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794931655415,
-   "t": "Agregó una recompensa al pase"
-  },
-  {
-   "at": 1794931674971,
-   "t": "Configuró el pase de temporada"
-  },
-  {
    "at": 1794931792667,
    "t": "Publicó cambios"
   },
@@ -3198,6 +3186,18 @@
   {
    "at": 1795453818955,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795455988705,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795456022818,
+   "t": "Cambio (advopen)"
+  },
+  {
+   "at": 1795456031078,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3477,14 +3477,15 @@
       "c": ""
      },
      "19": {
-      "id": "zmwtg0a1t68q",
+      "id": "zmwtk5n06olm",
       "type": "fondo",
-      "name": "Chimenea",
-      "desc": "Que cálido se siente",
-      "rar": "Épica",
-      "v": "chimenea",
+      "name": "Doomsday",
+      "desc": "El final se acerca...",
+      "rar": "Nexus",
+      "v": "",
       "a": "",
-      "c": ""
+      "c": "",
+      "img": "img/evrw-1795456019382.jpg"
      },
      "20": {
       "id": "amwtgfg7nfkk",
