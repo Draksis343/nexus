@@ -795,15 +795,79 @@
    "status": "Disponible",
    "round": "",
    "end": 1795892340000,
-   "link": "",
-   "desc": "¡A ver si consigues convertirte en la leyenda de Aero Fighters 2!",
-   "ob_bronce": "Completa una misión sin utilizar ningún continue.",
-   "ob_plata": "Completa una partida sin utilizar bombas.",
-   "ob_oro": "Completa el juego sin perder ninguna vida.",
-   "ob_platino": "Completa el juego sin utilizar continues y sin recoger potenciadores de armas.",
    "rules": "",
    "img": "img/ch-1794895745731.jpg",
-   "rq": 10
+   "rq": 10,
+   "ra": {
+    "g": {
+     "id": 11774,
+     "t": "Aero Fighters 2 (AES)",
+     "cn": "Arcade",
+     "ic": "/Images/117822.png",
+     "ti": "/Images/021864.png",
+     "ig": "/Images/021863.png",
+     "bx": "/Images/021862.png",
+     "np": 1009,
+     "nph": 1009
+    },
+    "L": [
+     {
+      "id": 65152,
+      "t": "His Imperial Tragedy's Reign",
+      "d": "Beat Japan's stage on Normal difficulty or higher",
+      "p": 5,
+      "b": "74219",
+      "n": 978,
+      "nh": 633
+     },
+     {
+      "id": 65157,
+      "t": "Advance Australia Fighter",
+      "d": "Beat Australia's stage on Normal difficulty or higher",
+      "p": 5,
+      "b": "74225",
+      "n": 338,
+      "nh": 187
+     },
+     {
+      "id": 65161,
+      "t": "Around the World in 10 Stages",
+      "d": "Beat the Fortress stage and finish the game on Normal difficulty or higher",
+      "p": 10,
+      "b": "74229",
+      "n": 152,
+      "nh": 28
+     },
+     {
+      "id": 65192,
+      "t": "Supreme Wings",
+      "d": "Beat the game on Hard difficulty",
+      "p": 50,
+      "b": "74259",
+      "n": 94,
+      "nh": 13
+     }
+    ],
+    "as": {
+     "65152": "bronce",
+     "65157": "plata",
+     "65161": "oro",
+     "65192": "platino"
+    },
+    "need": {
+     "bronce": 1,
+     "plata": 1,
+     "oro": 1,
+     "platino": 1
+    },
+    "gpl": {},
+    "grq": {},
+    "hc": true,
+    "since": 1795409303168,
+    "s": "Temporada 0 - PROTOCOLO ZERO",
+    "im": "https://media.retroachievements.org/Images/021863.png"
+   },
+   "syncrq": 0
   },
   {
    "id": "mwkbdc5kox8",
@@ -1471,14 +1535,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794719564248,
-   "t": "Editó el desafío «La caída del Covenant»"
-  },
-  {
-   "at": 1794719567256,
-   "t": "Publicó cambios"
-  },
   {
    "at": 1794719661985,
    "t": "Cambio (acccreate)"
@@ -3069,6 +3125,14 @@
   },
   {
    "at": 1795408191524,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795409303168,
+   "t": "Editó el desafío «Luchador Aéreo»"
+  },
+  {
+   "at": 1795409308942,
    "t": "Publicó cambios"
   }
  ],
