@@ -1607,14 +1607,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794948755905,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794950858264,
-   "t": "Configuró el pase de temporada"
-  },
-  {
    "at": 1794950861218,
    "t": "Publicó cambios"
   },
@@ -3205,6 +3197,14 @@
   {
    "at": 1795462548150,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795462841822,
+   "t": "Cambio (evcc)"
+  },
+  {
+   "at": 1795462853680,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3316,7 +3316,7 @@
      "xp": 100
     }
    ],
-   "cc": false,
+   "cc": true,
    "adv": {
     "on": false,
     "t": "Calendario de adviento",
