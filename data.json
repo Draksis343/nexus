@@ -1600,86 +1600,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794723646855,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794723905316,
-   "t": "Cambio (acccreate)"
-  },
-  {
-   "at": 1794723910197,
-   "t": "Cambio (acccreate)"
-  },
-  {
-   "at": 1794723916657,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794729638799,
-   "t": "Editó el desafío «Leyenda del Rock»"
-  },
-  {
-   "at": 1794729641722,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794730766465,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1794730878922,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794731072299,
-   "t": "Editó el desafío «The Mona Lisa»"
-  },
-  {
-   "at": 1794731077682,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794731441325,
-   "t": "Editó el desafío «The Mona Lisa»"
-  },
-  {
-   "at": 1794731445117,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794734723039,
-   "t": "Editó el desafío «La caída del Covenant»"
-  },
-  {
-   "at": 1794734735965,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794762039458,
-   "t": "Cambio (newn)"
-  },
-  {
-   "at": 1794762058912,
-   "t": "Cambio (deln)"
-  },
-  {
-   "at": 1794762067884,
-   "t": "Cambio (randd)"
-  },
-  {
-   "at": 1794762077405,
-   "t": "Editó un reto"
-  },
-  {
-   "at": 1794762166936,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794762573001,
-   "t": "Cambió la fecha límite de la ronda"
-  },
-  {
    "at": 1794762576045,
    "t": "Publicó cambios"
   },
@@ -3198,6 +3118,86 @@
   {
    "at": 1795447983270,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795448173573,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448179308,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795448209178,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448269415,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448276538,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448284034,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448288085,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448291468,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448366810,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448377475,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795448378805,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795448380377,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795448381805,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448384141,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795448413209,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448420437,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795448421866,
+   "t": "Cambio (advdel)"
+  },
+  {
+   "at": 1795448479885,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448551824,
+   "t": "Cambio (advday)"
+  },
+  {
+   "at": 1795448652004,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3283,16 +3283,6 @@
       "a": "",
       "c": ""
      },
-     "2": {
-      "id": "zmwtf2auvqi9",
-      "type": "reliquias",
-      "name": "Reliquias",
-      "desc": "Úsalas en la tienda",
-      "rar": "Reliquia",
-      "v": 20,
-      "a": "",
-      "c": ""
-     },
      "3": {
       "id": "zmwtf2qqp1ty",
       "type": "borde",
@@ -3303,53 +3293,23 @@
       "a": "",
       "c": ""
      },
-     "4": {
-      "id": "zmwtf4umps7k",
+     "5": {
+      "id": "zmwtfmm1lnsj",
       "type": "avatar",
       "name": "Empaquetados",
-      "desc": "Dale mas estilo a tu avatar",
+      "desc": "¿Que habrá dentro?",
       "rar": "Épica",
       "v": "eyes:21",
       "a": "",
       "c": ""
      },
-     "5": {
-      "id": "zmwtf5fkenxm",
-      "type": "reliquias",
-      "name": "Reliquias",
-      "desc": "Úsalos en la tienda",
-      "rar": "Reliquia",
-      "v": 20,
-      "a": "",
-      "c": ""
-     },
-     "6": {
-      "id": "zmwtf6vin7ci",
-      "type": "emblema",
-      "name": "",
-      "desc": "",
-      "rar": "Épica",
-      "v": "🎄",
-      "a": "brillo",
-      "c": ""
-     },
      "7": {
-      "id": "zmwtf8wr9wul",
-      "type": "titulo",
-      "name": "Espíritu navideño",
-      "desc": "Demuestra tu espíritu",
+      "id": "zmwtfo1hptk4",
+      "type": "fondo",
+      "name": "Envuelto",
+      "desc": "¿Para quien es? 👀",
       "rar": "Épica",
-      "v": "",
-      "a": "",
-      "c": ""
-     },
-     "8": {
-      "id": "zmwtf99z0823",
-      "type": "reliquias",
-      "name": "Reliquias",
-      "desc": "Úsalos en la tienda",
-      "rar": "Épica",
-      "v": 20,
+      "v": "regalos",
       "a": "",
       "c": ""
      },
@@ -3360,6 +3320,36 @@
       "desc": "Rico",
       "rar": "Épica",
       "v": "fx:navidad",
+      "a": "",
+      "c": ""
+     },
+     "11": {
+      "id": "zmwtfjj3barv",
+      "type": "color",
+      "name": "Jengibre",
+      "desc": "De lo único que serás rey será del reino de los estúpidos",
+      "rar": "Épica",
+      "v": "fx:galleta",
+      "a": "",
+      "c": ""
+     },
+     "13": {
+      "id": "zmwtflm8q7ww",
+      "type": "avatar",
+      "name": "Copito",
+      "desc": "Chupas... digo frioooo 🥶",
+      "rar": "Épica",
+      "v": "eyes:18",
+      "a": "",
+      "c": ""
+     },
+     "15": {
+      "id": "zmwtfi8m2ajn",
+      "type": "efecto",
+      "name": "Nevado",
+      "desc": "Hace frío aquí 🥶",
+      "rar": "Épica",
+      "v": "snow",
       "a": "",
       "c": ""
      },
