@@ -1462,14 +1462,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794717290094,
-   "t": "Editó la ventana de emuladores"
-  },
-  {
-   "at": 1794717518377,
-   "t": "Cambio (emuopen)"
-  },
-  {
    "at": 1794717525145,
    "t": "Editó la ventana de emuladores"
   },
@@ -3060,6 +3052,14 @@
   {
    "at": 1795380977248,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795400693107,
+   "t": "Cambió el plazo para retar"
+  },
+  {
+   "at": 1795400696489,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3473,5 +3473,5 @@
   "dim": 35,
   "img": ""
  },
- "rdf": 1795406400000
+ "rdf": 1795410000000
 }
