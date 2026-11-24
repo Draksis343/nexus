@@ -33,7 +33,7 @@ function mvpCard(id,pl,W){const p=D.players.find(x=>x.id===id);if(!p)return`<p s
  <div class="mvp-s"><div><b class="amber">+${pl}</b><span>PL</span></div><div><b>${ch}</b><span>Desafíos</span></div><div><b>${med}</b><span>Medallas</span></div><div><b>+${xp}</b><span>XP</span></div></div></div></button>`}
 function home(){const top=ranking().slice(0,3),last=feed().sort((a,b)=>b.at-a.at).slice(0,5);
  return updBtn()+`<div class="grid-main"><div class="stack">${evPanels()}${hero()}${others()}${weekPanel()}${relicPanel()}</div>
- <div class="stack">${seasonPanel()}<section class="panel pad"><h2 class="section-title">Top 3 jugadores</h2>${top.length?top.map((x,i)=>`<div class="line"><span class="mono amber">0${i+1}</span>${av(x.p)}<div><strong>${pnm(x.p)}</strong>${pr(x.s.prest)}${ttag(eqt(x.p))}<div class="subtle">${x.s.rank}</div></div><strong class="mono amber">${x.s.pl} PL</strong></div>`).join(''):'<p class="muted">Aún no hay jugadores.</p>'}</section><section class="panel pad"><h2 class="section-title">Últimos resultados</h2>${last.length?last.map(r=>`<div class="rrow"><span><strong>${pnh(r.p)}</strong><br><span class="subtle">${esc(r.t)}</span></span>${fbadge(r)}</div>`).join(''):'<p class="muted">Sin resultados todavía.</p>'}</section>${newsPanel()}</div></div>`}
+ <div class="stack">${seasonPanel()}<section class="panel pad"><h2 class="section-title">Top 3 jugadores</h2>${top.length?top.map((x,i)=>`<div class="line"><span class="mono amber">0${i+1}</span>${av(x.p)}<div><strong>${pnm(x.p)}</strong>${pr(x.s.prest)}${ttag(eqt(x.p))}<div class="subtle">${x.s.rank}</div></div><strong class="mono amber">${x.s.pl} PL</strong></div>`).join(''):'<p class="muted">Aún no hay jugadores.</p>'}</section>${vidPanel()}${newsPanel()}</div></div>`}
 
 // ---- acciones de esta sección ----
 Object.assign(act,{
@@ -42,3 +42,8 @@ Object.assign(act,{
  deln(e){const n=D.news.find(x=>x.id===e.id);if(!n||!confirm('¿Eliminar este aviso?'))return;if(n.img)repoDel(n.img);D.news=D.news.filter(x=>x.id!==e.id);touch()},
  morenews(){S.allnews=!S.allnews;render()}
 });
+
+// Panel «Videos recientes» del Command Center: lista compacta con miniatura
+function vidPanel(){const L=[...(D.videos||[])].filter(v=>v&&v.url).reverse().slice(0,8);
+ return`<section class="panel pad vidp"><h2 class="section-title">🎬 Videos recientes</h2>${L.length?`<div class="vidl">${L.map(v=>{const y=ytId(v.url),p=D.players.find(x=>x.id===v.p);
+  return`<a class="vidr" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer"><span class="vidt"><span class="vidf">🎬</span>${y?`<img src="https://img.youtube.com/vi/${y}/mqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">`:''}<i aria-hidden="true">▶</i></span><span class="vidx"><b>${esc(v.title||'Video')}</b><small>${p?pnm(p):'—'}${v.s?' · '+esc(String(v.s).replace(/\s*-.*$/,'')):''}</small></span></a>`}).join('')}</div>`:'<p class="muted">Aún no hay videos. Aparecerán aquí cuando se suban evidencias de retos y desafíos.</p>'}</section>`}
