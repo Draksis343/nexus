@@ -150,10 +150,8 @@
    "ob_bronce": "Termina el parkour",
    "ob_plata": "Termina con un rango superior al <b>B</b>",
    "ob_oro": "No uses los checkpoint del bioma<b><font color=\"#66a1ff\"> Ice Peaks</font></b>",
-   "ob_platino": "<font color=\"#ffffff\">Llega a la sima en una sola sesión</font>",
-   "rq": 10,
-   "goals": [],
-   "syncrq": 0
+   "ob_platino": "<font color=\"#ffffff\">Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b>",
+   "rq": 10
   },
   {
    "id": "mwb5nw6ht13",
@@ -1608,50 +1606,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794951997997,
-   "t": "Editó el desafío «La aventura del Reino Champiñón»"
-  },
-  {
-   "at": 1794952007262,
-   "t": "Editó el desafío «El Caballero Valiente»"
-  },
-  {
-   "at": 1794952016215,
-   "t": "Editó el desafío «Luchador Aéreo»"
-  },
-  {
-   "at": 1794952021638,
-   "t": "Editó el desafío «Sailor Senshi»"
-  },
-  {
-   "at": 1794952070534,
-   "t": "Editó un reto"
-  },
-  {
-   "at": 1794952085861,
-   "t": "Editó un reto"
-  },
-  {
-   "at": 1794952096954,
-   "t": "Editó un reto"
-  },
-  {
-   "at": 1794952106738,
-   "t": "Editó un reto"
-  },
-  {
-   "at": 1794952117166,
-   "t": "Editó un reto"
-  },
-  {
-   "at": 1794952126684,
-   "t": "Editó un reto"
-  },
-  {
-   "at": 1794952137104,
-   "t": "Editó un reto"
-  },
   {
    "at": 1794952150890,
    "t": "Cambio (edita)"
@@ -3193,19 +3147,63 @@
    "t": "Publicó cambios"
   },
   {
-   "at": 1795494164066,
-   "t": "Editó el desafío «Biome Spiral Parkour»"
+   "at": 1795540846703,
+   "t": "Editó «Emblema Invasor» en la tienda"
   },
   {
-   "at": 1795494172788,
-   "t": "Publicó cambios"
+   "at": 1795540871706,
+   "t": "Editó «Emblema Corona» en la tienda"
   },
   {
-   "at": 1795504148808,
-   "t": "Editó una recompensa del pase"
+   "at": 1795540920226,
+   "t": "Editó «Fondo papel de regalo» en la tienda"
   },
   {
-   "at": 1795504165243,
+   "at": 1795540938614,
+   "t": "Editó «Fondo bosque nevado» en la tienda"
+  },
+  {
+   "at": 1795540977846,
+   "t": "Editó «Fondo nevada» en la tienda"
+  },
+  {
+   "at": 1795542097954,
+   "t": "Editó «Boca · Glaseado» en la tienda"
+  },
+  {
+   "at": 1795542136503,
+   "t": "Editó «Ojos · Regalos» en la tienda"
+  },
+  {
+   "at": 1795542163676,
+   "t": "Editó «Ojos · Bastones» en la tienda"
+  },
+  {
+   "at": 1795542177696,
+   "t": "Editó «Ojos · Esferas» en la tienda"
+  },
+  {
+   "at": 1795542191236,
+   "t": "Editó «Boca · Bigote navideño» en la tienda"
+  },
+  {
+   "at": 1795542205353,
+   "t": "Editó «Boca · Carbones» en la tienda"
+  },
+  {
+   "at": 1795542270564,
+   "t": "Editó «Módulos · Antena de copo» en la tienda"
+  },
+  {
+   "at": 1795542293197,
+   "t": "Editó «Módulos · Orejas de elfo» en la tienda"
+  },
+  {
+   "at": 1795542317845,
+   "t": "Editó «Módulos · Antena de copo» en la tienda"
+  },
+  {
+   "at": 1795547296379,
    "t": "Publicó cambios"
   }
  ],
@@ -3786,10 +3784,7 @@
     "desc": "Exhíbelo ante todos",
     "v": "",
     "c": "",
-    "img": "img/pase-1795504147115.jpg",
-    "hid": false,
-    "a": "",
-    "rar": "Nexus"
+    "img": "img/pase-1794947546291.jpg"
    },
    {
     "id": "prmwl5gfw6z6a",
@@ -6299,15 +6294,16 @@
      "v": "👑",
      "name": "Emblema Corona",
      "desc": "",
-     "rar": "Común",
+     "rar": "Épica",
      "a": "brillo",
      "c": ""
     },
-    "price": 30,
+    "price": 100,
     "sync": 0,
     "stock": 0,
     "until": 0,
-    "feat": false
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2dest0i138",
@@ -6489,15 +6485,16 @@
      "v": "👾",
      "name": "Emblema Invasor",
      "desc": "",
-     "rar": "Rara",
+     "rar": "Épica",
      "a": "flotar",
      "c": ""
     },
-    "price": 60,
+    "price": 100,
     "sync": 0,
     "stock": 0,
     "until": 0,
-    "feat": false
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deso60156",
@@ -6725,8 +6722,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798783140000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desczu170",
@@ -6744,8 +6742,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798783140000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deswz6171",
@@ -6782,8 +6781,9 @@
     "price": 60,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798783140000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2deszd0176",
@@ -6794,15 +6794,16 @@
      "v": "eyes:20",
      "name": "Ojos · Bastones",
      "desc": "",
-     "rar": "Épica",
+     "rar": "Rara",
      "a": "",
      "c": ""
     },
-    "price": 100,
+    "price": 50,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798743540000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desmuu177",
@@ -6813,15 +6814,16 @@
      "v": "eyes:21",
      "name": "Ojos · Regalos",
      "desc": "",
-     "rar": "Épica",
+     "rar": "Rara",
      "a": "",
      "c": ""
     },
-    "price": 100,
+    "price": 50,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798742940000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2descsj178",
@@ -6839,8 +6841,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798743540000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2dessya179",
@@ -6858,8 +6861,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798743540000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2des04t180",
@@ -6877,8 +6881,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798743540000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desip6181",
@@ -6889,15 +6894,16 @@
      "v": "mouth:18",
      "name": "Boca · Glaseado",
      "desc": "",
-     "rar": "Épica",
+     "rar": "Rara",
      "a": "",
      "c": ""
     },
-    "price": 100,
+    "price": 50,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798743540000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desnpu182",
@@ -6928,15 +6934,16 @@
      "v": "top:18",
      "name": "Módulos · Antena de copo",
      "desc": "",
-     "rar": "Épica",
+     "rar": "Rara",
      "a": "",
      "c": ""
     },
-    "price": 100,
+    "price": 50,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798743540000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desbi6185",
@@ -6954,8 +6961,9 @@
     "price": 100,
     "sync": 0,
     "stock": 0,
-    "until": 0,
-    "feat": false
+    "until": 1798743540000,
+    "feat": false,
+    "old": 0
    },
    {
     "id": "smwti2desn48187",
