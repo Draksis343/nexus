@@ -1609,14 +1609,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794951976735,
-   "t": "Editó el desafío «Leyenda del Rock»"
-  },
-  {
-   "at": 1794951989030,
-   "t": "Editó el desafío «EL PODER DEL GARROTE»"
-  },
-  {
    "at": 1794951997997,
    "t": "Editó el desafío «La aventura del Reino Champiñón»"
   },
@@ -3207,6 +3199,14 @@
   {
    "at": 1795494172788,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795504148808,
+   "t": "Editó una recompensa del pase"
+  },
+  {
+   "at": 1795504165243,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3786,7 +3786,10 @@
     "desc": "Exhíbelo ante todos",
     "v": "",
     "c": "",
-    "img": "img/pase-1794947546291.jpg"
+    "img": "img/pase-1795504147115.jpg",
+    "hid": false,
+    "a": "",
+    "rar": "Nexus"
    },
    {
     "id": "prmwl5gfw6z6a",
