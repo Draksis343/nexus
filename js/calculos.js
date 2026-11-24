@@ -9,7 +9,7 @@ const mset=r=>{const a=Array.isArray(r.ms)&&r.ms.length>1?r.ms.filter(k=>MED[k])
 const rpl=r=>mset(r).reduce((s,k)=>s+MED[k].pl,0)+nxb(r);
 const dms=d=>{const a=Array.isArray(d.ms)?d.ms.filter(k=>MED[k]&&k!=='participacion'):(d.m&&MED[d.m]?[d.m]:[]);return a};
 const dfix=o=>{o.rq=Math.max(0,Math.round(+o.rq||0));o.ms=OBM.filter(k=>(o.ms||[]).includes(k));o.m=o.ms.length?o.ms[o.ms.length-1]:'';return o};
-const duelRes=()=>D.duels.flatMap(d=>{if(dms(d).length&&dst(d)==='Cumplido'){const a=dms(d);return[{p:d.b,c:null,m:a[a.length-1],ms:a.length>1?a:undefined,at:d.at||0,t:'Reto: '+(d.game||'sin juego'),s:D.season}]}const x=raDuel(d);if(!x.ms.length)return[];return[{p:d.b,c:null,m:x.ms[x.ms.length-1],ms:x.ms.length>1?x.ms:undefined,at:x.at||d.at||0,t:'Reto: '+(edf(d).game||'sin juego'),s:D.season,ra:1}]});
+const duelRes=()=>D.duels.flatMap(d=>{if(dms(d).length&&dst(d)==='Cumplido'){const a=dms(d);return[{p:d.b,c:null,m:a[a.length-1],ms:a.length>1?a:undefined,at:d.at||0,t:'Reto: '+(d.game||'sin juego'),s:D.season,cat:edf(d).cat||'',d:d.id}]}const x=raDuel(d);if(!x.ms.length)return[];return[{p:d.b,c:null,m:x.ms[x.ms.length-1],ms:x.ms.length>1?x.ms:undefined,at:x.at||d.at||0,t:'Reto: '+(edf(d).game||'sin juego'),s:D.season,ra:1,cat:edf(d).cat||'',d:d.id}]});
 function raDuel(d){if(d.status==='No cumplido'||(d.status==='Cumplido'&&dms(d).length))return{ms:[],at:0,got:{}};const e=edf(d);if(!raOn(e))return{ms:[],at:0,got:{}};return raMed({ra:e.ra,end:0},d.b)}
 const rname=r=>r.t||cname(r.c);
 const crar=c=>rbadge(!c.rarity||c.rarity==='Normal'?'Común':c.rarity);
