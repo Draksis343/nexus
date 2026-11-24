@@ -150,8 +150,10 @@
    "ob_bronce": "Termina el parkour",
    "ob_plata": "Termina con un rango superior al <b>B</b>",
    "ob_oro": "No uses los checkpoint del bioma<b><font color=\"#66a1ff\"> Ice Peaks</font></b>",
-   "ob_platino": "<font color=\"#ffffff\">Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b>",
-   "rq": 10
+   "ob_platino": "<font color=\"#ffffff\">Llega a la sima en una sola sesión</font>",
+   "rq": 10,
+   "goals": [],
+   "syncrq": 0
   },
   {
    "id": "mwb5nw6ht13",
@@ -1606,14 +1608,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794951958341,
-   "t": "Editó el desafío «La caída del Covenant»"
-  },
-  {
-   "at": 1794951967742,
-   "t": "Editó el desafío «Guerra sin cuartel»"
-  },
   {
    "at": 1794951976735,
    "t": "Editó el desafío «Leyenda del Rock»"
@@ -3204,6 +3198,14 @@
   },
   {
    "at": 1795464186208,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795494164066,
+   "t": "Editó el desafío «Biome Spiral Parkour»"
+  },
+  {
+   "at": 1795494172788,
    "t": "Publicó cambios"
   }
  ],
