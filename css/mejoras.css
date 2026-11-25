@@ -10,3 +10,5 @@ button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-vis
 /* Saltos suaves al navegar con enlaces internos */
 html{scroll-padding-top:70px}
 @media (prefers-reduced-motion:reduce){#totop{transition:none}}
+/* Barra superior fija en celular (menú siempre a la mano) */
+@media(max-width:900px){.mobile-bar{position:sticky;top:0;z-index:22;background:color-mix(in srgb,var(--side) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 6px 18px #0006;padding-top:max(13px,env(safe-area-inset-top))}}
