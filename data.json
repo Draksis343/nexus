@@ -1622,10 +1622,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794971733585,
-   "t": "Cambio (newgoal)"
-  },
-  {
    "at": 1794971773188,
    "t": "Editó el desafío «Playtime...»"
   },
@@ -3219,6 +3215,10 @@
   },
   {
    "at": 1795622535338,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795628060584,
    "t": "Publicó cambios"
   }
  ],
