@@ -1039,178 +1039,6 @@
    "rarity": "Épica",
    "slots": 5,
    "rq": 10
-  },
-  {
-   "id": "mwvtmp5pilt",
-   "start": 1795592864221,
-   "cs": "Temporada 0 - PROTOCOLO ZERO",
-   "goals": [
-    {
-     "id": "rast:582010:Achievement5",
-     "name": "La muerte crea vida",
-     "desc": "Logro oculto",
-     "pl": 10,
-     "rq": 0,
-     "ra": "st:582010:Achievement5"
-    },
-    {
-     "id": "rast:582010:Achievement6",
-     "name": "Emperatriz de las tierras altas",
-     "desc": "Logro oculto",
-     "pl": 10,
-     "rq": 0,
-     "ra": "st:582010:Achievement6"
-    },
-    {
-     "id": "rast:582010:Achievement7",
-     "name": "Sólo puede quedar uno",
-     "desc": "Logro oculto",
-     "pl": 10,
-     "rq": 0,
-     "ra": "st:582010:Achievement7"
-    },
-    {
-     "id": "rast:582010:Achievement8",
-     "name": "La Estrella Azul",
-     "desc": "Logro oculto",
-     "pl": 10,
-     "rq": 0,
-     "ra": "st:582010:Achievement8"
-    }
-   ],
-   "title": "MHW",
-   "game": "Monster Hunter: World",
-   "mode": "Solo",
-   "category": "Habilidad",
-   "difficulty": "Medio",
-   "status": "Disponible",
-   "round": "",
-   "ra": {
-    "g": {
-     "id": 582010,
-     "src": "steam",
-     "t": "Monster Hunter: World",
-     "cn": "Steam",
-     "ic": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/capsule_184x69.jpg?t=1791439347",
-     "ti": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg?t=1791439347",
-     "ig": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/ss_a262c53b8629de7c6547933dc0b49d31f4e1b1f1.1920x1080.jpg?t=1791439347",
-     "bx": "https://steamcdn-a.akamaihd.net/steam/apps/582010/library_600x900.jpg",
-     "np": 1000,
-     "nph": 0
-    },
-    "L": [
-     {
-      "id": "st:582010:Achievement1",
-      "t": "Bienvenido al Nuevo Mundo",
-      "d": "Logro oculto",
-      "p": 0,
-      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/582010/a1e07a657b94c6355b50c10b64906cc32d573857.jpg",
-      "n": 855,
-      "nh": 0
-     },
-     {
-      "id": "st:582010:Achievement2",
-      "t": "Nada detiene a la comisión",
-      "d": "Logro oculto",
-      "p": 0,
-      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/582010/170256de23e0e0be24ac69f5510f74a887b036cc.jpg",
-      "n": 747,
-      "nh": 0
-     },
-     {
-      "id": "st:582010:Achievement3",
-      "t": "Defensor de Astera",
-      "d": "Logro oculto",
-      "p": 0,
-      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/582010/10a7dd9995b8ffae25f90e4dddc014b03a09f2be.jpg",
-      "n": 664,
-      "nh": 0
-     },
-     {
-      "id": "st:582010:Achievement4",
-      "t": "En las profundidades",
-      "d": "Logro oculto",
-      "p": 0,
-      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/582010/808120f8494bc41c0af898a39b4bb3b6abab5cce.jpg",
-      "n": 584,
-      "nh": 0
-     },
-     {
-      "id": "st:582010:Achievement5",
-      "t": "La muerte crea vida",
-      "d": "Logro oculto",
-      "p": 0,
-      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/582010/02f71cfd5e52044720f5e8794ad6c9928c48e79a.jpg",
-      "n": 542,
-      "nh": 0
-     },
-     {
-      "id": "st:582010:Achievement6",
-      "t": "Emperatriz de las tierras altas",
-      "d": "Logro oculto",
-      "p": 0,
-      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/582010/91828efa7e920b5c74ecf952803b3c78516300de.jpg",
-      "n": 496,
-      "nh": 0
-     },
-     {
-      "id": "st:582010:Achievement7",
-      "t": "Sólo puede quedar uno",
-      "d": "Logro oculto",
-      "p": 0,
-      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/582010/73f84995b2ad08c0d2ad49302631768fe5190736.jpg",
-      "n": 474,
-      "nh": 0
-     },
-     {
-      "id": "st:582010:Achievement8",
-      "t": "La Estrella Azul",
-      "d": "Logro oculto",
-      "p": 0,
-      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/582010/1122a5179d2959b60b701493af25f7c67bf70253.jpg",
-      "n": 433,
-      "nh": 0
-     }
-    ],
-    "as": {
-     "st:582010:Achievement1": "bronce",
-     "st:582010:Achievement2": "plata",
-     "st:582010:Achievement3": "oro",
-     "st:582010:Achievement4": "platino",
-     "st:582010:Achievement5": "goal",
-     "st:582010:Achievement6": "goal",
-     "st:582010:Achievement7": "goal",
-     "st:582010:Achievement8": "goal"
-    },
-    "need": {
-     "bronce": 1,
-     "plata": 1,
-     "oro": 1,
-     "platino": 1
-    },
-    "gpl": {
-     "st:582010:Achievement5": 10,
-     "st:582010:Achievement6": 10,
-     "st:582010:Achievement7": 10,
-     "st:582010:Achievement8": 10
-    },
-    "grq": {
-     "st:582010:Achievement5": 0,
-     "st:582010:Achievement6": 0,
-     "st:582010:Achievement7": 0,
-     "st:582010:Achievement8": 0
-    },
-    "hc": true,
-    "since": 1795593187353,
-    "s": "Temporada 0 - PROTOCOLO ZERO",
-    "im": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg?t=1791439347"
-   },
-   "rq": 0,
-   "syncrq": 0,
-   "rules": "",
-   "rarity": "Rara",
-   "end": 0,
-   "slots": 5
   }
  ],
  "results": [
@@ -1785,14 +1613,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794952196408,
-   "t": "Cambio (edita)"
-  },
-  {
-   "at": 1794952209505,
-   "t": "Cambio (edita)"
-  },
   {
    "at": 1794952215352,
    "t": "Cambio (edita)"
@@ -3383,6 +3203,14 @@
   },
   {
    "at": 1795593194089,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795594246913,
+   "t": "Eliminó el desafío «MHW»"
+  },
+  {
+   "at": 1795594279701,
    "t": "Publicó cambios"
   }
  ],
