@@ -1,7 +1,7 @@
 // NEXUS ARENA · calculos
 // Cálculos de la liga: estadísticas, PL, medallas, ranking, feed de resultados, reliquias.
 // Se carga en orden desde index.html; comparte variables globales con los demás archivos.
-const feed=()=>[...D.results.map(r=>({p:r.p,at:r.at,t:rname(r),bt:mset(r).map(k=>MED[k].n).join(' + '),pl:rpl(r)})),...duelRes().map(r=>({p:r.p,at:r.at,t:(r.ra?'RA · ':'')+r.t,bt:mset(r).map(k=>MED[k].n).join(' + '),pl:rpl(r),ra:r.ra})),...raRes().map(r=>({p:r.p,at:r.at,t:'RA · '+rname(r),bt:mset(r).map(k=>MED[k].n).join(' + '),pl:rpl(r),ra:1})),...allCg().map(x=>({p:x.p,at:x.at,t:(x.ra?'RA · ':'')+x.t,bt:'Logro del desafío',pl:x.pl})),...allSyncs().map(x=>({p:x.p,at:x.at,t:(x.ra?'RA · ':'')+x.t,bt:SYNC.name,pl:x.pl})),...D.atem.map(x=>({p:x.p,at:x.at,t:'Desafío atemporal: '+x.t,bt:'Medalla Atemporal',pl:0})),...evFeed()];
+const feed=()=>[...D.results.map(r=>({p:r.p,at:r.at,t:rname(r),bt:mset(r).map(k=>MED[k].n).join(' + '),pl:rpl(r)})),...duelRes().map(r=>({p:r.p,at:r.at,t:(r.ra?'Auto · ':'')+r.t,bt:mset(r).map(k=>MED[k].n).join(' + '),pl:rpl(r),ra:r.ra})),...raRes().map(r=>({p:r.p,at:r.at,t:'Auto · '+rname(r),bt:mset(r).map(k=>MED[k].n).join(' + '),pl:rpl(r),ra:1})),...allCg().map(x=>({p:x.p,at:x.at,t:(x.ra?'Auto · ':'')+x.t,bt:'Logro del desafío',pl:x.pl})),...allSyncs().map(x=>({p:x.p,at:x.at,t:(x.ra?'Auto · ':'')+x.t,bt:SYNC.name,pl:x.pl})),...D.atem.map(x=>({p:x.p,at:x.at,t:'Desafío atemporal: '+x.t,bt:'Medalla Atemporal',pl:0})),...evFeed()];
 const fbadge=f=>badge(f.bt+(f.pl?' · +'+f.pl+' PL':''),'cyan');
 const C=id=>D.challenges.find(c=>c.id===id);
 const nxb=r=>{if(r.m==='participacion')return 0;const c=C(r.c);return c?(c.rarity==='Nexus'?+c.bonus||0:0):(+r.nb||0)};
