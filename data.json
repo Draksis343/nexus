@@ -1622,18 +1622,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794971663548,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794971693198,
-   "t": "Cambio (newgoal)"
-  },
-  {
-   "at": 1794971714166,
-   "t": "Cambio (newgoal)"
-  },
-  {
    "at": 1794971733585,
    "t": "Cambio (newgoal)"
   },
@@ -3219,6 +3207,18 @@
   },
   {
    "at": 1795618330056,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795622353801,
+   "t": "Cambió la música: Tienda"
+  },
+  {
+   "at": 1795622509240,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795622535338,
    "t": "Publicó cambios"
   }
  ],
@@ -7349,5 +7349,11 @@
    }
   ],
   "seeded": true
+ },
+ "secMusic": {
+  "tienda": {
+   "src": "music/1795622349593-Shop_-_The_Legend_of_Zelda_Ocarina_of_Time.mp3",
+   "name": "Shop - The Legend of Zelda Ocarina of Time.mp3"
+  }
  }
 }
