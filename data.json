@@ -1614,22 +1614,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794952215352,
-   "t": "Cambio (edita)"
-  },
-  {
-   "at": 1794952225833,
-   "t": "Cambio (edita)"
-  },
-  {
-   "at": 1794952255687,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794954707457,
-   "t": "Agregó una nota de actualización"
-  },
-  {
    "at": 1794954719379,
    "t": "Publicó cambios"
   },
@@ -3212,6 +3196,22 @@
   {
    "at": 1795594279701,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795594973243,
+   "t": "Cambio (evpz)"
+  },
+  {
+   "at": 1795595002602,
+   "t": "Cambio (evpz)"
+  },
+  {
+   "at": 1795595046047,
+   "t": "Cambio (evpz)"
+  },
+  {
+   "at": 1795595078877,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3248,6 +3248,16 @@
      "rar": "Épica",
      "v": "estrellasnav",
      "a": "",
+     "c": ""
+    },
+    {
+     "id": "zmwvuvwhn6aj",
+     "type": "emblema",
+     "name": "Hollydays",
+     "desc": "",
+     "rar": "Épica",
+     "v": "🎄",
+     "a": "brillo",
      "c": ""
     }
    ],
