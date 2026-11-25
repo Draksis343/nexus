@@ -1518,6 +1518,13 @@
    "title": "🤖 ¡Llegaron los avatares robot!",
    "at": 1795332240000,
    "body": "<p>Desde hoy cada jugador tiene su propio robot como avatar en Nexus Arena. Ya todos tienen uno por defecto con los colores de la liga, pero lo mejor es que lo hagas tuyo.</p>\n<p><strong>¿Cómo lo armo?</strong><br>\nEntra a <strong>Mi cuenta → Tu estilo → 🤖 Mi avatar</strong>, elige tus piezas y dale <strong>Guardar avatar</strong>.</p>\n<p><strong>¿Qué puedo personalizar?</strong></p>\n<ul>\n<li><strong>Pantalla:</strong> tu robot tiene una pantalla en lugar de cara. Elige entre 18 ojos y 16 bocas, el color con el que brillan y el color de la pantalla. También puedes agregar detalles como sonrojo, lágrimas o enojo.</li>\n<li><strong>Carcasa:</strong> el color base, el color de las luces y si quieres acabado brillante o mate.</li>\n<li><strong>Módulos:</strong> lo que lleva en la cabeza, como orejas de conejo, de gato, de oso o de zorro, cables, antenas, cuernos, alas, hélice, púas y más.</li>\n<li><strong>Cabeza:</strong> audífonos, gorras, gorros, boinas, sombreros, coronas, visores, lentes y más, con el color que quieras.</li>\n<li><strong>Ropa:</strong> camisas y chaquetas como la techwear, bomber, varsity, cuero o puffer, cada una en tu color.</li>\n<li><strong>Accesorios:</strong> cadenas, dije Nexus, corbata, medalla, bufanda y más.</li>\n<li><strong>Fondo:</strong> halo, synthwave, circuitos, estrellas, hexágonos y otros.</li>\n</ul>\n<p><strong>Detalles que te van a gustar</strong></p>\n<ul>\n<li>Tu robot se ve en todo el sitio: en la lista de jugadores, en tu perfil y en el Resumen de la semana si eres el MVP.</li>\n<li>En computadora tu robot respira, parpadea, voltea y hace gestos con la boca. En celular se ve quieto para que todo cargue rápido.</li>\n<li>En el creador, tócalo y verás cómo reacciona.</li>\n<li>Si no te decides, usa <strong>🎲 Aleatorio</strong> o regresa al robot original con <strong>Por defecto</strong>.</li>\n</ul>\n<p><strong>También en esta actualización</strong></p>\n<ul>\n<li>Las fotos y avatares se ven <strong>más grandes</strong> en los perfiles.</li>\n<li>El <strong>MVP de la semana</strong> ahora aparece en grande en el Resumen de la semana, con sus PL, desafíos, medallas y XP de la semana.</li>\n</ul>\n<p>¡Arma tu robot y presúmelo! 🤖⚡</p>"
+  },
+  {
+   "id": "mwvsxtr8949",
+   "ver": "v0.5",
+   "title": "📊 Nuevo: Estadísticas de jugador",
+   "at": 1795591620000,
+   "body": "<p>Ahora cada perfil tiene la pestaña <strong>Estadísticas</strong>, donde se ve en qué tipo de juego eres más fuerte.</p>\n<p><strong>🕸️ Tu gráfica de araña</strong><br>\nMuestra tus puntos en las 10 categorías: Habilidad, Supervivencia, Velocidad, Resistencia, Exploración, Creatividad, Cooperación, Combate, Sigilo y Caos. Cada eje se mide contra el mejor de la liga en esa categoría: si llegas a la orilla, eres el número uno en eso.</p>\n<p><strong>🏅 Cómo se ganan puntos</strong><br>\nCada desafío y cada reto suma puntos a su categoría según las medallas que consigas:</p>\n<ul>\n<li>Participación: 0.5</li>\n<li>Bronce: 1</li>\n<li>Plata: 2</li>\n<li>Oro: 3</li>\n<li>Platino: 4</li>\n</ul>\n<p>Si sacas las 4 medallas de un desafío o reto, te llevas <strong>10 puntos</strong> de un jalón. Completar todo vale la pena. Los logros de desafío no suman a las estadísticas.</p>\n<p><strong>⚔️ Compárate</strong><br>\nCon «Comparar con…» pones tu gráfica encima de la de otro jugador. También verás el promedio de la liga como línea punteada y tus 2 mejores categorías, más 2 en las que te falta mejorar.</p>\n<p><strong>🗓️ Por temporada</strong><br>\nFiltra para ver solo una temporada o todo tu historial.</p>\n<p><strong>🎯 Retos con categoría</strong><br>\nAl definir un reto ahora eliges su categoría, y lo que saque tu rival cuenta para sus estadísticas en esa categoría.</p>\n<p>Tu gráfica se irá llenando con cada desafío y reto que cumplas. ¡A ver quién domina cada categoría!</p>"
   }
  ],
  "polls": [
@@ -1606,14 +1613,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794952150890,
-   "t": "Cambio (edita)"
-  },
-  {
-   "at": 1794952159761,
-   "t": "Cambio (edita)"
-  },
   {
    "at": 1794952166528,
    "t": "Cambio (edita)"
@@ -3204,6 +3203,14 @@
   },
   {
    "at": 1795547296379,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795591703780,
+   "t": "Agregó una nota de actualización"
+  },
+  {
+   "at": 1795591709374,
    "t": "Publicó cambios"
   }
  ],
