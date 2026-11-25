@@ -76,11 +76,11 @@
    "difficulty": "Extrema",
    "bonus": "50",
    "slots": 5,
-   "status": "Activo",
+   "status": "Próximamente",
    "round": "1",
    "desc": "<p>La guerra ha llegado a la Tierra. Mientras el Covenant intensifica su ofensiva, el Jefe Maestro deberá defender a la humanidad de una amenaza que va mucho más allá de una simple invasión. Al mismo tiempo, un guerrero Elites es condenado y obligado a convertirse en el Inquisidor, descubriendo poco a poco una verdad capaz de cambiar el destino de toda la galaxia.</p><p>Lucha en ambos bandos de una guerra que está a punto de cambiarlo todo. <i>El destino de la humanidad y del Covenant está en juego.</i></p>",
    "rules": "Puedes descargarlo sino lo tienes en el enlace de arriba, es 100% seguro se trata de un proyecto como lo fue el primer halo con su versión en PC donde la comunidad creaba incluso creaba mapas para el multijugador.",
-   "end": 1795931940000,
+   "end": 1797141540000,
    "link": "https://www.halo2pc.com/install/",
    "_ups": {},
    "_img": null,
@@ -144,7 +144,7 @@
    "slots": 5,
    "status": "Disponible",
    "round": "1",
-   "end": 1795931940000,
+   "end": 1796536740000,
    "desc": "<b><font color=\"#f9bd62\">Biome Spiral Parkour</font></b> te lleva a un increíble recorrido de parkour a través de todos los biomas de Minecraft. ¿Podrás llegar a la cima de la Torre Espiral superando los desafíos de parkour y derrotar al Dragón del End al final? ¡Ven a descubrirlo y pon a prueba tus habilidades de parkour!<br><br>Versión de Minecraft 26.40",
    "rules": "",
    "link": "https://www.curseforge.com/minecraft-bedrock/maps/biome-spiral-parkour/download/8690321",
@@ -157,7 +157,9 @@
    "ob_plata": "Termina con un rango superior al <b>B</b>",
    "ob_oro": "No uses los checkpoint del bioma<b><font color=\"#66a1ff\"> Ice Peaks</font></b>",
    "ob_platino": "<font color=\"#ffffff\">Vence a la dragona en el </font><b><font color=\"#f3bb6d\">primer intento</font></b>",
-   "rq": 10
+   "rq": 10,
+   "goals": [],
+   "syncrq": 0
   },
   {
    "id": "mwb5nw6ht13",
@@ -1619,18 +1621,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794954783501,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794971563804,
-   "t": "Creó un desafío"
-  },
-  {
-   "at": 1794971607680,
-   "t": "Editó el desafío «Playtime...»"
-  },
   {
    "at": 1794971663548,
    "t": "Cambio (newgoal)"
@@ -3217,6 +3207,18 @@
   },
   {
    "at": 1795595187816,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795618290349,
+   "t": "Editó el desafío «La caída del Covenant»"
+  },
+  {
+   "at": 1795618307964,
+   "t": "Editó el desafío «Biome Spiral Parkour»"
+  },
+  {
+   "at": 1795618330056,
    "t": "Publicó cambios"
   }
  ],
