@@ -1622,14 +1622,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794986293986,
-   "t": "Editó el desafío «One Gun Challenge»"
-  },
-  {
-   "at": 1794986491714,
-   "t": "Publicó cambios"
-  },
-  {
    "at": 1794987167470,
    "t": "Cambio (newa)"
   },
@@ -3220,6 +3212,14 @@
   {
    "at": 1795677149709,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795677296673,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795677299838,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3275,7 +3275,7 @@
    "sub": "Servidor temático de Minecraft",
    "desc": "Vive la experiencia de un mundo nevado en nuestro servidor de Minecraft haciendo objetivos comunitarios para recibir cosméticos como recompensa para tu perfil. Participa en el evento para llevártelos una vez alcancen la meta. Además de un <b><font color=\"#fdc168\">Calendario de Adviento</font></b> donde podrás reclamar recompensas diariamente a partir del 1ro de diciembre hasta el 31. Recuerda ingresar todos los días a reclamar tu recompensa por que sino lo haces un día no podrás reclamarla despues.<div><i><b><br></b></i></div><div><i><b>Modpack y servidor próximamente</b></i></div>",
    "color": "#4da3ff",
-   "start": 1796166000000,
+   "start": 1795677360000,
    "end": 1798740000000,
    "ch": [
     {
