@@ -23,7 +23,7 @@ const rwOwned=p=>[...passMine(p.id).map(r=>({...r,from:''})),...achRw(p),...evRw
 function passXP(p){const P=PS(),X=P.xp||{},cur=x=>(x.s||D.season)===D.season,b={med:0,part:0,reto:0,logro:0,evento:0,mis:0,adj:0};
  [...D.results,...raRes()].filter(r=>r.p===p.id&&cur(r)).forEach(r=>{if(r.m==='participacion')b.part+=+X.participacion||0;else mset(r).forEach(k=>b.med+=+X[k]||0)});
  D.duels.filter(d=>d.b===p.id&&dst(d)==='Cumplido').forEach(d=>{b.reto+=+X.reto||0;(dms(d).length?dms(d):raDuel(d).ms).forEach(k=>b.med+=+X[k]||0)});
- (D.events||[]).forEach(e=>(e.done||[]).forEach(x=>{if(x.p!==p.id||(D.sStart&&(x.at||0)<D.sStart))return;const[t,id]=x.k.split(':'),it=(t==='c'?evCh(e):evAc(e)).find(y=>y.id===id);if(it)b.evento+=Math.max(0,+it.xp||0)}));
+ (D.events||[]).forEach(e=>evDoneL(e).forEach(x=>{if(x.p!==p.id||(D.sStart&&(x.at||0)<D.sStart))return;const[t,id]=x.k.split(':'),it=(t==='c'?evCh(e):evAc(e)).find(y=>y.id===id);if(it)b.evento+=Math.max(0,+it.xp||0)}));
  [...D.grants,...raGrants()].filter(g=>g.p===p.id&&(!D.sStart||(g.at||0)>=D.sStart)).forEach(()=>b.logro+=+X.logro||0);
  (P.missions||[]).forEach(m=>{if(misDone(m,p))b.mis+=+m.xp||0});b.adj=+((P.adj||{})[p.id])||0;
  const xp=Math.max(0,b.med+b.part+b.reto+b.logro+b.evento+b.mis+b.adj),per=Math.max(1,+P.per||300),N=Math.max(1,+P.levels||30),lv=Math.min(N,Math.floor(xp/per));return{xp,b,per,N,lv,into:lv>=N?per:xp-lv*per,pct:Math.min(100,xp/(N*per)*100)}}
