@@ -1794,26 +1794,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794988737881,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1795010113351,
-   "t": "Cambio (grantt)"
-  },
-  {
-   "at": 1795010380338,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1795020623785,
-   "t": "Agregó una nota de actualización"
-  },
-  {
-   "at": 1795020628733,
-   "t": "Publicó cambios"
-  },
-  {
    "at": 1795022995152,
    "t": "Cambio (grantt)"
   },
@@ -3392,6 +3372,26 @@
   {
    "at": 1795679590710,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795703497319,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795703613905,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795706473327,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795706556504,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795708208605,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3447,20 +3447,9 @@
    "sub": "Servidor temático de Minecraft",
    "desc": "Vive la experiencia de un mundo nevado en nuestro servidor de Minecraft haciendo objetivos comunitarios para recibir cosméticos como recompensa para tu perfil. Participa en el evento para llevártelos una vez alcancen la meta. Además de un <b><font color=\"#fdc168\">Calendario de Adviento</font></b> donde podrás reclamar recompensas diariamente a partir del 1ro de diciembre hasta el 31. Recuerda ingresar todos los días a reclamar tu recompensa por que sino lo haces un día no podrás reclamarla despues.<div><i><b><br></b></i></div><div><i><b>Modpack y servidor próximamente</b></i></div>",
    "color": "#4da3ff",
-   "start": 1795677360000,
+   "start": 1796148000000,
    "end": 1798740000000,
    "ch": [
-    {
-     "id": "mwx7rjnwths",
-     "name": "Entra a la cabaña de Steve",
-     "desc": "",
-     "rar": "Común",
-     "dif": "Fácil",
-     "pl": 20,
-     "xp": 100,
-     "mc": "mc:413B880715A515D9",
-     "mct": "Entra a la cabaña · WinterFest"
-    },
     {
      "id": "mwx8hu6p909",
      "name": "Sube la caldera a Nivel 2",
@@ -3506,7 +3495,58 @@
      "mct": "Sube la caldera a nivel 4 · WinterFest"
     }
    ],
-   "ac": [],
+   "ac": [
+    {
+     "id": "mwxnkg5tvqs",
+     "name": "Ni Krampus se atrevio a tanto",
+     "desc": "Consigan 10k de carbón para la caldera - no cuenta el vegetal",
+     "rar": "Nexus",
+     "pl": 50,
+     "xp": 150,
+     "mc": "mc:4E6962D1759EBE6A",
+     "mct": "Consigue 10k de carbon para la caldera · WinterFest"
+    },
+    {
+     "id": "mwxp9qi7jw3",
+     "name": "Es acogedor",
+     "desc": "Entra a la caballa de Steve",
+     "rar": "Común",
+     "pl": 10,
+     "xp": 50,
+     "mc": "mc:413B880715A515D9",
+     "mct": "Entra a la cabaña · WinterFest"
+    },
+    {
+     "id": "mwxp9qi7blm",
+     "name": "Por el bien de todos",
+     "desc": "Fabrica armadura de lana",
+     "rar": "Común",
+     "pl": 10,
+     "xp": 50,
+     "mc": "mc:313EB302ABC02983",
+     "mct": "Fabrica una protección contra el frío · WinterFest"
+    },
+    {
+     "id": "mwxp9qi7tzb",
+     "name": "Enciende el fuego",
+     "desc": "Ve a la caldera y enciendela",
+     "rar": "Común",
+     "pl": 10,
+     "xp": 50,
+     "mc": "mc:50F8C724E61C8754",
+     "mct": "Ve a la caldera y enciendela · WinterFest"
+    },
+    {
+     "id": "mwxp9qi7i3u",
+     "name": "Regalos para todos",
+     "desc": "Reclama recompensas todos los días",
+     "rar": "Común",
+     "pl": 10,
+     "xp": 50,
+     "mc": "mc:19CA61A7FC766327",
+     "mct": "Reclama tu primer recompensa diaria · WinterFest"
+    }
+   ],
    "cc": true,
    "adv": {
     "on": false,
