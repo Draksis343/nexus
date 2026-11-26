@@ -48,3 +48,13 @@
 .evveilq{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
 .evveilq span{padding:10px 16px;border-radius:12px;border:1px dashed color-mix(in srgb,var(--ec) 50%,var(--line));font:700 16px 'Space Mono',monospace;color:var(--muted)}
 html.lite .evveilic{animation:none}
+
+/* ===== Estado del servidor de Minecraft ===== */
+.mcsrv-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mcsrv-h .btn{margin-left:auto;font-family:'Space Mono',monospace}
+.mcsrv-dot{width:10px;height:10px;border-radius:50%;background:var(--muted)}
+.mcsrv.on .mcsrv-dot{background:#3ddc84;box-shadow:0 0 10px #3ddc84}
+.mcsrv.off .mcsrv-dot{background:var(--red)}
+.mcsrv-l{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.mcsrv-p{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 4px;border-radius:999px;background:var(--p2);border:1px solid var(--line);font-size:13px}
+.mcsrv-p img{width:22px;height:22px;border-radius:5px;image-rendering:pixelated}

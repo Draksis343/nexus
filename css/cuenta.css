@@ -64,3 +64,9 @@
 .rqp:hover{border-color:#ff9a8c;box-shadow:0 0 12px #ff9a8c55}
 .invic{width:46px;height:46px;flex:none;display:grid;place-items:center;font-size:24px;line-height:1;overflow:hidden;border-radius:10px;background:var(--p1);border:1px solid var(--line)}
 .invic img{width:100%;height:100%;object-fit:cover}
+
+/* Vincular Minecraft (Mi cuenta) */
+.mcbox{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--p2);font-size:13.5px}
+.mccode{display:flex;flex-direction:column;gap:6px;width:100%}
+.mccode code{font:700 18px 'Space Mono',monospace;color:var(--amber);background:#0006;border:1px dashed color-mix(in srgb,var(--amber) 50%,transparent);border-radius:8px;padding:8px 12px;user-select:all;align-self:flex-start}
+.rar img[src=""],.rat img[src=""]{display:none}
