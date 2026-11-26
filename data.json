@@ -1622,14 +1622,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794986059001,
-   "t": "Creó un desafío"
-  },
-  {
-   "at": 1794986084259,
-   "t": "Publicó cambios"
-  },
-  {
    "at": 1794986293986,
    "t": "Editó el desafío «One Gun Challenge»"
   },
@@ -3220,6 +3212,14 @@
   {
    "at": 1795677036365,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795677071180,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795677149709,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3277,7 +3277,19 @@
    "color": "#4da3ff",
    "start": 1796166000000,
    "end": 1798740000000,
-   "ch": [],
+   "ch": [
+    {
+     "id": "mwx7rjnwths",
+     "name": "Entra a la cabaña de Steve",
+     "desc": "",
+     "rar": "Común",
+     "dif": "Fácil",
+     "pl": 20,
+     "xp": 100,
+     "mc": "mc:413B880715A515D9",
+     "mct": "Entra a la cabaña · WinterFest"
+    }
+   ],
    "ac": [],
    "cc": true,
    "adv": {
