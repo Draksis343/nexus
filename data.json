@@ -1794,18 +1794,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1795022995152,
-   "t": "Cambio (grantt)"
-  },
-  {
-   "at": 1795023009701,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1795054905995,
-   "t": "Cambio (editp)"
-  },
-  {
    "at": 1795054909836,
    "t": "Publicó cambios"
   },
@@ -3392,6 +3380,18 @@
   {
    "at": 1795708208605,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795709655996,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795709737612,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795711017193,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3545,6 +3545,46 @@
      "xp": 50,
      "mc": "mc:19CA61A7FC766327",
      "mct": "Reclama tu primer recompensa diaria · WinterFest"
+    },
+    {
+     "id": "mwxr5y9n8ta",
+     "name": "El lobo de wall Street",
+     "desc": "",
+     "rar": "Común",
+     "pl": 10,
+     "xp": 50,
+     "mc": "mc:7302315EB842EEE8",
+     "mct": "El lobo de wall Street · WinterFest"
+    },
+    {
+     "id": "mwxr7p8srvs",
+     "name": "Todo va cuesta abajo desde aquí",
+     "desc": "",
+     "rar": "Común",
+     "pl": 10,
+     "xp": 50,
+     "mc": "mc:21D864DB069A0AAB",
+     "mct": "Todo va cuesta abajo desde aquí · WinterFest"
+    },
+    {
+     "id": "mwxr7p8smfk",
+     "name": "Post mórtem",
+     "desc": "",
+     "rar": "Rara",
+     "pl": 30,
+     "xp": 50,
+     "mc": "mc:6F1F425E49B76FEF",
+     "mct": "Post mórtem · WinterFest"
+    },
+    {
+     "id": "mwxr7p8sxxy",
+     "name": "Lo más helado posible",
+     "desc": "",
+     "rar": "Épica",
+     "pl": 40,
+     "xp": 50,
+     "mc": "mc:32A7C4118667326D",
+     "mct": "Lo más helado posible · WinterFest"
     }
    ],
    "cc": true,
