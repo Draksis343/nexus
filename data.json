@@ -1047,6 +1047,178 @@
    "rarity": "Épica",
    "slots": 5,
    "rq": 10
+  },
+  {
+   "id": "mwx97wqloy7",
+   "start": 1795679514237,
+   "cs": "Temporada 0 - PROTOCOLO ZERO",
+   "goals": [
+    {
+     "id": "rast:945360:wins_mira",
+     "name": "AISLAMIENTO LABORAL",
+     "desc": "Gana 3 partidas en MIRA HQ.",
+     "pl": 10,
+     "rq": 0,
+     "ra": "st:945360:wins_mira"
+    },
+    {
+     "id": "rast:945360:win_sabotage",
+     "name": "SABOTAJE CRÍTICO",
+     "desc": "Gana una partida saboteando un sistema crítico como impostor.",
+     "pl": 10,
+     "rq": 0,
+     "ra": "st:945360:win_sabotage"
+    },
+    {
+     "id": "rast:945360:win_kills",
+     "name": "PSICÓPATA",
+     "desc": "Gana una partida matando a todos los tripulantes como impostor.",
+     "pl": 10,
+     "rq": 0,
+     "ra": "st:945360:win_kills"
+    },
+    {
+     "id": "rast:945360:hns_crewmate_wins_easy",
+     "name": "NO PUEDES CORRER",
+     "desc": "Escóndete y gana 10 veces en el modo Escondite.",
+     "pl": 10,
+     "rq": 0,
+     "ra": "st:945360:hns_crewmate_wins_easy"
+    }
+   ],
+   "title": "Amongus",
+   "game": "Among Us",
+   "mode": "Multijugador",
+   "category": "Cooperación",
+   "difficulty": "Medio",
+   "status": "Próximamente",
+   "round": "",
+   "ra": {
+    "g": {
+     "id": 945360,
+     "src": "steam",
+     "t": "Among Us",
+     "cn": "Steam",
+     "ic": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/30be09a0c90199828534da8df9701dc17c2a15e9/capsule_184x69.jpg?t=1793821899",
+     "ti": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/d611f3f87743b5121532023b1d3ee2dd0e96e772/header.jpg?t=1793821899",
+     "ig": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/ss_b7374128e5b786a302a716bca038d604b00ffe46.1920x1080.jpg?t=1793821899",
+     "bx": "https://steamcdn-a.akamaihd.net/steam/apps/945360/library_600x900.jpg",
+     "np": 1000,
+     "nph": 0
+    },
+    "L": [
+     {
+      "id": "st:945360:task_complete_easy",
+      "t": "EN PRÁCTICAS",
+      "d": "Completa 10 tareas.",
+      "p": 0,
+      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/11d6a7da14eaa7036982b4375ea7caba288339ce.jpg",
+      "n": 451,
+      "nh": 0
+     },
+     {
+      "id": "st:945360:wins_skeld",
+      "t": "NAVE A LA DERIVA",
+      "d": "Gana 3 partidas en The Skeld.",
+      "p": 0,
+      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/1c1b96b03b075eb3b42e368ebbdf257e19ef9087.jpg",
+      "n": 417,
+      "nh": 0
+     },
+     {
+      "id": "st:945360:wins_mira",
+      "t": "AISLAMIENTO LABORAL",
+      "d": "Gana 3 partidas en MIRA HQ.",
+      "p": 0,
+      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/144c10dcf276eaffe8a7c03553c7d8a63c0de116.jpg",
+      "n": 92,
+      "nh": 0
+     },
+     {
+      "id": "st:945360:win_sabotage",
+      "t": "SABOTAJE CRÍTICO",
+      "d": "Gana una partida saboteando un sistema crítico como impostor.",
+      "p": 0,
+      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/6062188e86a7cf3c7ef46f0b3e575861a26bbb46.jpg",
+      "n": 127,
+      "nh": 0
+     },
+     {
+      "id": "st:945360:win_kills",
+      "t": "PSICÓPATA",
+      "d": "Gana una partida matando a todos los tripulantes como impostor.",
+      "p": 0,
+      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/cbf1cacf0178c63aa2f8545030d53b5f9891aeb0.jpg",
+      "n": 340,
+      "nh": 0
+     },
+     {
+      "id": "st:945360:win_always_correct_votes",
+      "t": "SHERLOCK",
+      "d": "Gana una partida como tripulante votando solo a impostores.",
+      "p": 0,
+      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/970151abaa23e371daaea0423122126184346103.jpg",
+      "n": 442,
+      "nh": 0
+     },
+     {
+      "id": "st:945360:hns_crewmate_wins_easy",
+      "t": "NO PUEDES CORRER",
+      "d": "Escóndete y gana 10 veces en el modo Escondite.",
+      "p": 0,
+      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/12a62b22955b0aeac6f250a7e736dc0e82e1d5e7.jpg",
+      "n": 33,
+      "nh": 0
+     },
+     {
+      "id": "st:945360:hns_impostor_kills_easy",
+      "t": "PUEDES CORRER",
+      "d": "Mata 100 veces en el modo Escondite.",
+      "p": 0,
+      "b": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/945360/bef1f16697da915b6edb6546ef86a48ef461b19d.jpg",
+      "n": 7,
+      "nh": 0
+     }
+    ],
+    "as": {
+     "st:945360:task_complete_easy": "bronce",
+     "st:945360:wins_skeld": "plata",
+     "st:945360:wins_mira": "goal",
+     "st:945360:win_sabotage": "goal",
+     "st:945360:win_kills": "goal",
+     "st:945360:win_always_correct_votes": "oro",
+     "st:945360:hns_crewmate_wins_easy": "goal",
+     "st:945360:hns_impostor_kills_easy": "platino"
+    },
+    "need": {
+     "bronce": 1,
+     "plata": 1,
+     "oro": 1,
+     "platino": 1
+    },
+    "gpl": {
+     "st:945360:wins_mira": 10,
+     "st:945360:win_sabotage": 10,
+     "st:945360:win_kills": 10,
+     "st:945360:hns_crewmate_wins_easy": 10
+    },
+    "grq": {
+     "st:945360:wins_mira": 0,
+     "st:945360:win_sabotage": 0,
+     "st:945360:win_kills": 0,
+     "st:945360:hns_crewmate_wins_easy": 0
+    },
+    "hc": true,
+    "since": 0,
+    "s": "Temporada 0 - PROTOCOLO ZERO",
+    "im": "https://steamcdn-a.akamaihd.net/steam/apps/945360/library_600x900.jpg"
+   },
+   "rq": 0,
+   "syncrq": 0,
+   "rules": "",
+   "rarity": "Rara",
+   "end": 0,
+   "slots": 5
   }
  ],
  "results": [
@@ -1621,18 +1793,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1794988497551,
-   "t": "Cambio (quitmusica)"
-  },
-  {
-   "at": 1794988506381,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1794988641818,
-   "t": "Cambio (edita)"
-  },
   {
    "at": 1794988737881,
    "t": "Publicó cambios"
@@ -3219,6 +3379,18 @@
   },
   {
    "at": 1795678965254,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795679514237,
+   "t": "Creó un desafío"
+  },
+  {
+   "at": 1795679584220,
+   "t": "Editó el desafío «Amongus»"
+  },
+  {
+   "at": 1795679590710,
    "t": "Publicó cambios"
   }
  ],
