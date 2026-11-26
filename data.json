@@ -1622,14 +1622,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1794987167470,
-   "t": "Cambio (newa)"
-  },
-  {
-   "at": 1794987400864,
-   "t": "Publicó cambios"
-  },
-  {
    "at": 1794987989414,
    "t": "Cambio (edita)"
   },
@@ -3220,6 +3212,14 @@
   {
    "at": 1795677299838,
    "t": "Publicó cambios"
+  },
+  {
+   "at": 1795678297873,
+   "t": "Cambio (evedit)"
+  },
+  {
+   "at": 1795678301967,
+   "t": "Publicó cambios"
   }
  ],
  "events": [
@@ -3288,6 +3288,17 @@
      "xp": 100,
      "mc": "mc:413B880715A515D9",
      "mct": "Entra a la cabaña · WinterFest"
+    },
+    {
+     "id": "mwx8hu6p909",
+     "name": "Sube la caldera a Nivel 2",
+     "desc": "",
+     "rar": "Común",
+     "dif": "Medio",
+     "pl": 20,
+     "xp": 100,
+     "mc": "mc:ev_caldera_nivel2",
+     "mct": "ev_caldera_nivel2"
     }
    ],
    "ac": [],
