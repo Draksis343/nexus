@@ -1235,7 +1235,7 @@
    "end": 1795931940000,
    "rq": 0,
    "syncrq": 0,
-   "rules": "",
+   "rules": "Jugar en modo hardcore de los logros y no usar save states.<br><br>Pueden descargar el juego de aquí: <a href=\"https://romsfun.com/roms/playstation/barbie-explorer.html\" target=\"_blank\" rel=\"noopener noreferrer\">https://romsfun.com/roms/playstation/barbie-explorer.html</a>",
    "rarity": "Rara",
    "slots": 5,
    "ra": {
@@ -1881,14 +1881,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1795066832542,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1795070106051,
-   "t": "Cambio (grantt)"
-  },
   {
    "at": 1795070118461,
    "t": "Publicó cambios"
@@ -3479,6 +3471,14 @@
   },
   {
    "at": 1795752418474,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795752599051,
+   "t": "Editó el desafío «Hoy soy una Barbie Explorer»"
+  },
+  {
+   "at": 1795752601706,
    "t": "Publicó cambios"
   }
  ],
