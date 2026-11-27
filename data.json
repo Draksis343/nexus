@@ -1756,14 +1756,14 @@
  "slogan": "JUEGA. SUPERA. TRASCIENDE.",
  "news": [
   {
-   "id": "mwiuxy1j8u6",
-   "at": 1794809008279,
-   "img": "img/news-1794810367230.gif",
-   "title": "Inició la Temporada 0 - Protocolo Zero",
+   "id": "mwzflpfj0ol",
+   "at": 1795811167999,
+   "img": "img/news-1795814637008.jpg",
+   "title": "🏁 Se despide la Temporada 0… ¡y llega la Temporada 1!",
    "kind": "Noticia",
-   "body": "<p>¡Damos comienzo a la <strong><i><font color=\"#ffc157\">Temporada 0: Protocolo Zero</font></i></strong> y, con ella, a la primera ronda de retos de Nexus Arena!</p><p>Es momento de poner a prueba tus habilidades, retar a tus amigos y demostrar de qué eres capaz. No dejes pasar la oportunidad de lanzar tus propios desafíos y participar en los de los demás antes de que termine el tiempo de esta ronda.</p><p>🏆 Compite por un lugar en el ranking a través de los <strong><font color=\"#fec158\">Desafíos de Temporada</font></strong> y, si crees tener lo necesario para llegar más lejos, ¡atrévete a conquistar el <strong><font color=\"#ffbf52\">Evento Nexus</font></strong>!</p><p>Recuerda que esta es nuestra temporada de prueba, una oportunidad para poner en marcha esta nueva forma de jugar, competir y compartir nuestra pasión por los videojuegos.</p><p>¡Esperamos que disfruten esta experiencia tanto como nosotros disfrutamos preparándola!</p>",
-   "link": "",
-   "linkText": ""
+   "body": "<p>La <strong><font color=\"#f7be69\">Temporada 0</font></strong>, nuestra temporada de prueba, está por llegar a su fin. Con ella se cierran todos los desafíos de temporada, los logros y el pase actual.</p>\n<p>Queremos darte las <strong><font color=\"#fdc168\">gracias</font></strong> por ser parte de los primeros pasos de Nexus Arena. Tu participación hizo posible este arranque, y ahora queremos escucharte: <strong><font color=\"#f4bc66\">cuéntanos qué te pareció en la breve encuesta que dejamos abajo</font><font color=\"#fcc169\">.</font></strong><font color=\"#fec46c\"> </font>Tus comentarios nos ayudarán a mejorar lo que viene.</p>\n<p>Y hablando de lo que viene…</p>\n<p><strong>❄️<font color=\"#ffc46b\"> La Temporada 1 arranca este domingo 29 de noviembre</font></strong>, con:</p>\n<ul>\n<li>Nuevos desafíos</li>\n<li>Nuevos logros</li>\n<li>Un <strong><font color=\"#fdc36d\">evento temático decembrino</font></strong> para cerrar el año en grande 🎄</li>\n</ul>\n<p>¡Prepárate, porque la competencia apenas comienza! <strong><font color=\"#fcc573\">Te esperamos en la Arena.</font></strong></p>",
+   "link": "https://forms.gle/FRCbsQnmuWqmdRSZ6",
+   "linkText": "Encuesta"
   }
  ],
  "notes": [
@@ -1889,22 +1889,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1795098821391,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1795099050412,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1795099058155,
-   "t": "Cambio (fbconf)"
-  },
-  {
-   "at": 1795101329745,
-   "t": "Publicó cambios"
-  },
   {
    "at": 1795101654033,
    "t": "Creó una encuesta"
@@ -3487,6 +3471,22 @@
   },
   {
    "at": 1795810778608,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795810806781,
+   "t": "Cambio (deln)"
+  },
+  {
+   "at": 1795811167999,
+   "t": "Cambio (newn)"
+  },
+  {
+   "at": 1795814638659,
+   "t": "Cambio (editn)"
+  },
+  {
+   "at": 1795814642226,
    "t": "Publicó cambios"
   }
  ],
