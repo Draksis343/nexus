@@ -1794,10 +1794,6 @@
  "atem": [],
  "log": [
   {
-   "at": 1795066704970,
-   "t": "Quitó medalla Bronce en un reto (PAROXTINE)"
-  },
-  {
    "at": 1795066736609,
    "t": "Publicó videos de reto en el perfil"
   },
@@ -3391,6 +3387,10 @@
   },
   {
    "at": 1795725777762,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795751761274,
    "t": "Publicó cambios"
   }
  ],
