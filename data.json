@@ -1235,15 +1235,78 @@
    "end": 1795931940000,
    "rq": 0,
    "syncrq": 0,
-   "desc": "",
-   "ob_bronce": "",
-   "ob_plata": "",
-   "ob_oro": "",
-   "ob_platino": "",
    "rules": "",
    "rarity": "Rara",
    "slots": 5,
-   "link": ""
+   "ra": {
+    "g": {
+     "id": 14433,
+     "t": "Barbie: Explorer",
+     "cn": "PlayStation",
+     "ic": "/Images/075922.png",
+     "ti": "/Images/026648.png",
+     "ig": "/Images/026649.png",
+     "bx": "/Images/026646.png",
+     "np": 467,
+     "nph": 467
+    },
+    "L": [
+     {
+      "id": 81865,
+      "t": "Deepest Rain Forest",
+      "d": "Complete Africa Level 01 on Hard Difficulty.",
+      "p": 4,
+      "b": "88145",
+      "n": 240,
+      "nh": 183
+     },
+     {
+      "id": 81882,
+      "t": "Jacob Diamond",
+      "d": "Get all 72 Jewels in Africa Level 01 on any difficulty.",
+      "p": 5,
+      "b": "88150",
+      "n": 232,
+      "nh": 176
+     },
+     {
+      "id": 81906,
+      "t": "Stop Eating My Sesame Cake",
+      "d": "Complete Africa Level 01 without dying on any difficulty.",
+      "p": 5,
+      "b": "88158",
+      "n": 113,
+      "nh": 79
+     },
+     {
+      "id": 81923,
+      "t": "Benin Bronze Relief",
+      "d": "Complete Africa Level 01 by 3m 20s.",
+      "p": 5,
+      "b": "88163",
+      "n": 99,
+      "nh": 87
+     }
+    ],
+    "as": {
+     "81865": "bronce",
+     "81882": "plata",
+     "81906": "oro",
+     "81923": "platino"
+    },
+    "need": {
+     "bronce": 1,
+     "plata": 1,
+     "oro": 1,
+     "platino": 1
+    },
+    "gpl": {},
+    "grq": {},
+    "hc": true,
+    "since": 1795752414514,
+    "s": "Temporada 0 - PROTOCOLO ZERO",
+    "im": "https://media.retroachievements.org/Images/026646.png"
+   }
   }
  ],
  "results": [
@@ -1818,14 +1881,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1795066782233,
-   "t": "Cambio (grantt)"
-  },
-  {
-   "at": 1795066818330,
-   "t": "Cambio (grantt)"
-  },
   {
    "at": 1795066832542,
    "t": "Publicó cambios"
@@ -3416,6 +3471,14 @@
   },
   {
    "at": 1795752239534,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795752414514,
+   "t": "Editó el desafío «Hoy soy una Barbie Explorer»"
+  },
+  {
+   "at": 1795752418474,
    "t": "Publicó cambios"
   }
  ],
