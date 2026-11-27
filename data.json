@@ -1737,6 +1737,14 @@
    "url": "https://youtu.be/U_HvQ7Frf0w",
    "title": "Reto: Minecraft · Elramasan reta a Itzy0w0",
    "src": "d:mwicvz83xvq"
+  },
+  {
+   "id": "mwzfd97ybxh",
+   "p": "mwen9cex36h",
+   "s": "Temporada 0 - PROTOCOLO ZERO",
+   "url": "https://youtu.be/sDNNT_JJcuw",
+   "title": "Reto: sin juego · Akiaseru reta a Draksis",
+   "src": "d:mwsbf3k9r72"
   }
  ],
  "seasons": [],
@@ -1881,14 +1889,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1795070118461,
-   "t": "Publicó cambios"
-  },
-  {
-   "at": 1795097248912,
-   "t": "Cambio (deln)"
-  },
   {
    "at": 1795098821391,
    "t": "Publicó cambios"
@@ -3479,6 +3479,14 @@
   },
   {
    "at": 1795752601706,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795810773742,
+   "t": "Publicó videos de reto en el perfil"
+  },
+  {
+   "at": 1795810778608,
    "t": "Publicó cambios"
   }
  ],
