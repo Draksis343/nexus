@@ -1219,6 +1219,31 @@
    "rarity": "Rara",
    "end": 0,
    "slots": 5
+  },
+  {
+   "id": "mwygijccz6j",
+   "start": 1795752233580,
+   "cs": "Temporada 0 - PROTOCOLO ZERO",
+   "goals": [],
+   "title": "Hoy soy una Barbie Explorer",
+   "game": "Barbie: Explorer",
+   "mode": "Solo",
+   "category": "Habilidad",
+   "difficulty": "Medio",
+   "status": "Disponible",
+   "round": "",
+   "end": 1795931940000,
+   "rq": 0,
+   "syncrq": 0,
+   "desc": "",
+   "ob_bronce": "",
+   "ob_plata": "",
+   "ob_oro": "",
+   "ob_platino": "",
+   "rules": "",
+   "rarity": "Rara",
+   "slots": 5,
+   "link": ""
   }
  ],
  "results": [
@@ -1793,14 +1818,6 @@
  "syncs": [],
  "atem": [],
  "log": [
-  {
-   "at": 1795066736609,
-   "t": "Publicó videos de reto en el perfil"
-  },
-  {
-   "at": 1795066739571,
-   "t": "Publicó videos de reto en el perfil"
-  },
   {
    "at": 1795066782233,
    "t": "Cambio (grantt)"
@@ -3391,6 +3408,14 @@
   },
   {
    "at": 1795751761274,
+   "t": "Publicó cambios"
+  },
+  {
+   "at": 1795752233581,
+   "t": "Creó un desafío"
+  },
+  {
+   "at": 1795752239534,
    "t": "Publicó cambios"
   }
  ],
