@@ -34,7 +34,7 @@
 <link rel="stylesheet" href="css/mejoras.css">
 <link rel="stylesheet" href="css/ajustes-finales.css">
 <link rel="stylesheet" href="css/cristal.css">
-<script>try{const q=new URLSearchParams(location.search).get("cristal");if(q==="1")localStorage.setItem("nx_cristal","1");if(q==="0")localStorage.removeItem("nx_cristal");if(localStorage.getItem("nx_cristal")==="1")document.documentElement.classList.add("cristal")}catch(e){}</script></head>
+<script>try{const q=new URLSearchParams(location.search).get("cristal");if(q==="1")localStorage.setItem("nx_cristal","1");if(q==="0")localStorage.removeItem("nx_cristal");if(localStorage.getItem("nx_cristal")==="1")document.documentElement.classList.add("cristal");const l=new URLSearchParams(location.search).get("luces");if(l==="1")localStorage.setItem("nx_luces","1");if(l==="0")localStorage.removeItem("nx_luces");if(localStorage.getItem("nx_luces")==="1"){document.documentElement.classList.add("luces");addEventListener("DOMContentLoaded",()=>{const d=document.createElement("div");d.className="nxl";d.innerHTML="<u></u><b></b><i></i>";document.body.prepend(d)})}}catch(e){}</script></head>
 <body>
 <header class="mobile-bar"><strong class="mono" style="color:#ffc266">NEXUS ARENA</strong><button id="menu" aria-label="Menú">☰</button></header>
 <canvas id="fx"></canvas>
