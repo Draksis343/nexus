@@ -1,0 +1,22 @@
+/* ===== Prueba: menús y tarjetas de cristal (se activa con ?cristal=1, se quita con ?cristal=0) ===== */
+html.cristal{--gl:color-mix(in srgb,var(--p1) 42%,transparent);--gls:rgba(255,255,255,.10);--glt:rgba(255,255,255,.22);--sheen:linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.02) 38%,rgba(255,255,255,0) 60%)}
+/* tarjetas normales */
+html.cristal .panel:not(.kb),html.cristal .stat{background:var(--sheen),var(--gl)!important;backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border:1px solid var(--gls);border-top-color:var(--glt);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 0 0 1px rgba(255,255,255,.02),0 18px 40px -18px #000b!important}
+/* tarjetas con imagen: conservan su borde de color, ganan el brillo de cristal */
+html.cristal .panel.kb{box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 18px 40px -18px #000b!important}
+html.cristal .panel.kb::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:var(--sheen);z-index:0}
+html.cristal .panel.kb>*{position:relative;z-index:1}
+/* menú lateral y barra de celular */
+html.cristal .sidebar{background:var(--sheen),color-mix(in srgb,var(--side) 50%,transparent)!important;backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border-right:1px solid var(--gls)!important}
+html.cristal .nav{border-radius:12px}
+html.cristal .nav:hover{background:rgba(255,255,255,.05);border-color:var(--gls)}
+html.cristal .nav.active{background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.03)),color-mix(in srgb,var(--amber) 10%,transparent);border-color:color-mix(in srgb,var(--amber) 40%,var(--glt));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 3px 0 var(--amber)}
+html.cristal .mobile-bar{background:var(--sheen),color-mix(in srgb,var(--side) 50%,transparent)!important;backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);border-bottom:1px solid var(--gls)}
+/* ventanas, menús emergentes y avisos */
+html.cristal .modal{background:#0009;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+html.cristal .modal form,html.cristal #mform,html.cristal .sheet,html.cristal #menu{background:var(--sheen),color-mix(in srgb,var(--p2) 62%,transparent)!important;backdrop-filter:blur(26px) saturate(150%);-webkit-backdrop-filter:blur(26px) saturate(150%);border:1px solid var(--gls)!important;border-top-color:var(--glt)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 30px 60px -20px #000d}
+html.cristal #toast{background:var(--sheen),color-mix(in srgb,var(--p1) 55%,transparent)!important;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--gls)}
+/* filas y botones secundarios */
+html.cristal .ac-row,html.cristal .rrow,html.cristal .line,html.cristal .vidr{background:rgba(255,255,255,.035);border-color:var(--gls)}
+html.cristal .btn.secondary,html.cristal .btn.ghost{background:rgba(255,255,255,.06);border-color:var(--gls);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+html.cristal.lite .panel:not(.kb),html.cristal.lite .stat,html.cristal.lite .sidebar{backdrop-filter:none;-webkit-backdrop-filter:none}
